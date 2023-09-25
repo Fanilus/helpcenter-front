@@ -12,7 +12,6 @@ export const Body = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 530px;
-  height: 444px;
   border-radius: 10px;
   padding: 60px;
 `;

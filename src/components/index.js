@@ -6,7 +6,10 @@ export { default as Paragraph } from './Typography/Paragraph/Paragraph';
 
 //Components
 export { default as Button } from './Button/Button';
-export { default as MenuWeb } from './MenuWeb/MenuWeb';
+export { default as Menu } from './Menu';
+export { default as RouteMenu } from './RouteMenu/RouteMenu';
 export { default as Accordion } from './Accordion/Accordion';
 export { default as Input } from './Input/Input';
+export { default as Header } from './Header/Header';
+export { default as Footer } from './Footer/Footer';
 export { default as Layout } from './Layout/Layout';

@@ -42,9 +42,16 @@ const warnings = '#FF7996';
 const red = '#FC087C';
 const pink = '#DF39EA';
 
+const boxShadow = '#EEEAF7';
+const boxShadowDark = '#EEEAF7';
+
 const gradientRedPink = 'linear-gradient(90deg, #FC077A 0%, #DB3FF8 110.75%)';
 
-const gradientDarkPurple = 'linear-gradient(180deg, #1C102F 0%, #A180FF 100%)';
+const gradientDarkPurple =
+  'linear-gradient(180deg, rgba(28, 16, 47, 0.00) 0%, #A180FF 144.16%);';
+
+const gradientDarkPurpleLight =
+  'linear-gradient(180deg, rgba(230, 226, 238, 0.00) 0%, #A180FF 144.16%);';
 
 export const COLORS = {
   //new
@@ -68,9 +75,14 @@ export const COLORS = {
   RED: red,
   PINK: pink,
 
+  BOX_SHADOW: boxShadow,
+  BOX_SHADOW_DARK: boxShadowDark,
+
   GRADIENT_RED_PINK: gradientRedPink,
 
   GRADIENT_DARK_PURPLE: gradientDarkPurple,
+
+  GRADIENT_DARK_PURPLE_LIGHT: gradientDarkPurpleLight,
 
   //old
   LIGHT_BLACK: lightBlack,

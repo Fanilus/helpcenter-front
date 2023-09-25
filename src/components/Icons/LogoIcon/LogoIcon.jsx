@@ -6,13 +6,13 @@ const LogoIcon = ({ size }) => {
   let width;
   let height;
   switch (size) {
-    case 'large':
-      width = 420;
-      height = 160;
+    case 'small':
+      width = 100;
+      height = 15;
       break;
     default:
-      width = 132;
-      height = 50;
+      width = 120;
+      height = 18;
       break;
   }
   return <Styled.Logo src={Logo} alt="" width={width} height={height} />;

@@ -1,16 +1,17 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import * as TymioUI from '../_DEPRECATED/index';
+import * as UI from '../index';
 import * as Styled from './styled';
 
 const Layout = () => {
   return (
     <TymioUI.Container>
-      <TymioUI.Header />
+      <UI.Header />
       <Styled.Main>
         <Outlet />
       </Styled.Main>
-      <TymioUI.Footer />
+      <UI.Footer />
     </TymioUI.Container>
   );
 };
