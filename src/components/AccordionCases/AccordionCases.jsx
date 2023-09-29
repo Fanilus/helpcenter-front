@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
 import * as Styled from './styled';
-import AccordionItem from './components/AccordionItem';
+import * as UI from '../../components/index';
 
-const Accordion = ({ faqList }) => {
+import AccordionItem from './components/AccordionCasesItem';
+
+const AccordionCases = ({ faqList }) => {
   const [openId, setId] = useState(null);
   const [isExpanded, setExpanded] = useState(false);
 
@@ -18,7 +20,7 @@ const Accordion = ({ faqList }) => {
   };
 
   return (
-    <Styled.Accordion>
+    <Styled.AccordionCases>
       {faqList.map((item, id) => (
         <AccordionItem
           item={item}
@@ -28,8 +30,8 @@ const Accordion = ({ faqList }) => {
           isOpen={id === openId}
         />
       ))}
-    </Styled.Accordion>
+    </Styled.AccordionCases>
   );
 };
 
-export default Accordion;
+export default AccordionCases;

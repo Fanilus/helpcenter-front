@@ -23,7 +23,7 @@ export const Paragraph = styled.p`
   font-size: ${({ size }) =>
     sizeMap[size]?.fontSize || sizeMap['medium'].fontSize};
   font-style: normal;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: ${({ size }) =>
     sizeMap[size]?.lineHeight || sizeMap['medium'].lineHeight};
   letter-spacing: ${({ size }) =>

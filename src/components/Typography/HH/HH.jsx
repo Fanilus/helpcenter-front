@@ -1,8 +1,12 @@
 import React from 'react';
 import * as Styled from './styled';
 
-export const HH = ({ children, color }) => {
-  return <Styled.HH color={color}>{children}</Styled.HH>;
+export const HH = ({ color, children, mobile }) => {
+  return (
+    <Styled.HH mobile={mobile} color={color}>
+      {children}
+    </Styled.HH>
+  );
 };
 
 export default HH;

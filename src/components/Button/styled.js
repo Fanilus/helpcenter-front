@@ -18,7 +18,8 @@ export const Button = styled.button`
   text-transform: ${({ common }) => !common && 'uppercase'};
   border: none;
   backdrop-filter: blur(2px);
-
+  font-weight: 500;
+  width: fit-content;
   &:hover {
     cursor: pointer;
     background: ${({ type }) => {

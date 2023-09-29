@@ -2,10 +2,7 @@ import styled from 'styled-components';
 import { COLORS } from '../../models/colors';
 import ComplicatedGradientPink from '../Icons/ComplicatedGradientPink/ComplicatedGradientPink.svg';
 
-export const Accordion = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+export const AccordionCases = styled.div``;
 
 export const Body = styled.div`
   background-image: url(${ComplicatedGradientPink});
@@ -15,7 +12,12 @@ export const Body = styled.div`
   border-radius: 10px;
   padding: 60px;
 `;
-export const AccordionItem = styled.div``;
+export const AccordionItem = styled.div`
+  border-top: 0.5px ${COLORS.GRAY} solid;
+  padding: 20px 0 70px;
+  display: flex;
+  justify-content: space-between;
+`;
 
 export const Collapse = styled.div`
   height: ${({ isOpen, itemRef }) =>
@@ -24,6 +26,7 @@ export const Collapse = styled.div`
   transition: all 0.3s ease-in-out;
 `;
 export const Quation = styled.div`
+  width: fit-content;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -42,9 +45,28 @@ export const Quation = styled.div`
   }
 `;
 
-export const Title = styled.div`
+export const Question = styled.div`
   font-size: 18px;
   font-weight: 400;
   line-height: 140%;
   letter-spacing: 0.18px;
+`;
+
+export const Title = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-basis: 50%;
+`;
+
+export const Content = styled.div`
+  flex-basis: 50%;
+  padding-right: 115px;
+`;
+
+export const Description = styled.div`
+  margin-bottom: 20px;
+  p {
+    line-height: 140%;
+  }
 `;

@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 // import WhitePaper from './pages/WhitePaper/WhitePaper';
 const Layout = lazy(() => import('./components/Layout/Layout.jsx'));
 const UIDemo = lazy(() => import('./pages/UIDemo/UIDemo'));
+const Main = lazy(() => import('./pages/Main/Main'));
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
       <Suspense fallback={<TymioUI.Preloader />}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="/" element={<UIDemo />} />
+            <Route path="/" element={<Main />} />
+            <Route path="/ui" element={<UIDemo />} />
             {/* <Route path="/whitepaper" element={<WhitePaper />} />
             <Route path="/ui" element={<UIDemo />} /> */}
           </Route>

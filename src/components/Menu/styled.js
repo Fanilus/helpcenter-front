@@ -16,13 +16,14 @@ export const MenuItem = styled.button`
   border: none;
   cursor: pointer;
   text-transform: uppercase;
-
   p {
     color: ${({ light }) => (light ? COLORS.GRAY_DARK : COLORS.PURPLE_GRAY)};
+    font-weight: 500;
   }
   &:hover {
     p {
       color: ${({ light }) => (light ? COLORS.RICH_BLACK : COLORS.LIGHT)};
+      font-weight: 500;
     }
   }
   &:focus {

@@ -19,6 +19,7 @@ export const Fixed = styled.div`
 `;
 
 export const Header = styled.header`
+  position: absolute;
   /* position: fixed;
   left: 0;
   top: 0;
