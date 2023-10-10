@@ -11,6 +11,10 @@ export const Body = styled.div`
   width: 530px;
   border-radius: 10px;
   padding: 60px;
+  p {
+    line-height: 140%;
+    color: ${COLORS.LIGHT};
+  }
 `;
 export const AccordionItem = styled.div`
   border-top: 0.5px ${COLORS.GRAY} solid;

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as TymioUI from '../_DEPRECATED';
 import * as UI from '../';
 
 import * as Styled from './styled';
 
 import { COLORS } from '../../models/colors';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const optionsRoute = [
   { label: 'How it works', path: '/' },

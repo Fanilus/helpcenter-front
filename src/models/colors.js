@@ -51,7 +51,7 @@ const gradientDarkPurple =
   'linear-gradient(180deg, rgba(28, 16, 47, 0.00) 0%, #A180FF 144.16%);';
 
 const gradientDarkPurpleLight =
-  'linear-gradient(180deg, rgba(230, 226, 238, 0.00) 0%, #A180FF 144.16%);';
+  ' linear-gradient(180deg, rgba(230, 226, 238, 0.00) 0%, #A180FF 144.16%);';
 
 export const COLORS = {
   //new

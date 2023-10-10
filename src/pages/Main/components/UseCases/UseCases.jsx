@@ -50,6 +50,19 @@ const UseCases = () => {
     <Styled.UseCases>
       <UI.H1>Use cases</UI.H1>
       <UI.AccordionCases faqList={faqList} />
+      <Styled.Board>
+        <UI.Badge
+          height={'fit-content'}
+          width={'fit-content'}
+          padding={'9px 15px'}
+        >
+          Custom
+        </UI.Badge>
+        <UI.H2>
+          Over 100 ETH or USDC <br /> equivalent? We are ready to <br /> make
+          you a special offer. <br /> Contact us at <span>info@Tymio.com</span>
+        </UI.H2>
+      </Styled.Board>
     </Styled.UseCases>
   );
 };

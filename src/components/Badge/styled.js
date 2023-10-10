@@ -7,8 +7,9 @@ export const Badge = styled.div`
   align-items: center;
   background-color: ${COLORS.LEMON};
   border-radius: 10px;
-  width: 30px;
-  height: 30px;
+  width: ${({ width }) => (width ? width : '30px')};
+  height: ${({ height }) => (height ? height : '30px')};
+  padding: ${({ padding }) => (padding ? padding : '0px')};
   p {
     font-weight: 500;
     color: ${COLORS.BLACK};

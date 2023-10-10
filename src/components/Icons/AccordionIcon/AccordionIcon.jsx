@@ -1,15 +1,29 @@
 import React from 'react';
 import { COLORS } from '../../../models/colors';
 
-const AccordionIcon = ({ expanded }) => {
+const AccordionIcon = ({ expanded, size }) => {
   const iconStyle = {
     transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)',
   };
+  let width;
+  let height;
+
+  switch (size) {
+    case 'large':
+      width = 24;
+      height = 11.2;
+      break;
+    default:
+      width = 17;
+      height = 9;
+      break;
+  }
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="17"
-      height="9"
+      width={width}
+      height={height}
       viewBox="0 0 17 9"
       fill="none"
       style={iconStyle}

@@ -10,12 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 const SELL_HIGHT_LINK = process.env.REACT_APP_SELL_HIGHT_LINK;
 
-const Header = () => {
-  // const { routes } = useRoutes();
-  // const [
-  // active,
-  //  setActive
-  // ] = useState('');
+const Header = ({ light }) => {
   const navigate = useNavigate();
   const options = [
     { label: 'how it works', path: '/' },
@@ -49,7 +44,11 @@ const Header = () => {
         <TymioUI.LogoIcon />
       </Styled.LogoLink>
       <Styled.Fixed>
-        <UI.RouteMenu scroll={scroll} options={options} />
+        <UI.RouteMenu
+          scroll={light ? null : scroll}
+          options={options}
+          light={light}
+        />
         <UI.Button type={BUTTON_TYPE.SECONDARY}>Start earning</UI.Button>
       </Styled.Fixed>
     </Styled.Header>

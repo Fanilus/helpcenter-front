@@ -5,6 +5,7 @@ export const Footer = styled.footer`
   padding: 20px 60px 60px 60px;
   background: ${({ light }) =>
     light ? COLORS.GRADIENT_DARK_PURPLE_LIGHT : COLORS.GRADIENT_DARK_PURPLE};
+  background-color: ${({ light }) => (light ? COLORS.LIGHT : 'transparent')};
 `;
 export const Container = styled.div`
   display: flex;

@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 const Layout = lazy(() => import('./components/Layout/Layout.jsx'));
 const UIDemo = lazy(() => import('./pages/UIDemo/UIDemo'));
 const Main = lazy(() => import('./pages/Main/Main'));
+const WhitePaper = lazy(() => import('./pages/WhitePaper/WhitePaper'));
 
 const App = () => {
   return (
@@ -20,8 +21,8 @@ const App = () => {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Main />} />
             <Route path="/ui" element={<UIDemo />} />
-            {/* <Route path="/whitepaper" element={<WhitePaper />} />
-            <Route path="/ui" element={<UIDemo />} /> */}
+            <Route path="/whitepaper" element={<WhitePaper />} />
+            {/* <Route path="/ui" element={<UIDemo />} />  */}
           </Route>
         </Routes>
       </Suspense>
