@@ -24,6 +24,9 @@ export const SubTitle = styled.div`
 export const Container = styled.div`
   border-top: 0.1px solid ${COLORS.GRAY};
   margin-bottom: 80px;
+  :last-child {
+    margin-bottom: 0;
+  }
 `;
 
 export const SubContainer = styled.div`
@@ -42,6 +45,11 @@ export const Title = styled.div`
   }
   p {
     color: ${COLORS.BLACK};
+    font-weight: 500;
+    line-height: 140%;
+  }
+  img {
+    margin-top: 20px;
   }
 `;
 export const Description = styled.div`
@@ -52,6 +60,14 @@ export const Description = styled.div`
   p {
     color: ${COLORS.BLACK};
     line-height: 140%;
+    a {
+      color: ${COLORS.PINK};
+      text-decoration: none;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 500;
+    }
   }
 `;
 
