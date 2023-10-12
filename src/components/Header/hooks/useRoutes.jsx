@@ -1,31 +1,41 @@
 const useRoutes = () => {
-  const main = {
-    title: 'Main',
-    path: '/',
-  };
-  const routes = [
+  const header = [];
+  const footer = [
     {
-      title: 'Products',
-      path: '/',
+      label: 'How it works',
+      path: 'https://tymio.com',
     },
     {
-      title: 'Developers',
-      path: '/',
+      label: 'Use cases',
+      path: 'https://tymio.com',
     },
     {
-      title: 'Governance',
-      path: '/',
+      label: 'Safety',
+      path: 'https://tymio.com',
     },
     {
-      title: 'About',
-      path: '/',
+      label: 'FAQ',
+      path: 'https://tymio.com',
+    },
+    {
+      label: 'Ambassadors',
+      path: 'https://tymio.com',
+    },
+    {
+      label: 'White Paper',
+      path: 'https://tymio.com',
+    },
+    {
+      label: 'Terms Of Use',
+      path: 'https://tymio.com',
     },
   ];
 
-  const allRoutes = [main, ...routes];
+  const allRoutes = [...header, ...footer];
+
   return {
-    main,
-    routes,
+    header,
+    footer,
     allRoutes,
   };
 };

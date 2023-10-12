@@ -47,43 +47,27 @@ const getResolutionValidProp = (resolutions, width) => {
 };
 
 export const Grid = styled.div`
-  margin: 0;
-  align-items: ${({ alignItems }) => alignItems || 'center'};
+  margin: ${({ margin }) => margin || 0};
+  align-items: ${({ alignItems }) => (alignItems ? alignItems : 'center')};
   display: grid;
-  grid-template-columns: ${({ columns }) =>
-    columns ? `repeat(${columns}, 1fr)` : 'repeat(12, 1fr)'};
+  grid-template-columns: ${({ columns, template }) =>
+    template || (columns ? `repeat(${columns}, 1fr)` : 'repeat(12, 1fr)')};
   gap: ${({ gap }) => (gap ? gap : 'initial')};
   width: ${({ width }) => width};
 
-  @media (max-width: 992px) {
-    grid-template-columns: ${({ columns, lgColumns }) =>
-      getResolutionValidProp(
-        { any: `repeat(${columns}, 1fr)`, lg: `repeat(${lgColumns}, 1fr)` },
-        992
-      ) || 'repeat(12, 1fr)'};
+  @media (max-width: 768px) {
+    grid-template-columns: ${({ mdColumns, mdTemplate }) =>
+      mdTemplate || (mdColumns && `repeat(${mdColumns}, 1fr)`)};
+    gap: ${({ mdGap }) => mdGap};
   }
 
   @media (max-width: 576px) {
-    gap: ${({ gap, lgGap, mdGap, xsGap }) =>
-      getResolutionValidProp(
-        { any: gap, lg: lgGap, md: mdGap, xs: xsGap },
-        576
-      ) || 'initial'};
-
-    grid-template-columns: ${({ columns, lgColumns, xsColumns }) =>
-      getResolutionValidProp(
-        {
-          any: `repeat(${columns}, 1fr)`,
-          lg: `repeat(${lgColumns}, 1fr)`,
-          xs: `repeat(${xsColumns}, 1fr)`,
-        },
-        576
-      ) || 'repeat(12, 1fr)'};
+    grid-template-columns: ${({ xsColumns, xsTemplate }) =>
+      xsTemplate || (xsColumns && `repeat(${xsColumns}, 1fr)`)};
   }
 `;
 
 export const GridElem = styled.div`
-  position: ${({ position }) => position};
   display: ${({ display }) => (display ? display : 'block')};
   grid-column: ${({ column }) => (column ? column : 'span 12')};
   grid-row: ${({ row }) => row};
@@ -95,7 +79,6 @@ export const GridElem = styled.div`
     inline ? 'inline-grid' : display || 'block'};
   text-align: ${({ textAlign }) => textAlign || 'center'};
   margin-left: ${({ floatRight }) => floatRight && 'auto'};
-  margin-right: ${({ floatLeft }) => floatLeft && 'auto'};
 
   @media (max-width: 992px) {
     display: ${({ display, lgDisplay }) =>
@@ -133,7 +116,6 @@ export const GridElem = styled.div`
   }
 
   @media (max-width: 576px) {
-    height: 100%;
     display: ${({ display, lgDisplay, mdDisplay, xsDisplay }) =>
       getResolutionValidProp(
         { any: display, lg: lgDisplay, md: mdDisplay, xs: xsDisplay },
@@ -159,5 +141,7 @@ export const GridElem = styled.div`
         },
         576
       ) || 'left'};
+
+    width: ${({ xsWidth }) => xsWidth};
   }
 `;

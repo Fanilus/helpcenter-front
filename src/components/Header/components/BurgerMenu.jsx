@@ -1,77 +1,58 @@
-// import React, { useEffect } from 'react';
-// // import { NavLink } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
-// // import useRoutes from '../hooks/useRoutes';
-// import * as Styled from '../styled';
-// import * as TymioUI from '../../_DEPRECATED';
-// import { Medium, Telegram, Twitter } from '../../_DEPRECATED/SocialNetwork';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
-// const BurgerMenu = ({ mobileMenuActive, setMobileMenuActive }) => {
-//   // const { routes } = useRoutes();
-//   const navigate = useNavigate();
+import useRoutes from '../hooks/useRoutes';
+import * as Styled from '../styled';
+import Close from '../../../assets/img/icons/cross-purple.svg';
+import { LogoIcon } from '../../_DEPRECATED';
+import Button from '../../Button/Button';
+import { BUTTON_TYPE } from '../../../models/types';
+import { COLORS } from '../../../models/colors';
+import Paragraph from '../../Typography/Paragraph/Paragraph';
 
-//   const navigateToFAQ = () => {
-//     navigate('/');
-//     setTimeout(() => {
-//       window.location.href = '#faq';
-//     }, 0);
-//   };
+const BurgerMenu = () => {
+  const { allRoutes } = useRoutes();
+  const [active, setActive] = useState(false);
 
-//   const toggleMenu = () => {
-//     setMobileMenuActive((prevState) => !prevState);
-//   };
+  const toggleMenu = () => {
+    setActive((prevState) => !prevState);
+  };
 
-//   useEffect(() => {
-//     if (mobileMenuActive) {
-//       document.documentElement.style.overflowY = 'hidden';
-//     } else {
-//       document.documentElement.style.overflowY = 'auto';
-//     }
-//   }, [mobileMenuActive]);
-//   return (
-//     <>
-//       <Styled.ActionIcon onClick={toggleMenu}>
-//         {mobileMenuActive ? (
-//           <TymioUI.CloseIcon />
-//         ) : (
-//           <TymioUI.ArrowDown width={24} />
-//         )}
-//       </Styled.ActionIcon>
+  return (
+    <>
+      <Styled.Burger onClick={toggleMenu}>
+        <Styled.BurgerLine />
+        <Styled.BurgerLine long />
+        <Styled.BurgerLine />
+      </Styled.Burger>
+      <Styled.Menu active={active ? 'true' : undefined}>
+        <Styled.Content>
+          <Styled.Logo onClick={toggleMenu}>
+            <NavLink to={'/'}>
+              <LogoIcon />
+            </NavLink>
+          </Styled.Logo>
+          <Styled.CloseIcon onClick={toggleMenu}>
+            <img src={Close} alt={''} />
+          </Styled.CloseIcon>
+          <Styled.Routes>
+            {allRoutes.map(({ path, label }, i) => (
+              <Styled.Route key={i}>
+                <NavLink to={path} onClick={toggleMenu}>
+                  {label}
+                </NavLink>
+                <Styled.HR />
+              </Styled.Route>
+            ))}
+            <Button type={BUTTON_TYPE.PRIMARY}>
+              <Paragraph color={COLORS.BLACK}>Start earning</Paragraph>
+            </Button>
+          </Styled.Routes>
+        </Styled.Content>
+        <Styled.Overlay onClick={toggleMenu} />
+      </Styled.Menu>
+    </>
+  );
+};
 
-//       <Styled.BurgerMenu active={mobileMenuActive ? 'true' : undefined}>
-//         <Styled.Content>
-//           <Styled.Routes>
-//             {/* {routes.map(({ path, title }, i) => ( */}
-//             <Styled.Route>
-//               <div onClick={navigateToFAQ}>FAQ</div>
-//             </Styled.Route>
-//             <Styled.Route>
-//               <div onClick={() => navigate('/whitepaper')}>White Paper</div>
-//             </Styled.Route>
-//             {/* ))} */}
-//           </Styled.Routes>
-//           <Styled.Socials>
-//             <div
-//               onClick={() => window.open('https://medium.com/@tymio', '_blank')}
-//             >
-//               <Medium />
-//             </div>
-//             <div onClick={() => window.open('https://t.me/tymioapp', '_blank')}>
-//               <Telegram />
-//             </div>
-//             <div
-//               onClick={() =>
-//                 window.open('https://twitter.com/TYMIOapp', '_blank')
-//               }
-//             >
-//               <Twitter />
-//             </div>
-//           </Styled.Socials>
-//         </Styled.Content>
-//         <Styled.Overlay onClick={toggleMenu} />
-//       </Styled.BurgerMenu>
-//     </>
-//   );
-// };
-
-// export default BurgerMenu;
+export default BurgerMenu;

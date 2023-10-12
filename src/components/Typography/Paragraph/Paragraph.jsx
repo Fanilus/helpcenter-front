@@ -1,9 +1,9 @@
 import React from 'react';
 import * as Styled from './styled';
 
-export const Paragraph = ({ children, size, color, ...restProps }) => {
+export const Paragraph = ({ children, size, color, lh, ...restProps }) => {
   return (
-    <Styled.Paragraph size={size} color={color} {...restProps}>
+    <Styled.Paragraph size={size} color={color} lh={lh} {...restProps}>
       {children}
     </Styled.Paragraph>
   );

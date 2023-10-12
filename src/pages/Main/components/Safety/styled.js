@@ -31,8 +31,10 @@ export const Card = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px;
-  flex-basis: 420px;
-  height: 313px;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-shrink: 1;
+  border-radius: 10px;
   p {
     line-height: 140%;
   }

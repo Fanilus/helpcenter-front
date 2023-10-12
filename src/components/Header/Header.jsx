@@ -51,6 +51,9 @@ const Header = ({ light }) => {
         />
         <UI.Button type={BUTTON_TYPE.SECONDARY}>Start earning</UI.Button>
       </Styled.Fixed>
+      <Styled.MobileActions>
+        <BurgerMenu />
+      </Styled.MobileActions>
     </Styled.Header>
   );
 };
