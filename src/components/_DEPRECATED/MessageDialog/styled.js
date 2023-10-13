@@ -39,7 +39,7 @@ export const Card = styled.div`
   border-radius: 10px;
   padding: 32px;
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     padding: 24px;
   }
 `;
@@ -50,7 +50,7 @@ export const CardHeader = styled.div`
   line-height: 150%;
   color: ${COLORS.WHITE};
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: 22px;
   }
 `;
@@ -70,7 +70,7 @@ export const CardBody = styled.div`
     font-size: 18px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     flex-direction: column;
   }
 
@@ -87,7 +87,7 @@ export const CardFooter = styled.div`
     width: 50%;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     button {
       width: 100%;
     }

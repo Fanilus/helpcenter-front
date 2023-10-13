@@ -3,7 +3,6 @@ import React, { useRef } from 'react';
 import AccordionIcon from '../../Icons/AccordionIcon/AccordionIcon';
 import * as UI from '../../index';
 import * as Styled from '../styled';
-import { COLORS } from '../../../models/colors';
 
 const AccordionItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
   const itemRef = useRef(null);

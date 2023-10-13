@@ -7,6 +7,9 @@ export const Card = styled.div`
   padding: 30px;
 
   @media (max-width: 1439px) {
-    padding: 30px 30px 30px 20px;
+    padding: 30px 20px;
+  }
+  @media (max-width: 767px) {
+    border-radius: ${({ xsRadius }) => xsRadius};
   }
 `;

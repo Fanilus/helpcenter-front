@@ -9,7 +9,7 @@ export const Main = styled.main`
     margin-top: 80px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     margin-top: 88px;
   } */
 `;

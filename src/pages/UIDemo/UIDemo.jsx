@@ -1,7 +1,6 @@
 import React from 'react';
 import * as Styled from './styled';
 import * as UI from '../../components/index';
-import { COLORS } from '../../models/colors';
 import Currency from '../../assets/video/Currency.mp4';
 
 const UIDemo = () => {

@@ -4,11 +4,17 @@ import { COLORS } from '../../models/colors';
 export const Footer = styled.footer`
   padding: 20px 60px 60px 60px;
   background: ${({ light }) =>
-    light ? COLORS.GRADIENT_DARK_PURPLE_LIGHT : COLORS.GRADIENT_DARK_PURPLE};
+    light
+      ? COLORS.GRADIENT_DARK_PURPLE_LIGHT
+      : 'linear-gradient(rgba(28, 16, 47, 0) 0%, rgb(161, 128, 255) 350%)'};
   background-color: ${({ light }) => (light ? COLORS.LIGHT : 'transparent')};
 
   @media (max-width: 1439px) {
     padding: 30px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 30px 15px;
   }
 `;
 export const Container = styled.div`
@@ -42,6 +48,12 @@ export const FooterContent = styled.div`
       margin-bottom: 0;
     }
   }
+
+  @media (max-width: 767px) {
+    p {
+      padding-bottom: 4px;
+    }
+  }
 `;
 export const FooterLinks = styled.div`
   display: flex;
@@ -73,4 +85,8 @@ export const MediaRoutes = styled.div`
 
 export const Route = styled.div`
   margin-left: 60px;
+
+  @media (max-width: 767px) {
+    margin-left: 20px;
+  }
 `;

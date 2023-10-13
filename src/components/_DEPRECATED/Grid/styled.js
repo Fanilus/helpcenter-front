@@ -26,11 +26,11 @@ import styled from 'styled-components';
 const getResolutionValidProp = (resolutions, width) => {
   const { xs, md, lg, any } = resolutions;
   switch (width) {
-    case 992:
+    case 1439:
       if (lg) return lg;
       if (any) return any;
       break;
-    case 768:
+    case 767:
       if (md) return md;
       if (lg) return lg;
       if (any) return any;
@@ -55,13 +55,13 @@ export const Grid = styled.div`
   gap: ${({ gap }) => (gap ? gap : 'initial')};
   width: ${({ width }) => width};
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1439px) {
     grid-template-columns: ${({ lgColumns, lgTemplate }) =>
       lgTemplate || (lgColumns && `repeat(${lgColumns}, 1fr)`)};
     gap: ${({ lgGap }) => lgGap};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     grid-template-columns: ${({ mdColumns, mdTemplate }) =>
       mdTemplate || (mdColumns && `repeat(${mdColumns}, 1fr)`)};
     gap: ${({ mdGap }) => mdGap};
@@ -86,37 +86,37 @@ export const GridElem = styled.div`
   text-align: ${({ textAlign }) => textAlign || 'center'};
   margin-left: ${({ floatRight }) => floatRight && 'auto'};
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1439px) {
     display: ${({ display, lgDisplay }) =>
-      getResolutionValidProp({ any: display, lg: lgDisplay }, 992) || 'block'};
+      getResolutionValidProp({ any: display, lg: lgDisplay }, 1439) || 'block'};
     grid-column: ${({ column, lgColumn }) =>
-      getResolutionValidProp({ any: column, lg: lgColumn }, 992) || 'span 12'};
+      getResolutionValidProp({ any: column, lg: lgColumn }, 1439) || 'span 12'};
     grid-row: ${({ row, lgRow }) =>
-      getResolutionValidProp({ any: row, lg: lgRow }, 992)};
+      getResolutionValidProp({ any: row, lg: lgRow }, 1439)};
     text-align: ${({ textAlign, lgTextAlign }) =>
-      getResolutionValidProp({ any: textAlign, lg: lgTextAlign }, 992) ||
+      getResolutionValidProp({ any: textAlign, lg: lgTextAlign }, 1439) ||
       'left'};
     grid-column-start: ${({ offset }) => (offset ? offset + 1 : 0)};
     width: auto;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: ${({ display, lgDisplay, mdDisplay }) =>
       getResolutionValidProp(
         { any: display, lg: lgDisplay, md: mdDisplay },
-        768
+        767
       ) || 'block'};
     grid-column: ${({ column, lgColumn, mdColumn }) =>
       getResolutionValidProp(
         { any: column, lg: lgColumn, md: mdColumn },
-        768
+        767
       ) || 'span 12'};
     grid-row: ${({ row, lgRow, mdRow }) =>
-      getResolutionValidProp({ any: row, lg: lgRow, md: mdRow }, 768)};
+      getResolutionValidProp({ any: row, lg: lgRow, md: mdRow }, 767)};
     text-align: ${({ textAlign, lgTextAlign, mdTextAlign }) =>
       getResolutionValidProp(
         { any: textAlign, lg: lgTextAlign, md: mdTextAlign },
-        768
+        767
       ) || 'left'};
     grid-column-start: ${({ offset }) => (offset ? offset + 1 : 0)};
   }

@@ -5,7 +5,7 @@ export const Check = styled.svg`
     height: 18px;
     width: 18px;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     height: 16px;
     width: 16px;
   }

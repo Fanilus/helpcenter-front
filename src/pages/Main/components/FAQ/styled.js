@@ -15,10 +15,19 @@ export const FAQ = styled.div`
 
     h1 {
       width: 216px;
-      line-height: 70px;
       flex-grow: 1;
       flex-shrink: 0;
       height: fit-content;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 100px 15px 100px;
+    flex-direction: column;
+    gap: 60px;
+
+    h1 {
+      width: auto;
     }
   }
 `;

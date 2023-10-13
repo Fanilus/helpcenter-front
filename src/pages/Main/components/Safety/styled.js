@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { COLORS } from '../../../../models/colors';
 import CardGradient from '../../../../img/card-gradient.svg';
 
 export const Safety = styled.div`
@@ -7,6 +6,10 @@ export const Safety = styled.div`
 
   @media (max-width: 1439px) {
     padding: 100px 30px 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 100px 15px 0;
   }
 `;
 
@@ -58,11 +61,16 @@ export const Card = styled.div`
   @media (max-width: 1439px) {
     flex-basis: 216px;
   }
+
+  @media (max-width: 767px) {
+    padding: 30px 20px;
+    flex-basis: 300px;
+  }
 `;
 export const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 50px;
 
   @media (max-width: 1439px) {

@@ -20,7 +20,7 @@ export const Card = styled.div`
     padding: 35px 30px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     max-width: 100%;
     padding: 24px 12px;
   }
@@ -33,7 +33,7 @@ export const CardHeader = styled.div`
   color: ${COLORS.WHITE};
   text-align: ${({ align }) => align};
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: 32px;
   }
 `;

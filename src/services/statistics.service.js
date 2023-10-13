@@ -99,4 +99,5 @@ class StatisticsService {
   }
 }
 
-export default new StatisticsService();
+const StatisticsServiceInstance = new StatisticsService();
+export default StatisticsServiceInstance;

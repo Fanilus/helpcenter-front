@@ -8,7 +8,7 @@ export const Logo = styled.img`
     height: 20px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     max-width: 75px;
     max-height: 18px;
   } */

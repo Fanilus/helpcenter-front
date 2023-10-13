@@ -8,7 +8,7 @@ export const ETH = styled.div`
     width: 35px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     width: 31px;
   }
 `;

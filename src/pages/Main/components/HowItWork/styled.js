@@ -10,6 +10,10 @@ export const HowItWork = styled.div`
   @media (max-width: 1439px) {
     padding: 60px 30px 0;
   }
+
+  @media (max-width: 767px) {
+    padding: 40px 15px 0;
+  }
 `;
 
 export const Content = styled.div`
@@ -25,6 +29,19 @@ export const Content = styled.div`
     margin: 20px 0 60px;
     video {
       width: 339px;
+    }
+  }
+`;
+
+export const MobileOnly = styled.div`
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+    margin-bottom: ${({ mb }) => mb};
+    margin-top: ${({ mt }) => mt};
+
+    img {
+      width: 100%;
     }
   }
 `;
@@ -57,6 +74,10 @@ export const Cards = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @media (max-width: 767px) {
+    gap: 0;
+  }
 `;
 
 export const CardContent = styled.div`
@@ -70,6 +91,13 @@ export const CardContent = styled.div`
     img {
       width: 50%;
       margin-left: auto;
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+    img {
+      display: none;
     }
   }
 `;
@@ -100,5 +128,9 @@ export const CardDescription = styled.div`
       font-size: 47px;
       line-height: 38px;
     }
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
   }
 `;

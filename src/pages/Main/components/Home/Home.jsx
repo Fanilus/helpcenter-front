@@ -8,10 +8,10 @@ import Cubes_768 from '../../../../assets/video/768_6sec.mp4';
 import Cubes_1440 from '../../../../assets/video/1440_6sec.mp4';
 import Cubes_1920 from '../../../../assets/video/1920_6sec.mp4';
 
-import CheckCircle from '../../../../components/Icons/CheckCircle/CheckCircle';
 import { COLORS } from '../../../../models/colors';
 import { TYPOGRAPHY_SIZE } from '../../../../models/types';
-import { Grid, GridElem } from '../../../../components/_DEPRECATED';
+import Checks from './Checks';
+import Stats from './Stats';
 
 const videos = {
   375: Cubes_375,
@@ -51,109 +51,17 @@ const Home = () => {
           <UI.Button>
             <UI.Paragraph color={COLORS.BLACK}>Start earning</UI.Paragraph>
           </UI.Button>
-          <Styled.Checks>
-            <Styled.Check>
-              <CheckCircle />
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} lh={'100%'}>
-                Instant
-              </UI.Paragraph>
-            </Styled.Check>
-            <Styled.Check>
-              <CheckCircle />
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} lh={'100%'}>
-                Fixed yield
-              </UI.Paragraph>
-            </Styled.Check>
-            <Styled.Check>
-              <CheckCircle />
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} lh={'100%'}>
-                Flexible terms
-              </UI.Paragraph>
-            </Styled.Check>
-          </Styled.Checks>
+
+          <Styled.Bot>
+            <Checks />
+          </Styled.Bot>
         </Styled.Content>
         {video && <Styled.Video src={video} autoPlay loop muted />}
       </Styled.Top>
       <Styled.HR />
+
       <Styled.Bot>
-        <Grid
-          template={'8fr 7fr 6fr 7fr 8fr'}
-          lgColumns={4}
-          xsColumns={2}
-          gap={'30px'}
-          lgGap={'15px'}
-        >
-          <GridElem
-            column={1}
-            row={1}
-            lgColumn={1}
-            lgRow={1}
-            textAlign={'left'}
-          >
-            <Styled.Card>
-              <UI.HH mobile={true}>$3.7M</UI.HH>
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                Total TradedVolume
-              </UI.Paragraph>
-            </Styled.Card>
-          </GridElem>
-          <GridElem
-            column={2}
-            row={1}
-            lgColumn={2}
-            lgRow={1}
-            textAlign={'left'}
-          >
-            <Styled.Card>
-              <UI.HH mobile={true}>$93.1K</UI.HH>
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                Total ValueLocked
-              </UI.Paragraph>
-            </Styled.Card>
-          </GridElem>
-          <GridElem
-            column={3}
-            row={1}
-            lgColumn={3}
-            lgRow={1}
-            textAlign={'left'}
-          >
-            <Styled.Card>
-              <UI.HH mobile={true}>751</UI.HH>
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                Total orders
-              </UI.Paragraph>
-            </Styled.Card>
-          </GridElem>
-          <GridElem
-            column={4}
-            row={1}
-            lgColumn={4}
-            lgRow={1}
-            textAlign={'left'}
-          >
-            <Styled.Card>
-              <UI.HH mobile={true}>50.2%</UI.HH>
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                Average APR
-              </UI.Paragraph>
-            </Styled.Card>
-          </GridElem>
-          <GridElem
-            column={5}
-            row={1}
-            lgColumn={'span 4'}
-            lgRow={2}
-            textAlign={'left'}
-          >
-            <Styled.Card>
-              <UI.HH mobile={true}>$40.5K</UI.HH>
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                Total Premium Generaed
-              </UI.Paragraph>
-            </Styled.Card>
-          </GridElem>
-        </Grid>
+        <Stats />
       </Styled.Bot>
     </Styled.Home>
   );

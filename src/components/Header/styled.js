@@ -48,8 +48,8 @@ export const Header = styled.header`
     padding: 15px 30px;
   }
 
-  @media (max-width: 576px) {
-    padding: 15px 15px;
+  @media (max-width: 767px) {
+    padding: 15px;
   }
 `;
 
@@ -124,7 +124,7 @@ export const Content = styled.div`
   @media (max-width: 1439px) {
     width: 100%;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     padding: 75px 15px 0 15px;
   }
 `;
@@ -184,7 +184,7 @@ export const CloseIcon = styled.div`
   height: 41px;
   cursor: pointer;
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     right: 15px;
   }
 `;
@@ -194,7 +194,7 @@ export const Logo = styled.div`
   left: 30px;
   top: 15px;
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     left: 15px;
   }
 `;

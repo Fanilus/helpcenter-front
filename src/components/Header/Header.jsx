@@ -6,12 +6,8 @@ import * as UI from '../index';
 import { BUTTON_TYPE } from '../../models/types';
 
 import * as Styled from './styled';
-import { useNavigate } from 'react-router-dom';
-
-const SELL_HIGHT_LINK = process.env.REACT_APP_SELL_HIGHT_LINK;
 
 const Header = ({ light }) => {
-  const navigate = useNavigate();
   const options = [
     { label: 'how it works', path: '/' },
     { label: 'Use cases', path: '/' },
@@ -33,10 +29,6 @@ const Header = ({ light }) => {
       });
     }
   }, []);
-
-  const handleLinkOpen = () => {
-    window.open(SELL_HIGHT_LINK, '_blank');
-  };
 
   return (
     <Styled.Header>

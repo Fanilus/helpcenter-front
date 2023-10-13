@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
     padding: 20px 50px 80px 50px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     padding: 22px 53px 141px;
   }
 `;
@@ -36,7 +36,7 @@ export const Title = styled.h2`
     line-height: 48px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: 34px;
     line-height: 38px;
   }
@@ -53,7 +53,7 @@ export const SubTitle = styled(Title)`
     font-size: 48px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: 30px;
     line-height: 37px;
   }
@@ -66,7 +66,7 @@ export const IntroduceTitle = styled(Title)`
     margin-bottom: 40px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     margin-bottom: 32px;
   }
 `;
@@ -87,7 +87,7 @@ export const HowItWorksTitle = styled(SubTitle)`
     margin-bottom: 50px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     margin-bottom: 48px;
   }
 `;
@@ -106,7 +106,7 @@ export const ListName = styled.div`
     margin-bottom: 45px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     flex-direction: column;
     gap: 8px;
     align-items: center;
@@ -133,7 +133,7 @@ export const Headlines = styled.div`
     line-height: 26px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
@@ -168,7 +168,7 @@ export const Statistics = styled.div`
     }
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     padding: 64px 40px;
 
     .grid {
@@ -188,7 +188,7 @@ export const HowItWorks = styled.div`
     padding: 100px 50px 700px 50px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     padding: 64px 24px 0;
   }
 `;
@@ -220,7 +220,7 @@ export const Titles = styled.div`
     line-height: 26px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     margin-bottom: 6px;
     font-size: 30px;
     line-height: 37px;
@@ -235,7 +235,7 @@ export const Subtitle = styled.div`
     font-size: 18px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: 18px;
     line-height: 20px;
   }
@@ -257,7 +257,7 @@ export const Stylish = styled.div`
     flex-direction: column;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     gap: 50px;
     flex-direction: column;
     padding-bottom: 397px;
@@ -278,7 +278,7 @@ export const FaqWrapper = styled.div`
     padding: 100px 50px 160px 50px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     padding: 64px 24px;
   }
 `;
@@ -286,7 +286,7 @@ export const FaqWrapper = styled.div`
 export const FaqTitle = styled(SubTitle)`
   margin-bottom: 64px;
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     margin-bottom: 32px;
   }
 `;

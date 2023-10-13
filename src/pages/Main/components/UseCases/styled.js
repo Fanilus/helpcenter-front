@@ -15,6 +15,10 @@ export const UseCases = styled.div`
       margin-bottom: 60px;
     }
   }
+
+  @media (max-width: 767px) {
+    padding: 100px 15px 0;
+  }
 `;
 
 export const Board = styled.div`
@@ -24,6 +28,7 @@ export const Board = styled.div`
   padding: 30px;
   display: flex;
   justify-content: space-between;
+  border-radius: 10px;
   h2 {
     margin: 44px 75px;
     span {
@@ -33,10 +38,20 @@ export const Board = styled.div`
 
   @media (max-width: 1439px) {
     gap: 30px;
-    border-radius: 10px;
     h2 {
       margin: 0;
       flex-basis: 71%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    padding: 30px 20px 60px;
+    h2 {
+      flex-basis: 100%;
+    }
+    br {
+      display: none;
     }
   }
 `;
@@ -47,5 +62,9 @@ export const Badge = styled.div`
     div {
       width: fit-content;
     }
+  }
+
+  @media (max-width: 767px) {
+    flex-basis: 100%;
   }
 `;

@@ -36,7 +36,7 @@ export const Title = styled.div`
     font-size: 1.25rem;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: 1.125rem;
     line-height: 1.5rem;
     padding: 1.5rem 0;
@@ -63,7 +63,7 @@ export const Content = styled.div`
     font-size: 1rem;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: 1rem;
     line-height: 1.25rem;
   }

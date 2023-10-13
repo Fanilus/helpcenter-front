@@ -15,4 +15,5 @@ class PreloaderService {
   }
 }
 
-export default new PreloaderService();
+const PreloaderServiceInstance = new PreloaderService();
+export default PreloaderServiceInstance;
