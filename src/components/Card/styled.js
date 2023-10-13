@@ -5,4 +5,8 @@ export const Card = styled.div`
   border-radius: 10px;
   background: ${COLORS.RICH_BLACK};
   padding: 30px;
+
+  @media (max-width: 1439px) {
+    padding: 30px 30px 30px 20px;
+  }
 `;

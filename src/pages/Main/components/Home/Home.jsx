@@ -77,70 +77,80 @@ const Home = () => {
       <Styled.HR />
       <Styled.Bot>
         <Grid
-          columns={5}
-          mdColumns={4}
+          template={'8fr 7fr 6fr 7fr 8fr'}
+          lgColumns={4}
           xsColumns={2}
           gap={'30px'}
-          mdGap={'15px'}
+          lgGap={'15px'}
         >
           <GridElem
             column={1}
             row={1}
-            mdColumn={1}
-            mdRow={1}
+            lgColumn={1}
+            lgRow={1}
             textAlign={'left'}
           >
             <Styled.Card>
               <UI.HH mobile={true}>$3.7M</UI.HH>
-              <UI.Paragraph type={'large'}>Total TradedVolume</UI.Paragraph>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                Total TradedVolume
+              </UI.Paragraph>
             </Styled.Card>
           </GridElem>
           <GridElem
             column={2}
             row={1}
-            mdColumn={2}
-            mdRow={1}
+            lgColumn={2}
+            lgRow={1}
             textAlign={'left'}
           >
             <Styled.Card>
               <UI.HH mobile={true}>$93.1K</UI.HH>
-              <UI.Paragraph type={'large'}>Total ValueLocked</UI.Paragraph>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                Total ValueLocked
+              </UI.Paragraph>
             </Styled.Card>
           </GridElem>
           <GridElem
             column={3}
             row={1}
-            mdColumn={3}
-            mdRow={1}
+            lgColumn={3}
+            lgRow={1}
             textAlign={'left'}
           >
             <Styled.Card>
               <UI.HH mobile={true}>751</UI.HH>
-              <UI.Paragraph type={'large'}>Total orders</UI.Paragraph>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                Total orders
+              </UI.Paragraph>
             </Styled.Card>
           </GridElem>
           <GridElem
             column={4}
             row={1}
-            mdColumn={4}
-            mdRow={1}
+            lgColumn={4}
+            lgRow={1}
             textAlign={'left'}
           >
             <Styled.Card>
               <UI.HH mobile={true}>50.2%</UI.HH>
-              <UI.Paragraph type={'large'}>Average APR</UI.Paragraph>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                Average APR
+              </UI.Paragraph>
             </Styled.Card>
           </GridElem>
           <GridElem
             column={5}
             row={1}
-            mdColumn={'span 4'}
-            mdRow={2}
+            lgColumn={'span 4'}
+            lgRow={2}
             textAlign={'left'}
           >
             <Styled.Card>
               <UI.HH mobile={true}>$40.5K</UI.HH>
-              <UI.Paragraph type={'large'}>Total Premium Generaed</UI.Paragraph>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                Total Premium Generaed
+              </UI.Paragraph>
             </Styled.Card>
           </GridElem>
         </Grid>

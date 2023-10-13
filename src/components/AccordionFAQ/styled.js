@@ -10,6 +10,10 @@ export const Body = styled.div`
     line-height: 140%;
     color: ${COLORS.LIGHT};
   }
+
+  @media (max-width: 1439px) {
+    padding: 0 0 30px 0;
+  }
 `;
 export const AccordionFAQItem = styled.div`
   margin-bottom: 30px;
@@ -46,6 +50,11 @@ export const Question = styled.div`
   font-weight: 400;
   line-height: 140%;
   letter-spacing: 0.18px;
+  user-select: none;
+
+  @media (max-width: 1439px) {
+    font-size: 17px;
+  }
 `;
 
 export const Content = styled.div``;

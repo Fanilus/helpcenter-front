@@ -55,6 +55,12 @@ export const Grid = styled.div`
   gap: ${({ gap }) => (gap ? gap : 'initial')};
   width: ${({ width }) => width};
 
+  @media (max-width: 1200px) {
+    grid-template-columns: ${({ lgColumns, lgTemplate }) =>
+      lgTemplate || (lgColumns && `repeat(${lgColumns}, 1fr)`)};
+    gap: ${({ lgGap }) => lgGap};
+  }
+
   @media (max-width: 768px) {
     grid-template-columns: ${({ mdColumns, mdTemplate }) =>
       mdTemplate || (mdColumns && `repeat(${mdColumns}, 1fr)`)};
@@ -80,7 +86,7 @@ export const GridElem = styled.div`
   text-align: ${({ textAlign }) => textAlign || 'center'};
   margin-left: ${({ floatRight }) => floatRight && 'auto'};
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     display: ${({ display, lgDisplay }) =>
       getResolutionValidProp({ any: display, lg: lgDisplay }, 992) || 'block'};
     grid-column: ${({ column, lgColumn }) =>

@@ -6,6 +6,10 @@ export const HowItWork = styled.div`
   h1 {
     color: rgba(215, 203, 250, 0.25);
   }
+
+  @media (max-width: 1439px) {
+    padding: 60px 30px 0;
+  }
 `;
 
 export const Content = styled.div`
@@ -13,6 +17,16 @@ export const Content = styled.div`
   align-items: center;
   gap: 90px;
   margin: 60px 0 60px;
+
+  @media (max-width: 1439px) {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 20px 0 60px;
+    video {
+      width: 339px;
+    }
+  }
 `;
 
 export const Description = styled.div`
@@ -23,6 +37,14 @@ export const Description = styled.div`
   margin-right: 30px;
   p {
     line-height: 140%;
+  }
+  @media (max-width: 1439px) {
+    margin: 0;
+    p {
+      br {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -40,6 +62,16 @@ export const Cards = styled.div`
 export const CardContent = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1439px) {
+    flex-direction: column;
+    gap: 30px;
+
+    img {
+      width: 50%;
+      margin-left: auto;
+    }
+  }
 `;
 
 export const CardDescription = styled.div`
@@ -55,6 +87,18 @@ export const CardDescription = styled.div`
     }
     p {
       line-height: 140%;
+    }
+  }
+
+  @media (max-width: 1439px) {
+    width: 50%;
+    gap: 60px;
+    br {
+      display: none;
+    }
+    h1 {
+      font-size: 47px;
+      line-height: 38px;
     }
   }
 `;

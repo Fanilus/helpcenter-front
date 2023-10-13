@@ -16,7 +16,7 @@ export const Card = styled.div`
   box-shadow: 0px 0px 60px rgba(98, 126, 235, 0.1);
   border-radius: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     padding: 35px 30px;
   }
 

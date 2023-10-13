@@ -8,7 +8,7 @@ export const WrapperCard = styled.div`
   gap: 32px;
   z-index: 1;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     margin-bottom: 32px;
   }
 
@@ -45,7 +45,7 @@ export const TitleSell = styled.div`
     font-size: 36px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     font-size: 30px;
     line-height: 29px;
   }
@@ -69,7 +69,7 @@ export const ListItems = styled.div`
     font-size: 18px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     font-size: 16px;
     line-height: 20px;
   }
@@ -107,7 +107,7 @@ export const ListTitle = styled.div`
     font-size: 18px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     font-size: 18px;
     line-height: 20px;
     gap: 10px;
@@ -141,7 +141,7 @@ export const Portal = styled.div`
     bottom: -40px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     bottom: -650px;
   }
 

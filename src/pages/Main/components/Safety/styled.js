@@ -4,6 +4,10 @@ import CardGradient from '../../../../img/card-gradient.svg';
 
 export const Safety = styled.div`
   padding: 180px 60px 0;
+
+  @media (max-width: 1439px) {
+    padding: 100px 30px 0;
+  }
 `;
 
 export const Title = styled.div`
@@ -18,12 +22,24 @@ export const Title = styled.div`
     color: rgba(215, 203, 250, 0.25);
     width: 420px;
   }
+
+  @media (max-width: 1439px) {
+    gap: 30px;
+
+    h2 {
+      width: auto;
+    }
+  }
 `;
 
 export const CardContainer = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 30px;
+
+  @media (max-width: 1439px) {
+    flex-direction: column;
+  }
 `;
 
 export const Card = styled.div`
@@ -38,10 +54,18 @@ export const Card = styled.div`
   p {
     line-height: 140%;
   }
+
+  @media (max-width: 1439px) {
+    flex-basis: 216px;
+  }
 `;
 export const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+
+  @media (max-width: 1439px) {
+    margin-bottom: 30px;
+  }
 `;

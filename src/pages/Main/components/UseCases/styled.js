@@ -8,6 +8,13 @@ export const UseCases = styled.div`
     color: rgba(215, 203, 250, 0.25);
     margin-bottom: 100px;
   }
+
+  @media (max-width: 1439px) {
+    padding: 100px 30px 0;
+    h1 {
+      margin-bottom: 60px;
+    }
+  }
 `;
 
 export const Board = styled.div`
@@ -21,6 +28,24 @@ export const Board = styled.div`
     margin: 44px 75px;
     span {
       color: ${COLORS.RED};
+    }
+  }
+
+  @media (max-width: 1439px) {
+    gap: 30px;
+    border-radius: 10px;
+    h2 {
+      margin: 0;
+      flex-basis: 71%;
+    }
+  }
+`;
+
+export const Badge = styled.div`
+  @media (max-width: 1439px) {
+    flex-basis: 29%;
+    div {
+      width: fit-content;
     }
   }
 `;

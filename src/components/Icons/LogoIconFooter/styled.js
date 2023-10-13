@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Logo = styled.img`
   /* margin-left: 8px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     width: 80px;
     height: 20px;
   }

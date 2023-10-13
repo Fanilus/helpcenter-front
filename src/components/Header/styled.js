@@ -17,7 +17,7 @@ export const Fixed = styled.div`
   padding: 20px 30px;
   z-index: 10;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     display: none;
   }
 `;
@@ -41,7 +41,7 @@ export const Header = styled.header`
   }}; */
   padding: 20px 60px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -60,7 +60,7 @@ export const Flex = styled.div`
   align-items: flex-start;
   gap: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     align-items: flex-start;
   }
 `;
@@ -68,7 +68,7 @@ export const Flex = styled.div`
 export const MobileActions = styled(Flex)`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     display: flex;
   }
 `;
@@ -102,7 +102,7 @@ export const Menu = styled.div`
   transition: all 0.3s;
   width: ${({ active }) => active && '100%'};
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     width: 100%;
   }
 `;
@@ -121,7 +121,7 @@ export const Content = styled.div`
     width: 100%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     width: 100%;
   }
   @media (max-width: 576px) {

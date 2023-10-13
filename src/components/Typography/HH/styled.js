@@ -7,7 +7,7 @@ export const HH = styled.h1`
   line-height: ${({ mobile }) => (mobile ? '50px' : '90px')};
   color: ${({ color }) => (color ? color : COLORS.LIGHT)};
   margin: 0;
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     font-size: 50px;
     line-height: 50px;
   }

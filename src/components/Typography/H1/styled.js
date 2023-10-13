@@ -9,9 +9,9 @@ export const H1 = styled.h1`
   text-transform: uppercase;
   color: ${(color) => (!color ? color : COLORS.LIGHT)};
   margin: 0;
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     font-size: 90px;
-    line-height: 90px;
+    line-height: 81px;
     letter-spacing: -1.8px;
   }
   @media (max-width: 375px) {

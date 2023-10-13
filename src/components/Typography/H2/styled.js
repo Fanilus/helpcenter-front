@@ -8,7 +8,7 @@ export const H2 = styled.h2`
   letter-spacing: 0.4px;
   margin: 0;
   color: ${({ color }) => (color ? color : COLORS.LIGHT)};
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     font-size: 28px;
     line-height: 28px;
     letter-spacing: 0.28px;

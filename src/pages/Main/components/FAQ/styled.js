@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { COLORS } from '../../../../models/colors';
-import CardGradient from '../../../../img/card-gradient.svg';
 
 export const FAQ = styled.div`
   padding: 180px 60px 180px;
@@ -9,5 +7,18 @@ export const FAQ = styled.div`
   gap: 346px;
   h1 {
     color: rgba(215, 203, 250, 0.25);
+  }
+
+  @media (max-width: 1439px) {
+    padding: 100px 30px 100px;
+    gap: 30px;
+
+    h1 {
+      width: 216px;
+      line-height: 70px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      height: fit-content;
+    }
   }
 `;

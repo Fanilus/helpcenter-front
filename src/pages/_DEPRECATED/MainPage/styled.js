@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
     padding: 60px 200px 80px 200px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     padding: 20px 50px 80px 50px;
   }
 
@@ -31,7 +31,7 @@ export const Title = styled.h2`
     font-size: 60px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     font-size: 36px;
     line-height: 48px;
   }
@@ -62,7 +62,7 @@ export const SubTitle = styled(Title)`
 export const IntroduceTitle = styled(Title)`
   margin-bottom: 40px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     margin-bottom: 40px;
   }
 
@@ -83,7 +83,7 @@ export const IntroduceSubTitle = styled.div`
 export const HowItWorksTitle = styled(SubTitle)`
   margin-bottom: 28px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     margin-bottom: 50px;
   }
 
@@ -101,7 +101,7 @@ export const ListName = styled.div`
     margin-bottom: 110px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     gap: 30px;
     margin-bottom: 45px;
   }
@@ -161,7 +161,7 @@ export const Statistics = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     padding: 75px 50px;
     .grid {
       gap: 21px;
@@ -184,7 +184,7 @@ export const HowItWorks = styled.div`
     padding: 160px 50px 170px 50px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     padding: 100px 50px 700px 50px;
   }
 
@@ -214,7 +214,7 @@ export const Titles = styled.div`
     font-size: 36px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     min-height: 26px;
     font-size: 24px;
     line-height: 26px;
@@ -253,7 +253,7 @@ export const Stylish = styled.div`
   justify-content: space-between;
   position: relative;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     flex-direction: column;
   }
 
@@ -274,7 +274,7 @@ export const FaqWrapper = styled.div`
     rgba(0, 0, 0, 0) 112.58%
   );
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     padding: 100px 50px 160px 50px;
   }
 

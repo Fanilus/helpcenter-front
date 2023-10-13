@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import AccordionIcon from '../../Icons/AccordionIcon/AccordionIcon';
 import * as UI from '../../index';
 import * as Styled from '../styled';
+import { TYPOGRAPHY_SIZE } from '../../../models/types';
 
 const AccordionFAQItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
   const itemRef = useRef(null);
@@ -19,7 +20,9 @@ const AccordionFAQItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
         </Styled.Quation>
         <Styled.Collapse isOpen={isOpen} itemRef={itemRef}>
           <Styled.Body ref={itemRef}>
-            <UI.Paragraph>{item.answer}</UI.Paragraph>
+            <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+              {item.answer}
+            </UI.Paragraph>
           </Styled.Body>
         </Styled.Collapse>
       </Styled.Content>

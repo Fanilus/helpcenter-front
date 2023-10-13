@@ -41,7 +41,7 @@ const Footer = ({ light }) => {
           <Styled.RoutesLinks>
             {optionsRoute.map(({ label, path }, index) => (
               <Styled.Route key={index} onClick={() => navigate(path)}>
-                <UI.Paragraph color={COLORS.PURPLE_DARK} size={'small'}>
+                <UI.Paragraph color={COLORS.PURPLE_DARK} size={'large'}>
                   {label}
                 </UI.Paragraph>
               </Styled.Route>
@@ -50,7 +50,7 @@ const Footer = ({ light }) => {
           <Styled.MediaRoutes>
             {optionsMedia.map(({ label, path }, index) => (
               <Styled.Route key={index} onClick={() => navigate(path)}>
-                <UI.Paragraph color={COLORS.PURPLE_DARK} size={'small'}>
+                <UI.Paragraph color={COLORS.PURPLE_DARK} size={'large'}>
                   {label}
                 </UI.Paragraph>
               </Styled.Route>
