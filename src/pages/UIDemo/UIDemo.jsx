@@ -62,7 +62,12 @@ const UIDemo = () => {
       <UI.Paragraph size={'Big'}>Paragraph</UI.Paragraph>
       <UI.Paragraph size={'Medium'}>Paragraph</UI.Paragraph>
       <UI.Paragraph size={'Small'}>Paragraph</UI.Paragraph>
-      <UI.Button lowercase={true}>Start earning</UI.Button>
+      <UI.Button
+        lowercase={true}
+        onClick={() => window.open('https://sell-high.io', '_blank')}
+      >
+        Start earning
+      </UI.Button>
       <UI.RouteMenu options={options} />
       <UI.RouteMenu light={true} options={options} />
       <UI.AccordionCases faqList={faqList} />

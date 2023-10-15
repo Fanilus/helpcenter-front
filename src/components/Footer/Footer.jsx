@@ -5,27 +5,12 @@ import * as UI from '../';
 import * as Styled from './styled';
 
 import { COLORS } from '../../models/colors';
-import { useNavigate } from 'react-router-dom';
-
-const optionsRoute = [
-  { label: 'How it works', path: '/' },
-  { label: 'Use cases', path: '/' },
-  { label: 'Safety', path: '/' },
-  { label: 'FAQ', path: '/' },
-  { label: 'Ambassadors', path: '/' },
-  { label: 'White Paper', path: '/' },
-  { label: 'Terms Of Use', path: '/' },
-];
-
-const optionsMedia = [
-  { label: 'Medium', path: '/' },
-  { label: 'Telegram', path: '/' },
-  { label: 'Twitter', path: '/' },
-  { label: 'info@Tymio.com', path: '/' },
-];
+import { NavLink } from 'react-router-dom';
+import useRoutes from '../../hooks/useRoutes';
+import { BUTTON_TYPE, TYPOGRAPHY_SIZE } from '../../models/types';
 
 const Footer = ({ light }) => {
-  const navigate = useNavigate();
+  const { footer, media } = useRoutes();
 
   return (
     <Styled.Footer light={light}>
@@ -33,32 +18,51 @@ const Footer = ({ light }) => {
       <Styled.Container>
         <Styled.FooterContent>
           <TymioUI.LogoIconFooter />
-          <UI.Paragraph color={COLORS.GRAY} size={'small'}>
+          <UI.Paragraph color={COLORS.GRAY} size={TYPOGRAPHY_SIZE.SMALL}>
             © 2023 Tymio. All rights reserved.
           </UI.Paragraph>
         </Styled.FooterContent>
         <Styled.FooterLinks>
           <Styled.RoutesLinks>
-            {optionsRoute.map(({ label, path }, index) => (
-              <Styled.Route key={index} onClick={() => navigate(path)}>
-                <UI.Paragraph color={COLORS.PURPLE_DARK} size={'large'}>
-                  {label}
-                </UI.Paragraph>
+            {footer.map(({ label, path }, index) => (
+              <Styled.Route key={index}>
+                <NavLink to={path}>
+                  <UI.Paragraph
+                    color={COLORS.PURPLE_DARK}
+                    size={TYPOGRAPHY_SIZE.LARGE}
+                  >
+                    {label}
+                  </UI.Paragraph>
+                </NavLink>
               </Styled.Route>
             ))}
           </Styled.RoutesLinks>
           <Styled.MediaRoutes>
-            {optionsMedia.map(({ label, path }, index) => (
-              <Styled.Route key={index} onClick={() => navigate(path)}>
-                <UI.Paragraph color={COLORS.PURPLE_DARK} size={'large'}>
-                  {label}
-                </UI.Paragraph>
+            {media.map(({ label, path, type }, index) => (
+              <Styled.Route key={index}>
+                <a
+                  href={path}
+                  rel={type !== 'mail' ? 'noreferrer' : []}
+                  target={type !== 'mail' ? '_blank' : '_self'}
+                >
+                  <UI.Paragraph
+                    color={COLORS.PURPLE_DARK}
+                    size={TYPOGRAPHY_SIZE.LARGE}
+                  >
+                    {label}
+                  </UI.Paragraph>
+                </a>
               </Styled.Route>
             ))}
           </Styled.MediaRoutes>
         </Styled.FooterLinks>
         <Styled.FooterButton>
-          <UI.Button type="primary">start earning</UI.Button>
+          <UI.Button
+            type={BUTTON_TYPE.PRIMARY}
+            onClick={() => window.open('https://sell-high.io', '_blank')}
+          >
+            start earning
+          </UI.Button>
         </Styled.FooterButton>
       </Styled.Container>
     </Styled.Footer>

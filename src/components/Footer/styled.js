@@ -85,6 +85,10 @@ export const MediaRoutes = styled.div`
 
 export const Route = styled.div`
   margin-left: 60px;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+  }
 
   @media (max-width: 767px) {
     margin-left: 20px;

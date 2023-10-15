@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { COLORS } from '../../models/colors';
 
 export const LogoLink = styled(NavLink)`
+  cursor: pointer;
   line-height: 0;
 `;
 

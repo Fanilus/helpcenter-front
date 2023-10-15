@@ -49,7 +49,12 @@ const Home = () => {
             </UI.Paragraph>
           </Styled.Description>
           <UI.Button>
-            <UI.Paragraph color={COLORS.BLACK}>Start earning</UI.Paragraph>
+            <UI.Paragraph
+              color={COLORS.BLACK}
+              onClick={() => window.open('https://sell-high.io', '_blank')}
+            >
+              Start earning
+            </UI.Paragraph>
           </UI.Button>
 
           <Styled.Bot>

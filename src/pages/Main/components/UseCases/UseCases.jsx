@@ -62,7 +62,15 @@ const UseCases = () => {
         </Styled.Badge>
         <UI.H2>
           Over 100 ETH or USDC <br /> equivalent? We are ready to <br /> make
-          you a special offer. <br /> Contact us at <span>info@Tymio.com</span>
+          you a special offer. <br /> Contact us at{' '}
+          <span>
+            <a
+              style={{ textDecoration: 'none', color: 'unset' }}
+              href={'mailto:info@Tymio.com'}
+            >
+              info@Tymio.com
+            </a>
+          </span>
         </UI.H2>
       </Styled.Board>
     </Styled.UseCases>

@@ -112,10 +112,6 @@ export const Checks = styled.div`
   gap: 30px;
   margin: 200px 0 30px 0;
 
-  @media (max-width: 1919px) {
-    margin: 260px 0 30px 0;
-  }
-
   @media (max-width: 1439px) {
     margin: 95px 0 40px 0;
     gap: 19px;
