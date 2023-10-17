@@ -3,7 +3,6 @@ import { COLORS } from '../../models/colors';
 
 export const Menu = styled.div`
   padding: 0 10px;
-  backdrop-filter: blur(2px);
   border-radius: 5px;
   display: flex;
   width: fit-content;

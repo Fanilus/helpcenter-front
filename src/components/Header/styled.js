@@ -24,21 +24,7 @@ export const Fixed = styled.div`
 
 export const Header = styled.header`
   position: absolute;
-  z-index: 1;
-  /* position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  padding: 16px;
-  z-index: 10;
-  backdrop-filter: ${({ background, mobileBackground }) =>
-    background && !mobileBackground && 'blur(10px)'};
-  box-shadow: ${({ background, mobileBackground }) =>
-    background && !mobileBackground && '0 3px 5px rgba(0, 0, 0, .5)'};
-  background: ${({ background, mobileBackground }) => {
-    if (background && !mobileBackground) return 'rgba(0, 0, 0, .5)';
-    if (mobileBackground) return '#000000';
-  }}; */
+  z-index: 2;
   padding: 20px 60px;
 
   @media (max-width: 768px) {
