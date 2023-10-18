@@ -30,20 +30,26 @@ const Ambassadors = () => {
   return (
     <Styled.Ambassadors>
       <UI.H1>Ambassadors</UI.H1>
-      <Styled.Content>
+      {/* <Styled.MobileText>
         <UI.H2>
-          Tymio ambassador has all the <br /> power to influence the <br />
-          community and help people <br /> to discover new ways of <br />
+          Tymio ambassador has all the power to influence the <br />
+          community and help people to discover new ways of <br />
           earning with Tymio.
         </UI.H2>
+      </Styled.MobileText> */}
+      <Styled.Content>
+        <UI.H2>
+          Tymio ambassador has all the power to influence the community and help
+          people to discover new ways of earning with Tymio.
+        </UI.H2>
         <Styled.Description>
-          <UI.Paragraph size={'large'}>
-            We are looking for key opinion leaders in crypto and DeFi, with an
-            <br />
-            audience starting from 1,000 active members. After an interview
-            <br />
-            process to see if you are elgible, we will be happy to offer you:
-          </UI.Paragraph>
+          <Styled.Text>
+            <UI.Paragraph size={'large'}>
+              We are looking for key opinion leaders in crypto and DeFi, with an
+              audience starting from 1,000 active members. After an interview
+              process to see if you are elgible, we will be happy to offer you:
+            </UI.Paragraph>
+          </Styled.Text>
           <Styled.Checks>
             <Styled.Check>
               <CheckAmbassadors />
@@ -62,8 +68,8 @@ const Ambassadors = () => {
             <Styled.Check>
               <CheckAmbassadors />
               <UI.Paragraph size="large">
-                80% revenue share from Tymio course, which <br /> we will help
-                you to create;
+                80% revenue share from Tymio course, which we will help you to
+                create;
               </UI.Paragraph>
             </Styled.Check>
             <Styled.Check>
