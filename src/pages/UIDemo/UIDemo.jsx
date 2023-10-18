@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as Styled from './styled';
 import * as UI from '../../components/index';
 import Currency from '../../assets/video/Currency.mp4';
@@ -53,6 +53,12 @@ const UIDemo = () => {
     { label: 'Ambassadors', path: '/' },
     { label: 'FAQ', path: '/' },
   ];
+
+  const optionsSelect = ['Penis', '123', 'zxc'];
+  const [valueSelected, setValueSelected] = useState('Penis');
+  const onSelectAction = (value) => {
+    setValueSelected(value);
+  };
   return (
     <Styled.Container>
       <video src={Currency} width="600" height="300" autoPlay loop muted />
@@ -70,6 +76,9 @@ const UIDemo = () => {
       </UI.Button>
       <UI.RouteMenu options={options} />
       <UI.RouteMenu light={true} options={options} />
+      <UI.Dropdown onSelectAction={onSelectAction} options={optionsSelect}>
+        {valueSelected}
+      </UI.Dropdown>
       <UI.AccordionCases faqList={faqList} />
       <UI.Input />
     </Styled.Container>
