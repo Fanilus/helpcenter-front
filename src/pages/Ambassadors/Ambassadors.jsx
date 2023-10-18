@@ -30,13 +30,7 @@ const Ambassadors = () => {
   return (
     <Styled.Ambassadors>
       <UI.H1>Ambassadors</UI.H1>
-      {/* <Styled.MobileText>
-        <UI.H2>
-          Tymio ambassador has all the power to influence the <br />
-          community and help people to discover new ways of <br />
-          earning with Tymio.
-        </UI.H2>
-      </Styled.MobileText> */}
+
       <Styled.Content>
         <UI.H2>
           Tymio ambassador has all the power to influence the community and help

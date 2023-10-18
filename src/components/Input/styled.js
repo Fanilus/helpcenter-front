@@ -7,7 +7,7 @@ export const Input = styled.input`
   border-radius: 5px;
   border: 0.5px solid ${COLORS.GRAY};
   background: ${COLORS.RICH_BLACK};
-  padding: 10px 55px 10px 15px;
+  padding: 10px 50px 10px 15px;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -24,6 +24,9 @@ export const Input = styled.input`
     ::placeholder {
       color: ${COLORS.GRAY};
     }
+  }
+  @media (max-width: 1439px) {
+    font-size: 13px;
   }
 `;
 

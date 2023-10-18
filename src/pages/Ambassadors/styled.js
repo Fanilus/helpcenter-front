@@ -41,6 +41,9 @@ export const Description = styled.div`
     flex-direction: row;
     gap: 30px;
   }
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 
 export const Checks = styled.div`
@@ -82,6 +85,15 @@ export const AmbassadorsCard = styled.div`
     }
     gap: 95px;
     justify-content: flex-start;
+    padding: 30px 30px 30px 20px;
+  }
+  @media (max-width: 767px) {
+    h2 {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    display: block;
+    padding: 30px 20px;
   }
 `;
 
@@ -106,6 +118,16 @@ export const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 767px) {
+    label {
+      width: 215px;
+      align-items: flex-start;
+      span {
+        flex-shrink: 0;
+      }
+    }
+  }
 `;
 
 export const Text = styled.div`
@@ -114,5 +136,11 @@ export const Text = styled.div`
   @media (max-width: 1439px) {
     flex-basis: 345px;
     flex-shrink: 0;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    flex-shrink: 0;
+    height: fit-content;
+    flex-basis: 0;
   }
 `;
