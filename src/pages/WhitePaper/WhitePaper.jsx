@@ -539,7 +539,7 @@ const WhitePaper = () => {
             </UI.Paragraph>
             {/* TODO сделать ссылку */}
             <UI.Paragraph size={'large'}>
-              <a href="#">Start earning → </a> <br />
+              <a href="https://sell-high.io/">Start earning → </a> <br />
               Sell higher than market and earn extra yield, buy lower than
               market and earn extra yield with Tymio App
             </UI.Paragraph>

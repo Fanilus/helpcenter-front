@@ -1,27 +1,28 @@
 import { Subject } from 'rxjs';
 
 class ModalService {
-	initialState = {
-		show: false,
-		message: '',
-	};
+  initialState = {
+    show: false,
+    message: '',
+  };
 
-	state$ = new Subject(this.initialState);
+  state$ = new Subject(this.initialState);
 
-	hide() {
-		this.state$.next({
-			...this.initialState,
-			show: false,
-		});
-	}
+  hide() {
+    this.state$.next({
+      ...this.initialState,
+      show: false,
+    });
+  }
 
-	show(message) {
-		this.state$.next({
-			...this.initialState,
-			show: true,
-			message,
-		});
-	}
+  show(message) {
+    this.state$.next({
+      ...this.initialState,
+      show: true,
+      message,
+    });
+  }
 }
 
-export default new ModalService();
+const ModalServiceInstance = new ModalService();
+export default ModalServiceInstance;

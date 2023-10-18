@@ -43,7 +43,7 @@ export const Paragraph = styled.p`
   text-transform: ${({ uppercase }) => uppercase && 'uppercase '};
   text-align: ${({ align }) => align && align};
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     font-size: ${({ size }) => size === 'large' && '17px'};
     letter-spacing: ${({ size }) => size === 'large' && '0.34px'};
   }

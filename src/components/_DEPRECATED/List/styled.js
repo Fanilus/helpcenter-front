@@ -25,7 +25,7 @@ export const ListItem = styled.span`
   font-size: ${({ font }) => (font === 'small' ? '16px' : '18px')};
   text-align: left;
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: ${({ font }) => (font === 'small' ? '16px' : '20px')};
   }
 `;
@@ -36,7 +36,7 @@ export const ListTitle = styled.div`
   text-align: left;
   font-weight: ${({ font }) => (font === 'small' ? 'normal' : 'bold')};
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: 20px;
   }
 `;

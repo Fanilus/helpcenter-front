@@ -43,7 +43,7 @@ export const TextArea = styled.textarea`
   background: none;
   border: none;
   outline: none;
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     max-height: 120px;
   }
 `;

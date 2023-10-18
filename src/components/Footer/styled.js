@@ -4,8 +4,18 @@ import { COLORS } from '../../models/colors';
 export const Footer = styled.footer`
   padding: 20px 60px 60px 60px;
   background: ${({ light }) =>
-    light ? COLORS.GRADIENT_DARK_PURPLE_LIGHT : COLORS.GRADIENT_DARK_PURPLE};
+    light
+      ? COLORS.GRADIENT_DARK_PURPLE_LIGHT
+      : 'linear-gradient(rgba(28, 16, 47, 0) 0%, rgb(161, 128, 255) 350%)'};
   background-color: ${({ light }) => (light ? COLORS.LIGHT : 'transparent')};
+
+  @media (max-width: 1439px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 30px 15px;
+  }
 `;
 export const Container = styled.div`
   display: flex;
@@ -17,18 +27,43 @@ export const Hr = styled.div`
   height: 0.5px;
   background: ${COLORS.GRAY};
   margin-bottom: 30px;
+
+  @media (max-width: 1439px) {
+    margin-bottom: 15px;
+  }
 `;
 
 export const FooterContent = styled.div`
   img {
     margin-bottom: 20px;
   }
+
+  @media (max-width: 1439px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img {
+      width: 125px;
+      height: 83px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    p {
+      padding-bottom: 4px;
+    }
+  }
 `;
 export const FooterLinks = styled.div`
   display: flex;
   gap: 140px;
 `;
-export const FooterButton = styled.div``;
+export const FooterButton = styled.div`
+  @media (max-width: 1439px) {
+    display: none;
+  }
+`;
 
 export const RoutesLinks = styled.div`
   display: flex;
@@ -36,6 +71,10 @@ export const RoutesLinks = styled.div`
   gap: 10px;
   flex-wrap: wrap;
   height: 100px;
+
+  @media (max-width: 1439px) {
+    display: none;
+  }
 `;
 
 export const MediaRoutes = styled.div`
@@ -46,4 +85,12 @@ export const MediaRoutes = styled.div`
 
 export const Route = styled.div`
   margin-left: 60px;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+  }
+
+  @media (max-width: 767px) {
+    margin-left: 20px;
+  }
 `;

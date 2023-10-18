@@ -15,12 +15,30 @@ export const Body = styled.div`
     line-height: 140%;
     color: ${COLORS.LIGHT};
   }
+
+  @media (max-width: 1439px) {
+    width: auto;
+    padding: 30px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 20px;
+  }
 `;
 export const AccordionItem = styled.div`
   border-top: 0.5px ${COLORS.GRAY} solid;
-  padding: 20px 0 70px;
+  padding: 20px 0 40px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1439px) {
+    padding: 20px 0 30px;
+    gap: 30px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 
 export const Collapse = styled.div`
@@ -36,7 +54,7 @@ export const Quation = styled.div`
   gap: 20px;
   color: ${({ expanded }) => (expanded ? COLORS.PINK : COLORS.LEMON)};
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   &:hover {
     color: ${({ expanded }) => (expanded ? COLORS.PINK : COLORS.LIME_LEMON)};
     svg {
@@ -46,6 +64,9 @@ export const Quation = styled.div`
           expanded ? COLORS.PINK : COLORS.LIME_LEMON};
       }
     }
+  }
+  @media (max-width: 1439px) {
+    margin-bottom: 30px;
   }
 `;
 
@@ -61,15 +82,30 @@ export const Title = styled.div`
   align-items: flex-start;
   gap: 30px;
   flex-basis: 50%;
+
+  @media (max-width: 1439px) {
+    height: fit-content;
+    flex-basis: 33%;
+    overflow-wrap: anywhere;
+
+    div {
+      margin-top: 1px;
+    }
+  }
 `;
 
 export const Content = styled.div`
   flex-basis: 50%;
   padding-right: 115px;
+
+  @media (max-width: 1439px) {
+    flex-basis: 67%;
+    padding-right: 0;
+  }
 `;
 
 export const Description = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   p {
     line-height: 140%;
   }

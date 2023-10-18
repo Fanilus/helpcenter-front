@@ -8,13 +8,13 @@ export const Container = styled.div`
   overflow-y: hidden;
   color: white;
   font-size: 18px;
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     padding: 0;
   }
 `;
 export const Image = styled.img`
   width: 500px;
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     width: 300px;
   }
 `;

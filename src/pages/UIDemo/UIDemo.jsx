@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import * as Styled from './styled';
 import * as UI from '../../components/index';
-import { COLORS } from '../../models/colors';
 import Currency from '../../assets/video/Currency.mp4';
 
 const UIDemo = () => {
@@ -69,7 +68,12 @@ const UIDemo = () => {
       <UI.Paragraph size={'Big'}>Paragraph</UI.Paragraph>
       <UI.Paragraph size={'Medium'}>Paragraph</UI.Paragraph>
       <UI.Paragraph size={'Small'}>Paragraph</UI.Paragraph>
-      <UI.Button lowercase={true}>Start earning</UI.Button>
+      <UI.Button
+        lowercase={true}
+        onClick={() => window.open('https://sell-high.io', '_blank')}
+      >
+        Start earning
+      </UI.Button>
       <UI.RouteMenu options={options} />
       <UI.RouteMenu light={true} options={options} />
       <UI.Dropdown onSelectAction={onSelectAction} options={optionsSelect}>

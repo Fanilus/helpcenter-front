@@ -5,11 +5,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Main = styled.main`
-  /* @media (max-width: 768px) {
+  /* @media (max-width: 1439px) {
     margin-top: 80px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     margin-top: 88px;
   } */
 `;

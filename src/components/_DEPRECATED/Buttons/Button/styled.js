@@ -51,7 +51,7 @@ export const Button = styled.button`
     font-size: 16px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     padding: 12px 48px;
     font-size: 16px;
     font-weight: 700;

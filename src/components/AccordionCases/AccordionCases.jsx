@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import * as Styled from './styled';
-import * as UI from '../../components/index';
 
 import AccordionItem from './components/AccordionCasesItem';
 
@@ -23,6 +22,7 @@ const AccordionCases = ({ faqList }) => {
     <Styled.AccordionCases>
       {faqList.map((item, id) => (
         <AccordionItem
+          key={id}
           item={item}
           id={id}
           isExpanded={isExpanded}

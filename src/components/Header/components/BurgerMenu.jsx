@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import useRoutes from '../hooks/useRoutes';
+import useRoutes from '../../../hooks/useRoutes';
 import * as Styled from '../styled';
 import Close from '../../../assets/img/icons/cross-purple.svg';
 import { LogoIcon } from '../../_DEPRECATED';
@@ -11,7 +11,7 @@ import { COLORS } from '../../../models/colors';
 import Paragraph from '../../Typography/Paragraph/Paragraph';
 
 const BurgerMenu = () => {
-  const { allRoutes } = useRoutes();
+  const { burger } = useRoutes();
   const [active, setActive] = useState(false);
 
   const toggleMenu = () => {
@@ -36,7 +36,7 @@ const BurgerMenu = () => {
             <img src={Close} alt={''} />
           </Styled.CloseIcon>
           <Styled.Routes>
-            {allRoutes.map(({ path, label }, i) => (
+            {burger.map(({ path, label }, i) => (
               <Styled.Route key={i}>
                 <NavLink to={path} onClick={toggleMenu}>
                   {label}
@@ -45,7 +45,12 @@ const BurgerMenu = () => {
               </Styled.Route>
             ))}
             <Button type={BUTTON_TYPE.PRIMARY}>
-              <Paragraph color={COLORS.BLACK}>Start earning</Paragraph>
+              <Paragraph
+                color={COLORS.BLACK}
+                onClick={() => window.open('https://sell-high.io', '_blank')}
+              >
+                Start earning
+              </Paragraph>
             </Button>
           </Styled.Routes>
         </Styled.Content>

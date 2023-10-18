@@ -8,11 +8,11 @@ export const WrapperCard = styled.div`
   gap: 32px;
   z-index: 1;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     margin-bottom: 32px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     gap: 20px;
   }
 `;
@@ -45,12 +45,12 @@ export const TitleSell = styled.div`
     font-size: 36px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     font-size: 30px;
     line-height: 29px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 14px;
@@ -69,12 +69,12 @@ export const ListItems = styled.div`
     font-size: 18px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     font-size: 16px;
     line-height: 20px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: 14px;
     line-height: 20px;
   }
@@ -85,7 +85,7 @@ export const List = styled.div`
   gap: 6px;
   margin-bottom: 32px;
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     margin-bottom: 12px;
   }
 `;
@@ -107,14 +107,14 @@ export const ListTitle = styled.div`
     font-size: 18px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     font-size: 18px;
     line-height: 20px;
     gap: 10px;
     padding: 6px 12px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     font-size: 16px;
     line-height: 20px;
     padding: 6px 12px;
@@ -141,11 +141,11 @@ export const Portal = styled.div`
     bottom: -40px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     bottom: -650px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     bottom: 20px;
   }
 `;
@@ -165,7 +165,7 @@ const PortalMobileAnimation = keyframes`
 `;
 
 export const PortalLayout = styled.img`
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     width: 226px;
   }
 `;
@@ -177,7 +177,7 @@ export const LogoIcon = styled.img`
   transform: translate(-50%, -50%);
   animation: ${PortalAnimation} 1.5s infinite alternate-reverse;
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     width: 90px;
     animation: ${PortalMobileAnimation} 1.5s infinite alternate-reverse;
   }

@@ -31,9 +31,9 @@ const AccordionIcon = ({ expanded, size }) => {
       <path
         d="M1 1L8.5 8L16 1"
         stroke={expanded ? COLORS.PINK : COLORS.LEMON}
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="bevel"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="bevel"
       />
     </svg>
   );

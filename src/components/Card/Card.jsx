@@ -2,8 +2,8 @@ import React from 'react';
 
 import * as Styled from './styled';
 
-const Card = ({ children }) => {
-  return <Styled.Card>{children}</Styled.Card>;
+const Card = ({ children, ...props }) => {
+  return <Styled.Card {...props}>{children}</Styled.Card>;
 };
 
 export default Card;

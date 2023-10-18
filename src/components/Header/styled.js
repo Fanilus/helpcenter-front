@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { COLORS } from '../../models/colors';
 
 export const LogoLink = styled(NavLink)`
+  cursor: pointer;
   line-height: 0;
 `;
 
@@ -17,7 +18,7 @@ export const Fixed = styled.div`
   padding: 20px 30px;
   z-index: 10;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     display: none;
   }
 `;
@@ -27,15 +28,15 @@ export const Header = styled.header`
   z-index: 2;
   padding: 20px 60px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 15px 30px;
   }
 
-  @media (max-width: 576px) {
-    padding: 15px 15px;
+  @media (max-width: 767px) {
+    padding: 15px;
   }
 `;
 
@@ -46,7 +47,7 @@ export const Flex = styled.div`
   align-items: flex-start;
   gap: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     align-items: flex-start;
   }
 `;
@@ -54,7 +55,7 @@ export const Flex = styled.div`
 export const MobileActions = styled(Flex)`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     display: flex;
   }
 `;
@@ -88,7 +89,7 @@ export const Menu = styled.div`
   transition: all 0.3s;
   width: ${({ active }) => active && '100%'};
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     width: 100%;
   }
 `;
@@ -107,10 +108,10 @@ export const Content = styled.div`
     width: 100%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     width: 100%;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     padding: 75px 15px 0 15px;
   }
 `;
@@ -170,7 +171,7 @@ export const CloseIcon = styled.div`
   height: 41px;
   cursor: pointer;
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     right: 15px;
   }
 `;
@@ -180,7 +181,7 @@ export const Logo = styled.div`
   left: 30px;
   top: 15px;
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     left: 15px;
   }
 `;

@@ -35,7 +35,9 @@ const FAQ = () => {
   ];
   return (
     <Styled.FAQ>
-      <UI.H1>FAQ</UI.H1>
+      <UI.H1>
+        <UI.Animation type={'text'}>FAQ</UI.Animation>
+      </UI.H1>
       <UI.AccordionFAQ faqList={faqList} />
     </Styled.FAQ>
   );
