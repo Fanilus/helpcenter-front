@@ -48,12 +48,17 @@ const Animation = ({ children, type, ...props }) => {
         let count = 0;
         setTimeout(() => {
           const inter = setInterval(() => {
-            ref.current.innerHTML += arr[count] === ' ' ? '&nbsp;' : arr[count];
-            count++;
-            if (count >= arr.length) {
-              setTimeout(() => {
-                setTextAnimEnd(true);
-              }, 1200);
+            if (ref.current) {
+              ref.current.innerHTML +=
+                arr[count] === ' ' ? '&nbsp;' : arr[count];
+              count++;
+              if (count >= arr.length) {
+                setTimeout(() => {
+                  setTextAnimEnd(true);
+                }, 1200);
+                clearInterval(inter);
+              }
+            } else {
               clearInterval(inter);
             }
           }, 80);

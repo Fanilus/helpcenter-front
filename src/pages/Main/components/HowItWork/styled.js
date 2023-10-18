@@ -87,7 +87,7 @@ export const CardContent = styled.div`
 
     img {
       width: 50%;
-      margin-left: auto;
+      float: right;
     }
   }
 

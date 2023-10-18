@@ -5,6 +5,7 @@ import * as UI from '../../components/index';
 
 import algorithmPic from '../../img/algorithm-pic.svg';
 import strategyPic from '../../img/strategy-pic.svg';
+import { TYPOGRAPHY_SIZE } from '../../models/types';
 
 const WhitePaper = () => {
   return (
@@ -118,39 +119,81 @@ const WhitePaper = () => {
             <UI.H2>4. Roadmap</UI.H2>
           </Styled.Title>
           <Styled.Description>
-            <UI.Paragraph size={'large'}>
-              <span>1. 2023. Evaluating.</span> <br />
-              Demand "Limit orders with yield" for USDC/ETH, our flagship
-              product, based on the time-tested covered call/put option strategy
-              using CEX liquidity (smart-routing liquidity from option CEXs).
-            </UI.Paragraph>
-            <UI.Paragraph size={'large'}>
-              <span>2. H2 2023. Expansion.</span> <br />
-              In this phase, we incorporate layer-2 networks such as Arbitrum
-              and Optimism, as well as other blockchains and assets (BTC, USDT).
-            </UI.Paragraph>
-            <UI.Paragraph size={'large'}>
-              <span>3. Q4 2023–Q1 2024. Decentralization.</span> <br />
-              During this phase, we connect to various option DEX liquidity
-              sources, becoming a truly decentralized, permissionless,
-              non-custodial protocol.
-            </UI.Paragraph>
-            <UI.Paragraph size={'large'}>
-              <span>4. H2 2024. Multiple Product Offering.</span> <br />
-              In this phase, we introduce other products, derived from option
-              and futures strategies. As always, users will be able to set price
-              and duration parameters, creating custom-made products.
-            </UI.Paragraph>
-            <UI.Paragraph size={'large'}>
-              <span>5. H2 2024. Transition to DAO.</span> <br />
-              Tymio aims to become a significant pillar of the decentralized
-              economy and an essential building block within the DeFi ecosystem.
-              As it progresses, Tymio plans to transition ownership of the
-              service to the community through a Token Generation Event (TGE).
-              This shift in ownership will empower the community to actively
-              participate in the governance and decision-making processes of
-              Tymio.
-            </UI.Paragraph>
+            <Styled.ListItem>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>1.</UI.Paragraph>
+              <Styled.ItemDesc>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} uppercase>
+                  2023. Evaluating.
+                </UI.Paragraph>
+                <UI.Paragraph>
+                  Demand "Limit orders with yield" for USDC/ETH, our flagship
+                  product, based on the time-tested covered call/put option
+                  strategy using CEX liquidity (smart-routing liquidity from
+                  option CEXs).
+                </UI.Paragraph>
+              </Styled.ItemDesc>
+            </Styled.ListItem>
+
+            <Styled.ListItem>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>2.</UI.Paragraph>
+              <Styled.ItemDesc>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} uppercase>
+                  H2 2023. Expansion.
+                </UI.Paragraph>
+                <UI.Paragraph>
+                  In this phase, we incorporate layer-2 networks such as
+                  Arbitrum and Optimism, as well as other blockchains and assets
+                  (BTC, USDT).
+                </UI.Paragraph>
+              </Styled.ItemDesc>
+            </Styled.ListItem>
+
+            <Styled.ListItem>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>3.</UI.Paragraph>
+              <Styled.ItemDesc>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} uppercase>
+                  Q4 2023–Q1 2024. Decentralization.
+                </UI.Paragraph>
+                <UI.Paragraph>
+                  During this phase, we connect to various option DEX liquidity
+                  sources, becoming a truly decentralized, permissionless,
+                  non-custodial protocol.
+                </UI.Paragraph>
+              </Styled.ItemDesc>
+            </Styled.ListItem>
+
+            <Styled.ListItem>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>4.</UI.Paragraph>
+              <Styled.ItemDesc>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} uppercase>
+                  H2 2024. Multiple Product Offering.
+                </UI.Paragraph>
+                <UI.Paragraph>
+                  In this phase, we introduce other products, derived from
+                  option and futures strategies. As always, users will be able
+                  to set price and duration parameters, creating custom-made
+                  products.
+                </UI.Paragraph>
+              </Styled.ItemDesc>
+            </Styled.ListItem>
+
+            <Styled.ListItem>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>5.</UI.Paragraph>
+              <Styled.ItemDesc>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} uppercase>
+                  H2 2024. Transition to DAO.
+                </UI.Paragraph>
+                <UI.Paragraph>
+                  Tymio aims to become a significant pillar of the decentralized
+                  economy and an essential building block within the DeFi
+                  ecosystem. As it progresses, Tymio plans to transition
+                  ownership of the service to the community through a Token
+                  Generation Event (TGE). This shift in ownership will empower
+                  the community to actively participate in the governance and
+                  decision-making processes of Tymio.
+                </UI.Paragraph>
+              </Styled.ItemDesc>
+            </Styled.ListItem>
           </Styled.Description>
         </Styled.Content>
       </Styled.Container>
@@ -301,8 +344,13 @@ const WhitePaper = () => {
       <Styled.Container>
         <Styled.Content>
           <Styled.Title>
-            <UI.H2>5.4. THE ALGORITHM</UI.H2>
-            <img src={algorithmPic} alt="algorithm" />
+            <UI.Paragraph>5.4. THE ALGORITHM</UI.Paragraph>
+            <Styled.DesktopImg
+              width={563}
+              height={359}
+              src={algorithmPic}
+              alt="algorithm"
+            />
           </Styled.Title>
           <Styled.Description>
             <UI.Paragraph size={'large'}>
@@ -315,6 +363,12 @@ const WhitePaper = () => {
               the earned call/put premium is transferred back to the client,
               minus fees (see Pic.1)
             </UI.Paragraph>
+            <Styled.MobileImg
+              width={462}
+              height={274}
+              src={algorithmPic}
+              alt="algorithm"
+            />
             <UI.Paragraph size={'large'}>
               In product phase one (see paragraph 4), a simple Ethereum smart
               contract is used to lock the funds until the expiration date and
@@ -334,7 +388,12 @@ const WhitePaper = () => {
         <Styled.Content>
           <Styled.Title>
             <UI.H2>6. Risks</UI.H2>
-            <img src={strategyPic} alt="algorithm" />
+            <Styled.DesktopImg
+              width={563}
+              height={369}
+              src={strategyPic}
+              alt="strategy"
+            />
           </Styled.Title>
           <Styled.Description>
             <UI.Paragraph size={'large'}>
@@ -358,6 +417,12 @@ const WhitePaper = () => {
               strategy than selling at the time of contract initiation, as you
               will sell it at a higher price plus earn additional yield.
             </UI.Paragraph>
+            <Styled.MobileImg
+              width={462}
+              height={274}
+              src={strategyPic}
+              alt="strategy"
+            />
             <UI.Paragraph size={'large'}>
               <span>BUY-LOW</span> <br />
               In the case of using BUY-LOW, you are locking USDC to buy ETH
@@ -471,38 +536,68 @@ const WhitePaper = () => {
             <UI.H2>7. Competition</UI.H2>
           </Styled.Title>
           <Styled.Description>
-            <UI.Paragraph size={'medium'}>
-              <span>
-                1. DUAL INVESTMENT PRODUCTS BY CENTRALIZED CRYPTO EXCHANGES
-              </span>
-              <br />
-              These products represent strong competition at product phases one
-              and two. Many CEXs provide similar functionality. Once phase three
-              is completed, TYMIO will be a fully permissionless protocol,
-              offering significant advantages over centralized venues. At phase
-              one, TYMIO uses a 3-click approach, providing better UX/UI than
-              most CEX competitors. Additionally, from a marketing perspective,
-              TYMIO's product concept is easier to understand.
-            </UI.Paragraph>
-            <UI.Paragraph size={'medium'}>
-              <span>2.FARMING PROTOCOLS</span> <br />
-              While farming yields can be higher than TYMIO's APR, they also
-              involve impermanent risk, volatility risks of tokens, and complex
-              UI/UX, which are typically designed for DeFi professionals rather
-              than the general public. TYMIO is simpler to use.
-            </UI.Paragraph>
-            <UI.Paragraph size={'medium'}>
-              <span>3. STAKING</span> <br />
-              Staking yields for ETH are currently less than 10% APR, but
-              staking is still seen as a main competitor to TYMIO.
-            </UI.Paragraph>
-            <UI.Paragraph size={'medium'}>
-              <span>4. OPTION VAULTS</span> <br />
-              Although decentralized and providing exposure to similar covered
-              call/put strategies, option vaults cannot be customized and
-              tailored to one's needs like TYMIO's "limit order with yield"
-              product.
-            </UI.Paragraph>
+            <Styled.ListItem>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>1.</UI.Paragraph>
+              <Styled.ItemDesc>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} uppercase>
+                  DUAL INVESTMENT PRODUCTS BY CENTRALIZED CRYPTO EXCHANGES
+                </UI.Paragraph>
+                <UI.Paragraph>
+                  These products represent strong competition at product phases
+                  one and two. Many CEXs provide similar functionality. Once
+                  phase three is completed, TYMIO will be a fully permissionless
+                  protocol, offering significant advantages over centralized
+                  venues. At phase one, TYMIO uses a 3-click approach, providing
+                  better UX/UI than most CEX competitors. Additionally, from a
+                  marketing perspective, TYMIO's product concept is easier to
+                  understand.
+                </UI.Paragraph>
+              </Styled.ItemDesc>
+            </Styled.ListItem>
+
+            <Styled.ListItem>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>2.</UI.Paragraph>
+              <Styled.ItemDesc>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} uppercase>
+                  FARMING PROTOCOLS
+                </UI.Paragraph>
+                <UI.Paragraph>
+                  While farming yields can be higher than TYMIO's APR, they also
+                  involve impermanent risk, volatility risks of tokens, and
+                  complex UI/UX, which are typically designed for DeFi
+                  professionals rather than the general public. TYMIO is simpler
+                  to use.
+                </UI.Paragraph>
+              </Styled.ItemDesc>
+            </Styled.ListItem>
+
+            <Styled.ListItem>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>3.</UI.Paragraph>
+              <Styled.ItemDesc>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} uppercase>
+                  STAKING
+                </UI.Paragraph>
+                <UI.Paragraph>
+                  Staking yields for ETH are currently less than 10% APR, but
+                  staking is still seen as a main competitor to TYMIO.
+                </UI.Paragraph>
+              </Styled.ItemDesc>
+            </Styled.ListItem>
+
+            <Styled.ListItem>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>4.</UI.Paragraph>
+              <Styled.ItemDesc>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} uppercase>
+                  OPTION VAULTS
+                </UI.Paragraph>
+                <UI.Paragraph>
+                  Although decentralized and providing exposure to similar
+                  covered call/put strategies, option vaults cannot be
+                  customized and tailored to one's needs like TYMIO's "limit
+                  order with yield" product.
+                </UI.Paragraph>
+              </Styled.ItemDesc>
+            </Styled.ListItem>
           </Styled.Description>
         </Styled.Content>
       </Styled.Container>

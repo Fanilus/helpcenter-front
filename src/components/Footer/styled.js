@@ -5,7 +5,7 @@ export const Footer = styled.footer`
   padding: 20px 60px 60px 60px;
   background: ${({ light }) =>
     light
-      ? COLORS.GRADIENT_DARK_PURPLE_LIGHT
+      ? 'linear-gradient(180deg, rgba(230, 226, 238, 0.00) 0%, #A180FF 350%)'
       : 'linear-gradient(rgba(28, 16, 47, 0) 0%, rgb(161, 128, 255) 350%)'};
   background-color: ${({ light }) => (light ? COLORS.LIGHT : 'transparent')};
 

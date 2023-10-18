@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { COLORS } from '../../models/colors';
 import AmbassadorsCardGradient from '../../img/AmbassadorsCardGradient.svg';
 
 export const Ambassadors = styled.div`
