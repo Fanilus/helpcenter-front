@@ -48,31 +48,37 @@ const UseCases = () => {
   ];
   return (
     <Styled.UseCases>
-      <UI.H1>Use cases</UI.H1>
+      <UI.H1>
+        <UI.Animation type={'text'}>Use cases</UI.Animation>
+      </UI.H1>
       <UI.AccordionCases faqList={faqList} />
-      <Styled.Board>
-        <Styled.Badge>
-          <UI.Badge
-            height={'fit-content'}
-            width={'fit-content'}
-            padding={'9px 15px'}
-          >
-            Custom
-          </UI.Badge>
-        </Styled.Badge>
-        <UI.H2>
-          Over 100 ETH or USDC <br /> equivalent? We are ready to <br /> make
-          you a special offer. <br /> Contact us at{' '}
-          <span>
-            <a
-              style={{ textDecoration: 'none', color: 'unset' }}
-              href={'mailto:info@Tymio.com'}
+      <UI.Animation delay={1}>
+        <Styled.Board>
+          <Styled.Badge>
+            <UI.Badge
+              height={'fit-content'}
+              width={'fit-content'}
+              padding={'9px 15px'}
             >
-              info@Tymio.com
-            </a>
-          </span>
-        </UI.H2>
-      </Styled.Board>
+              Custom
+            </UI.Badge>
+          </Styled.Badge>
+          <UI.Animation delay={1.2} type={'opacity'}>
+            <UI.H2>
+              Over 100 ETH or USDC <br /> equivalent? We are ready to <br />{' '}
+              make you a special offer. <br /> Contact us at{' '}
+              <span>
+                <a
+                  style={{ textDecoration: 'none', color: 'unset' }}
+                  href={'mailto:info@Tymio.com'}
+                >
+                  info@Tymio.com
+                </a>
+              </span>
+            </UI.H2>
+          </UI.Animation>
+        </Styled.Board>
+      </UI.Animation>
     </Styled.UseCases>
   );
 };

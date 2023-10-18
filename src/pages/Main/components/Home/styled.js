@@ -1,9 +1,28 @@
 import styled from 'styled-components';
 import { COLORS } from '../../../../models/colors';
 
+export const Screen = styled.div`
+  background: linear-gradient(180deg, #1c0b41, #260f5d, #2e185b);
+
+  @media (max-width: 1919px) {
+    background: linear-gradient(180deg, #191130, #2b1b4c);
+  }
+
+  @media (max-width: 1439px) {
+    background: linear-gradient(180deg, #191130, #21173e, #2e1b4f);
+  }
+`;
+
 export const Home = styled.div`
   position: relative;
-  background: linear-gradient(180deg, #1c0b41, #260f5d, #2e185b);
+  background: ${({ background }) =>
+    background
+      ? `url(${background})`
+      : 'linear-gradient(180deg, #1c0b41, #260f5d, #2e185b)'};
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: contain;
+
   z-index: 0;
   padding: 83px 60px 30px 60px;
   span {
@@ -11,16 +30,29 @@ export const Home = styled.div`
   }
 
   @media (max-width: 1919px) {
-    background: linear-gradient(180deg, #191130, #2b1b4c);
+    background: ${({ background }) =>
+      background
+        ? `url(${background})`
+        : 'linear-gradient(180deg, #191130, #2b1b4c)'};
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: contain;
   }
 
   @media (max-width: 1439px) {
     padding: 70px 30px 40px 30px;
-    background: linear-gradient(180deg, #191130, #21173e, #2e1b4f);
+    background: ${({ background }) =>
+      background
+        ? `url(${background})`
+        : 'linear-gradient(180deg, #191130, #21173e, #2e1b4f)'};
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: contain;
   }
 
   @media (max-width: 767px) {
     padding: 75px 15px 287px 15px;
+    background-position-y: bottom;
   }
 `;
 
@@ -111,6 +143,10 @@ export const Checks = styled.div`
   display: flex;
   gap: 30px;
   margin: 200px 0 30px 0;
+
+  @media (max-width: 1919px) {
+    margin: 260px 0 30px 0;
+  }
 
   @media (max-width: 1439px) {
     margin: 95px 0 40px 0;

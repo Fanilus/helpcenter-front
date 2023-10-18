@@ -9,24 +9,29 @@ const AccordionFAQItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
   const itemRef = useRef(null);
 
   return (
-    <Styled.AccordionFAQItem key={id}>
-      <Styled.Content>
-        <Styled.Quation
-          onClick={() => clickHandler(id)}
-          expanded={isOpen ? isExpanded : null}
-        >
-          <Styled.Question>{item.question}</Styled.Question>
-          <AccordionIcon size={'large'} expanded={isOpen ? isExpanded : null} />
-        </Styled.Quation>
-        <Styled.Collapse isOpen={isOpen} itemRef={itemRef}>
-          <Styled.Body ref={itemRef}>
-            <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              {item.answer}
-            </UI.Paragraph>
-          </Styled.Body>
-        </Styled.Collapse>
-      </Styled.Content>
-    </Styled.AccordionFAQItem>
+    <UI.Animation delay={1.5 + id * 0.2}>
+      <Styled.AccordionFAQItem key={id}>
+        <Styled.Content>
+          <Styled.Quation
+            onClick={() => clickHandler(id)}
+            expanded={isOpen ? isExpanded : null}
+          >
+            <Styled.Question>{item.question}</Styled.Question>
+            <AccordionIcon
+              size={'large'}
+              expanded={isOpen ? isExpanded : null}
+            />
+          </Styled.Quation>
+          <Styled.Collapse isOpen={isOpen} itemRef={itemRef}>
+            <Styled.Body ref={itemRef}>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                {item.answer}
+              </UI.Paragraph>
+            </Styled.Body>
+          </Styled.Collapse>
+        </Styled.Content>
+      </Styled.AccordionFAQItem>
+    </UI.Animation>
   );
 };
 

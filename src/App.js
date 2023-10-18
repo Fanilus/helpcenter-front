@@ -11,7 +11,7 @@ const WhitePaper = lazy(() => import('./pages/WhitePaper/WhitePaper'));
 const App = () => {
   return (
     <>
-      <TymioUI.Preloader />
+      {/* <TymioUI.Preloader /> */}
       <TymioUI.Modal />
       <TymioUI.MessageDialog />
       <Suspense fallback={<></>}>

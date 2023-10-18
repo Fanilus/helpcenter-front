@@ -3,9 +3,6 @@ import { COLORS } from '../../../../models/colors';
 
 export const HowItWork = styled.div`
   padding: 180px 60px 0;
-  h1 {
-    color: rgba(215, 203, 250, 0.25);
-  }
 
   @media (max-width: 1439px) {
     padding: 60px 30px 0;
