@@ -1,22 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import * as Styled from './styled';
 import * as UI from '../../../../components/index';
 
 import { TYPOGRAPHY_SIZE } from '../../../../models/types';
 import { Grid, GridElem } from '../../../../components/_DEPRECATED';
-import useStatistics from './hooks/useStatistics';
 
-const Stats = () => {
-  const {
-    // error, loading,
-    statistics,
-  } = useStatistics();
-
-  useEffect(() => {
-    console.log(statistics);
-  }, [statistics]);
-
+const Stats = ({ statistics }) => {
   return (
     <Grid
       template={'8fr 7fr 6fr 7fr 8fr'}
@@ -36,9 +26,19 @@ const Stats = () => {
       >
         <UI.Animation delay={1.2} distance={'25px'}>
           <Styled.Card>
-            <UI.HH mobile={true}>$3.7M</UI.HH>
+            <UI.HH mobile={true}>
+              {statistics && (
+                <>
+                  ${statistics.formatted.totalTradedVolume}
+                  {statistics.totalTradedVolume > 999999 && 'M'}
+                  {statistics.totalTradedVolume > 999 &&
+                    statistics.totalTradedVolume < 1000000 &&
+                    'K'}
+                </>
+              )}
+            </UI.HH>
             <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              Total TradedVolume
+              Total Traded Volume
             </UI.Paragraph>
           </Styled.Card>
         </UI.Animation>
@@ -55,9 +55,16 @@ const Stats = () => {
       >
         <UI.Animation delay={1.3} distance={'25px'}>
           <Styled.Card>
-            <UI.HH mobile={true}>$93.1K</UI.HH>
+            <UI.HH mobile={true}>
+              {statistics && (
+                <>
+                  ${statistics.formatted.totalValueLocked}
+                  {statistics.totalValueLocked > 999 && 'K'}
+                </>
+              )}
+            </UI.HH>
             <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              Total ValueLocked
+              Total Value Locked
             </UI.Paragraph>
           </Styled.Card>
         </UI.Animation>
@@ -74,7 +81,14 @@ const Stats = () => {
       >
         <UI.Animation delay={1.4} distance={'25px'}>
           <Styled.Card>
-            <UI.HH mobile={true}>751</UI.HH>
+            <UI.HH mobile={true}>
+              {statistics && (
+                <>
+                  {statistics.formatted.totalOrders}
+                  {statistics.totalOrders > 999 && 'K'}
+                </>
+              )}
+            </UI.HH>
             <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
               Total orders
             </UI.Paragraph>
@@ -93,7 +107,11 @@ const Stats = () => {
       >
         <UI.Animation delay={1.5} distance={'25px'}>
           <Styled.Card>
-            <UI.HH mobile={true}>50.2%</UI.HH>
+            <UI.HH mobile={true}>
+              {statistics && (
+                <>{Math.round(statistics.averageAPY * 10) / 10}%</>
+              )}
+            </UI.HH>
             <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
               Average APR
             </UI.Paragraph>
@@ -112,7 +130,14 @@ const Stats = () => {
       >
         <UI.Animation delay={1.6} distance={'25px'}>
           <Styled.Card>
-            <UI.HH mobile={true}>$40.5K</UI.HH>
+            <UI.HH mobile={true}>
+              {statistics && (
+                <>
+                  ${statistics.formatted.totalPremiumGenerated}
+                  {statistics.totalPremiumGenerated > 999 && 'K'}
+                </>
+              )}
+            </UI.HH>
             <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
               Total Premium Generated
             </UI.Paragraph>

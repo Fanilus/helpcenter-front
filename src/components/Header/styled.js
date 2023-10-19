@@ -61,6 +61,9 @@ export const MobileActions = styled(Flex)`
 `;
 
 export const Burger = styled.div`
+  position: fixed;
+  top: 15px;
+  right: 30px;
   padding: 13px;
   border-radius: 5px;
   background: ${COLORS.PURPLE_BRIGHT};
@@ -70,6 +73,10 @@ export const Burger = styled.div`
   align-items: center;
   gap: 4px;
   cursor: pointer;
+
+  @media (max-width: 767px) {
+    right: 15px;
+  }
 `;
 
 export const BurgerLine = styled.div`
@@ -79,7 +86,9 @@ export const BurgerLine = styled.div`
 `;
 
 export const Menu = styled.div`
-  width: fit-content;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: ${({ active }) => (active ? '0' : '-100%')};
   height: 100vh;
@@ -88,10 +97,6 @@ export const Menu = styled.div`
   opacity: ${({ active }) => (active ? '1' : '0')};
   transition: all 0.3s;
   width: ${({ active }) => active && '100%'};
-
-  @media (max-width: 1439px) {
-    width: 100%;
-  }
 `;
 
 export const Content = styled.div`

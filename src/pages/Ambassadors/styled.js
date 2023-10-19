@@ -22,9 +22,6 @@ export const Content = styled.div`
   margin-bottom: 80px;
   display: flex;
   gap: 142px;
-  h2 {
-    flex-basis: 533px;
-  }
   @media (max-width: 1439px) {
     margin-top: 30px;
     margin-bottom: 60px;
@@ -32,10 +29,14 @@ export const Content = styled.div`
   }
 `;
 export const Description = styled.div`
+  padding-right: 112px;
+  flex-basis: 50%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
   @media (max-width: 1439px) {
+    padding-right: 0;
     margin-top: 60px;
     flex-direction: row;
     gap: 30px;
@@ -50,6 +51,10 @@ export const Checks = styled.div`
   flex-direction: column;
   gap: 15px;
   @media (max-width: 1439px) {
+    width: 50%;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
   }
 `;
 
@@ -57,7 +62,6 @@ export const Check = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  width: 395px;
   svg {
     flex-shrink: 0;
   }
@@ -66,7 +70,6 @@ export const Check = styled.div`
   }
   @media (max-width: 1439px) {
     font-size: 17px;
-    width: 335px;
   }
 `;
 
@@ -78,11 +81,9 @@ export const AmbassadorsCard = styled.div`
   padding: 60px 30px;
   display: flex;
   justify-content: space-between;
+  gap: 142px;
   @media (max-width: 1439px) {
-    h2 {
-      width: 90px;
-    }
-    gap: 95px;
+    gap: 30px;
     justify-content: flex-start;
     padding: 30px 30px 30px 20px;
   }
@@ -100,8 +101,10 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex-basis: 50%;
   @media (max-width: 1439px) {
-    width: 100%;
+    flex-basis: 70%;
+    margin-left: auto;
   }
 `;
 export const Wrapper = styled.div`
@@ -117,10 +120,9 @@ export const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  gap: 30px;
   @media (max-width: 767px) {
     label {
-      width: 215px;
       align-items: flex-start;
       span {
         flex-shrink: 0;
@@ -130,15 +132,14 @@ export const FooterWrapper = styled.div`
 `;
 
 export const Text = styled.div`
-  width: 533px;
   flex-shrink: 0;
+
   @media (max-width: 1439px) {
-    flex-basis: 345px;
-    flex-shrink: 0;
+    width: 50%;
   }
+
   @media (max-width: 767px) {
     width: 100%;
-    flex-shrink: 0;
     height: fit-content;
     flex-basis: 0;
   }

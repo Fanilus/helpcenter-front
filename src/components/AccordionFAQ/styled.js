@@ -10,13 +10,19 @@ export const Body = styled.div`
     line-height: 140%;
     color: ${COLORS.LIGHT};
   }
+  a {
+    text-decoration: none;
+    color: ${COLORS.PINK};
+  }
+  b {
+    font-weight: 500;
+  }
 
   @media (max-width: 1439px) {
     padding: 0 0 30px 0;
   }
 `;
 export const AccordionFAQItem = styled.div`
-  margin-bottom: 30px;
   border-bottom: 0.5px ${COLORS.GRAY} solid;
   display: flex;
   justify-content: space-between;
@@ -35,7 +41,7 @@ export const Quation = styled.div`
   gap: 30px;
   color: ${({ expanded }) => (expanded ? COLORS.LEMON : COLORS.LIGHT)};
   cursor: pointer;
-  margin-bottom: 30px;
+  padding: 30px 0;
   svg {
     flex-shrink: 0;
     transition: all 0.3s ease-in-out;
@@ -57,4 +63,6 @@ export const Question = styled.div`
   }
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+  width: 100%;
+`;

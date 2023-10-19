@@ -69,15 +69,13 @@ class StatisticsService {
             ? Math.round((totalPremiumGenerated / 1000) * 10) / 10
             : Math.round(totalPremiumGenerated * 100) / 100;
 
-        result.data.statistics.formatted.averageAPY =
-          Math.round(averageAPY * 100) / 100;
+        result.data.statistics.formatted.averageAPY = Math.floor(averageAPY);
         return result;
       })
     );
 
     data$.subscribe({
       next: (result) => {
-        console.log(result);
         this.state = {
           ...this.state,
           error: null,

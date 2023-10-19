@@ -15,22 +15,24 @@ const Safety = () => {
           <UI.Animation type={'text'}>Safety</UI.Animation>
         </UI.H1>
         <UI.Animation type={'opacity'} delay={1}>
-          <UI.H2>Safety of users funds are our first priority</UI.H2>
+          <UI.H2>
+            At TYMIO, the safety of our users' funds is our top priority.
+          </UI.H2>
         </UI.Animation>
       </Styled.Title>
       <Styled.CardContainer>
         <Styled.Card>
           <UI.Animation delay={1.5} type={'opacity'}>
             <Styled.CardHeader>
-              <UI.H2>No market risk</UI.H2>
+              <UI.H2>Our Smart Contract is Insured</UI.H2>
               <Shield />
             </Styled.CardHeader>
           </UI.Animation>
           <UI.Animation delay={1.7} type={'opacity'}>
             <UI.Paragraph size={'large'}>
-              Our protocol model does not involve any market risk. We do not
-              trade or expose ourself to market in any other ways. We just
-              collect fixed option premium and transfer it to our users.
+              We maintain a reserve fund of 100,000 USDC to cover any potential
+              losses or theft from our smart contract. This fund is set to grow
+              over time.
             </UI.Paragraph>
           </UI.Animation>
         </Styled.Card>
@@ -38,17 +40,18 @@ const Safety = () => {
         <Styled.Card>
           <UI.Animation delay={2} type={'opacity'}>
             <Styled.CardHeader>
-              <UI.H2>Own liquidity</UI.H2>
+              <UI.H2>No Third-Party Risk</UI.H2>
               <Lock />
             </Styled.CardHeader>
           </UI.Animation>
           <UI.Animation delay={2.2} type={'opacity'}>
             <UI.Paragraph size={'large'}>
-              User funds do not leave smart-contract, they only serve as a
-              guarantee for the deal settlement. We use our own liquidity to
-              generate yield. Therefore, if 3rd party liquidity provider goes
-              insolvent, we take a hit, not customers. You can check
-              smart-contract at any time to ensure your funds are there.
+              User funds remain within the smart contract and only serve as
+              collateral for deal settlement. We use our own liquidity to
+              generate yields. Hence, if a third-party liquidity provider
+              becomes insolvent, the burden falls on us, not our customers. You
+              can always review our smart contracts to ensure your funds'
+              presence: [<a href="https://etherscan.io/address/0x0D0C69c9E31923712f2D51d994950D08Ed9b2958" rel="noreferrer" target="_blank">Mainnet</a>, <a href="https://arbiscan.io/address/0x0D0C69c9E31923712f2D51d994950D08Ed9b2958" rel="noreferrer" target="_blank">Arbitrum</a>].
             </UI.Paragraph>
           </UI.Animation>
         </Styled.Card>
@@ -56,14 +59,16 @@ const Safety = () => {
         <Styled.Card>
           <UI.Animation delay={2.5} type={'opacity'}>
             <Styled.CardHeader>
-              <UI.H2>Reserve fund</UI.H2>
+              <UI.H2>Secure & Transparent Transactions</UI.H2>
               <Coins />
             </Styled.CardHeader>
           </UI.Animation>
           <UI.Animation delay={2.7} type={'opacity'}>
             <UI.Paragraph size={'large'}>
-              We have a reserve fund of 100,000 USDC to cover any loss or theft
-              from our smart-contract.
+              The result of your transaction is binary, with both potential
+              outcomes clearly detailed in the contract text. After assessing
+              and accepting both scenarios, rest assured that there will be no
+              unexpected outcomes.
             </UI.Paragraph>
           </UI.Animation>
         </Styled.Card>

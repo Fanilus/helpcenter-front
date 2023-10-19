@@ -9,7 +9,7 @@ const AccordionFAQItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
   const itemRef = useRef(null);
 
   return (
-    <UI.Animation delay={1.5 + id * 0.2}>
+    <UI.Animation>
       <Styled.AccordionFAQItem key={id}>
         <Styled.Content>
           <Styled.Quation
@@ -24,9 +24,10 @@ const AccordionFAQItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
           </Styled.Quation>
           <Styled.Collapse isOpen={isOpen} itemRef={itemRef}>
             <Styled.Body ref={itemRef}>
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                {item.answer}
-              </UI.Paragraph>
+              <UI.Paragraph
+                size={TYPOGRAPHY_SIZE.LARGE}
+                dangerouslySetInnerHTML={{ __html: item.answer }}
+              />
             </Styled.Body>
           </Styled.Collapse>
         </Styled.Content>

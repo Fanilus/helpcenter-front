@@ -12,22 +12,26 @@ export const FAQ = styled.div`
   @media (max-width: 1439px) {
     padding: 100px 30px 100px;
     gap: 30px;
-
-    h1 {
-      width: 216px;
-      flex-grow: 1;
-      flex-shrink: 0;
-      height: fit-content;
-    }
   }
 
   @media (max-width: 767px) {
     padding: 100px 15px 100px;
     flex-direction: column;
     gap: 60px;
+  }
+`;
 
-    h1 {
-      width: auto;
-    }
+export const H1Wrapper = styled.div`
+  flex-basis: 325px;
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  @media (max-width: 1439px) {
+    flex-basis: 216px;
+    height: fit-content;
+  }
+
+  @media (max-width: 767px) {
+    flex-basis: auto;
   }
 `;

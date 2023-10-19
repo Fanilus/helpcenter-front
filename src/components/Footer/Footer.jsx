@@ -7,7 +7,7 @@ import * as Styled from './styled';
 import { COLORS } from '../../models/colors';
 import { NavLink } from 'react-router-dom';
 import useRoutes from '../../hooks/useRoutes';
-import { BUTTON_TYPE, TYPOGRAPHY_SIZE } from '../../models/types';
+import { TYPOGRAPHY_SIZE } from '../../models/types';
 
 const Footer = ({ light }) => {
   const { footer, media } = useRoutes();
@@ -56,14 +56,7 @@ const Footer = ({ light }) => {
             ))}
           </Styled.MediaRoutes>
         </Styled.FooterLinks>
-        <Styled.FooterButton>
-          <UI.Button
-            type={BUTTON_TYPE.PRIMARY}
-            onClick={() => window.open('https://sell-high.io', '_blank')}
-          >
-            start earning
-          </UI.Button>
-        </Styled.FooterButton>
+        <Styled.FooterButton />
       </Styled.Container>
     </Styled.Footer>
   );

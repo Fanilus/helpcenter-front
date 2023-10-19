@@ -63,6 +63,7 @@ export const Description = styled.div`
 `;
 
 export const HR = styled.div`
+  margin-top: 10px;
   background-color: ${COLORS.GRAY};
   height: 0.5px;
 `;

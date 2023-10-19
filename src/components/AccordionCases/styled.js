@@ -8,7 +8,6 @@ export const Body = styled.div`
   background-image: url(${ComplicatedGradientPink});
   background-repeat: no-repeat;
   background-size: cover;
-  width: 530px;
   border-radius: 10px;
   padding: 60px;
   p {
@@ -96,6 +95,7 @@ export const Title = styled.div`
 
 export const Content = styled.div`
   flex-basis: 50%;
+  flex-shrink: 0;
   padding-right: 115px;
 
   @media (max-width: 1439px) {

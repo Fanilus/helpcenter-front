@@ -49,12 +49,13 @@ const MessageDialog = () => {
     if (dialog) {
       recognizeIcon(dialog.type);
       setTimeout(() => {
-        document.body.style.overflowY = dialog.show ? 'hidden' : 'auto';
+        const html = document.getElementsByTagName('html')[0];
+        html.style.overflowY = dialog.show ? 'hidden' : 'auto';
       });
     }
-
     return () => {
-      document.body.style.overflowY = 'auto';
+      const html = document.getElementsByTagName('html')[0];
+      html.style.overflowY = 'auto';
     };
   }, [dialog]);
 

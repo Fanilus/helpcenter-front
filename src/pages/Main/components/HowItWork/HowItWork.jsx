@@ -10,12 +10,12 @@ import { TYPOGRAPHY_SIZE } from '../../../../models/types';
 import Checks from '../Home/Checks';
 import Stats from '../Home/Stats';
 
-const HowItWork = () => {
+const HowItWork = ({ loading, statistics }) => {
   return (
     <Styled.HowItWork>
       <Styled.MobileOnly mb={'100px'}>
         <Checks />
-        <Stats />
+        <Stats statistics={statistics} />
       </Styled.MobileOnly>
 
       <UI.H1 color={'rgba(215, 203, 250, 0.25)'}>
@@ -29,30 +29,34 @@ const HowItWork = () => {
         <Styled.Description>
           <UI.Animation delay={1.5}>
             <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              Set your price
+              Step 1. Set the asset, the direction of the order, and the price
             </UI.Paragraph>
-
             <Styled.HR />
           </UI.Animation>
           <UI.Animation delay={1.7}>
             <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              Set contract time period for lock up
+              Step 2. Define contract time period for lock-up
             </UI.Paragraph>
-
             <Styled.HR />
           </UI.Animation>
           <UI.Animation delay={1.9}>
             <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              Check yield and agreement
+              Step 3. Review the agreement to ensure you clearly understand it
+              and are comfortable with both potential outcomes
             </UI.Paragraph>
             <Styled.HR />{' '}
           </UI.Animation>
           <UI.Animation delay={2.1}>
             <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              Receive fixed yield and either ETH / BTC or USDC <br /> back
-              directly to your wallet
+              Step 4. Click “Confirm” and confirm transaction in your wallet
             </UI.Paragraph>
-
+            <Styled.HR />
+          </UI.Animation>
+          <UI.Animation delay={2.3}>
+            <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+              Step 5. Wait until the contract expires and receive fixed yield
+              and either ETH, BTC or USDC back directly to your wallet
+            </UI.Paragraph>
             <Styled.HR />
           </UI.Animation>
         </Styled.Description>

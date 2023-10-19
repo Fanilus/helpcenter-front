@@ -32,7 +32,7 @@ const screens = {
   1920: Screen_1920,
 };
 
-const Home = () => {
+const Home = ({ loading, statistics }) => {
   const [width, setWidth] = useState(window.innerWidth);
   const [video, setVideo] = useState();
   const [screen, setScreen] = useState();
@@ -108,9 +108,12 @@ const Home = () => {
             <UI.Animation delay={0.2}>
               <Styled.Description>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                  Earn up to XX annualized on your USDC/ETH/BTC by being ready
-                  to sell above market price or to buy below market price.
-                  Powered by options.
+                  Earn up to{' '}
+                  {!loading && statistics
+                    ? `${Math.floor(statistics.formatted.averageAPY)}%`
+                    : 'XX'}{' '}
+                  annualized on your USDC, ETH or WBTC by being ready to sell
+                  above market price or to buy below market price.
                 </UI.Paragraph>
               </Styled.Description>
             </UI.Animation>
@@ -145,7 +148,7 @@ const Home = () => {
         <Styled.HR />
 
         <Styled.Bot>
-          <Stats />
+          <Stats statistics={statistics} />
         </Styled.Bot>
       </Styled.Home>
     </Styled.Screen>

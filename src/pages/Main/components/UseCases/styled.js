@@ -30,7 +30,7 @@ export const Board = styled.div`
   justify-content: space-between;
   border-radius: 10px;
   h2 {
-    margin: 44px 75px;
+    margin: 44px 0;
     span {
       color: ${COLORS.RED};
     }
@@ -40,19 +40,29 @@ export const Board = styled.div`
     gap: 30px;
     h2 {
       margin: 0;
-      flex-basis: 71%;
     }
   }
 
   @media (max-width: 767px) {
     flex-direction: column;
-    padding: 30px 20px 60px;
+    padding: 20px;
+    gap: 20px;
     h2 {
-      flex-basis: 100%;
+      font-size: 16px;
+      line-height: 140%;
     }
-    br {
-      display: none;
-    }
+  }
+`;
+
+export const Desc = styled.div`
+  flex-basis: 50%;
+  flex-shrink: 0;
+  @media (max-width: 1439px) {
+    flex-basis: 71%;
+  }
+
+  @media (max-width: 767px) {
+    flex-basis: 100%;
   }
 `;
 
@@ -66,5 +76,10 @@ export const Badge = styled.div`
 
   @media (max-width: 767px) {
     flex-basis: 100%;
+
+    p {
+      font-size: 13px;
+      line-height: 13px;
+    }
   }
 `;

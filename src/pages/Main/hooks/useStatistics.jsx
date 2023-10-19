@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { StatisticsService } from '../../../../../services';
+import { StatisticsService } from '../../../services';
 
 const useStatistics = () => {
   const [loading, setLoading] = useState(false);

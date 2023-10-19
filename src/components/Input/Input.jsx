@@ -41,7 +41,7 @@ const Input = ({ placeholder, checkbox, paste, label }) => {
   return (
     <Styled.Container>
       {checkbox ? (
-        <Styled.Label for="check">
+        <Styled.Label htmlFor="check">
           <Styled.Checkbox
             type="checkbox"
             id="check"
@@ -50,10 +50,7 @@ const Input = ({ placeholder, checkbox, paste, label }) => {
             onChange={handleCheckboxChange}
           />
           <Styled.CustomCheckbox></Styled.CustomCheckbox>
-          <UI.Paragraph size="small">
-            I have read the agreement above and
-            <span> Term and Conditions</span>
-          </UI.Paragraph>
+          <UI.Paragraph size="small">{label}</UI.Paragraph>
         </Styled.Label>
       ) : (
         <Styled.Input

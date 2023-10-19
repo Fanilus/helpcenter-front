@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import useRoutes from '../../../hooks/useRoutes';
@@ -17,6 +17,11 @@ const BurgerMenu = () => {
   const toggleMenu = () => {
     setActive((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    const html = document.getElementsByTagName('html')[0];
+    html.style.overflowY = active ? 'hidden' : 'auto';
+  }, [active]);
 
   return (
     <>

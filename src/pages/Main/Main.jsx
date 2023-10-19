@@ -6,8 +6,14 @@ import UseCases from './components/UseCases/UseCases';
 import Safety from './components/Safety/Safety';
 import FAQ from './components/FAQ/FAQ';
 import { useParams } from 'react-router-dom';
+import useStatistics from './hooks/useStatistics';
 
 const Main = () => {
+  const {
+    //  error,
+    loading,
+    statistics,
+  } = useStatistics();
   const { elementId } = useParams();
   const home = useRef();
   const how_it_work = useRef();
@@ -33,10 +39,10 @@ const Main = () => {
   return (
     <>
       <div ref={home}>
-        <Home />
+        <Home loading={loading} statistics={statistics} />
       </div>
       <div ref={how_it_work}>
-        <HowItWork />
+        <HowItWork loading={loading} statistics={statistics} />
       </div>
       <div ref={use_cases}>
         <UseCases />
