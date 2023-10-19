@@ -80,12 +80,13 @@ export const Cards = styled.div`
 export const CardContent = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 
   @media (max-width: 1439px) {
     flex-direction: column;
-    gap: 30px;
 
     img {
+      width: 100%;
       width: 50%;
       float: right;
     }

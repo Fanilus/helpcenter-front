@@ -33,6 +33,10 @@ export const DropDownHeader = styled('div')`
   svg {
     transition: all 0.3s ease-in-out;
   }
+
+  @media (max-width: 1439px) {
+    font-size: 13px;
+  }
 `;
 
 export const DropDownListContainer = styled('div')`

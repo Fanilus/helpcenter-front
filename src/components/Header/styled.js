@@ -10,11 +10,11 @@ export const LogoLink = styled(NavLink)`
 export const Fixed = styled.div`
   position: fixed;
   display: flex;
+  width: fit-content;
   justify-content: flex-end;
   gap: 10px;
   right: 0;
   top: 0;
-  width: 100%;
   padding: 20px 30px;
   z-index: 10;
 
@@ -79,7 +79,7 @@ export const BurgerLine = styled.div`
 `;
 
 export const Menu = styled.div`
-  position: fixed;
+  width: fit-content;
   top: 0;
   left: ${({ active }) => (active ? '0' : '-100%')};
   height: 100vh;
