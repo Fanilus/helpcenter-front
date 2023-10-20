@@ -8,6 +8,8 @@ import { BUTTON_TYPE } from '../../models/types';
 import * as Styled from './styled';
 import useRoutes from '../../hooks/useRoutes';
 
+const APP_LINK = process.env.REACT_APP_APP_LINK;
+
 const Header = ({ light }) => {
   const { header } = useRoutes();
 
@@ -38,7 +40,7 @@ const Header = ({ light }) => {
         />
         <UI.Button
           type={BUTTON_TYPE.SECONDARY}
-          onClick={() => window.open('https://sell-high.io', '_blank')}
+          onClick={() => window.open(APP_LINK, '_blank')}
         >
           Start earning
         </UI.Button>

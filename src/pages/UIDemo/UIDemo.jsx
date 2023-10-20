@@ -3,6 +3,8 @@ import * as Styled from './styled';
 import * as UI from '../../components/index';
 import Currency from '../../assets/video/Currency.mp4';
 
+const APP_LINK = process.env.REACT_APP_APP_LINK;
+
 const UIDemo = () => {
   const faqList = [
     {
@@ -70,7 +72,7 @@ const UIDemo = () => {
       <UI.Paragraph size={'Small'}>Paragraph</UI.Paragraph>
       <UI.Button
         lowercase={true}
-        onClick={() => window.open('https://sell-high.io', '_blank')}
+        onClick={() => window.open(APP_LINK, '_blank')}
       >
         Start earning
       </UI.Button>

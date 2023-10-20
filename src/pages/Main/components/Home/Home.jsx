@@ -18,6 +18,8 @@ import { TYPOGRAPHY_SIZE } from '../../../../models/types';
 import Checks from './Checks';
 import Stats from './Stats';
 
+const APP_LINK = process.env.REACT_APP_APP_LINK;
+
 const videos = {
   375: Cubes_375,
   768: Cubes_768,
@@ -122,7 +124,7 @@ const Home = ({ loading, statistics }) => {
               <UI.Button>
                 <UI.Paragraph
                   color={COLORS.BLACK}
-                  onClick={() => window.open('https://sell-high.io', '_blank')}
+                  onClick={() => window.open(APP_LINK, '_blank')}
                 >
                   Start earning
                 </UI.Paragraph>

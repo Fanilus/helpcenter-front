@@ -7,6 +7,8 @@ import algorithmPic from '../../img/algorithm-pic.svg';
 import strategyPic from '../../img/strategy-pic.svg';
 import { TYPOGRAPHY_SIZE } from '../../models/types';
 
+const APP_LINK = process.env.REACT_APP_APP_LINK;
+
 const WhitePaper = () => {
   return (
     <Styled.WhitePaper>
@@ -634,7 +636,7 @@ const WhitePaper = () => {
             </UI.Paragraph>
             {/* TODO сделать ссылку */}
             <UI.Paragraph size={'large'}>
-              <a href="https://sell-high.io/">Start earning → </a> <br />
+              <a href={APP_LINK}>Start earning → </a> <br />
               Sell higher than market and earn extra yield, buy lower than
               market and earn extra yield with Tymio App
             </UI.Paragraph>

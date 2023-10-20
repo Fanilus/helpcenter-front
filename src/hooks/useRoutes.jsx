@@ -1,3 +1,5 @@
+const APP_LINK = process.env.REACT_APP_APP_LINK;
+
 const useRoutes = () => {
   const header = [
     { label: 'how it works', path: '/how_it_work' },
@@ -33,7 +35,7 @@ const useRoutes = () => {
     },
     {
       label: 'Terms Of Use',
-      path: 'https://sell-high.io/terms',
+      path: `${APP_LINK}/terms`,
     },
   ];
   const media = [
@@ -49,7 +51,7 @@ const useRoutes = () => {
     { label: 'FAQ', path: '/faq' },
     { label: 'Ambassadors', path: '/ambassadors' },
     { label: 'White Paper', path: '/whitepaper' },
-    { label: 'Terms Of Use', path: 'https://sell-high.io/terms' },
+    { label: 'Terms Of Use', path: `${APP_LINK}/terms` },
   ];
 
   const allRoutes = [...header, ...media, ...burger, ...footer];

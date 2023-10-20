@@ -10,6 +10,8 @@ import { BUTTON_TYPE } from '../../../models/types';
 import { COLORS } from '../../../models/colors';
 import Paragraph from '../../Typography/Paragraph/Paragraph';
 
+const APP_LINK = process.env.REACT_APP_APP_LINK;
+
 const BurgerMenu = () => {
   const { burger } = useRoutes();
   const [active, setActive] = useState(false);
@@ -52,7 +54,7 @@ const BurgerMenu = () => {
             <Button type={BUTTON_TYPE.PRIMARY}>
               <Paragraph
                 color={COLORS.BLACK}
-                onClick={() => window.open('https://sell-high.io', '_blank')}
+                onClick={() => window.open(APP_LINK, '_blank')}
               >
                 Start earning
               </Paragraph>
