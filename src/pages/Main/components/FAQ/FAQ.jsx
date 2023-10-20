@@ -153,12 +153,14 @@ const FAQ = () => {
   ];
   return (
     <Styled.FAQ>
-      <Styled.H1Wrapper>
-        <UI.H1>
-          <UI.Animation type={'text'}>FAQ</UI.Animation>
-        </UI.H1>
-      </Styled.H1Wrapper>
-      <UI.AccordionFAQ faqList={faqList} />
+      <UI.Container>
+        <Styled.H1Wrapper>
+          <UI.H1>
+            <UI.Animation type={'text'}>FAQ</UI.Animation>
+          </UI.H1>
+        </Styled.H1Wrapper>
+        <UI.AccordionFAQ faqList={faqList} />
+      </UI.Container>
     </Styled.FAQ>
   );
 };

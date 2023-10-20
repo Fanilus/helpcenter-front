@@ -3,7 +3,7 @@ import { COLORS } from '../../models/colors';
 
 export const WhitePaper = styled.div`
   background-color: ${COLORS.LIGHT};
-  padding: 120px 60px 180px;
+  padding: 120px 0 180px;
   h1 {
     color: ${COLORS.GRAY};
     margin-bottom: 60px;

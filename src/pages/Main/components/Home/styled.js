@@ -1,58 +1,44 @@
 import styled from 'styled-components';
+import screen from '../../../../assets/img/icons/home-bg.svg';
 import { COLORS } from '../../../../models/colors';
-
-export const Screen = styled.div`
-  background: linear-gradient(180deg, #1c0b41, #260f5d, #2e185b);
-
-  @media (max-width: 1919px) {
-    background: linear-gradient(180deg, #191130, #2b1b4c);
-  }
-
-  @media (max-width: 1439px) {
-    background: linear-gradient(180deg, #191130, #21173e, #2e1b4f);
-  }
-`;
 
 export const Home = styled.div`
   position: relative;
-  background: ${({ background }) =>
-    background
-      ? `url(${background})`
-      : 'linear-gradient(180deg, #1c0b41, #260f5d, #2e185b)'};
+  background-image: url(${screen});
   background-repeat: no-repeat;
-  background-position-x: right;
-  background-size: contain;
-
+  background-size: cover;
+  height: 1076px;
   z-index: 0;
-  padding: 83px 60px 30px 60px;
+  padding: 83px 0 30px 0;
+
   span {
     color: ${COLORS.LEMON};
   }
 
   @media (max-width: 1919px) {
-    background: ${({ background }) =>
-      background
-        ? `url(${background})`
-        : 'linear-gradient(180deg, #191130, #2b1b4c)'};
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-size: contain;
+    height: 950px;
   }
 
   @media (max-width: 1439px) {
+    height: 820px;
     padding: 70px 30px 40px 30px;
-    background: ${({ background }) =>
-      background
-        ? `url(${background})`
-        : 'linear-gradient(180deg, #191130, #21173e, #2e1b4f)'};
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-size: contain;
   }
 
   @media (max-width: 767px) {
+    height: auto;
     padding: 75px 15px 287px 15px;
-    background-position-y: bottom;
+  }
+`;
+
+export const Container = styled.div`
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (max-width: 1919px) {
+    margin: unset;
+    max-width: unset;
+    position: unset;
   }
 `;
 
@@ -70,11 +56,55 @@ export const Content = styled.div`
 
 export const Video = styled.video`
   position: absolute;
-  top: 0;
+  top: 128px;
   right: 0;
-  height: 100%;
   z-index: -1;
+  height: 681px;
+
+  @media (max-width: 1919px) {
+    top: 24px;
+    right: 0;
+    height: 660px;
+  }
+
+  @media (max-width: 1439px) {
+    top: 24px;
+    right: 30px;
+    height: 379px;
+  }
+
+  @media (max-width: 767px) {
+    top: unset;
+    bottom: 0;
+    height: 301px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
+
+// export const Video = styled.video`
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   height: 100%;
+//   z-index: -1;
+//   height: 681px;
+//   @media (max-width: 1919px) {
+//     height: 660px;
+//   }
+
+//   @media (max-width: 1439px) {
+//     height: 379px;
+//   }
+
+//   @media (max-width: 767px) {
+//     top: unset;
+//     bottom: 0;
+//     height: 301px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+// `;
 
 export const Top = styled.div`
   display: flex;
@@ -124,7 +154,7 @@ export const HR = styled.div`
 
   @media (max-width: 1439px) {
     position: absolute;
-    width: 340px;
+    width: 350px;
     right: 30px;
     top: 402px;
   }
@@ -142,10 +172,10 @@ export const HR = styled.div`
 export const Checks = styled.div`
   display: flex;
   gap: 30px;
-  margin: 200px 0 30px 0;
+  margin: 326px 0 30px 0;
 
   @media (max-width: 1919px) {
-    margin: 260px 0 30px 0;
+    margin: 201px 0 30px 0;
   }
 
   @media (max-width: 1439px) {

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FAQ = styled.div`
-  padding: 180px 60px 180px;
+  padding: 180px 0 180px;
   display: flex;
   justify-content: space-between;
   gap: 346px;

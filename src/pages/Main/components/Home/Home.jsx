@@ -1,113 +1,39 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React from 'react';
 
 import * as Styled from './styled';
 import * as UI from '../../../../components/index';
-
-import Cubes_375 from '../../../../assets/video/375_12sec.mp4';
-import Cubes_768 from '../../../../assets/video/768_12sec.mp4';
-import Cubes_1440 from '../../../../assets/video/1440_12sec.mp4';
-import Cubes_1920 from '../../../../assets/video/1920_12sec.mp4';
-
-import Screen_375 from '../../../../assets/video/375_12sec.jpg';
-import Screen_768 from '../../../../assets/video/768_12sec.jpg';
-import Screen_1440 from '../../../../assets/video/1440_12sec.jpg';
-import Screen_1920 from '../../../../assets/video/1920_12sec.jpg';
 
 import { COLORS } from '../../../../models/colors';
 import { TYPOGRAPHY_SIZE } from '../../../../models/types';
 import Checks from './Checks';
 import Stats from './Stats';
 
+import video from '../../../../assets/video/video_low_quality.webm';
+import { isMobile } from '../../../../lib/lib';
+
 const APP_LINK = process.env.REACT_APP_APP_LINK;
 
-const videos = {
-  375: Cubes_375,
-  768: Cubes_768,
-  1440: Cubes_1440,
-  1920: Cubes_1920,
-};
-
-const screens = {
-  375: Screen_375,
-  768: Screen_768,
-  1440: Screen_1440,
-  1920: Screen_1920,
-};
-
 const Home = ({ loading, statistics }) => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const [video, setVideo] = useState();
-  const [screen, setScreen] = useState();
-  const videoRef = useRef();
-  const containerRef = useRef();
-
-  const adaptiveWidth = (width) => {
-    if (width >= 1920) {
-      setVideo(videos['1920']);
-      setScreen(screens['1920']);
-      return;
-    }
-    if (width >= 1440) {
-      setVideo(videos['1440']);
-      setScreen(screens['1440']);
-      return;
-    }
-    if (width >= 768) {
-      setVideo(videos['768']);
-      setScreen(screens['768']);
-      return;
-    }
-    if (width >= 375) {
-      setVideo(videos['375']);
-      setScreen(screens['375']);
-      return;
-    }
-  };
-
-  useEffect(() => {
-    adaptiveWidth(width);
-  }, [width]);
-
-  useLayoutEffect(() => {
-    const updateSize = () => {
-      setWidth(window.innerWidth);
-    };
-    const updateVisibility = () => {
-      if (!videoRef.current) {
-        const rect = containerRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setWidth(window.innerWidth);
-          adaptiveWidth(window.innerWidth);
-        }
-        return;
-      }
-      const rect = videoRef.current.getBoundingClientRect();
-      if (rect.bottom < 0) setVideo(() => null);
-    };
-    window.addEventListener('resize', updateSize);
-    window.addEventListener('scroll', updateVisibility);
-    updateSize();
-    return () => {
-      window.removeEventListener('resize', updateSize);
-      window.removeEventListener('scroll', updateVisibility);
-    };
-  }, []);
+  const mobile = isMobile();
+  const delay = mobile ? 1 : 0;
+  const duration = mobile ? 0.4 : 0.5;
+  const delayStep = mobile ? 0.4 : 0.2;
 
   return (
-    <Styled.Screen>
-      <Styled.Home background={screen}>
-        <Styled.Top ref={containerRef}>
+    <Styled.Home>
+      <UI.Container>
+        <Styled.Top>
           <Styled.Content>
-            <UI.Animation>
+            <UI.Animation delay={delay} duration={duration}>
               <Styled.Title>
                 <UI.HH>
                   Turn time into money.{' '}
-                  <span>By setting limit order with yield.</span>
+                  <span>Set a limit order with yield.</span>
                 </UI.HH>
               </Styled.Title>
             </UI.Animation>
 
-            <UI.Animation delay={0.2}>
+            <UI.Animation delay={delay + delayStep} duration={duration}>
               <Styled.Description>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
                   Earn up to{' '}
@@ -120,7 +46,7 @@ const Home = ({ loading, statistics }) => {
               </Styled.Description>
             </UI.Animation>
 
-            <UI.Animation delay={0.4}>
+            <UI.Animation delay={delay + delayStep * 2} duration={duration}>
               <UI.Button>
                 <UI.Paragraph
                   color={COLORS.BLACK}
@@ -135,25 +61,23 @@ const Home = ({ loading, statistics }) => {
               <Checks />
             </Styled.Bot>
           </Styled.Content>
-          {video && (
-            <Styled.Video
-              ref={videoRef}
-              src={video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              type="video/mp4"
-            />
-          )}
+          <Styled.Video
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            type="video/webm"
+            preload="auto"
+          />
         </Styled.Top>
         <Styled.HR />
 
         <Styled.Bot>
           <Stats statistics={statistics} />
         </Styled.Bot>
-      </Styled.Home>
-    </Styled.Screen>
+      </UI.Container>
+    </Styled.Home>
   );
 };
 

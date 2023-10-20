@@ -3,7 +3,7 @@ import CardGradient from '../../../../img/card-gradient.svg';
 import { COLORS } from '../../../../models/colors';
 
 export const Safety = styled.div`
-  padding: 180px 60px 0;
+  padding: 180px 0 0;
 
   @media (max-width: 1439px) {
     padding: 100px 30px 0;

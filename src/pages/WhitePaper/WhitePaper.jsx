@@ -12,6 +12,7 @@ const APP_LINK = process.env.REACT_APP_APP_LINK;
 const WhitePaper = () => {
   return (
     <Styled.WhitePaper>
+      <UI.Container>
       <UI.H1>White paper</UI.H1>
       <Styled.SubTitle>
         <UI.H2>
@@ -643,6 +644,7 @@ const WhitePaper = () => {
           </Styled.Description>
         </Styled.Content>
       </Styled.Container>
+      </UI.Container>
     </Styled.WhitePaper>
   );
 };

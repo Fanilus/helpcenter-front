@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import AmbassadorsCardGradient from '../../img/AmbassadorsCardGradient.svg';
 
 export const Ambassadors = styled.div`
-  padding: 120px 300px 180px;
+  padding: 120px 0 180px;
   h1 {
     color: rgba(215, 203, 250, 0.3);
   }

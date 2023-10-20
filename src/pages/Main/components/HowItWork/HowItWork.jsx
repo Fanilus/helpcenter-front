@@ -13,123 +13,125 @@ import Stats from '../Home/Stats';
 const HowItWork = ({ loading, statistics }) => {
   return (
     <Styled.HowItWork>
-      <Styled.MobileOnly mb={'100px'}>
-        <Checks />
-        <Stats statistics={statistics} />
-      </Styled.MobileOnly>
-
-      <UI.H1 color={'rgba(215, 203, 250, 0.25)'}>
-        <UI.Animation type={'text'}>How it works</UI.Animation>
-      </UI.H1>
-
-      <Styled.Content>
-        <UI.Animation delay={2.8} type={'opacity'}>
-          <video src={Currency} autoPlay loop muted />
-        </UI.Animation>
-        <Styled.Description>
-          <UI.Animation delay={1.5}>
-            <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              Step 1. Set the asset, the direction of the order, and the price
-            </UI.Paragraph>
-            <Styled.HR />
-          </UI.Animation>
-          <UI.Animation delay={1.7}>
-            <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              Step 2. Define contract time period for lock-up
-            </UI.Paragraph>
-            <Styled.HR />
-          </UI.Animation>
-          <UI.Animation delay={1.9}>
-            <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              Step 3. Review the agreement to ensure you clearly understand it
-              and are comfortable with both potential outcomes
-            </UI.Paragraph>
-            <Styled.HR />{' '}
-          </UI.Animation>
-          <UI.Animation delay={2.1}>
-            <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              Step 4. Click “Confirm” and confirm transaction in your wallet
-            </UI.Paragraph>
-            <Styled.HR />
-          </UI.Animation>
-          <UI.Animation delay={2.3}>
-            <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-              Step 5. Wait until the contract expires and receive fixed yield
-              and either ETH, BTC or USDC back directly to your wallet
-            </UI.Paragraph>
-            <Styled.HR />
-          </UI.Animation>
-        </Styled.Description>
-      </Styled.Content>
-      <Styled.Cards>
-        <UI.Animation>
-          <UI.Card xsRadius={'10px 10px 0 0'}>
-            <Styled.CardContent>
-              <Styled.CardDescription>
-                <UI.H1
-                  color={'rgba(215, 203, 250, 0.25)'}
-                  style={{ width: '100px' }}
-                >
-                  1
-                </UI.H1>
-                <div>
-                  <UI.Animation delay={0.5}>
-                    <UI.H2>↑ Sell high</UI.H2>
-                  </UI.Animation>
-                  <UI.Animation delay={0.7}>
-                    <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                      You have ETH or BTC and ready <br /> to sell it above the
-                      market price
-                    </UI.Paragraph>
-                  </UI.Animation>
-                </div>
-              </Styled.CardDescription>
-              <UI.Animation delay={1}>
-                <img src={SellHightChart} alt="chart" />
-              </UI.Animation>
-            </Styled.CardContent>
-          </UI.Card>
-        </UI.Animation>
-        <Styled.MobileOnly mb={'30px'} mt={'-5px'}>
-          <UI.Animation>
-            <img src={SellHightChart} alt="chart" />
-          </UI.Animation>
+      <UI.Container>
+        <Styled.MobileOnly mb={'100px'}>
+          <Checks />
+          <Stats statistics={statistics} />
         </Styled.MobileOnly>
-        <UI.Animation>
-          <UI.Card xsRadius={'10px 10px 0 0'}>
-            <Styled.CardContent>
-              <Styled.CardDescription>
-                <UI.H1
-                  color={'rgba(215, 203, 250, 0.25)'}
-                  style={{ width: '100px' }}
-                >
-                  2
-                </UI.H1>
-                <div>
-                  <UI.Animation delay={0.5}>
-                    <UI.H2>↓ Buy low</UI.H2>
-                  </UI.Animation>
-                  <UI.Animation delay={0.7}>
-                    <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                      You have USDC and ready to buy <br />
-                      ETH or BTC below the market <br />
-                      price
-                    </UI.Paragraph>
-                  </UI.Animation>
-                </div>
-              </Styled.CardDescription>
-              <UI.Animation delay={1}>
-                <img src={BuyLowChart} alt="chart" />
-              </UI.Animation>
-            </Styled.CardContent>
-          </UI.Card>
-        </UI.Animation>
-        <Styled.MobileOnly mt={'-5px'}>
-          <UI.Animation>
-            <img src={BuyLowChart} alt="chart" />
+
+        <UI.H1 color={'rgba(215, 203, 250, 0.25)'}>
+          <UI.Animation type={'text'}>How it works</UI.Animation>
+        </UI.H1>
+
+        <Styled.Content>
+          <UI.Animation delay={2.8} type={'opacity'}>
+            <video src={Currency} autoPlay loop muted />
           </UI.Animation>
-        </Styled.MobileOnly>
-      </Styled.Cards>
+          <Styled.Description>
+            <UI.Animation delay={1.5}>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                Step 1. Set the asset, the direction of the order, and the price
+              </UI.Paragraph>
+              <Styled.HR />
+            </UI.Animation>
+            <UI.Animation delay={1.7}>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                Step 2. Define contract time period for lock-up
+              </UI.Paragraph>
+              <Styled.HR />
+            </UI.Animation>
+            <UI.Animation delay={1.9}>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                Step 3. Review the agreement to ensure you clearly understand it
+                and are comfortable with both potential outcomes
+              </UI.Paragraph>
+              <Styled.HR />{' '}
+            </UI.Animation>
+            <UI.Animation delay={2.1}>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                Step 4. Click “Confirm” and confirm transaction in your wallet
+              </UI.Paragraph>
+              <Styled.HR />
+            </UI.Animation>
+            <UI.Animation delay={2.3}>
+              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                Step 5. Wait until the contract expires and receive fixed yield
+                and either ETH, BTC or USDC back directly to your wallet
+              </UI.Paragraph>
+              <Styled.HR />
+            </UI.Animation>
+          </Styled.Description>
+        </Styled.Content>
+        <Styled.Cards>
+          <UI.Animation>
+            <UI.Card xsRadius={'10px 10px 0 0'}>
+              <Styled.CardContent>
+                <Styled.CardDescription>
+                  <UI.H1
+                    color={'rgba(215, 203, 250, 0.25)'}
+                    style={{ width: '100px' }}
+                  >
+                    1
+                  </UI.H1>
+                  <div>
+                    <UI.Animation delay={0.5}>
+                      <UI.H2>↑ Sell high</UI.H2>
+                    </UI.Animation>
+                    <UI.Animation delay={0.7}>
+                      <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                        You have ETH or BTC and ready <br /> to sell it above
+                        the market price
+                      </UI.Paragraph>
+                    </UI.Animation>
+                  </div>
+                </Styled.CardDescription>
+                <UI.Animation delay={1}>
+                  <img src={SellHightChart} alt="chart" />
+                </UI.Animation>
+              </Styled.CardContent>
+            </UI.Card>
+          </UI.Animation>
+          <Styled.MobileOnly mb={'30px'} mt={'-5px'}>
+            <UI.Animation>
+              <img src={SellHightChart} alt="chart" />
+            </UI.Animation>
+          </Styled.MobileOnly>
+          <UI.Animation>
+            <UI.Card xsRadius={'10px 10px 0 0'}>
+              <Styled.CardContent>
+                <Styled.CardDescription>
+                  <UI.H1
+                    color={'rgba(215, 203, 250, 0.25)'}
+                    style={{ width: '100px' }}
+                  >
+                    2
+                  </UI.H1>
+                  <div>
+                    <UI.Animation delay={0.5}>
+                      <UI.H2>↓ Buy low</UI.H2>
+                    </UI.Animation>
+                    <UI.Animation delay={0.7}>
+                      <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                        You have USDC and ready to buy <br />
+                        ETH or BTC below the market <br />
+                        price
+                      </UI.Paragraph>
+                    </UI.Animation>
+                  </div>
+                </Styled.CardDescription>
+                <UI.Animation delay={1}>
+                  <img src={BuyLowChart} alt="chart" />
+                </UI.Animation>
+              </Styled.CardContent>
+            </UI.Card>
+          </UI.Animation>
+          <Styled.MobileOnly mt={'-5px'}>
+            <UI.Animation>
+              <img src={BuyLowChart} alt="chart" />
+            </UI.Animation>
+          </Styled.MobileOnly>
+        </Styled.Cards>
+      </UI.Container>
     </Styled.HowItWork>
   );
 };

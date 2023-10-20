@@ -48,44 +48,46 @@ const UseCases = () => {
   ];
   return (
     <Styled.UseCases>
-      <UI.H1>
-        <UI.Animation type={'text'}>Use cases</UI.Animation>
-      </UI.H1>
-      <UI.AccordionCases faqList={faqList} />
-      <UI.Animation delay={1}>
-        <Styled.Board>
-          <Styled.Badge>
-            <UI.Badge
-              height={'fit-content'}
-              width={'fit-content'}
-              padding={'8px 16px'}
-            >
-              TYMIO OTC
-            </UI.Badge>
-          </Styled.Badge>
-          <Styled.Desc>
-            <UI.Animation delay={1.2} type={'opacity'}>
-              <UI.H2>
-                Looking to transact over 100 ETH or its equivalent in USDC or
-                BTC?
-                <br />
-                We provide customized OTC services, higher APR rates, and the
-                option to transact without locking funds in a smart contract.
-                <br />
-                Reach out to us at{' '}
-                <span>
-                  <a
-                    style={{ textDecoration: 'none', color: 'unset' }}
-                    href={'mailto:info@tymio.com'}
-                  >
-                    info@tymio.com
-                  </a>
-                </span>
-              </UI.H2>
-            </UI.Animation>
-          </Styled.Desc>
-        </Styled.Board>
-      </UI.Animation>
+      <UI.Container>
+        <UI.H1>
+          <UI.Animation type={'text'}>Use cases</UI.Animation>
+        </UI.H1>
+        <UI.AccordionCases faqList={faqList} />
+        <UI.Animation delay={1}>
+          <Styled.Board>
+            <Styled.Badge>
+              <UI.Badge
+                height={'fit-content'}
+                width={'fit-content'}
+                padding={'8px 16px'}
+              >
+                TYMIO OTC
+              </UI.Badge>
+            </Styled.Badge>
+            <Styled.Desc>
+              <UI.Animation delay={1.2} type={'opacity'}>
+                <UI.H2>
+                  Looking to transact over 100 ETH or its equivalent in USDC or
+                  BTC?
+                  <br />
+                  We provide customized OTC services, higher APR rates, and the
+                  option to transact without locking funds in a smart contract.
+                  <br />
+                  Reach out to us at{' '}
+                  <span>
+                    <a
+                      style={{ textDecoration: 'none', color: 'unset' }}
+                      href={'mailto:info@tymio.com'}
+                    >
+                      info@tymio.com
+                    </a>
+                  </span>
+                </UI.H2>
+              </UI.Animation>
+            </Styled.Desc>
+          </Styled.Board>
+        </UI.Animation>
+      </UI.Container>
     </Styled.UseCases>
   );
 };

@@ -14,6 +14,7 @@ const Ambassadors = () => {
   };
   return (
     <Styled.Ambassadors>
+      <UI.Container>
       <UI.H1>Ambassadors</UI.H1>
 
       <Styled.Content>
@@ -93,6 +94,7 @@ const Ambassadors = () => {
           </Styled.FooterWrapper>
         </Styled.InputContainer>
       </Styled.AmbassadorsCard>
+      </UI.Container>
     </Styled.Ambassadors>
   );
 };

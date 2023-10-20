@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { COLORS } from '../../../../models/colors';
 
 export const HowItWork = styled.div`
-  padding: 180px 60px 0;
+  padding: 180px 0 0;
 
   @media (max-width: 1439px) {
     padding: 60px 30px 0;
