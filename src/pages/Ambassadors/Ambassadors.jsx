@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, {
+  useEffect,
+  //  useState
+} from 'react';
 
 import * as Styled from './styled';
 import * as UI from '../../components/index';
 
 import CheckAmbassadors from '../../components/Icons/CheckAmbassadors/CheckAmbassadors';
-import { COUNTRIES } from '../../models/enum';
+// import { COUNTRIES } from '../../models/enum';
 import { useLocation } from 'react-router-dom';
 
 const Ambassadors = () => {
-  const optionsSelect = COUNTRIES;
-  const [valueSelected, setValueSelected] = useState('Country');
-  const onSelectAction = (value) => {
-    setValueSelected(value);
-  };
+  // const optionsSelect = COUNTRIES;
+  // const [valueSelected, setValueSelected] = useState('Country');
+  // const onSelectAction = (value) => {
+  //   setValueSelected(value);
+  // };
 
   const location = useLocation();
 
@@ -72,9 +75,15 @@ const Ambassadors = () => {
                 </UI.Paragraph>
               </Styled.Check>
             </Styled.Checks>
+            <Styled.Text>
+              <UI.Paragraph size={'large'}>
+                For questions regarding cooperation, please email{' '}
+                <a href="mailto:info@tymio.com">info@tymio.com</a>
+              </UI.Paragraph>
+            </Styled.Text>
           </Styled.Description>
         </Styled.Content>
-        <Styled.AmbassadorsCard>
+        {/* <Styled.AmbassadorsCard>
           <UI.H2>Apply here:</UI.H2>
           <Styled.InputContainer>
             <Styled.Wrapper>
@@ -106,7 +115,7 @@ const Ambassadors = () => {
               <UI.Button>Send</UI.Button>
             </Styled.FooterWrapper>
           </Styled.InputContainer>
-        </Styled.AmbassadorsCard>
+        </Styled.AmbassadorsCard> */}
       </UI.Container>
     </Styled.Ambassadors>
   );

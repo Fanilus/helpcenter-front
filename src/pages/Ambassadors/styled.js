@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import AmbassadorsCardGradient from '../../img/AmbassadorsCardGradient.svg';
+import { COLORS } from '../../models/colors';
 
 export const Ambassadors = styled.div`
   padding: 120px 0 180px;
@@ -133,6 +134,10 @@ export const FooterWrapper = styled.div`
 
 export const Text = styled.div`
   flex-shrink: 0;
+
+  a {
+    color: ${COLORS.LIGHT};
+  }
 
   @media (max-width: 1439px) {
     width: 50%;
