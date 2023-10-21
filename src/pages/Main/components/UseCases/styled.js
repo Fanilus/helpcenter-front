@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { COLORS } from '../../../../models/colors';
 import BoardGradient from '../../../../img/board-gradient.svg';
+import BoardGradientSm from '../../../../img/board-gradient_sm.svg';
 
 export const UseCases = styled.div`
   padding: 180px 0 0;
@@ -44,6 +45,7 @@ export const Board = styled.div`
   }
 
   @media (max-width: 767px) {
+    background-image: url(${BoardGradientSm});
     flex-direction: column;
     padding: 20px;
     gap: 20px;

@@ -15,7 +15,7 @@ const Safety = () => {
           <UI.H1>
             <UI.Animation type={'text'}>Safety</UI.Animation>
           </UI.H1>
-          <UI.Animation type={'opacity'} delay={1}>
+          <UI.Animation type={'opacity'} delay={0.67}>
             <UI.H2>
               At TYMIO, the safety of our users' funds is our top priority.
             </UI.H2>
@@ -23,13 +23,13 @@ const Safety = () => {
         </Styled.Title>
         <Styled.CardContainer>
           <Styled.Card>
-            <UI.Animation delay={1.5} type={'opacity'}>
+            <UI.Animation delay={1} type={'opacity'}>
               <Styled.CardHeader>
                 <UI.H2>Our Smart Contract is Insured</UI.H2>
                 <Shield />
               </Styled.CardHeader>
             </UI.Animation>
-            <UI.Animation delay={1.7} type={'opacity'}>
+            <UI.Animation delay={1.13} type={'opacity'}>
               <UI.Paragraph size={'large'}>
                 We maintain a reserve fund of 100,000 USDC to cover any
                 potential losses or theft from our smart contract. This fund is
@@ -39,13 +39,13 @@ const Safety = () => {
           </Styled.Card>
 
           <Styled.Card>
-            <UI.Animation delay={2} type={'opacity'}>
+            <UI.Animation delay={1.33} type={'opacity'}>
               <Styled.CardHeader>
                 <UI.H2>No Third-Party Risk</UI.H2>
                 <Lock />
               </Styled.CardHeader>
             </UI.Animation>
-            <UI.Animation delay={2.2} type={'opacity'}>
+            <UI.Animation delay={1.47} type={'opacity'}>
               <UI.Paragraph size={'large'}>
                 User funds remain within the smart contract and only serve as
                 collateral for deal settlement. We use our own liquidity to
@@ -74,13 +74,13 @@ const Safety = () => {
           </Styled.Card>
 
           <Styled.Card>
-            <UI.Animation delay={2.5} type={'opacity'}>
+            <UI.Animation delay={1.67} type={'opacity'}>
               <Styled.CardHeader>
                 <UI.H2>Secure & Transparent Transactions</UI.H2>
                 <Coins />
               </Styled.CardHeader>
             </UI.Animation>
-            <UI.Animation delay={2.7} type={'opacity'}>
+            <UI.Animation delay={1.8} type={'opacity'}>
               <UI.Paragraph size={'large'}>
                 The result of your transaction is binary, with both potential
                 outcomes clearly detailed in the contract text. After assessing

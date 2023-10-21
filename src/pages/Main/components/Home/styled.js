@@ -74,37 +74,22 @@ export const Video = styled.video`
   }
 
   @media (max-width: 767px) {
-    top: unset;
+    display: none;
+  }
+`;
+
+export const Frame = styled.canvas`
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+    position: absolute;
+    z-index: -1;
     bottom: 0;
-    height: 301px;
+    height: 300px;
     left: 50%;
     transform: translateX(-50%);
   }
 `;
-
-// export const Video = styled.video`
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   height: 100%;
-//   z-index: -1;
-//   height: 681px;
-//   @media (max-width: 1919px) {
-//     height: 660px;
-//   }
-
-//   @media (max-width: 1439px) {
-//     height: 379px;
-//   }
-
-//   @media (max-width: 767px) {
-//     top: unset;
-//     bottom: 0;
-//     height: 301px;
-//     left: 50%;
-//     transform: translateX(-50%);
-//   }
-// `;
 
 export const Top = styled.div`
   display: flex;

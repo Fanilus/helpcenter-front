@@ -9,7 +9,7 @@ import { TYPOGRAPHY_SIZE } from '../../../../models/types';
 const Checks = () => {
   return (
     <Styled.Checks>
-      <UI.Animation delay={0.6} distance={'25px'}>
+      <UI.Animation delay={0.4} distance={'25px'}>
         <Styled.Check>
           <CheckCircle />
           <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} lh={'100%'}>
@@ -17,7 +17,7 @@ const Checks = () => {
           </UI.Paragraph>
         </Styled.Check>
       </UI.Animation>
-      <UI.Animation delay={0.8} distance={'25px'}>
+      <UI.Animation delay={0.53} distance={'25px'}>
         <Styled.Check>
           <CheckCircle />
           <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} lh={'100%'}>
@@ -25,7 +25,7 @@ const Checks = () => {
           </UI.Paragraph>
         </Styled.Check>
       </UI.Animation>
-      <UI.Animation delay={1} distance={'25px'}>
+      <UI.Animation delay={0.67} distance={'25px'}>
         <Styled.Check>
           <CheckCircle />
           <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} lh={'100%'}>

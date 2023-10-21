@@ -24,7 +24,7 @@ const Stats = ({ statistics }) => {
         mdRow={1}
         textAlign={'left'}
       >
-        <UI.Animation delay={1.2} distance={'25px'}>
+        <UI.Animation delay={0.8} distance={'25px'}>
           <Styled.Card>
             <UI.HH mobile={true}>
               {statistics && (
@@ -53,7 +53,7 @@ const Stats = ({ statistics }) => {
         mdRow={1}
         textAlign={'left'}
       >
-        <UI.Animation delay={1.3} distance={'25px'}>
+        <UI.Animation delay={0.87} distance={'25px'}>
           <Styled.Card>
             <UI.HH mobile={true}>
               {statistics && (
@@ -79,7 +79,7 @@ const Stats = ({ statistics }) => {
         mdRow={2}
         textAlign={'left'}
       >
-        <UI.Animation delay={1.4} distance={'25px'}>
+        <UI.Animation delay={0.93} distance={'25px'}>
           <Styled.Card>
             <UI.HH mobile={true}>
               {statistics && (
