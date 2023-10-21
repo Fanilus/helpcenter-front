@@ -105,7 +105,7 @@ const Stats = ({ statistics }) => {
         mdRow={2}
         textAlign={'left'}
       >
-        <UI.Animation delay={1.5} distance={'25px'}>
+        <UI.Animation delay={1} distance={'25px'}>
           <Styled.Card>
             <UI.HH mobile={true}>
               {statistics && (
@@ -128,7 +128,7 @@ const Stats = ({ statistics }) => {
         mdRow={3}
         textAlign={'left'}
       >
-        <UI.Animation delay={1.6} distance={'25px'}>
+        <UI.Animation delay={1.07} distance={'25px'}>
           <Styled.Card>
             <UI.HH mobile={true}>
               {statistics && (
