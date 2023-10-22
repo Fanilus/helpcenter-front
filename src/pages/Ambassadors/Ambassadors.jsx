@@ -74,13 +74,13 @@ const Ambassadors = () => {
                   24/7 support from our tech and business team
                 </UI.Paragraph>
               </Styled.Check>
+              <Styled.Text style={{ marginTop: '25px', width: '100%' }}>
+                <UI.Paragraph size={'large'}>
+                  For questions regarding cooperation, please email{' '}
+                  <a href="mailto:info@tymio.com">info@tymio.com</a>
+                </UI.Paragraph>
+              </Styled.Text>
             </Styled.Checks>
-            <Styled.Text>
-              <UI.Paragraph size={'large'}>
-                For questions regarding cooperation, please email{' '}
-                <a href="mailto:info@tymio.com">info@tymio.com</a>
-              </UI.Paragraph>
-            </Styled.Text>
           </Styled.Description>
         </Styled.Content>
         {/* <Styled.AmbassadorsCard>
