@@ -1,6 +1,5 @@
 import React, {
   useEffect,
-  useState,
   //  useState
 } from 'react';
 
@@ -8,15 +7,15 @@ import * as Styled from './styled';
 import * as UI from '../../components/index';
 
 import CheckAmbassadors from '../../components/Icons/CheckAmbassadors/CheckAmbassadors';
-import { COUNTRIES } from '../../models/enum';
+// import { COUNTRIES } from '../../models/enum';
 import { useLocation } from 'react-router-dom';
 
 const Ambassadors = () => {
-  const optionsSelect = COUNTRIES;
-  const [valueSelected, setValueSelected] = useState('Country');
-  const onSelectAction = (value) => {
-    setValueSelected(value);
-  };
+  // const optionsSelect = COUNTRIES;
+  // const [valueSelected, setValueSelected] = useState('Country');
+  // const onSelectAction = (value) => {
+  //   setValueSelected(value);
+  // };
 
   const location = useLocation();
 
@@ -84,7 +83,7 @@ const Ambassadors = () => {
             </Styled.Checks>
           </Styled.Description>
         </Styled.Content>
-        <Styled.AmbassadorsCard>
+        {/* <Styled.AmbassadorsCard>
           <UI.H2>Apply here:</UI.H2>
           <Styled.InputContainer>
             <Styled.Wrapper>
@@ -116,7 +115,7 @@ const Ambassadors = () => {
               <UI.Button>Send</UI.Button>
             </Styled.FooterWrapper>
           </Styled.InputContainer>
-        </Styled.AmbassadorsCard>
+        </Styled.AmbassadorsCard> */}
       </UI.Container>
     </Styled.Ambassadors>
   );
