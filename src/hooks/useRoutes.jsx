@@ -51,7 +51,7 @@ const useRoutes = () => {
     { label: 'FAQ', path: '/faq' },
     { label: 'Ambassadors', path: '/ambassadors' },
     { label: 'White Paper', path: '/whitepaper' },
-    { label: 'Terms Of Use', path: `${APP_LINK}/terms` },
+    { label: 'Terms Of Use', path: `/terms` },
   ];
 
   const allRoutes = [...header, ...media, ...burger, ...footer];

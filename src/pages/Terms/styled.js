@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { COLORS } from '../../models/colors';
 
-export const WhitePaper = styled.div`
+export const Terms = styled.div`
   background-color: ${COLORS.LIGHT};
   padding: 120px 0 180px;
   margin-bottom: -1px;

@@ -12,7 +12,10 @@ const Layout = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname.includes('/whitepaper')) {
+    if (
+      location.pathname.includes('/whitepaper') ||
+      location.pathname.includes('/terms')
+    ) {
       setLight(true);
     } else {
       setLight(false);

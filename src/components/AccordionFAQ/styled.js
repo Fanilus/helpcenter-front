@@ -29,8 +29,7 @@ export const AccordionFAQItem = styled.div`
 `;
 
 export const Collapse = styled.div`
-  height: ${({ isOpen, itemRef }) =>
-    isOpen ? `${itemRef.current.scrollHeight}px` : '0px'};
+  height: ${({ isOpen, itemRef }) => (isOpen ? `${itemRef}px` : '0px')};
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 `;

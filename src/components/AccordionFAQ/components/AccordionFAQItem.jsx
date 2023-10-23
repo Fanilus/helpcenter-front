@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 import AccordionIcon from '../../Icons/AccordionIcon/AccordionIcon';
 import * as UI from '../../index';
@@ -7,6 +7,14 @@ import { TYPOGRAPHY_SIZE } from '../../../models/types';
 
 const AccordionFAQItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
   const itemRef = useRef(null);
+  const [height, setHeight] = useState(0);
+
+  // console.log(itemRef.current);
+  useEffect(() => {
+    if (itemRef.current) {
+      setHeight(itemRef.current.scrollHeight);
+    }
+  }, []);
 
   return (
     <UI.Animation>
@@ -22,7 +30,7 @@ const AccordionFAQItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
               expanded={isOpen ? isExpanded : null}
             />
           </Styled.Quation>
-          <Styled.Collapse isOpen={isOpen} itemRef={itemRef}>
+          <Styled.Collapse isOpen={isOpen} itemRef={height}>
             <Styled.Body ref={itemRef}>
               <UI.Paragraph
                 size={TYPOGRAPHY_SIZE.LARGE}
