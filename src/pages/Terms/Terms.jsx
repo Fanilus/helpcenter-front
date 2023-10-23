@@ -3,10 +3,7 @@ import React, { useEffect } from 'react';
 import * as Styled from './styled';
 import * as UI from '../../components/index';
 
-import { TYPOGRAPHY_SIZE } from '../../models/types';
 import { useLocation } from 'react-router-dom';
-
-const APP_LINK = process.env.REACT_APP_APP_LINK;
 
 const Terms = () => {
   const location = useLocation();
