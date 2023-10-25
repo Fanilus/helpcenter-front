@@ -19,7 +19,7 @@ const UseCases = () => {
         "Most speculators end up losing money over the span of a year or longer. This trend is backed by statistical data. Why does this happen? They often employ leverage, set strict stop-loss orders, and struggle to accurately forecast market movements. With TYMIO, you're not burdened with predicting the exact direction of price movements. Instead, you simply estimate how far the price won't probably go. This approach is simpler and offers a higher likelihood of success. Instead of risking money and time in active trading, especially if you're inexperienced, start with TYMIO to build your knowledge and skill set. Statistics are on your side.",
       question: 'Statistics',
       answer:
-        'Only 13% of all orders end up being executed. The 87% are pure profit. ',
+        'Only 26.5% of all orders end up being executed. The 73.5% are pure profit. ',
     },
     {
       title: 'Miners',
