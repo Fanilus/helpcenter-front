@@ -41,7 +41,7 @@ const Animation = ({ children, type, ...props }) => {
 
   // Text animation
   useEffect(() => {
-    if (inUserVision) {
+    if (inUserVision && !hasTriggeredAnimation) {
       if (type === 'text') {
         const arr = ref.current.innerHTML.split('');
         ref.current.innerHTML = '';
@@ -65,11 +65,16 @@ const Animation = ({ children, type, ...props }) => {
         }, 1200);
       }
     }
-  }, [type, inUserVision]);
+  }, [type, inUserVision, hasTriggeredAnimation]);
 
   return (
     <Styled.Wrapper type={type}>
-      <Styled.Animation active={inUserVision} ref={ref} type={type} {...props}>
+      <Styled.Animation
+        active={inUserVision && hasTriggeredAnimation}
+        ref={ref}
+        type={type}
+        {...props}
+      >
         {children}
       </Styled.Animation>
       {type === 'text' && !textAnimEnd && <Styled.Slash />}

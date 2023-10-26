@@ -9,7 +9,7 @@ export { default as Button } from './Button/Button';
 export { default as Menu } from './Menu';
 export { default as RouteMenu } from './RouteMenu/RouteMenu';
 export { default as AccordionCases } from './AccordionCases/AccordionCases';
-export { default as AccordionFAQ } from './AccordionFAQ/AccordionFAQ';
+export { default as Accordion } from './Accordion/Accordion';
 export { default as Input } from './Input/Input';
 export { default as Card } from './Card/Card';
 export { default as Header } from './Header/Header';
