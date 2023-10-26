@@ -8,7 +8,11 @@ const Accordion = ({ faqList }) => {
   const [isExpanded, setExpanded] = useState(false);
   const [isOpen, setOpen] = useState(false);
   const [internalHeightSum, setInternalHeightSum] = useState(0);
-  console.log(internalHeightSum);
+  const [openId, setId] = useState(null);
+  const [secondId, setSecondId] = useState(null);
+  console.log(openId);
+
+  console.log(secondId);
 
   const [heightSum, setHeightSum] = useState(0);
 
@@ -44,7 +48,9 @@ const Accordion = ({ faqList }) => {
         <Styled.Content>
           <Styled.Collapse
             isOpen={isExpanded}
-            heightSum={isOpen ? heightSum + internalHeightSum : heightSum}
+            heightSum={
+              secondId === openId ? heightSum + internalHeightSum : heightSum
+            }
           >
             <Styled.Body ref={itemRef}>
               <UI.AccordionFAQ
@@ -52,6 +58,9 @@ const Accordion = ({ faqList }) => {
                 isOpen={isOpen}
                 setOpen={setOpen}
                 setInternalHeightSum={setInternalHeightSum}
+                openId={openId}
+                setId={setId}
+                setSecondId={setSecondId}
               />
             </Styled.Body>
           </Styled.Collapse>
