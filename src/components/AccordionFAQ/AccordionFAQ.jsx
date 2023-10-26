@@ -4,17 +4,26 @@ import * as Styled from './styled';
 
 import AccordionItem from './components/AccordionFAQItem';
 
-const AccordionFAQ = ({ faqList }) => {
-  const [openId, setId] = useState(null);
-  const [isExpanded, setExpanded] = useState(false);
+const AccordionFAQ = ({
+  faqList,
+  isOpen,
+  setOpen,
+  setInternalHeightSum,
+  openId,
+  setId,
+  setSecondId,
+}) => {
+  // const [openId, setId] = useState(null);
+  // const [isExpanded, setExpanded] = useState(false);
 
   const clickHandler = (id) => {
+    setSecondId(id);
     if (id === openId) {
       setId(null);
-      setExpanded(false);
+      setOpen(false);
     } else {
       setId(id);
-      setExpanded(true);
+      setOpen(true);
     }
   };
 
@@ -26,9 +35,10 @@ const AccordionFAQ = ({ faqList }) => {
             key={id}
             item={item}
             id={id}
-            isExpanded={isExpanded}
+            isExpanded={isOpen}
             clickHandler={clickHandler}
             isOpen={id === openId}
+            setInternalHeightSum={setInternalHeightSum}
           />
         ))}
     </Styled.AccordionFAQ>

@@ -5,16 +5,24 @@ import * as UI from '../../index';
 import * as Styled from '../styled';
 import { TYPOGRAPHY_SIZE } from '../../../models/types';
 
-const AccordionFAQItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
+const AccordionFAQItem = ({
+  isExpanded,
+  isOpen,
+  id,
+  item,
+  clickHandler,
+  setInternalHeightSum,
+}) => {
   const itemRef = useRef(null);
   const [height, setHeight] = useState(0);
 
-  // console.log(itemRef.current);
+  console.log(isOpen);
   useEffect(() => {
     if (itemRef.current) {
       setHeight(itemRef.current.scrollHeight);
+      setInternalHeightSum(isOpen ? itemRef.current.scrollHeight : 0);
     }
-  }, []);
+  }, [isOpen]);
 
   return (
     <UI.Animation>

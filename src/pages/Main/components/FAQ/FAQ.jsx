@@ -2,6 +2,7 @@ import React from 'react';
 
 import * as Styled from './styled';
 import * as UI from '../../../../components/index';
+import Accordion from './components/Accordion/Accordion';
 
 const FAQ = () => {
   const faqList = [
@@ -38,118 +39,118 @@ const FAQ = () => {
       question: 'How is the yield determined?',
       answer: `The yield is influenced by market implied volatility and the chosen sell/buy price levels. The greater the deviation of the required ETH sell/buy price from the current market rate, the lower the yield. Additionally, the likelihood of the transaction being executed diminishes as this deviation increases.`,
     },
-    // {
-    //   question: 'What is a “time limit-order with yield”?',
-    //   answer: `The "time limit-order with yield" is an innovative concept introduced by TYMIO. It enables you to earn not from the transaction itself, but from the commitment to buy or sell ETH or WBTC. Even if the transaction doesn't materialize, you still gain passive income in USDC or ETH/WBTC. This transaction can be repeated, allowing you to continuously generate positive cash flow from your crypto assets or stablecoins.`,
-    // },
-    // {
-    //   question: 'How is it different from a standard limit order?',
-    //   answer: `A standard limit order typically triggers when the market reaches the specified price. In contrast, the TYMIO time-limit order with yield only executes if the price is either above or below the set level precisely at a predetermined date and time (the settlement date). Until that specific date and time, the price can fluctuate above or below the set level without triggering the order. For more details, refer to the TYMIO contract text before initiating a transaction.`,
-    // },
-    // {
-    //   question:
-    //     'Do I need to evaluate price charts and try to predict future prices when considering buying or selling an asset?',
-    //   answer: `Predicting markets is an inherently challenging endeavor. We suggest proceeding with a deal on TYMIO only if you've assessed all potential outcomes and are comfortable with each scenario. Please carefully review all the details and conditions of the deal before finalizing the transaction.`,
-    // },
-    // {
-    //   question: 'Are my funds safe?',
-    //   answer: `Like any financial endeavor, there are inherent risks involved, such as smart-contract vulnerability, counterparty risk, custodial risk, and regulatory risk. We take these risks very seriously and work diligently to mitigate them. Here are some key measures we've implemented:
-    //   <br/><br/>
-    //   Your funds are secured in a smart-contract until the expiration date, ensuring they aren't exposed to counterparty risk. We utilize our own liquidity to generate the premium/yield.
-    //   To safeguard funds against potential smart-contract vulnerabilities and thefts, TYMIO has established a reserve insurance fund of 100,000 USDC. You can view the current TVL on https://tymio.com to determine the percentage of TVL currently covered by this reserve insurance fund. This fund is intended to grow over time.
-    //   That being said, it's crucial to understand that no system can be entirely risk-free. It's advisable not to invest funds you cannot afford to lose. Always conduct your own research (DYOR). Before any interaction, double-check the TYMIO smart-contract addresses:
-    //   <br/><br/>
-    //   [<a href="https://etherscan.io/address/0x0D0C69c9E31923712f2D51d994950D08Ed9b2958" rel="noreferrer" target="_blank">Mainnet</a>, <a href="https://arbiscan.io/address/0x0D0C69c9E31923712f2D51d994950D08Ed9b2958" rel="noreferrer" target="_blank">Arbitrum</a>]`,
-    // },
-    // {
-    //   question: 'How does TYMIO make money?',
-    //   answer: `The app earns revenue by taking a cut from the option premium (yield) generated. The exact percentage can fluctuate based on market conditions and the level of user involvement with TYMIO.`,
-    // },
-    // {
-    //   question: 'If I make money, then somebody should lose it. Who is losing?',
-    //   answer: `Some traders use crypto options to make high-risk/high-reward bets on significant price movements of the underlying assets. They buy both call and put options, and in many market conditions, these traders risk losing the premiums they've paid for these options. TYMIO capitalizes on the premiums from these call and put options to produce yield.`,
-    // },
-    // {
-    //   question:
-    //     'How is TYMIO different from option vaults, staking, or farming?',
-    //   answer: `TYMIO distinguishes itself in several ways:
-    //   <br/><br/>
-    //   Fixed APR: Unlike variable rates in other platforms, we provide a consistent return rate.<br/>
-    //   Asset Choice: We exclusively deal with ETH, WBTC and USDC, avoiding the potential volatility and risks associated with altcoins.<br/>
-    //   Flexibility: Compared to option vaults, TYMIO offers users greater flexibility.<br/>
-    //   Competitive Returns: Our APR typically surpasses the rates found in staking.`,
-    // },
-    // {
-    //   question: 'Can I get my funds back before the deal expires?',
-    //   answer: `No, once committed, funds are locked until the agreed-upon date. Deal conditions are binding, and you must wait until the settlement of the deal to access your funds.`,
-    // },
-    // {
-    //   question: 'Who is paying gas fees?',
-    //   answer: `Gas fees are shared equally between you and TYMIO. You cover the gas fee when initiating a transaction, while TYMIO takes care of the gas fee when returning funds to your wallet.`,
-    // },
-    // {
-    //   question: 'How do I save on gas?',
-    //   answer: `To save on gas fees, consider bridging your crypto to Arbitrum. While the initial bridging might incur some cost, subsequent transaction fees on Arbitrum are significantly lower than on Ethereum. We recommend using the Arbitrum bridge, which can be accessed at: <a href="https://bridge.arbitrum.io/" target="_blank">https://bridge.arbitrum.io/</a>`,
-    // },
-    // {
-    //   question: 'What are the benefits of TYMIO compared to active trading?',
-    //   answer: `With TYMIO, you don't need to be a professional trader to earn. The advantages include:<br/>
-    //   Time-efficiency: No need to constantly track the market.<br/>
-    //   High probability of capital appreciation with each transaction.<br/>
-    //   No risk of liquidation.<br/>
-    //   Suitable for both novice and seasoned investors.`,
-    // },
-    // {
-    //   question: 'What are the benefits of TYMIO compared to farming?',
-    //   answer: `TYMIO offers:<br/>
-    //   A more user-friendly interface and user experience (UI/UX).<br/>
-    //   The convenience of using only ETH, WBTC and USDC, eliminating the complexities of altcoins.<br/>
-    //   A fixed yield, providing clearer expectations on returns.`,
-    // },
-    // {
-    //   question: 'What are the benefits of TYMIO compared to staking?',
-    //   answer: `TYMIO offers:<br/>
-    //   Potentially higher yields compared to traditional staking.<br/>
-    //   Simplified user experience without the need to engage in complex staking procedures.<br/>
-    //   No reliance on altcoin performance or network conditions, as TYMIO primarily uses ETH, WBTC and USDC.<br/>
-    //   Predictable returns with fixed yield, allowing for better financial planning.`,
-    // },
-    // {
-    //   question: 'Do you have a whitepaper?',
-    //   answer: `Yes, our whitepaper provides a detailed overview of our platform, its mechanisms, and our vision for the future. You can access it at the following link: [URL]. We recommend going through the whitepaper to get an in-depth understanding of how TYMIO works.`,
-    // },
-    // {
-    //   question: 'Could I use TYMIO from my mobile phone?',
-    //   answer: `Yes, TYMIO is compatible with mobile browsers and integrates with mobile wallets like Metamask. Just ensure you have the Metamask mobile app installed, and you can access and interact with TYMIO directly from your smartphone.`,
-    // },
-    // {
-    //   question: 'What is the purpose of TYMIO?',
-    //   answer: `TYMIO is a DeFi crypto service that allows users to set time-limited orders with yield. This enables crypto holders to monetize their willingness to sell or buy assets at a specific price. In other words, you can put your crypto to work and earn annualized percentage yield (APR) on your crypto, while maintaining a low risk profile.`,
-    // },
-    // {
-    //   question: 'I have a problem with my transaction, can you help me?',
-    //   answer: `We're here to help. Please reach out to our support team through the in-app chat function, or you can also send an email detailing your issue to info@tymio.com. Ensure you provide as much detail as possible about the transaction, but never share your private keys or sensitive information.`,
-    // },
-    // {
-    //   question: 'What are the 5 principles of tymionauts?',
-    //   answer: `The principles of tymionauts are rooted in both a belief in the transformative potential of cryptocurrency and a cautious, well-informed approach to transactions:
-    //   <br/><br/>
-    //   <b>1. We believe in the long-term future of crypto.</b><br/>
-    //   This principle emphasizes a deep-rooted belief in the enduring value and transformative potential of cryptocurrency, viewing it not merely as a speculative tool but as a significant paradigm shift in finance and technology.
-    //   <br/><br/>
-    //   <b>2. We only enter into a transaction if we are ok with both outcomes.</b><br/>
-    //   Before committing to any transaction, it's crucial to weigh both potential results. This ensures that decisions are made from an informed perspective, reducing the likelihood of future regrets.
-    //   <br/><br/>
-    //   <b>3. We don't rush, we avoid greed, and we don’t let emotions drive our deals.</b><br/>
-    //   Recognizing that the crypto market can be volatile, this principle underscores the importance of making calm and deliberate decisions, resisting the urge to act hastily or be swayed by short-term market movements.
-    //   <br/><br/>
-    //   <b>4. We have patience, and we do not waste time on active trading.</b><br/>
-    //   Active trading requires time, effort, and a vast amount of knowledge. Instead, by prioritizing passive income avenues that align with long-term market beliefs, one can focus on consistent growth without the stress of daily market fluctuations.
-    //   <br/><br/>
-    //   <b>5. Our priority is long-term capital growth.</b><br/>
-    //   This principle is all about the long game. By emphasizing strategies and decisions that favor long-term capital appreciation, one aligns actions with the foundational belief in the sustained value of cryptocurrency.
-    //   `,
-    // },
+    {
+      question: 'What is a “time limit-order with yield”?',
+      answer: `The "time limit-order with yield" is an innovative concept introduced by TYMIO. It enables you to earn not from the transaction itself, but from the commitment to buy or sell ETH or WBTC. Even if the transaction doesn't materialize, you still gain passive income in USDC or ETH/WBTC. This transaction can be repeated, allowing you to continuously generate positive cash flow from your crypto assets or stablecoins.`,
+    },
+    {
+      question: 'How is it different from a standard limit order?',
+      answer: `A standard limit order typically triggers when the market reaches the specified price. In contrast, the TYMIO time-limit order with yield only executes if the price is either above or below the set level precisely at a predetermined date and time (the settlement date). Until that specific date and time, the price can fluctuate above or below the set level without triggering the order. For more details, refer to the TYMIO contract text before initiating a transaction.`,
+    },
+    {
+      question:
+        'Do I need to evaluate price charts and try to predict future prices when considering buying or selling an asset?',
+      answer: `Predicting markets is an inherently challenging endeavor. We suggest proceeding with a deal on TYMIO only if you've assessed all potential outcomes and are comfortable with each scenario. Please carefully review all the details and conditions of the deal before finalizing the transaction.`,
+    },
+    {
+      question: 'Are my funds safe?',
+      answer: `Like any financial endeavor, there are inherent risks involved, such as smart-contract vulnerability, counterparty risk, custodial risk, and regulatory risk. We take these risks very seriously and work diligently to mitigate them. Here are some key measures we've implemented:
+      <br/><br/>
+      Your funds are secured in a smart-contract until the expiration date, ensuring they aren't exposed to counterparty risk. We utilize our own liquidity to generate the premium/yield.
+      To safeguard funds against potential smart-contract vulnerabilities and thefts, TYMIO has established a reserve insurance fund of 100,000 USDC. You can view the current TVL on https://tymio.com to determine the percentage of TVL currently covered by this reserve insurance fund. This fund is intended to grow over time.
+      That being said, it's crucial to understand that no system can be entirely risk-free. It's advisable not to invest funds you cannot afford to lose. Always conduct your own research (DYOR). Before any interaction, double-check the TYMIO smart-contract addresses:
+      <br/><br/>
+      [<a href="https://etherscan.io/address/0x0D0C69c9E31923712f2D51d994950D08Ed9b2958" rel="noreferrer" target="_blank">Mainnet</a>, <a href="https://arbiscan.io/address/0x0D0C69c9E31923712f2D51d994950D08Ed9b2958" rel="noreferrer" target="_blank">Arbitrum</a>]`,
+    },
+    {
+      question: 'How does TYMIO make money?',
+      answer: `The app earns revenue by taking a cut from the option premium (yield) generated. The exact percentage can fluctuate based on market conditions and the level of user involvement with TYMIO.`,
+    },
+    {
+      question: 'If I make money, then somebody should lose it. Who is losing?',
+      answer: `Some traders use crypto options to make high-risk/high-reward bets on significant price movements of the underlying assets. They buy both call and put options, and in many market conditions, these traders risk losing the premiums they've paid for these options. TYMIO capitalizes on the premiums from these call and put options to produce yield.`,
+    },
+    {
+      question:
+        'How is TYMIO different from option vaults, staking, or farming?',
+      answer: `TYMIO distinguishes itself in several ways:
+      <br/><br/>
+      Fixed APR: Unlike variable rates in other platforms, we provide a consistent return rate.<br/>
+      Asset Choice: We exclusively deal with ETH, WBTC and USDC, avoiding the potential volatility and risks associated with altcoins.<br/>
+      Flexibility: Compared to option vaults, TYMIO offers users greater flexibility.<br/>
+      Competitive Returns: Our APR typically surpasses the rates found in staking.`,
+    },
+    {
+      question: 'Can I get my funds back before the deal expires?',
+      answer: `No, once committed, funds are locked until the agreed-upon date. Deal conditions are binding, and you must wait until the settlement of the deal to access your funds.`,
+    },
+    {
+      question: 'Who is paying gas fees?',
+      answer: `Gas fees are shared equally between you and TYMIO. You cover the gas fee when initiating a transaction, while TYMIO takes care of the gas fee when returning funds to your wallet.`,
+    },
+    {
+      question: 'How do I save on gas?',
+      answer: `To save on gas fees, consider bridging your crypto to Arbitrum. While the initial bridging might incur some cost, subsequent transaction fees on Arbitrum are significantly lower than on Ethereum. We recommend using the Arbitrum bridge, which can be accessed at: <a href="https://bridge.arbitrum.io/" target="_blank">https://bridge.arbitrum.io/</a>`,
+    },
+    {
+      question: 'What are the benefits of TYMIO compared to active trading?',
+      answer: `With TYMIO, you don't need to be a professional trader to earn. The advantages include:<br/>
+      Time-efficiency: No need to constantly track the market.<br/>
+      High probability of capital appreciation with each transaction.<br/>
+      No risk of liquidation.<br/>
+      Suitable for both novice and seasoned investors.`,
+    },
+    {
+      question: 'What are the benefits of TYMIO compared to farming?',
+      answer: `TYMIO offers:<br/>
+      A more user-friendly interface and user experience (UI/UX).<br/>
+      The convenience of using only ETH, WBTC and USDC, eliminating the complexities of altcoins.<br/>
+      A fixed yield, providing clearer expectations on returns.`,
+    },
+    {
+      question: 'What are the benefits of TYMIO compared to staking?',
+      answer: `TYMIO offers:<br/>
+      Potentially higher yields compared to traditional staking.<br/>
+      Simplified user experience without the need to engage in complex staking procedures.<br/>
+      No reliance on altcoin performance or network conditions, as TYMIO primarily uses ETH, WBTC and USDC.<br/>
+      Predictable returns with fixed yield, allowing for better financial planning.`,
+    },
+    {
+      question: 'Do you have a whitepaper?',
+      answer: `Yes, our whitepaper provides a detailed overview of our platform, its mechanisms, and our vision for the future. You can access it at the following link: [URL]. We recommend going through the whitepaper to get an in-depth understanding of how TYMIO works.`,
+    },
+    {
+      question: 'Could I use TYMIO from my mobile phone?',
+      answer: `Yes, TYMIO is compatible with mobile browsers and integrates with mobile wallets like Metamask. Just ensure you have the Metamask mobile app installed, and you can access and interact with TYMIO directly from your smartphone.`,
+    },
+    {
+      question: 'What is the purpose of TYMIO?',
+      answer: `TYMIO is a DeFi crypto service that allows users to set time-limited orders with yield. This enables crypto holders to monetize their willingness to sell or buy assets at a specific price. In other words, you can put your crypto to work and earn annualized percentage yield (APR) on your crypto, while maintaining a low risk profile.`,
+    },
+    {
+      question: 'I have a problem with my transaction, can you help me?',
+      answer: `We're here to help. Please reach out to our support team through the in-app chat function, or you can also send an email detailing your issue to info@tymio.com. Ensure you provide as much detail as possible about the transaction, but never share your private keys or sensitive information.`,
+    },
+    {
+      question: 'What are the 5 principles of tymionauts?',
+      answer: `The principles of tymionauts are rooted in both a belief in the transformative potential of cryptocurrency and a cautious, well-informed approach to transactions:
+      <br/><br/>
+      <b>1. We believe in the long-term future of crypto.</b><br/>
+      This principle emphasizes a deep-rooted belief in the enduring value and transformative potential of cryptocurrency, viewing it not merely as a speculative tool but as a significant paradigm shift in finance and technology.
+      <br/><br/>
+      <b>2. We only enter into a transaction if we are ok with both outcomes.</b><br/>
+      Before committing to any transaction, it's crucial to weigh both potential results. This ensures that decisions are made from an informed perspective, reducing the likelihood of future regrets.
+      <br/><br/>
+      <b>3. We don't rush, we avoid greed, and we don’t let emotions drive our deals.</b><br/>
+      Recognizing that the crypto market can be volatile, this principle underscores the importance of making calm and deliberate decisions, resisting the urge to act hastily or be swayed by short-term market movements.
+      <br/><br/>
+      <b>4. We have patience, and we do not waste time on active trading.</b><br/>
+      Active trading requires time, effort, and a vast amount of knowledge. Instead, by prioritizing passive income avenues that align with long-term market beliefs, one can focus on consistent growth without the stress of daily market fluctuations.
+      <br/><br/>
+      <b>5. Our priority is long-term capital growth.</b><br/>
+      This principle is all about the long game. By emphasizing strategies and decisions that favor long-term capital appreciation, one aligns actions with the foundational belief in the sustained value of cryptocurrency.
+      `,
+    },
   ];
   return (
     <Styled.FAQ>
@@ -159,7 +160,7 @@ const FAQ = () => {
             <UI.Animation type={'text'}>FAQ</UI.Animation>
           </UI.H1>
         </Styled.H1Wrapper>
-        <UI.AccordionFAQ faqList={faqList} />
+        <Accordion faqList={faqList} />
       </UI.Container>
     </Styled.FAQ>
   );
