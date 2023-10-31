@@ -7,23 +7,33 @@ import { BUTTON_TYPE } from '../../models/types';
 
 import * as Styled from './styled';
 import useRoutes from '../../hooks/useRoutes';
+import { useLocation } from 'react-router-dom';
 
 const APP_LINK = process.env.REACT_APP_APP_LINK;
 
 const Header = ({ light }) => {
   const { header } = useRoutes();
-
   const [scroll, setScroll] = useState(false);
+  const location = useLocation()
+  const [active, setActive] = useState()
+
+  useEffect(() => {
+    setActive(location.pathname)
+  }, [location.pathname])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', () => {
+      const update = () => {
         if (window.scrollY > 0) {
           setScroll(true);
         } else {
           setScroll(false);
         }
-      });
+      }
+      window.addEventListener('scroll', update);
+      return () => {
+        window.removeEventListener('scroll', update);
+      };
     }
   }, []);
 
@@ -37,6 +47,7 @@ const Header = ({ light }) => {
           scroll={light ? null : scroll}
           options={header}
           light={light}
+          active={active}
         />
         <UI.Button
           type={BUTTON_TYPE.SECONDARY}

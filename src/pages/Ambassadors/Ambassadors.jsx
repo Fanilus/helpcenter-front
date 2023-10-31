@@ -30,7 +30,7 @@ const Ambassadors = () => {
   return (
     <Styled.Ambassadors>
       <UI.Container>
-        <UI.H1>Ambassadors</UI.H1>
+        <UI.H1><UI.Animation type={'text'}>Ambassadors</UI.Animation></UI.H1>
 
         <Styled.Content>
           <UI.H2>

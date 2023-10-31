@@ -6,7 +6,7 @@ const FaqList = () => {
   return (
     <>
       {FAQ_LIST.map((item, index) => (
-        <UI.Animation delay={0.2 * index}>
+        <UI.Animation key={index} delay={0.2 * index}>
           <UI.Accordion
             key={index}
             trigger={item.question}

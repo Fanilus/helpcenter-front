@@ -41,29 +41,27 @@ const Animation = ({ children, type, ...props }) => {
 
   // Text animation
   useEffect(() => {
-    if (inUserVision && !hasTriggeredAnimation) {
-      if (type === 'text') {
-        const arr = ref.current.innerHTML.split('');
-        ref.current.innerHTML = '';
-        let count = 0;
-        setTimeout(() => {
-          const inter = setInterval(() => {
-            if (ref.current) {
-              ref.current.innerHTML +=
-                arr[count] === ' ' ? '&nbsp;' : arr[count];
-              count++;
-              if (count >= arr.length) {
-                setTimeout(() => {
-                  setTextAnimEnd(true);
-                }, 1200);
-                clearInterval(inter);
-              }
-            } else {
+    if (type === 'text' && inUserVision && hasTriggeredAnimation) {
+      const arr = ref.current.innerHTML.split('');
+      ref.current.innerHTML = '';
+      let count = 0;
+      setTimeout(() => {
+        const inter = setInterval(() => {
+          if (ref.current) {
+            ref.current.innerHTML +=
+              arr[count] === ' ' ? '&nbsp;' : arr[count];
+            count++;
+            if (count >= arr.length) {
+              setTimeout(() => {
+                setTextAnimEnd(true);
+              }, 600);
               clearInterval(inter);
             }
-          }, 80);
-        }, 1200);
-      }
+          } else {
+            clearInterval(inter);
+          }
+        }, 40);
+      }, 600);
     }
   }, [type, inUserVision, hasTriggeredAnimation]);
 

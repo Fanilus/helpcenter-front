@@ -14,28 +14,40 @@ export const Menu = styled.div`
       : 'rgba(28, 16, 47, 0.9)'};
 `;
 export const MenuItem = styled.button`
-  padding: 14.5px 10px;
+  padding: ${({active}) => active ? '13.5px 9px' : '14.5px 10px'};
+  border-radius: ${({active}) => active && '5px'};
+  border: ${({active, light}) => {
+      if (active) {
+        if (light) return `1px solid ${COLORS.BLACK}`
+        return `1px solid ${COLORS.LIGHT}`
+      }
+      return 'none'
+    }
+  };
+  box-shadow: ${({ active, light }) => {
+      if (active) {
+        if (light) return `0px 0px 3px 0px ${COLORS.BOX_SHADOW_DARK}`
+        return `0px 0px 3px 0px ${COLORS.BOX_SHADOW}`
+      }
+      return 'none'
+    }
+  };
   background-color: transparent;
-  border: none;
   cursor: pointer;
   text-transform: uppercase;
+
   p {
-    color: ${({ light }) => (light ? COLORS.GRAY_DARK : COLORS.PURPLE_GRAY)};
+    color: ${({ light }) => {
+      if (light) return COLORS.GRAY_DARK
+      return COLORS.PURPLE_GRAY
+    }};
     font-weight: 500;
   }
+
   &:hover {
     p {
       color: ${({ light }) => (light ? COLORS.RICH_BLACK : COLORS.LIGHT)};
       font-weight: 500;
     }
-  }
-  &:focus {
-    padding: 13.5px 9px;
-    border-radius: 5px;
-    border: 1px solid ${({ light }) => (light ? COLORS.BLACK : COLORS.LIGHT)};
-    box-shadow: ${({ light }) =>
-      light
-        ? `0px 0px 3px 0px ${COLORS.BOX_SHADOW_DARK}`
-        : `0px 0px 3px 0px ${COLORS.BOX_SHADOW}`};
   }
 `;
