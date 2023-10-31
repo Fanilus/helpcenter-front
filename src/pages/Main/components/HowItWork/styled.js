@@ -133,3 +133,8 @@ export const CardDescription = styled.div`
     width: 100%;
   }
 `;
+
+export const ListItem = styled.div`
+  display: flex;
+  gap: 6px;
+`;

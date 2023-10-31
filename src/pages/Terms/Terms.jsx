@@ -26,7 +26,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>1. Introduction</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>1.</UI.H2>
+                <UI.H2>Introduction</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -74,7 +77,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>2. Use and Eligibility</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>2.</UI.H2>
+                <UI.H2>Use and Eligibility</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -234,7 +240,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>3. Age</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>3.</UI.H2>
+                <UI.H2>Age</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -252,7 +261,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>4. Privacy</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>4.</UI.H2>
+                <UI.H2>Privacy</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -293,7 +305,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>5. Prohibited Activity</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>5.</UI.H2>
+                <UI.H2>Prohibited Activity</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -392,7 +407,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>6. Access</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>6.</UI.H2>
+                <UI.H2>Access</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -403,8 +421,10 @@ const Terms = () => {
                 additional instructions. Your access and use of the Interface is
                 limited to yourself, and where you are an organization or entity
                 any persons authorized by your organization or entity, you may
-                not transfer or assign your access to any third parties. All
-                rights not explicitly granted are reserved for TYMIO. Your
+                not transfer or assign your access to any third parties.
+              </UI.Paragraph>
+              <UI.Paragraph size={'large'}>
+                All rights not explicitly granted are reserved for TYMIO. Your
                 access to use our Interface may be suspended or terminated, If
                 you breach any of these access provisions or at our discretion.
                 Additionally, we may revoke your access to our Interface if we
@@ -421,7 +441,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>7. Digital Wallet</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>7.</UI.H2>
+                <UI.H2>Digital Wallet</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -434,6 +457,8 @@ const Terms = () => {
                 of any unauthorized use or other breach of security of your
                 Digital Wallet. TYMIO will not be liable for any losses you
                 incur as a result of someone else using your Digital Wallet.
+              </UI.Paragraph>
+              <UI.Paragraph size={'large'}>
                 However, you could be held liable for losses incurred by TYMIO
                 or another party due to someone else using your Digital Wallet.
                 Any Digital Wallets connected to the Interface are
@@ -453,7 +478,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>8. No Professional Advice or Fiduciary Duties</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>8.</UI.H2>
+                <UI.H2>No Professional Advice or Fiduciary Duties</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -468,20 +496,22 @@ const Terms = () => {
                 financial, legal, or other decisions involving the Interface,
                 you should seek independent professional advice from an
                 individual who is licensed and qualified in the area for which
-                such advice would be appropriate. We are not your broker,
-                intermediary, agent or advisor and have no fiduciary
-                relationship or obligation with you when you use the Interface
-                or Protocol. We have no liability for any of your activities or
-                decisions made while using the Interface. This Agreement is not
-                intended to, and does not, create or impose any fiduciary duties
-                on us. To the fullest extent permitted by law, you acknowledge
-                and agree that we owe no fiduciary duties or liabilities to you
-                or any other party, and that to the extent any such duties or
-                liabilities may exist at law or in equity, those duties and
-                liabilities are hereby irrevocably disclaimed, waived, and
-                eliminated. You further agree that the only duties and
-                obligations that we owe you are those set out expressly in this
-                Agreement.
+                such advice would be appropriate.
+              </UI.Paragraph>
+              <UI.Paragraph size={'large'}>
+                We are not your broker, intermediary, agent or advisor and have
+                no fiduciary relationship or obligation with you when you use
+                the Interface or Protocol. We have no liability for any of your
+                activities or decisions made while using the Interface. This
+                Agreement is not intended to, and does not, create or impose any
+                fiduciary duties on us. To the fullest extent permitted by law,
+                you acknowledge and agree that we owe no fiduciary duties or
+                liabilities to you or any other party, and that to the extent
+                any such duties or liabilities may exist at law or in equity,
+                those duties and liabilities are hereby irrevocably disclaimed,
+                waived, and eliminated. You further agree that the only duties
+                and obligations that we owe you are those set out expressly in
+                this Agreement.
               </UI.Paragraph>
             </Styled.Description>
           </Styled.Content>
@@ -490,7 +520,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>9. Interface</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>9.</UI.H2>
+                <UI.H2>Interface</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -504,21 +537,24 @@ const Terms = () => {
                 long short positions or trading Digital Assets. The Interface
                 attempts to provide up-to-date information for all Digital
                 Assets listed; however, due to the nature of Digital Assets some
-                information may be out of date or inaccurate. As you control
-                your own Digital Wallet you are solely responsible for verifying
-                any information regarding the Digital Assets, the Interface, and
-                the Protocol. No representation is made as to the accuracy,
-                completeness, or appropriateness for any particular purpose of
-                any information distributed via the Interface or otherwise
-                encountered when using the Interface. We are not liable to you
-                for any inaccurately quoted information including but not
-                limited to Digital Asset rates or pricing rates for any Digital
-                Assets. Our Interface cannot control the timing of any
-                transactions, transaction times are based on your Digital Assets
-                and the Blockchain Technology selected, and we are not liable or
-                responsible for any delays or any issues due to untimeliness of
-                any transactions initiated through the Interface. Use of the
-                Interface is at your sole risk and liability.
+                information may be out of date or inaccurate.
+              </UI.Paragraph>
+              <UI.Paragraph size={'large'}>
+                As you control your own Digital Wallet you are solely
+                responsible for verifying any information regarding the Digital
+                Assets, the Interface, and the Protocol. No representation is
+                made as to the accuracy, completeness, or appropriateness for
+                any particular purpose of any information distributed via the
+                Interface or otherwise encountered when using the Interface. We
+                are not liable to you for any inaccurately quoted information
+                including but not limited to Digital Asset rates or pricing
+                rates for any Digital Assets. Our Interface cannot control the
+                timing of any transactions, transaction times are based on your
+                Digital Assets and the Blockchain Technology selected, and we
+                are not liable or responsible for any delays or any issues due
+                to untimeliness of any transactions initiated through the
+                Interface. Use of the Interface is at your sole risk and
+                liability.
               </UI.Paragraph>
             </Styled.Description>
           </Styled.Content>
@@ -527,7 +563,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>10. Protocol</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>10.</UI.H2>
+                <UI.H2>Protocol</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -541,17 +580,20 @@ const Terms = () => {
                 Digital Assets. You agree that these risks may materially impact
                 your transactions while using the Interface, which could result
                 in the loss of the transaction or a complete loss of your
-                Digital Assets. As the Protocol and Blockchain Technology
-                supporting the Protocol are constantly under development we
-                cannot guarantee or otherwise ensure full security, fidelity,
-                operation, accuracy, or completeness of the Protocol. You
-                acknowledge that the Protocol is subject to flaws and that you
-                are solely responsible for evaluating any code provided in the
-                Protocol, and you represent and warrant that you have the skill
-                and ability to evaluate and understand the risks of the
-                Protocol. You are solely responsible for your use and access to
-                the Protocol which may be accessed via the Interface or through
-                other means as permitted by any Blockchain Technology.
+                Digital Assets.
+              </UI.Paragraph>
+              <UI.Paragraph size={'large'}>
+                As the Protocol and Blockchain Technology supporting the
+                Protocol are constantly under development we cannot guarantee or
+                otherwise ensure full security, fidelity, operation, accuracy,
+                or completeness of the Protocol. You acknowledge that the
+                Protocol is subject to flaws and that you are solely responsible
+                for evaluating any code provided in the Protocol, and you
+                represent and warrant that you have the skill and ability to
+                evaluate and understand the risks of the Protocol. You are
+                solely responsible for your use and access to the Protocol which
+                may be accessed via the Interface or through other means as
+                permitted by any Blockchain Technology.
               </UI.Paragraph>
             </Styled.Description>
           </Styled.Content>
@@ -560,7 +602,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>11. Blockchain Technology</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>11.</UI.H2>
+                <UI.H2>Blockchain Technology</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -573,8 +618,10 @@ const Terms = () => {
                 security of the Blockchain Technology. Blockchain Technology is
                 subject to change that is out of our control, which could
                 materially affect the Interface, the Protocol, and the value,
-                functionality, availability, and use of any Digital Assets. It
-                is your responsibility to make yourself aware of upcoming
+                functionality, availability, and use of any Digital Assets.
+              </UI.Paragraph>
+              <UI.Paragraph size={'large'}>
+                It is your responsibility to make yourself aware of upcoming
                 operating changes, and you must carefully consider publicly
                 available information in determining whether to continue to use
                 the Interface, transact with any Protocols using your Digital
@@ -597,7 +644,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>12. Fees and Costs</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>12.</UI.H2>
+                <UI.H2>Fees and Costs</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -618,7 +668,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>13. Gas</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>13.</UI.H2>
+                <UI.H2>Gas</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -643,7 +696,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>14. Reversals</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>14.</UI.H2>
+                <UI.H2>Reversals</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -661,7 +717,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>15. Interface Availability and Modification</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>15.</UI.H2>
+                <UI.H2>Interface Availability and Modification</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -674,18 +733,20 @@ const Terms = () => {
                 remove the Interface or any portions thereof, at any time at our
                 discretion. We reserve the right to discontinue previously
                 offered features or functionality at our sole discretion and
-                without prior notice. We are not liable to you or to any third
-                party for any modification, suspension, or discontinuance of any
-                feature or component of any portion of the Interface. We reserve
-                the right to determine the timing and content of software
-                updates, which may be automatically updated without notice to
-                you. We may conduct such modifications to our Interface for
-                security, intellectual property, legal reasons, or various other
-                reasons at our discretion, and we are not required to explain
-                such modifications or provide you access to previous versions of
-                our Interface. Nothing in this section obligates us to take
-                measures to update the Interface for security, legal, or other
-                purposes.
+                without prior notice.
+              </UI.Paragraph>
+              <UI.Paragraph size={'large'}>
+                We are not liable to you or to any third party for any
+                modification, suspension, or discontinuance of any feature or
+                component of any portion of the Interface. We reserve the right
+                to determine the timing and content of software updates, which
+                may be automatically updated without notice to you. We may
+                conduct such modifications to our Interface for security,
+                intellectual property, legal reasons, or various other reasons
+                at our discretion, and we are not required to explain such
+                modifications or provide you access to previous versions of our
+                Interface. Nothing in this section obligates us to take measures
+                to update the Interface for security, legal, or other purposes.
               </UI.Paragraph>
             </Styled.Description>
           </Styled.Content>
@@ -694,7 +755,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>16. Third Parties</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>16.</UI.H2>
+                <UI.H2>Third Parties</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -718,7 +782,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>17. Third Party Content</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>17.</UI.H2>
+                <UI.H2>Third Party Content</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -742,7 +809,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>18. Termination</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>18.</UI.H2>
+                <UI.H2>Termination</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -765,7 +835,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>19. Taxes</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>19.</UI.H2>
+                <UI.H2>Taxes</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -783,7 +856,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>20. Fraudulent Transactions</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>20.</UI.H2>
+                <UI.H2>Fraudulent Transactions</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -803,7 +879,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>21. Intellectual Property</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>21.</UI.H2>
+                <UI.H2>Intellectual Property</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -827,7 +906,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>22. Assumption of Risk</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>22.</UI.H2>
+                <UI.H2>Assumption of Risk</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -845,20 +927,25 @@ const Terms = () => {
                 Digital Assets may decrease in value or lose all of its value
                 due to various factors including discovery of wrongful conduct,
                 market manipulation, changes to the underlying Digital Asset or
-                Blockchain Technology. Such factors could cause transaction
-                costs to increase which may impact your use of the Interface; -
-                suspension or cessation of support for an Digital Assets by
-                Blockchain Technology service providers may result in a total
-                loss or inability to transfer or access any Digital Assets; and
-                - Digital Assets may lose value or functionality due to
-                governmental action, laws, or regulation as there is uncertainty
-                to the legal status and categorization of Digital Assets. Such
-                actions could result in the loss of access to the Interface. You
-                hereby assume and agree that TYMIO will have no responsibility
-                or liability for such risks. You hereby irrevocably waive,
-                release, and discharge any and all claims, whether known or
-                unknown to you, against TYMIO, its affiliates and their
-                respective shareholders, members, directors, officers,
+                Blockchain Technology.
+              </UI.Paragraph>
+              <UI.Paragraph size={'large'}>
+                Such factors could cause transaction costs to increase which may
+                impact your use of the Interface; - suspension or cessation of
+                support for an Digital Assets by Blockchain Technology service
+                providers may result in a total loss or inability to transfer or
+                access any Digital Assets; and - Digital Assets may lose value
+                or functionality due to governmental action, laws, or regulation
+                as there is uncertainty to the legal status and categorization
+                of Digital Assets. Such actions could result in the loss of
+                access to the Interface.
+              </UI.Paragraph>
+              <UI.Paragraph size={'large'}>
+                You hereby assume and agree that TYMIO will have no
+                responsibility or liability for such risks. You hereby
+                irrevocably waive, release, and discharge any and all claims,
+                whether known or unknown to you, against TYMIO, its affiliates
+                and their respective shareholders, members, directors, officers,
                 employees, contractors, agents, and representatives related to
                 any of the risks set forth herein. You accept the risk of all
                 use of the Digital Assets and are responsible for conducting
@@ -874,7 +961,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>23. Limitation of Liability</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>23.</UI.H2>
+                <UI.H2>Limitation of Liability</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -889,8 +979,10 @@ const Terms = () => {
                 months in any fees (excluding Gas) to access the Interface or
                 one-hundred US dollars (USD$100.00), whichever is greater. The
                 limitations of damages set forth above are fundamental elements
-                of the basis of the bargain between TYMIO and you. Some
-                jurisdictions do not allow the exclusion or limitation of
+                of the basis of the bargain between TYMIO and you. Interface.
+              </UI.Paragraph>
+              <UI.Paragraph size={'large'}>
+                Some jurisdictions do not allow the exclusion or limitation of
                 liability for consequential or incidental damages. So the above
                 limitation or exclusion may not apply to you, and you may also
                 have other legal rights that vary between jurisdictions.
@@ -911,7 +1003,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>24. Release</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>24.</UI.H2>
+                <UI.H2>Release</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -936,7 +1031,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>25. Indemnity</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>25.</UI.H2>
+                <UI.H2>Indemnity</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -966,7 +1064,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>26. No Warranties</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>26.</UI.H2>
+                <UI.H2>No Warranties</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -993,7 +1094,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>27. Informal Resolution</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>27.</UI.H2>
+                <UI.H2>Informal Resolution</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -1022,7 +1126,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>28. Force Majeure</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>28.</UI.H2>
+                <UI.H2>Force Majeure</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -1042,7 +1149,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>29. Severability</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>29.</UI.H2>
+                <UI.H2>Severability</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -1063,7 +1173,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>30. Non-Waiver</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>30.</UI.H2>
+                <UI.H2>Non-Waiver</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -1081,7 +1194,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>31. Survival</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>31.</UI.H2>
+                <UI.H2>Survival</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -1101,7 +1217,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>32. Assignment</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>32.</UI.H2>
+                <UI.H2>Assignment</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -1117,7 +1236,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>33. Amendments</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>33.</UI.H2>
+                <UI.H2>Amendments</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -1134,7 +1256,10 @@ const Terms = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>34. Electronic Communications</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>34.</UI.H2>
+                <UI.H2>Electronic Communications</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>

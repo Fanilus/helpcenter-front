@@ -5,8 +5,8 @@ const useRoutes = () => {
     { label: 'how it works', path: '/how_it_work' },
     { label: 'Use cases', path: '/use_cases' },
     { label: 'Safety', path: '/safety' },
-    { label: 'Ambassadors', path: '/ambassadors' },
     { label: 'FAQ', path: '/faq' },
+    { label: 'Ambassadors', path: '/ambassadors' },
   ];
   const burger = [
     {

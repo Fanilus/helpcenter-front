@@ -34,7 +34,10 @@ const WhitePaper = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>1. Abstract</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>1.</UI.H2>
+                <UI.H2>Abstract</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -65,7 +68,10 @@ const WhitePaper = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>2. Market</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>2.</UI.H2>
+                <UI.H2>Market</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -110,7 +116,10 @@ const WhitePaper = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>3. Vision</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>3.</UI.H2>
+                <UI.H2>Vision</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -131,7 +140,10 @@ const WhitePaper = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>4. Roadmap</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>4.</UI.H2>
+                <UI.H2>Roadmap</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <Styled.ListItem>
@@ -215,10 +227,13 @@ const WhitePaper = () => {
         <Styled.SubContainer>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>
-                5. “Limit order with yield’ <br />
-                (buy-low and sell-high)
-              </UI.H2>
+              <Styled.ListItem>
+                <UI.H2>5.</UI.H2>
+                <UI.H2>
+                  “Limit order with yield’ <br />
+                  (buy-low and sell-high)
+                </UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -248,7 +263,10 @@ const WhitePaper = () => {
         <Styled.SubContainer>
           <Styled.Content>
             <Styled.Title>
-              <UI.Paragraph>5.1. HOW IT WORKS</UI.Paragraph>
+              <Styled.ListItem>
+                <UI.Paragraph>5.1.</UI.Paragraph>
+                <UI.Paragraph>HOW IT WORKS</UI.Paragraph>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -316,7 +334,10 @@ const WhitePaper = () => {
         <Styled.SubContainer>
           <Styled.Content>
             <Styled.Title>
-              <UI.Paragraph>5.2 WHY IS A HIGH YIELD POSSIBLE?</UI.Paragraph>
+              <Styled.ListItem>
+                <UI.Paragraph>5.2</UI.Paragraph>
+                <UI.Paragraph>WHY IS A HIGH YIELD POSSIBLE?</UI.Paragraph>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -346,7 +367,10 @@ const WhitePaper = () => {
         <Styled.SubContainer>
           <Styled.Content>
             <Styled.Title>
-              <UI.Paragraph>5.3 WHERE DOES THE YIELD COME FROM?</UI.Paragraph>
+              <Styled.ListItem>
+                <UI.Paragraph>5.3</UI.Paragraph>
+                <UI.Paragraph>WHERE DOES THE YIELD COME FROM?</UI.Paragraph>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -362,7 +386,10 @@ const WhitePaper = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.Paragraph>5.4. THE ALGORITHM</UI.Paragraph>
+              <Styled.ListItem>
+                <UI.Paragraph>5.4.</UI.Paragraph>
+                <UI.Paragraph>THE ALGORITHM</UI.Paragraph>
+              </Styled.ListItem>
               <Styled.DesktopImg
                 width={563}
                 height={359}
@@ -405,7 +432,10 @@ const WhitePaper = () => {
         <Styled.SubContainer>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>6. Risks</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>6.</UI.H2>
+                <UI.H2>Risks</UI.H2>
+              </Styled.ListItem>
               <Styled.DesktopImg
                 width={563}
                 height={369}
@@ -554,7 +584,10 @@ const WhitePaper = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>7. Competition</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>7.</UI.H2>
+                <UI.H2>Competition</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <Styled.ListItem>
@@ -625,7 +658,10 @@ const WhitePaper = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>8. Conclusion</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>8.</UI.H2>
+                <UI.H2>Conclusion</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
@@ -646,16 +682,25 @@ const WhitePaper = () => {
         <Styled.Container>
           <Styled.Content>
             <Styled.Title>
-              <UI.H2>9. References</UI.H2>
+              <Styled.ListItem>
+                <UI.H2>9.</UI.H2>
+                <UI.H2>References</UI.H2>
+              </Styled.ListItem>
             </Styled.Title>
             <Styled.Description>
               <UI.Paragraph size={'large'}>
-                <a href="https://www.bloomberg.com">Bloomberg.com →</a> <br />
+                <a target="_blanc" href="https://www.bloomberg.com">
+                  Bloomberg.com →
+                </a>
+                <br />
                 Sure time to grasp the potential of structured products
               </UI.Paragraph>
               {/* TODO сделать ссылку */}
               <UI.Paragraph size={'large'}>
-                <a href={APP_LINK}>Start earning → </a> <br />
+                <a target="_blanc" href={APP_LINK}>
+                  Start earning →
+                </a>
+                <br />
                 Sell higher than market and earn extra yield, buy lower than
                 market and earn extra yield with Tymio App
               </UI.Paragraph>

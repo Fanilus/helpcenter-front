@@ -29,36 +29,51 @@ const HowItWork = ({ loading, statistics }) => {
           </UI.Animation>
           <Styled.Description>
             <UI.Animation delay={1}>
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                Step 1. Set the asset, the direction of the order, and the price
-              </UI.Paragraph>
-              <Styled.HR />
+              <Styled.ListItem>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>1.</UI.Paragraph>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                  Set the asset, the direction of the order, and the price
+                </UI.Paragraph>
+                <Styled.HR />
+              </Styled.ListItem>
             </UI.Animation>
             <UI.Animation delay={1.13}>
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                Step 2. Define contract time period for lock-up
-              </UI.Paragraph>
-              <Styled.HR />
+              <Styled.ListItem>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>2.</UI.Paragraph>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                  Define contract time period for lock-up
+                </UI.Paragraph>
+                <Styled.HR />
+              </Styled.ListItem>
             </UI.Animation>
             <UI.Animation delay={1.27}>
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                Step 3. Review the agreement to ensure you clearly understand it
-                and are comfortable with both potential outcomes
-              </UI.Paragraph>
-              <Styled.HR />{' '}
+              <Styled.ListItem>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>3.</UI.Paragraph>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                  Review the agreement to ensure you clearly understand it and
+                  are comfortable with both potential outcomes
+                </UI.Paragraph>
+                <Styled.HR />
+              </Styled.ListItem>
             </UI.Animation>
             <UI.Animation delay={1.4}>
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                Step 4. Click “Confirm” and confirm transaction in your wallet
-              </UI.Paragraph>
-              <Styled.HR />
+              <Styled.ListItem>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>4.</UI.Paragraph>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                  Click “Confirm” and confirm transaction in your wallet
+                </UI.Paragraph>
+                <Styled.HR />
+              </Styled.ListItem>
             </UI.Animation>
             <UI.Animation delay={1.53}>
-              <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                Step 5. Wait until the contract expires and receive fixed yield
-                and either ETH, BTC or USDC back directly to your wallet
-              </UI.Paragraph>
-              <Styled.HR />
+              <Styled.ListItem>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>5.</UI.Paragraph>
+                <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
+                  Wait until the contract expires and receive fixed yield and
+                  either ETH, BTC or USDC back directly to your wallet
+                </UI.Paragraph>
+                <Styled.HR />
+              </Styled.ListItem>
             </UI.Animation>
           </Styled.Description>
         </Styled.Content>

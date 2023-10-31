@@ -24,7 +24,7 @@ export const Title = styled.div`
   }
   h2 {
     color: rgba(215, 203, 250, 0.25);
-    width: 420px;
+    width: 530px;
   }
 
   @media (max-width: 1439px) {

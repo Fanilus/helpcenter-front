@@ -19,7 +19,10 @@ const AccordionItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
         <Styled.Content>
           <Styled.Description>
             <UI.Animation delay={1.8} distance={'50px'}>
-              <UI.Paragraph size={'large'}>{item.description}</UI.Paragraph>
+              <UI.Paragraph
+                size={'large'}
+                dangerouslySetInnerHTML={{ __html: item.description }}
+              />
             </UI.Animation>
           </Styled.Description>
           <UI.Animation delay={2} distance={'50px'}>
