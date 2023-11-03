@@ -5,9 +5,11 @@ import * as UI from '../../../../components/index';
 
 import FaqList from './components/FaqList';
 import ExtraFaq from './components/ExtraFaq';
-import { ANIMATION } from '../../../../models/enum';
+import { useStep } from '../../../../hooks';
 
 const FAQ = () => {
+  const step = useStep();
+
   return (
     <UI.Container>
       <Styled.FAQ>
@@ -18,7 +20,7 @@ const FAQ = () => {
         </Styled.H1Wrapper>
         <Styled.FaqQuestions>
           <FaqList />
-          <UI.Animation delay={ANIMATION.STEP}>
+          <UI.Animation delay={step}>
             <ExtraFaq />
           </UI.Animation>
         </Styled.FaqQuestions>

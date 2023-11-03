@@ -5,9 +5,11 @@ import * as UI from '../../../../components/index';
 
 import { TYPOGRAPHY_SIZE } from '../../../../models/types';
 import { Grid, GridElem } from '../../../../components/_DEPRECATED';
-import { ANIMATION } from '../../../../models/enum';
+import { useStep } from '../../../../hooks';
 
 const Stats = ({ statistics }) => {
+  const step = useStep();
+
   return (
     <Grid
       template={'8fr 7fr 6fr 7fr 8fr'}
@@ -54,7 +56,7 @@ const Stats = ({ statistics }) => {
         mdRow={1}
         textAlign={'left'}
       >
-        <UI.Animation delay={ANIMATION.STEP} distance={'25px'}>
+        <UI.Animation delay={step} distance={'25px'}>
           <Styled.Card>
             <UI.HH mobile={true}>
               {statistics && (
@@ -80,7 +82,7 @@ const Stats = ({ statistics }) => {
         mdRow={2}
         textAlign={'left'}
       >
-        <UI.Animation delay={ANIMATION.STEP * 2} distance={'25px'}>
+        <UI.Animation delay={step * 2} distance={'25px'}>
           <Styled.Card>
             <UI.HH mobile={true}>
               {statistics && (
@@ -106,7 +108,7 @@ const Stats = ({ statistics }) => {
         mdRow={2}
         textAlign={'left'}
       >
-        <UI.Animation delay={ANIMATION.STEP * 3} distance={'25px'}>
+        <UI.Animation delay={step * 3} distance={'25px'}>
           <Styled.Card>
             <UI.HH mobile={true}>
               {statistics && (
@@ -129,7 +131,7 @@ const Stats = ({ statistics }) => {
         mdRow={3}
         textAlign={'left'}
       >
-        <UI.Animation delay={ANIMATION.STEP * 4} distance={'25px'}>
+        <UI.Animation delay={step * 4} distance={'25px'}>
           <Styled.Card>
             <UI.HH mobile={true}>
               {statistics && (
