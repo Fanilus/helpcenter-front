@@ -46,16 +46,16 @@ export const Animation = styled.div`
     active &&
     type === 'opacity' &&
     css`
-      animation: ${opacityAnimation} 0.5s ease-out;
+      animation: ${opacityAnimation} 0.4s ease-out;
     `};
   ${({ active, type, distance }) =>
     active &&
     !type &&
     css`
-      animation: ${slideUpAnimation(distance)} 0.5s ease-out;
+      animation: ${slideUpAnimation(distance)} 0.4s ease-out;
     `};
 
-  animation-duration: ${({ duration }) => duration || 0.5}s;
+  animation-duration: ${({ duration }) => duration || 0.4}s;
   animation-delay: ${({ delay }) => delay || 0}s;
   animation-fill-mode: both;
 `;

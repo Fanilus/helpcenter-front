@@ -93,7 +93,7 @@ const HowItWork = ({ loading, statistics }) => {
                     <UI.Animation delay={ANIMATION.STEP}>
                       <UI.H2>↑ Sell high</UI.H2>
                     </UI.Animation>
-                    <UI.Animation delay={ANIMATION.STEP * 2}>
+                    <UI.Animation delay={ANIMATION.STEP}>
                       <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
                         You have ETH or BTC and ready <br /> to sell it above
                         the market price
@@ -101,7 +101,7 @@ const HowItWork = ({ loading, statistics }) => {
                     </UI.Animation>
                   </div>
                 </Styled.CardDescription>
-                <UI.Animation delay={ANIMATION.STEP * 3}>
+                <UI.Animation delay={ANIMATION.STEP * 2}>
                   <img src={SellHightChart} alt="chart" />
                 </UI.Animation>
               </Styled.CardContent>
@@ -126,7 +126,7 @@ const HowItWork = ({ loading, statistics }) => {
                     <UI.Animation delay={ANIMATION.STEP}>
                       <UI.H2>↓ Buy low</UI.H2>
                     </UI.Animation>
-                    <UI.Animation delay={ANIMATION.STEP * 2}>
+                    <UI.Animation delay={ANIMATION.STEP}>
                       <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
                         You have USDC and ready to buy <br />
                         ETH or BTC below the market <br />
@@ -135,7 +135,7 @@ const HowItWork = ({ loading, statistics }) => {
                     </UI.Animation>
                   </div>
                 </Styled.CardDescription>
-                <UI.Animation delay={ANIMATION.STEP * 3}>
+                <UI.Animation delay={ANIMATION.STEP * 2}>
                   <img src={BuyLowChart} alt="chart" />
                 </UI.Animation>
               </Styled.CardContent>

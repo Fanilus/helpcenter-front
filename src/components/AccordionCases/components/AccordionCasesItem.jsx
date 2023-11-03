@@ -19,14 +19,14 @@ const AccordionItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
         </UI.Animation>
         <Styled.Content>
           <Styled.Description>
-            <UI.Animation delay={ANIMATION.STEP * 2} distance={'50px'}>
+            <UI.Animation delay={ANIMATION.STEP} distance={'50px'}>
               <UI.Paragraph
                 size={'large'}
                 dangerouslySetInnerHTML={{ __html: item.description }}
               />
             </UI.Animation>
           </Styled.Description>
-          <UI.Animation delay={ANIMATION.STEP * 3} distance={'50px'}>
+          <UI.Animation delay={ANIMATION.STEP} distance={'50px'}>
             <Styled.Quation
               onClick={() => clickHandler(id)}
               expanded={isOpen ? isExpanded : null}
