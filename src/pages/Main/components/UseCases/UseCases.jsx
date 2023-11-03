@@ -2,6 +2,7 @@ import React from 'react';
 
 import * as Styled from './styled';
 import * as UI from '../../../../components/index';
+import { ANIMATION } from '../../../../models/enum';
 
 const UseCases = () => {
   const faqList = [
@@ -53,7 +54,7 @@ const UseCases = () => {
           <UI.Animation type={'text'}>Use cases</UI.Animation>
         </UI.H1>
         <UI.AccordionCases faqList={faqList} />
-        <UI.Animation delay={0.67}>
+        <UI.Animation delay={ANIMATION.STEP}>
           <Styled.Board>
             <Styled.Badge>
               <UI.Badge
@@ -65,7 +66,7 @@ const UseCases = () => {
               </UI.Badge>
             </Styled.Badge>
             <Styled.Desc>
-              <UI.Animation delay={0.8} type={'opacity'}>
+              <UI.Animation delay={ANIMATION.STEP * 2} type={'opacity'}>
                 <UI.H2>
                   Looking to transact over 100 ETH or its equivalent in USDC or
                   BTC?

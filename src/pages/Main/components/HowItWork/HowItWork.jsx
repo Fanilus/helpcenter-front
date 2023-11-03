@@ -9,6 +9,7 @@ import BuyLowChart from '../../../../img/BuyLowChart.svg';
 import { TYPOGRAPHY_SIZE } from '../../../../models/types';
 import Checks from '../Home/Checks';
 import Stats from '../Home/Stats';
+import { ANIMATION } from '../../../../models/enum';
 
 const HowItWork = ({ loading, statistics }) => {
   return (
@@ -24,11 +25,11 @@ const HowItWork = ({ loading, statistics }) => {
         </UI.H1>
 
         <Styled.Content>
-          <UI.Animation delay={1.87} type={'opacity'}>
+          <UI.Animation delay={ANIMATION.STEP * 5} type={'opacity'}>
             <video src={Currency} autoPlay loop muted />
           </UI.Animation>
           <Styled.Description>
-            <UI.Animation delay={1}>
+            <UI.Animation>
               <Styled.ListItem>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>1.</UI.Paragraph>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
@@ -37,7 +38,7 @@ const HowItWork = ({ loading, statistics }) => {
                 <Styled.HR />
               </Styled.ListItem>
             </UI.Animation>
-            <UI.Animation delay={1.13}>
+            <UI.Animation delay={ANIMATION.STEP}>
               <Styled.ListItem>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>2.</UI.Paragraph>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
@@ -46,7 +47,7 @@ const HowItWork = ({ loading, statistics }) => {
                 <Styled.HR />
               </Styled.ListItem>
             </UI.Animation>
-            <UI.Animation delay={1.27}>
+            <UI.Animation delay={ANIMATION.STEP * 2}>
               <Styled.ListItem>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>3.</UI.Paragraph>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
@@ -56,7 +57,7 @@ const HowItWork = ({ loading, statistics }) => {
                 <Styled.HR />
               </Styled.ListItem>
             </UI.Animation>
-            <UI.Animation delay={1.4}>
+            <UI.Animation delay={ANIMATION.STEP * 3}>
               <Styled.ListItem>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>4.</UI.Paragraph>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
@@ -65,7 +66,7 @@ const HowItWork = ({ loading, statistics }) => {
                 <Styled.HR />
               </Styled.ListItem>
             </UI.Animation>
-            <UI.Animation delay={1.53}>
+            <UI.Animation delay={ANIMATION.STEP * 4}>
               <Styled.ListItem>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>5.</UI.Paragraph>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
@@ -89,10 +90,10 @@ const HowItWork = ({ loading, statistics }) => {
                     1
                   </UI.H1>
                   <div>
-                    <UI.Animation delay={0.33}>
+                    <UI.Animation delay={ANIMATION.STEP}>
                       <UI.H2>↑ Sell high</UI.H2>
                     </UI.Animation>
-                    <UI.Animation delay={0.47}>
+                    <UI.Animation delay={ANIMATION.STEP * 2}>
                       <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
                         You have ETH or BTC and ready <br /> to sell it above
                         the market price
@@ -100,7 +101,7 @@ const HowItWork = ({ loading, statistics }) => {
                     </UI.Animation>
                   </div>
                 </Styled.CardDescription>
-                <UI.Animation delay={0.67}>
+                <UI.Animation delay={ANIMATION.STEP * 3}>
                   <img src={SellHightChart} alt="chart" />
                 </UI.Animation>
               </Styled.CardContent>
@@ -122,10 +123,10 @@ const HowItWork = ({ loading, statistics }) => {
                     2
                   </UI.H1>
                   <div>
-                    <UI.Animation delay={0.33}>
+                    <UI.Animation delay={ANIMATION.STEP}>
                       <UI.H2>↓ Buy low</UI.H2>
                     </UI.Animation>
-                    <UI.Animation delay={0.47}>
+                    <UI.Animation delay={ANIMATION.STEP * 2}>
                       <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
                         You have USDC and ready to buy <br />
                         ETH or BTC below the market <br />
@@ -134,7 +135,7 @@ const HowItWork = ({ loading, statistics }) => {
                     </UI.Animation>
                   </div>
                 </Styled.CardDescription>
-                <UI.Animation delay={0.67}>
+                <UI.Animation delay={ANIMATION.STEP * 3}>
                   <img src={BuyLowChart} alt="chart" />
                 </UI.Animation>
               </Styled.CardContent>

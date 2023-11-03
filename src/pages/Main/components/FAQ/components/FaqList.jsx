@@ -1,12 +1,12 @@
 import React from 'react';
 import * as UI from '../../../../../components/index';
-import { FAQ_LIST } from '../../../../../models/enum';
+import { ANIMATION, FAQ_LIST } from '../../../../../models/enum';
 
 const FaqList = () => {
   return (
     <>
       {FAQ_LIST.map((item, index) => (
-        <UI.Animation key={index} delay={0.2 * index}>
+        <UI.Animation key={index} delay={ANIMATION.STEP * index}>
           <UI.Accordion
             key={index}
             trigger={item.question}

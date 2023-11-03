@@ -5,11 +5,19 @@ import {
   DropDownHeader,
   DropDownList,
   DropDownListContainer,
+  FormErrorText,
   ListItem,
 } from './styled';
 import SelectArrow from '../Icons/SelectArrow/SelectArrow';
 
-const Dropdown = ({ options, onSelectAction, children, valueSelected }) => {
+const Dropdown = ({
+  options,
+  onSelectAction,
+  placeholder,
+  valueSelected,
+  error,
+  ...props
+}) => {
   const dropdownMenuRef = useOuterClick((ev) => {
     if (isOpen) {
       setIsOpen(false);
@@ -29,11 +37,11 @@ const Dropdown = ({ options, onSelectAction, children, valueSelected }) => {
   return (
     <DropDownContainer ref={dropdownMenuRef}>
       <DropDownHeader
-        valueSelected={valueSelected}
+        valueSelected={valueSelected || placeholder}
         isOpen={isOpen}
         onClick={toggling}
       >
-        <span>{children}</span>
+        <span>{valueSelected || placeholder}</span>
         <SelectArrow isOpen={isOpen} />
       </DropDownHeader>
       {isOpen && (
@@ -47,6 +55,8 @@ const Dropdown = ({ options, onSelectAction, children, valueSelected }) => {
           </DropDownList>
         </DropDownListContainer>
       )}
+
+      {error ? <FormErrorText>{error}</FormErrorText> : null}
     </DropDownContainer>
   );
 };

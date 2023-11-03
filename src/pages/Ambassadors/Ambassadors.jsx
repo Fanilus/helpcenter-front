@@ -1,22 +1,16 @@
-import React, {
-  useEffect,
-  //  useState
-} from 'react';
+import React, { useEffect } from 'react';
 
 import * as Styled from './styled';
 import * as UI from '../../components/index';
 
 import CheckAmbassadors from '../../components/Icons/CheckAmbassadors/CheckAmbassadors';
-// import { COUNTRIES } from '../../models/enum';
+import { COUNTRIES } from '../../models/enum';
 import { useLocation } from 'react-router-dom';
+import useFormik from './hook/useFormik';
+import { useSession } from '../../hooks';
+import { SessionService } from '../../services';
 
 const Ambassadors = () => {
-  // const optionsSelect = COUNTRIES;
-  // const [valueSelected, setValueSelected] = useState('Country');
-  // const onSelectAction = (value) => {
-  //   setValueSelected(value);
-  // };
-
   const location = useLocation();
 
   const scrollToTop = () => {
@@ -27,10 +21,40 @@ const Ambassadors = () => {
     scrollToTop();
   }, [location]);
 
+  const optionsSelect = COUNTRIES;
+  const formik = useFormik();
+  const {
+    loading: loadingSession,
+    error: errorSession,
+    sessionInfo,
+  } = useSession();
+
+  // useEffect(() => {
+  //   SessionService.getSession();
+  // }, []);
+
+  const handleChange = async (field, value) => {
+    await formik.setFieldValue(field, value, false);
+    await formik.validateField(field);
+  };
+
+  const handleSubmit = async () => {
+    const errors = await formik.validateForm();
+    if (JSON.stringify(errors) === '{}') {
+      formik.handleSubmit(sessionInfo);
+    }
+  };
+
+  useEffect(() => {
+    console.log(sessionInfo);
+  }, [sessionInfo]);
+
   return (
     <Styled.Ambassadors>
       <UI.Container>
-        <UI.H1><UI.Animation type={'text'}>Ambassadors</UI.Animation></UI.H1>
+        <UI.H1>
+          <UI.Animation type={'text'}>Ambassadors</UI.Animation>
+        </UI.H1>
 
         <Styled.Content>
           <UI.H2>
@@ -85,34 +109,62 @@ const Ambassadors = () => {
         </Styled.Content>
         {/* <Styled.AmbassadorsCard>
           <UI.H2>Apply here:</UI.H2>
+
           <Styled.InputContainer>
             <Styled.Wrapper>
-              <UI.Input placeholder={'Name'} />
+              <UI.Input
+                placeholder={'Name'}
+                onChange={(value) => handleChange('name', value)}
+                error={formik.errors.name}
+              />
+
               <UI.Dropdown
-                onSelectAction={onSelectAction}
+                onSelectAction={(value) => handleChange('country', value)}
                 options={optionsSelect}
-                valueSelected={valueSelected}
-              >
-                {valueSelected}
-              </UI.Dropdown>
+                valueSelected={formik.values.country}
+                placeholder={'Country'}
+                error={formik.errors.country}
+              />
             </Styled.Wrapper>
-            <UI.Input placeholder={'Contact number (Telegram or WahatsApp)'} />
+
+            <UI.Input
+              number
+              placeholder={'Contact number (Telegram or WhatsApp)'}
+              onChange={(value) => handleChange('phone', value)}
+              error={formik.errors.phone}
+            />
+
             <Styled.Wrapper>
-              <UI.Input placeholder={'Your experience in DeFi'} />
-              <UI.Input placeholder={'Your ETH wallet'} paste />
+              <UI.Input
+                placeholder={'Your experience in DeFi'}
+                onChange={(value) => handleChange('experience', value)}
+                error={formik.errors.experience}
+              />
+              <UI.Input
+                placeholder={'Your ETH wallet'}
+                paste
+                onChange={(value) => handleChange('wallet', value)}
+                error={formik.errors.wallet}
+              />
             </Styled.Wrapper>
+
             <UI.Input
               placeholder={'Describe your community (describe or give a link)'}
               paste
+              onChange={(value) => handleChange('link', value)}
+              error={formik.errors.link}
             />
+
             <Styled.FooterWrapper>
               <UI.Input
                 checkbox
                 label={
                   'I hereby consent to the processing of the personal data that I have provided'
                 }
+                onChange={(value) => handleChange('agreement', value)}
+                error={formik.errors.agreement}
               />
-              <UI.Button>Send</UI.Button>
+              <UI.Button onClick={handleSubmit}>Send</UI.Button>
             </Styled.FooterWrapper>
           </Styled.InputContainer>
         </Styled.AmbassadorsCard> */}

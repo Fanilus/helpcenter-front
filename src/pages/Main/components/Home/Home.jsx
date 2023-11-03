@@ -12,6 +12,7 @@ import video from '../../../../assets/video/video_low_quality.webm';
 import { isMobile } from '../../../../lib/lib';
 
 import { importAllImages } from './imageImport';
+import { ANIMATION } from '../../../../models/enum';
 const imageContext = require.context(
   '../../../../assets/video/frames',
   false,
@@ -27,9 +28,9 @@ const totalFrames = 360;
 
 const Home = ({ loading, statistics }) => {
   const mobile = isMobile();
-  const delay = mobile ? 0.67 : 0;
-  const duration = mobile ? 0.4 : 0.5;
-  const delayStep = mobile ? 0.4 : 0.2;
+  // const delay = mobile ? 0.67 : 0;
+  // const duration = mobile ? 0.4 : 0.5;
+  // const delayStep = mobile ? 0.4 : 0.2;
 
   const canvasRef = useRef(null);
   const framesToLoad = useRef(Array(totalFrames).fill(null));
@@ -80,7 +81,7 @@ const Home = ({ loading, statistics }) => {
       <UI.Container>
         <Styled.Top>
           <Styled.Content>
-            <UI.Animation delay={delay} duration={duration}>
+            <UI.Animation>
               <Styled.Title>
                 <UI.HH>
                   Turn time into money.{' '}
@@ -88,7 +89,7 @@ const Home = ({ loading, statistics }) => {
                 </UI.HH>
               </Styled.Title>
             </UI.Animation>
-            <UI.Animation delay={delay + delayStep} duration={duration}>
+            <UI.Animation delay={ANIMATION.STEP}>
               <Styled.Description>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
                   Earn up to{' '}
@@ -101,7 +102,7 @@ const Home = ({ loading, statistics }) => {
               </Styled.Description>
             </UI.Animation>
 
-            <UI.Animation delay={delay + delayStep * 2} duration={duration}>
+            <UI.Animation delay={ANIMATION.STEP * 2}>
               <UI.Button>
                 <UI.Paragraph
                   color={COLORS.BLACK}

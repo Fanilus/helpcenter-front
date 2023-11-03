@@ -1,3 +1,7 @@
+export const ANIMATION = {
+  STEP: 0.2,
+};
+
 export const FAQ_LIST = [
   {
     question: 'How is TYMIO pronounced?',

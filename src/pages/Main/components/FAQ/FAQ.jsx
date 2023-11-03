@@ -5,6 +5,7 @@ import * as UI from '../../../../components/index';
 
 import FaqList from './components/FaqList';
 import ExtraFaq from './components/ExtraFaq';
+import { ANIMATION } from '../../../../models/enum';
 
 const FAQ = () => {
   return (
@@ -17,7 +18,7 @@ const FAQ = () => {
         </Styled.H1Wrapper>
         <Styled.FaqQuestions>
           <FaqList />
-          <UI.Animation delay={1}>
+          <UI.Animation delay={ANIMATION.STEP}>
             <ExtraFaq />
           </UI.Animation>
         </Styled.FaqQuestions>

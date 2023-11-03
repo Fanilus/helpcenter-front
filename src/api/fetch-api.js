@@ -1,3 +1,5 @@
+import Cookies from 'js-cookie';
+
 const convertToQueryParams = (params = {}) => {
   let queryString = '';
   Object.keys(params).forEach((key, index) => {
@@ -23,5 +25,35 @@ export const GET = (url = '', params = {}) => {
       .catch((err) => {
         reject(new Error(err.message));
       });
+  });
+};
+
+export const POST = (url = '', data = {}) => {
+  return new Promise((resolve, reject) => {
+    const options = {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Session-Token': data.sessionToken || Cookies.get('sessionToken'),
+      },
+      body: JSON.stringify(data),
+    };
+
+    fetch(url, options)
+      .then((response) => {
+        if (!response.ok) {
+          reject(
+            new Error(
+              `${
+                response.statusText || 'Can`t post data'
+              }\n${url}\n${JSON.stringify(data)}`
+            )
+          );
+        }
+
+        resolve(response.json());
+      })
+      .catch((e) => reject(new Error(`${e.message}\n${url}`)));
   });
 };

@@ -3,14 +3,15 @@ import React, { useRef } from 'react';
 import AccordionIcon from '../../Icons/AccordionIcon/AccordionIcon';
 import * as UI from '../../index';
 import * as Styled from '../styled';
+import { ANIMATION } from '../../../models/enum';
 
 const AccordionItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
   const itemRef = useRef(null);
 
   return (
-    <UI.Animation delay={1}>
+    <UI.Animation>
       <Styled.AccordionItem key={id}>
-        <UI.Animation delay={1.5} distance={'50px'}>
+        <UI.Animation delay={ANIMATION.STEP} distance={'50px'}>
           <Styled.Title>
             <UI.Badge>{id + 1}</UI.Badge>
             <UI.H2 style={{ lineHeight: '80%' }}>{item.title}</UI.H2>
@@ -18,14 +19,14 @@ const AccordionItem = ({ isExpanded, isOpen, id, item, clickHandler }) => {
         </UI.Animation>
         <Styled.Content>
           <Styled.Description>
-            <UI.Animation delay={1.8} distance={'50px'}>
+            <UI.Animation delay={ANIMATION.STEP * 2} distance={'50px'}>
               <UI.Paragraph
                 size={'large'}
                 dangerouslySetInnerHTML={{ __html: item.description }}
               />
             </UI.Animation>
           </Styled.Description>
-          <UI.Animation delay={2} distance={'50px'}>
+          <UI.Animation delay={ANIMATION.STEP * 3} distance={'50px'}>
             <Styled.Quation
               onClick={() => clickHandler(id)}
               expanded={isOpen ? isExpanded : null}
