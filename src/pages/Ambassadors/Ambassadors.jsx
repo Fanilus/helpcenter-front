@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 import * as Styled from './styled';
 import * as UI from '../../components/index';
@@ -7,11 +8,13 @@ import CheckAmbassadors from '../../components/Icons/CheckAmbassadors/CheckAmbas
 import { COUNTRIES } from '../../models/enum';
 import { useLocation } from 'react-router-dom';
 import useFormik from './hook/useFormik';
-import { useSession } from '../../hooks';
-import { SessionService } from '../../services';
+
+const reCAPTCHA = process.env.REACT_APP_CAPTCHA;
 
 const Ambassadors = () => {
+  const [sentForm, setSentForm] = useState(false);
   const location = useLocation();
+  const recaptchaRef = useRef();
 
   const scrollToTop = () => {
     window.scrollTo(0, 0);
@@ -23,31 +26,30 @@ const Ambassadors = () => {
 
   const optionsSelect = COUNTRIES;
   const formik = useFormik();
-  const {
-    loading: loadingSession,
-    error: errorSession,
-    sessionInfo,
-  } = useSession();
-
-  // useEffect(() => {
-  //   SessionService.getSession();
-  // }, []);
 
   const handleChange = async (field, value) => {
     await formik.setFieldValue(field, value, false);
     await formik.validateField(field);
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     const errors = await formik.validateForm();
-    if (JSON.stringify(errors) === '{}') {
-      formik.handleSubmit(sessionInfo);
+    if (JSON.stringify(errors) === '{}' && formik.isValid) {
+      try {
+        await recaptchaRef.current.executeAsync();
+      } catch (e) {
+        await recaptchaRef.current.reset();
+        await recaptchaRef.current.executeAsync();
+      }
     }
   };
 
-  useEffect(() => {
-    console.log(sessionInfo);
-  }, [sessionInfo]);
+  const handleRecaptchaVerify = async (captcha) => {
+    await handleChange('captcha', captcha);
+    await formik.handleSubmit();
+    setSentForm(true);
+  };
 
   return (
     <Styled.Ambassadors>
@@ -107,67 +109,91 @@ const Ambassadors = () => {
             </Styled.Checks>
           </Styled.Description>
         </Styled.Content>
-        {/* <Styled.AmbassadorsCard>
-          <UI.H2>Apply here:</UI.H2>
+        <Styled.AmbassadorsCard>
+          <UI.H2>{!sentForm && 'Apply here:'}</UI.H2>
 
-          <Styled.InputContainer>
-            <Styled.Wrapper>
-              <UI.Input
-                placeholder={'Name'}
-                onChange={(value) => handleChange('name', value)}
-                error={formik.errors.name}
-              />
+          <Styled.InputContainer onSubmit={handleSubmit}>
+            {sentForm ? (
+              <UI.H2>
+                For questions regarding cooperation, please email{' '}
+                <a href="mailto:info@Tymio.com">info@Tymio.com</a>
+              </UI.H2>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <Styled.Wrapper>
+                  <UI.Input
+                    placeholder={'Name'}
+                    value={formik.values.name}
+                    onChange={(value) => handleChange('name', value)}
+                    error={formik.errors.name}
+                  />
 
-              <UI.Dropdown
-                onSelectAction={(value) => handleChange('country', value)}
-                options={optionsSelect}
-                valueSelected={formik.values.country}
-                placeholder={'Country'}
-                error={formik.errors.country}
-              />
-            </Styled.Wrapper>
+                  <UI.Dropdown
+                    onSelectAction={(value) => handleChange('country', value)}
+                    options={optionsSelect}
+                    valueSelected={formik.values.country}
+                    placeholder={'Country'}
+                    error={formik.errors.country}
+                  />
+                </Styled.Wrapper>
 
-            <UI.Input
-              number
-              placeholder={'Contact number (Telegram or WhatsApp)'}
-              onChange={(value) => handleChange('phone', value)}
-              error={formik.errors.phone}
-            />
+                <UI.Input
+                  number
+                  placeholder={'Contact number (Telegram or WhatsApp)'}
+                  value={formik.values.phone}
+                  onChange={(value) => handleChange('phone', value)}
+                  error={formik.errors.phone}
+                />
 
-            <Styled.Wrapper>
-              <UI.Input
-                placeholder={'Your experience in DeFi'}
-                onChange={(value) => handleChange('experience', value)}
-                error={formik.errors.experience}
-              />
-              <UI.Input
-                placeholder={'Your ETH wallet'}
-                paste
-                onChange={(value) => handleChange('wallet', value)}
-                error={formik.errors.wallet}
-              />
-            </Styled.Wrapper>
+                <Styled.Wrapper>
+                  <UI.Input
+                    placeholder={'Your experience in DeFi'}
+                    value={formik.values.experience}
+                    onChange={(value) => handleChange('experience', value)}
+                    error={formik.errors.experience}
+                  />
+                  <UI.Input
+                    placeholder={'Your ETH wallet'}
+                    paste
+                    value={formik.values.wallet}
+                    onChange={(value) => handleChange('wallet', value)}
+                    error={formik.errors.wallet}
+                  />
+                </Styled.Wrapper>
 
-            <UI.Input
-              placeholder={'Describe your community (describe or give a link)'}
-              paste
-              onChange={(value) => handleChange('link', value)}
-              error={formik.errors.link}
-            />
+                <UI.Input
+                  placeholder={
+                    'Describe your community (describe or give a link)'
+                  }
+                  paste
+                  value={formik.values.link}
+                  onChange={(value) => handleChange('link', value)}
+                  error={formik.errors.link}
+                />
 
-            <Styled.FooterWrapper>
-              <UI.Input
-                checkbox
-                label={
-                  'I hereby consent to the processing of the personal data that I have provided'
-                }
-                onChange={(value) => handleChange('agreement', value)}
-                error={formik.errors.agreement}
-              />
-              <UI.Button onClick={handleSubmit}>Send</UI.Button>
-            </Styled.FooterWrapper>
+                <Styled.FooterWrapper>
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    size="invisible"
+                    style={{ position: 'absolute' }}
+                    sitekey={reCAPTCHA}
+                    onChange={handleRecaptchaVerify}
+                  />
+                  <UI.Input
+                    checkbox
+                    label={
+                      'I hereby consent to the processing of the personal data that I have provided'
+                    }
+                    value={formik.values.agreement}
+                    onChange={(value) => handleChange('agreement', value)}
+                    error={formik.errors.agreement}
+                  />
+                  <UI.Button type="submit">Send</UI.Button>
+                </Styled.FooterWrapper>
+              </form>
+            )}
           </Styled.InputContainer>
-        </Styled.AmbassadorsCard> */}
+        </Styled.AmbassadorsCard>
       </UI.Container>
     </Styled.Ambassadors>
   );

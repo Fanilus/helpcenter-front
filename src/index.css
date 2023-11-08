@@ -24,8 +24,8 @@
   font-weight: 500;
 }
 
-iframe {
-  display: none;
+.grecaptcha-badge {
+  right: -1860px !important;
 }
 
 body {

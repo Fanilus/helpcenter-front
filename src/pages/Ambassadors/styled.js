@@ -75,6 +75,7 @@ export const Check = styled.div`
 `;
 
 export const AmbassadorsCard = styled.div`
+  min-height: 412px;
   border-radius: 14px;
   background-image: url(${AmbassadorsCardGradient});
   background-repeat: no-repeat;
@@ -84,6 +85,7 @@ export const AmbassadorsCard = styled.div`
   justify-content: space-between;
   gap: 142px;
   @media (max-width: 1439px) {
+    min-height: unset;
     gap: 30px;
     justify-content: flex-start;
     padding: 30px 30px 30px 20px;
@@ -99,10 +101,21 @@ export const AmbassadorsCard = styled.div`
 `;
 
 export const InputContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   flex-basis: 50%;
+
+  h2 {
+    a {
+      text-decoration: none;
+      color: ${COLORS.RED};
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   @media (max-width: 1439px) {
     flex-basis: 70%;
     margin-left: auto;
@@ -122,6 +135,7 @@ export const FooterWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+
   @media (max-width: 767px) {
     label {
       align-items: flex-start;

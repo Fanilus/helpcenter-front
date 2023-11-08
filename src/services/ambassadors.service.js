@@ -15,7 +15,7 @@ class AmbassadorsService {
     this.apiUrl = process.env.REACT_APP_API_URL;
   }
 
-  async postOrder(body) {
+  async post(body) {
     if (this.state.loading) {
       return;
     }

@@ -1,5 +1,6 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import AmbassadorsService from '../../../services/ambassadors.service';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required('Required'),
@@ -12,12 +13,14 @@ const validationSchema = Yup.object().shape({
   experience: Yup.string(),
   wallet: Yup.string()
     .matches(/^[a-zA-Z0-9-]+$/, 'Only alphabets and numbers are allowed')
-    .matches(/0x[a-fA-F0-9]{40}/, 'Only token addresses are allowed')
+    .matches(/0x[a-fA-F0-9]{40}/, 'Only wallet addresses are allowed')
+    .max(42, 'Wallet address can be at most 42 digits')
     .required('Required'),
-  link: Yup.string().url('Invalid URL format').required('Required'),
+  link: Yup.string().url('Invalid URL format'),
   agreement: Yup.boolean()
     .oneOf([true], 'You need to agree to the terms and conditions')
     .required('You need to agree to the terms and conditions'),
+  captcha: Yup.string(),
 });
 
 const useAmbFormik = () => {
@@ -30,12 +33,20 @@ const useAmbFormik = () => {
       wallet: '',
       link: '',
       agreement: false,
+      captcha: '',
     },
     validationSchema: validationSchema,
     validateOnMount: false,
-    onSubmit: async (sessionInfo, values) => {
-      console.log(sessionInfo);
-      console.log(values);
+    onSubmit: async (values) => {
+      if (!values.captcha)
+        return formik.setErrors({
+          captcha: "You have not confirmed that you're human",
+        });
+
+      await AmbassadorsService.post({
+        ...values,
+        wallet: values.wallet.toLocaleLowerCase(),
+      });
     },
   });
 

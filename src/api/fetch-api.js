@@ -35,7 +35,6 @@ export const POST = (url = '', data = {}) => {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        'Session-Token': data.sessionToken || Cookies.get('sessionToken'),
       },
       body: JSON.stringify(data),
     };

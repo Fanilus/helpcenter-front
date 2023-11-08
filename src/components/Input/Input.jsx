@@ -74,7 +74,7 @@ const Input = ({
             type="checkbox"
             id="check"
             name="check"
-            checked={isChecked}
+            checked={isChecked || props.value}
             onChange={handleCheckboxChange}
           />
           <Styled.CustomCheckbox></Styled.CustomCheckbox>
@@ -87,6 +87,7 @@ const Input = ({
           onChange={handleInputChange}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
+          {...props}
         />
       )}
 
