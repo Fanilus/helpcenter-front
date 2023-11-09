@@ -116,7 +116,7 @@ const Home = ({ loading, statistics }) => {
             </Styled.Bot>
           </Styled.Content>
           {mobile ? (
-            <Styled.Frame ref={canvasRef} width={300} height={300} />
+            <Styled.Frame ref={canvasRef} width={287} height={287} />
           ) : (
             <Styled.Video
               src={video}

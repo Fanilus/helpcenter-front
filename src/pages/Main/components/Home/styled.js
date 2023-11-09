@@ -56,21 +56,21 @@ export const Content = styled.div`
 
 export const Video = styled.video`
   position: absolute;
-  top: 128px;
+  top: -18px;
   right: 0;
   z-index: -1;
-  height: 681px;
+  height: 826px;
 
   @media (max-width: 1919px) {
-    top: 24px;
+    top: -19px;
     right: 0;
-    height: 660px;
+    height: 702px;
   }
 
   @media (max-width: 1439px) {
-    top: 24px;
+    top: 0px;
     right: 30px;
-    height: 379px;
+    height: 402px;
   }
 
   @media (max-width: 767px) {
@@ -85,7 +85,7 @@ export const Frame = styled.canvas`
     position: absolute;
     z-index: -1;
     bottom: 0;
-    height: 300px;
+    height: 287px;
     left: 50%;
     transform: translateX(-50%);
   }
