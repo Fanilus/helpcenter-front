@@ -69,7 +69,7 @@ export const Video = styled.video`
 
   @media (max-width: 1439px) {
     top: 0px;
-    right: 30px;
+    right: 45px;
     height: 402px;
   }
 

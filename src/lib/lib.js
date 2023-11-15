@@ -1,5 +1,3 @@
-import Cookies from 'js-cookie';
-
 export const isMobile = function () {
   let isMobile = false;
   (function (a) {
@@ -15,9 +13,4 @@ export const isMobile = function () {
       isMobile = true;
   })(navigator.userAgent || navigator.vendor || window.opera);
   return isMobile;
-};
-
-export const updateCookies = (sessionInfo) => {
-  const { sessionToken } = sessionInfo;
-  Cookies.set('sessionToken', sessionToken);
 };

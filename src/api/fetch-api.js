@@ -1,5 +1,3 @@
-import Cookies from 'js-cookie';
-
 const convertToQueryParams = (params = {}) => {
   let queryString = '';
   Object.keys(params).forEach((key, index) => {
