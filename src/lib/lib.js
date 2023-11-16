@@ -14,3 +14,12 @@ export const isMobile = function () {
   })(navigator.userAgent || navigator.vendor || window.opera);
   return isMobile;
 };
+
+export const importAllImages = (context) => {
+  let images = {};
+  context.keys().forEach((item) => {
+    const imageName = item.replace('./', '');
+    images[imageName] = context(item).default;
+  });
+  return images;
+};

@@ -1,18 +1,76 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import * as Styled from './styled';
 import * as UI from '../../../../components/index';
 
-import Currency from '../../../../assets/video/Currency.mp4';
+import video from '../../../../assets/video/currency_low_quality.webm';
 import SellHightChart from '../../../../img/SellHightChart.svg';
 import BuyLowChart from '../../../../img/BuyLowChart.svg';
 import { TYPOGRAPHY_SIZE } from '../../../../models/types';
 import Checks from '../Home/Checks';
 import Stats from '../Home/Stats';
 import { useStep } from '../../../../hooks';
+import { importAllImages, isMobile } from '../../../../lib/lib';
+
+const imageContext = require.context(
+  '../../../../assets/video/frames/currency',
+  false,
+  /\.(png|jpe?g|gif|svg)$/
+);
+const images = importAllImages(imageContext);
+const frameRate = 30;
+const frameInterval = 1000 / frameRate;
+const totalFrames = 90;
 
 const HowItWork = ({ loading, statistics }) => {
   const step = useStep();
+  const mobile = isMobile();
+
+  const canvasRef = useRef(null);
+  const [isCanvasReady, setIsCanvasReady] = useState(false);
+  const framesToLoad = useRef(Array(totalFrames).fill(null));
+  const imagesLoaded = useRef(false);
+  const loaderCounter = useRef(0);
+  const currentFrame = useRef(0);
+
+  const handleImageLoad = () => {
+    loaderCounter.current++;
+    if (loaderCounter.current === totalFrames - 1) {
+      imagesLoaded.current = true;
+      setIsCanvasReady(true);
+    }
+  };
+
+  useEffect(() => {
+    if (mobile) {
+      const canvas = canvasRef.current;
+      const ctx = canvas.getContext('2d');
+      const frameWidth = canvas.width;
+      const frameHeight = canvas.height;
+
+      framesToLoad.current = Array.from({ length: totalFrames }, (_, i) => {
+        const img = new Image();
+        img.src = images[Object.keys(images)[i]];
+        img.onload = handleImageLoad;
+        return img;
+      });
+
+      const drawNextFrame = () => {
+        const img = framesToLoad.current[currentFrame.current];
+
+        ctx.clearRect(0, 0, frameWidth, frameHeight);
+        if (img) {
+          ctx.drawImage(img, 0, 0, frameWidth, frameHeight);
+        }
+        if (imagesLoaded.current) {
+          currentFrame.current = (currentFrame.current + 1) % totalFrames;
+        }
+        setTimeout(drawNextFrame, frameInterval);
+      };
+
+      drawNextFrame();
+    }
+  }, [mobile]);
 
   return (
     <Styled.HowItWork>
@@ -27,9 +85,39 @@ const HowItWork = ({ loading, statistics }) => {
         </UI.H1>
 
         <Styled.Content>
-          <UI.Animation delay={step * 5} type={'opacity'}>
-            <video src={Currency} autoPlay loop muted />
-          </UI.Animation>
+          {mobile ? (
+            <>
+              <canvas
+                ref={canvasRef}
+                width={307}
+                height={126}
+                style={{ margin: '0 auto' }}
+              />
+              {!isCanvasReady && (
+                <img
+                  width={307}
+                  height={126}
+                  style={{
+                    position: 'absolute',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                  }}
+                  src={images[Object.keys(images)[0]]}
+                  alt=""
+                />
+              )}
+            </>
+          ) : (
+            <video
+              src={video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              type="video/webm"
+              preload="auto"
+            />
+          )}
           <Styled.Description>
             <UI.Animation>
               <Styled.ListItem>

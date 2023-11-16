@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import * as Styled from './styled';
 import * as UI from '../../../../components/index';
@@ -9,12 +9,11 @@ import Checks from './Checks';
 import Stats from './Stats';
 
 import video from '../../../../assets/video/video_low_quality.webm';
-import { isMobile } from '../../../../lib/lib';
+import { importAllImages, isMobile } from '../../../../lib/lib';
 
-import { importAllImages } from './imageImport';
 import { useStep } from '../../../../hooks';
 const imageContext = require.context(
-  '../../../../assets/video/frames',
+  '../../../../assets/video/frames/home',
   false,
   /\.(png|jpe?g|gif|svg)$/
 );
@@ -31,6 +30,7 @@ const Home = ({ loading, statistics }) => {
   const mobile = isMobile();
 
   const canvasRef = useRef(null);
+  const [isCanvasReady, setIsCanvasReady] = useState(false);
   const framesToLoad = useRef(Array(totalFrames).fill(null));
   const imagesLoaded = useRef(false);
   const loaderCounter = useRef(0);
@@ -40,6 +40,7 @@ const Home = ({ loading, statistics }) => {
     loaderCounter.current++;
     if (loaderCounter.current === totalFrames - 1) {
       imagesLoaded.current = true;
+      setIsCanvasReady(true);
     }
   };
 
@@ -116,7 +117,23 @@ const Home = ({ loading, statistics }) => {
             </Styled.Bot>
           </Styled.Content>
           {mobile ? (
-            <Styled.Frame ref={canvasRef} width={287} height={287} />
+            <>
+              <Styled.Frame ref={canvasRef} width={287} height={287} />
+              {!isCanvasReady && (
+                <img
+                  width={287}
+                  height={287}
+                  style={{
+                    position: 'absolute',
+                    left: '50%',
+                    bottom: '0',
+                    transform: 'translateX(-50%)',
+                  }}
+                  src={images[Object.keys(images)[0]]}
+                  alt=""
+                />
+              )}
+            </>
           ) : (
             <Styled.Video
               src={video}
