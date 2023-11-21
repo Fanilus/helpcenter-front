@@ -22,41 +22,40 @@ const Footer = ({ light }) => {
             © 2023 Tymio. All rights reserved.
           </UI.Paragraph>
         </Styled.FooterContent>
-        <Styled.FooterLinks>
-          <Styled.RoutesLinks>
-            {footer.map(({ label, path }, index) => (
-              <Styled.Route key={index}>
-                <NavLink to={path}>
-                  <UI.Paragraph
-                    color={COLORS.PURPLE_DARK}
-                    size={TYPOGRAPHY_SIZE.LARGE}
-                  >
-                    {label}
-                  </UI.Paragraph>
-                </NavLink>
-              </Styled.Route>
-            ))}
-          </Styled.RoutesLinks>
-          <Styled.MediaRoutes>
-            {media.map(({ label, path, type }, index) => (
-              <Styled.Route key={index}>
-                <a
-                  href={path}
-                  rel={type !== 'mail' ? 'noreferrer' : []}
-                  target={type !== 'mail' ? '_blank' : '_self'}
+        {/* <Styled.FooterLinks> */}
+        <Styled.RoutesLinks>
+          {footer.map(({ label, path }, index) => (
+            <Styled.Route key={index}>
+              <NavLink to={path}>
+                <UI.Paragraph
+                  color={COLORS.PURPLE_DARK}
+                  size={TYPOGRAPHY_SIZE.LARGE}
                 >
-                  <UI.Paragraph
-                    color={COLORS.PURPLE_DARK}
-                    size={TYPOGRAPHY_SIZE.LARGE}
-                  >
-                    {label}
-                  </UI.Paragraph>
-                </a>
-              </Styled.Route>
-            ))}
-          </Styled.MediaRoutes>
-        </Styled.FooterLinks>
-        <Styled.FooterButton />
+                  {label}
+                </UI.Paragraph>
+              </NavLink>
+            </Styled.Route>
+          ))}
+        </Styled.RoutesLinks>
+        <Styled.MediaRoutes>
+          {media.map(({ label, path, type }, index) => (
+            <Styled.Route key={index}>
+              <a
+                href={path}
+                rel={type !== 'mail' ? 'noreferrer' : []}
+                target={type !== 'mail' ? '_blank' : '_self'}
+              >
+                <UI.Paragraph
+                  color={COLORS.PURPLE_DARK}
+                  size={TYPOGRAPHY_SIZE.LARGE}
+                >
+                  {label}
+                </UI.Paragraph>
+              </a>
+            </Styled.Route>
+          ))}
+        </Styled.MediaRoutes>
+        {/* </Styled.FooterLinks> */}
       </Styled.Container>
     </Styled.Footer>
   );

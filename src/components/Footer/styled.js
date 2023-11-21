@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { COLORS } from '../../models/colors';
 
 export const Footer = styled.footer`
-  padding: 20px 60px 60px 60px;
+  padding: 20px 60px 40px 60px;
   background: ${({ light }) =>
     light
       ? 'linear-gradient(180deg, rgba(230, 226, 238, 0.00) 0%, #A180FF 350%)'
@@ -19,7 +19,11 @@ export const Footer = styled.footer`
 `;
 export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
+  gap: 200px;
+  @media (max-width: 1439px) {
+    gap: 0;
+    justify-content: space-between;
+  }
 `;
 
 export const Hr = styled.div`
@@ -55,10 +59,10 @@ export const FooterContent = styled.div`
     }
   }
 `;
-export const FooterLinks = styled.div`
-  display: flex;
-  gap: 140px;
-`;
+// export const FooterLinks = styled.div`
+//   display: flex;
+//   gap: 140px;
+// `;
 export const FooterButton = styled.div`
   @media (max-width: 1439px) {
     display: none;
@@ -81,6 +85,7 @@ export const MediaRoutes = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin: 0 auto;
 `;
 
 export const Route = styled.div`
