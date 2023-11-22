@@ -86,6 +86,9 @@ export const MediaRoutes = styled.div`
   flex-direction: column;
   gap: 10px;
   margin: 0 auto;
+  @media (max-width: 1439px) {
+    margin: 0;
+  }
 `;
 
 export const Route = styled.div`

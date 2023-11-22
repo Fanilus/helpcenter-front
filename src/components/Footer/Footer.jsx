@@ -22,7 +22,6 @@ const Footer = ({ light }) => {
             © 2023 Tymio. All rights reserved.
           </UI.Paragraph>
         </Styled.FooterContent>
-        {/* <Styled.FooterLinks> */}
         <Styled.RoutesLinks>
           {footer.map(({ label, path }, index) => (
             <Styled.Route key={index}>
@@ -55,7 +54,6 @@ const Footer = ({ light }) => {
             </Styled.Route>
           ))}
         </Styled.MediaRoutes>
-        {/* </Styled.FooterLinks> */}
       </Styled.Container>
     </Styled.Footer>
   );
