@@ -15,7 +15,9 @@ const LogoIconFooter = ({ size }) => {
       height = 112;
       break;
   }
-  return <Styled.Logo src={Logo} alt="" width={width} height={height} />;
+  return (
+    <Styled.Logo src={Logo} alt="logotype" width={width} height={height} />
+  );
 };
 
 export default LogoIconFooter;
