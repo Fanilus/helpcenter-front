@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import AmbassadorsCardGradient from '../../img/AmbassadorsCardGradient.svg';
 import { COLORS } from '../../models/colors';
 
-export const Ambassadors = styled.div`
+export const Club = styled.div`
   padding: 120px 0 180px;
   h1 {
     color: rgba(215, 203, 250, 0.3);
@@ -74,7 +74,7 @@ export const Check = styled.div`
   }
 `;
 
-export const AmbassadorsCard = styled.div`
+export const ClubCard = styled.div`
   min-height: 412px;
   border-radius: 14px;
   background-image: url(${AmbassadorsCardGradient});
@@ -153,10 +153,6 @@ export const FooterWrapper = styled.div`
 export const Text = styled.div`
   flex-shrink: 0;
 
-  a {
-    color: ${COLORS.LIGHT};
-  }
-
   @media (max-width: 1439px) {
     width: 50%;
   }
@@ -166,4 +162,12 @@ export const Text = styled.div`
     height: fit-content;
     flex-basis: 0;
   }
+`;
+
+export const TextContent = styled.div`
+  flex-shrink: 0;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 `;

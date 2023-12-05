@@ -57,6 +57,7 @@ export const CustomCheckbox = styled.span`
   background: transparent;
   border-radius: 2px;
   border: 1px solid ${COLORS.PURPLE_GRAY};
+  flex-shrink: 0;
   :before {
     content: '';
     display: inline-block;

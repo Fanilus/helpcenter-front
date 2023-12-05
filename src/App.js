@@ -8,6 +8,7 @@ const Main = lazy(() => import('./pages/Main/Main'));
 const WhitePaper = lazy(() => import('./pages/WhitePaper/WhitePaper'));
 const Terms = lazy(() => import('./pages/Terms/Terms'));
 const Ambassadors = lazy(() => import('./pages/Ambassadors/Ambassadors'));
+const Club = lazy(() => import('./pages/Club/Club'));
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/whitepaper" element={<WhitePaper />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/ambassadors" element={<Ambassadors />} />
+            <Route path="/club" element={<Club />} />
 
             <Route path="*" element={<Main />} />
           </Route>

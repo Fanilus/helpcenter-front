@@ -37,6 +37,10 @@ const useRoutes = () => {
       label: 'Terms Of Use',
       path: `${APP_LINK}/terms`,
     },
+    {
+      label: 'Club',
+      path: `/club`,
+    },
   ];
   const media = [
     { label: 'DeBank', path: 'https://debank.com/official-account/111827' },
@@ -52,6 +56,7 @@ const useRoutes = () => {
     { label: 'Ambassadors', path: '/ambassadors' },
     { label: 'White Paper', path: '/whitepaper' },
     { label: 'Terms Of Use', path: `/terms` },
+    { label: 'Club', path: `/club` },
   ];
 
   const allRoutes = [...header, ...media, ...burger, ...footer];
