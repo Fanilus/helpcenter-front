@@ -110,8 +110,8 @@ const Club = () => {
           <Styled.InputContainer onSubmit={handleSubmit}>
             {sentForm ? (
               <UI.H2>
-                For questions regarding cooperation, please email{' '}
-                <a href="mailto:info@Tymio.com">info@Tymio.com</a>
+                Request accepted, TYMIO ambassador will get in touch with you
+                soon.
               </UI.H2>
             ) : (
               <form onSubmit={handleSubmit}>
