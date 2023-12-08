@@ -94,7 +94,7 @@ const Club = () => {
               </Styled.Check>
               <Styled.TextContent>
                 <UI.Paragraph size={'large'}>
-                  *some languages not supproted
+                  *some languages not supported
                 </UI.Paragraph>
                 <UI.Paragraph size={'large'}>
                   The club subscription costs $89 for six months. Access can
