@@ -42,7 +42,7 @@ const UseCases = () => {
     {
       title: 'Startups',
       description:
-        'Put your treasury funds to work. This strategy will enhance your run rate and give you a competitive advantage. We offer special rates and a higher APR.',
+        'Put your treasury funds to work. This strategy will enhance your runway and give you a competitive advantage. We offer special rates and a higher APR.',
       question: 'Example',
       answer:
         "Imagine you need to sell 1 BTC in a month to cover your team's salary. With TYMIO, you can set a sell order at a higher price with a duration of one month. At the end of this period, you'll either achieve the desired selling price or earn a fixed yield on your BTC. It's both straightforward and profitable.",
