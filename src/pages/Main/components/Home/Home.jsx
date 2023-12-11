@@ -91,11 +91,7 @@ const Home = ({ loading, statistics }) => {
             <UI.Animation delay={step}>
               <Styled.Description>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                  Earn up to{' '}
-                  {!loading && statistics
-                    ? `${Math.floor(statistics.formatted.averageAPY)}%`
-                    : 'XX'}{' '}
-                  annualized on your USDC, ETH or WBTC by being ready to sell
+                  Earn up to 50% annualized on your USDC, ETH or WBTC by being ready to sell
                   above market price or to buy below market price.
                 </UI.Paragraph>
               </Styled.Description>
