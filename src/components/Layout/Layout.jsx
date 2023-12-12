@@ -24,7 +24,7 @@ const Layout = () => {
 
   return (
     <TymioUI.Container>
-      {/* <UI.Header light={light} /> */}
+      <UI.Header light={light} />
       <Styled.Main>
         <Outlet />
       </Styled.Main>

@@ -47,6 +47,8 @@ export const Button = styled.button`
           return COLORS.GRADIENT_RED_PINK;
         case BUTTON_TYPE.SECONDARY:
           return COLORS.PURPLE_BRIGHT;
+        case BUTTON_TYPE.BIG:
+          return COLORS.LEMON;
         default:
           return COLORS.GRADIENT_RED_PINK;
       }

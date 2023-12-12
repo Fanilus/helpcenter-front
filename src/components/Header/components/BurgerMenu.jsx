@@ -11,11 +11,12 @@ import { COLORS } from '../../../models/colors';
 import Paragraph from '../../Typography/Paragraph/Paragraph';
 
 const APP_LINK = process.env.REACT_APP_APP_LINK;
+const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
 
 const BurgerMenu = () => {
-  const { burger } = useRoutes();
+  const { burger, burgerWelcome } = useRoutes();
   const [active, setActive] = useState(false);
-
+  const BURGER = WELCOME_PAGE ? burgerWelcome : burger;
   const toggleMenu = () => {
     setActive((prevState) => !prevState);
   };
@@ -43,7 +44,7 @@ const BurgerMenu = () => {
             <img src={Close} alt={''} />
           </Styled.CloseIcon>
           <Styled.Routes>
-            {burger.map(({ path, label }, i) => (
+            {BURGER.map(({ path, label }, i) => (
               <Styled.Route key={i}>
                 <NavLink to={path} onClick={toggleMenu}>
                   {label}

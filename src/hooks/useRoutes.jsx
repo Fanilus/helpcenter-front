@@ -42,6 +42,40 @@ const useRoutes = () => {
       path: `/club`,
     },
   ];
+  const burgerWelcome = [
+    {
+      label: 'How it works',
+      path: 'https://tymio.com/how_it_work',
+    },
+    {
+      label: 'Use cases',
+      path: 'https://tymio.com/use_cases',
+    },
+    {
+      label: 'Safety',
+      path: 'https://tymio.com/safety',
+    },
+    {
+      label: 'FAQ',
+      path: 'https://tymio.com/faq',
+    },
+    {
+      label: 'Ambassadors',
+      path: 'https://tymio.com/ambassadors',
+    },
+    {
+      label: 'White Paper',
+      path: 'https://tymio.com/whitepaper',
+    },
+    {
+      label: 'Terms Of Use',
+      path: `${APP_LINK}/terms`,
+    },
+    {
+      label: 'Club',
+      path: `https://tymio.com/club`,
+    },
+  ];
   const media = [
     { label: 'DeBank', path: 'https://debank.com/official-account/111827' },
     { label: 'Telegram', path: 'https://t.me/tymioapp' },
@@ -59,14 +93,27 @@ const useRoutes = () => {
     { label: 'Club', path: `/club` },
   ];
 
+  const footerWelcome = [
+    { label: 'How it works', path: 'https://tymio.com/how_it_work' },
+    { label: 'Use cases', path: 'https://tymio.com/use_cases' },
+    { label: 'Safety', path: 'https://tymio.com/safety' },
+    { label: 'FAQ', path: 'https://tymio.com/faq' },
+    { label: 'Ambassadors', path: 'https://tymio.com/ambassadors' },
+    { label: 'White Paper', path: 'https://tymio.com/whitepaper' },
+    { label: 'Terms Of Use', path: `https://tymio.com/terms` },
+    { label: 'Club', path: `https://tymio.com/club` },
+  ];
+
   const allRoutes = [...header, ...media, ...burger, ...footer];
 
   return {
     header,
     media,
     burger,
+    burgerWelcome,
     footer,
     allRoutes,
+    footerWelcome,
   };
 };
 

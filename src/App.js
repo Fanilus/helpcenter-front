@@ -9,8 +9,9 @@ const WhitePaper = lazy(() => import('./pages/WhitePaper/WhitePaper'));
 const Terms = lazy(() => import('./pages/Terms/Terms'));
 const Ambassadors = lazy(() => import('./pages/Ambassadors/Ambassadors'));
 const Club = lazy(() => import('./pages/Club/Club'));
-const Redirect = lazy(() => import('./pages/Redirect/Redirect'));
+const Welcome = lazy(() => import('./pages/Welcome/Welcome'));
 
+const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
 
 const App = () => {
   return (
@@ -20,15 +21,22 @@ const App = () => {
       <Suspense fallback={<></>}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="/" element={<Main />} />
-            <Route path="/:elementId" element={<Main />} />
-            <Route path="/whitepaper" element={<WhitePaper />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/ambassadors" element={<Ambassadors />} />
-            <Route path="/club" element={<Club />} />
-            <Route path="/redirect" element={<Redirect />} />
+            {WELCOME_PAGE ? (
+              <>
+                <Route path="/" element={<Welcome />} />
+              </>
+            ) : (
+              <>
+                <Route path="/" element={<Main />} />
+                <Route path="/:elementId" element={<Main />} />
+                <Route path="/whitepaper" element={<WhitePaper />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/ambassadors" element={<Ambassadors />} />
+                <Route path="/club" element={<Club />} />
+              </>
+            )}
 
-            <Route path="*" element={<Main />} />
+            <Route path="*" element={WELCOME_PAGE ? <Welcome /> : <Main />} />
           </Route>
         </Routes>
       </Suspense>

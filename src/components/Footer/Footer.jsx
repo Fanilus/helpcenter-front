@@ -8,10 +8,11 @@ import { COLORS } from '../../models/colors';
 import { NavLink } from 'react-router-dom';
 import useRoutes from '../../hooks/useRoutes';
 import { TYPOGRAPHY_SIZE } from '../../models/types';
+const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
 
 const Footer = ({ light }) => {
-  const { footer, media } = useRoutes();
-
+  const { footer, media, footerWelcome } = useRoutes();
+  const FOOTER = WELCOME_PAGE ? footerWelcome : footer;
   return (
     <Styled.Footer light={light}>
       <Styled.Hr />
@@ -23,7 +24,7 @@ const Footer = ({ light }) => {
           </UI.Paragraph>
         </Styled.FooterContent>
         <Styled.RoutesLinks>
-          {footer.map(({ label, path }, index) => (
+          {FOOTER.map(({ label, path }, index) => (
             <Styled.Route key={index}>
               <NavLink to={path}>
                 <UI.Paragraph
