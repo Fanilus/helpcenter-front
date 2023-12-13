@@ -31,7 +31,7 @@ export const Banner = styled.div`
 
 export const Logo = styled.div`
   margin-bottom: 96px;
-  @media (max-width: 767px) {
+  @media (max-width: 1439px) {
     display: none;
   }
 `;
@@ -95,7 +95,8 @@ export const Content = styled.div`
   width: ${({ width }) => width || 'fit-content'};
   @media (max-width: 1439px) {
     width: fit-content;
-    flex-basis: 645px;
+    flex-basis: auto;
+    flex-grow: 1;
   }
   @media (max-width: 767px) {
     width: 100%;
@@ -113,10 +114,16 @@ export const Formula = styled.div`
 export const ButtonWrapper = styled.div`
   margin-bottom: 80px;
   width: 100%;
+  button {
+    width: 419px;
+  }
   @media (max-width: 767px) {
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+    button {
+      width: 345px;
+    }
   }
 `;
 export const Description = styled.div`

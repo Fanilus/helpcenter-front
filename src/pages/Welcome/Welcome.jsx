@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import * as Styled from './styled';
 import * as UI from '../../components/index';
@@ -6,17 +6,12 @@ import { COLORS } from '../../models/colors';
 
 import LogoSmall from '../../components/Icons/LogoSmall/LogoSmall';
 import TableContent from './components/TableContent/TableContent';
-import useWelcomePage from './hooks/useWelcomePage';
-import WelcomePageService from '../../services/welcome-page.service';
+
 
 const APP_LINK = process.env.REACT_APP_APP_LINK;
+const DIRECTION = process.env.REACT_APP_WELCOME_PAGE_DIRECTION;
 
 const Welcome = () => {
-  const { currentOffer, loading, error } = useWelcomePage();
-  console.log(currentOffer);
-  useEffect(() => {
-    WelcomePageService.getData({ tokenSymbol: 'WBTC' });
-  }, []);
   return (
     <Styled.Welcome>
       <Styled.Banner>
@@ -24,7 +19,12 @@ const Welcome = () => {
           <LogoSmall />
         </Styled.Logo>
         <Styled.Wrapper>
-          <UI.HH color={COLORS.BLACK}>Buy ETH or BTC lower.</UI.HH>
+          {DIRECTION === 'sell' && (
+            <UI.HH color={COLORS.BLACK}>Sell ETH or BTC higher.</UI.HH>
+          )}
+          {DIRECTION === 'buy' && (
+            <UI.HH color={COLORS.BLACK}>Buy ETH or BTC lower.</UI.HH>
+          )}
           <UI.HH color={COLORS.LEMON}>Earn yield on your stablecoins</UI.HH>
         </Styled.Wrapper>
       </Styled.Banner>

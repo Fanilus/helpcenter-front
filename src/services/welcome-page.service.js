@@ -1,4 +1,4 @@
-import { take, Subject, from } from 'rxjs';
+import { take, Subject, from, forkJoin } from 'rxjs';
 import { GET } from '../api/fetch-api';
 
 const DIRECTION = process.env.REACT_APP_WELCOME_PAGE_DIRECTION;
@@ -7,7 +7,8 @@ class WelcomePageService {
   initialState = {
     loading: false,
     error: null,
-    current_offer: null,
+    current_WBTC_offer: null,
+    current_ETH_offer: null,
   };
 
   state = this.initialState;
@@ -17,7 +18,7 @@ class WelcomePageService {
     this.apiUrl = process.env.REACT_APP_API_URL;
   }
 
-  getData({ tokenSymbol }) {
+  getData() {
     if (this.state.loading) {
       return;
     }
@@ -28,17 +29,26 @@ class WelcomePageService {
     };
     this.state$.next(this.state);
 
-    const data$ = from(
-      GET(`${this.apiUrl}/web/current_offer/:${DIRECTION}`, { tokenSymbol })
+    const WBTCData$ = from(
+      GET(`${this.apiUrl}/web/current_offer/${DIRECTION}`, {
+        tokenSymbol: 'WBTC',
+      })
     ).pipe(take(1));
 
-    data$.subscribe({
-      next: (result) => {
+    const ETHData$ = from(
+      GET(`${this.apiUrl}/web/current_offer/${DIRECTION}`, {
+        tokenSymbol: 'ETH',
+      })
+    ).pipe(take(1));
+
+    forkJoin([WBTCData$, ETHData$]).subscribe({
+      next: ([WBTCResult, ETHResult]) => {
         this.state = {
           ...this.state,
           error: null,
           loading: false,
-          current_offer: result.data ? result.data.statistics : null,
+          current_WBTC_offer: WBTCResult.data,
+          current_ETH_offer: ETHResult.data,
         };
 
         this.state$.next(this.state);

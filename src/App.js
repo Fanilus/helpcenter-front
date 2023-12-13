@@ -24,6 +24,7 @@ const App = () => {
             {WELCOME_PAGE ? (
               <>
                 <Route path="/" element={<Welcome />} />
+                <Route path="*" element={<Welcome />} />
               </>
             ) : (
               <>
@@ -33,10 +34,9 @@ const App = () => {
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/ambassadors" element={<Ambassadors />} />
                 <Route path="/club" element={<Club />} />
+                <Route path="*" element={<Main />} />
               </>
             )}
-
-            <Route path="*" element={WELCOME_PAGE ? <Welcome /> : <Main />} />
           </Route>
         </Routes>
       </Suspense>

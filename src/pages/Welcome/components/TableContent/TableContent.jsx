@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { COLORS } from '../../../../models/colors';
 
+import useWelcomePage from '../../hooks/useWelcomePage';
+import WelcomePageService from '../../../../services/welcome-page.service';
 import { Table } from './index';
 import ETH from '../../../../components/Icons/ETHIconSecond/ETHIconSecond';
 import BTC from '../../../../components/Icons/BTCIcon/BTCIcon';
+import { LoadingSpinner } from '../../../../components/_DEPRECATED';
 
 const TableContent = () => {
+  const { currentETHOffer, currentWBTCOffer, loading, error } =
+    useWelcomePage();
+
+  useEffect(() => {
+    WelcomePageService.getData();
+  }, []);
+
   return (
     <Table>
       <Table.Head>
@@ -23,50 +33,54 @@ const TableContent = () => {
           <Table.Th align={'left'}></Table.Th>
         </Table.Head.Tr>
       </Table.Head>
-      <Table.Body hr>
-        <Table.Tr
-          grid_template_columns={'1fr 1fr 1fr 1fr 0.5fr'}
-          mobile_grid_template_columns={'1fr 1.5fr 1fr 1fr 0.5fr'}
-        >
-          <Table.Td align={'left'} adaptive>
-            <ETH />
-            ETH
-          </Table.Td>
-          <Table.Td align={'left'} adaptive>
-            2,050
-          </Table.Td>
-          <Table.Td align={'left'} adaptive>
-            1,900
-          </Table.Td>
-          <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
-            15%
-          </Table.Td>
-          <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
-            $150
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr
-          grid_template_columns={'1fr 1fr 1fr 1fr 0.5fr'}
-          mobile_grid_template_columns={'1fr 1.5fr 1fr 1fr 0.5fr'}
-        >
-          <Table.Td align={'left'} adaptive>
-            <BTC />
-            BTC
-          </Table.Td>
-          <Table.Td align={'left'} adaptive>
-            35,000
-          </Table.Td>
-          <Table.Td align={'left'} adaptive>
-            34,900
-          </Table.Td>
-          <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
-            7%
-          </Table.Td>
-          <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
-            $330
-          </Table.Td>
-        </Table.Tr>
-      </Table.Body>
+
+      {loading && <LoadingSpinner />}
+      {!loading && !error && currentETHOffer && currentWBTCOffer && (
+        <Table.Body hr>
+          <Table.Tr
+            grid_template_columns={'1fr 1fr 1fr 1fr 0.5fr'}
+            mobile_grid_template_columns={'1fr 1.5fr 1fr 1fr 0.5fr'}
+          >
+            <Table.Td align={'left'} adaptive>
+              <ETH />
+              ETH
+            </Table.Td>
+            <Table.Td align={'left'} adaptive>
+              {currentETHOffer.market_price}
+            </Table.Td>
+            <Table.Td align={'left'} adaptive>
+              {currentETHOffer.offer_price}
+            </Table.Td>
+            <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
+              {currentETHOffer.save_percent}%
+            </Table.Td>
+            <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
+              ${currentETHOffer.prices_difference}
+            </Table.Td>
+          </Table.Tr>
+          <Table.Tr
+            grid_template_columns={'1fr 1fr 1fr 1fr 0.5fr'}
+            mobile_grid_template_columns={'1fr 1.5fr 1fr 1fr 0.5fr'}
+          >
+            <Table.Td align={'left'} adaptive>
+              <BTC />
+              BTC
+            </Table.Td>
+            <Table.Td align={'left'} adaptive>
+              {currentWBTCOffer.market_price}
+            </Table.Td>
+            <Table.Td align={'left'} adaptive>
+              {currentWBTCOffer.offer_price}
+            </Table.Td>
+            <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
+              {currentWBTCOffer.save_percent}%
+            </Table.Td>
+            <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
+              ${currentWBTCOffer.prices_difference}
+            </Table.Td>
+          </Table.Tr>
+        </Table.Body>
+      )}
     </Table>
   );
 };

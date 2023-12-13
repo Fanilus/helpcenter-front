@@ -3,14 +3,16 @@ import WelcomePageService from '../../../services/welcome-page.service';
 
 const useWelcomePage = () => {
   const [loading, setLoading] = useState(false);
-  const [currentOffer, setCurrentOffer] = useState([]);
   const [error, setError] = useState(null);
+  const [currentWBTCOffer, setCurrentWBTCOffer] = useState(null);
+  const [currentETHOffer, setCurrentETHOffer] = useState(null);
 
   useEffect(() => {
     const currentOffer$ = WelcomePageService.state$.subscribe((state) => {
       setError(state.error);
       setLoading(state.loading);
-      setCurrentOffer(state.currentOffer);
+      setCurrentWBTCOffer(state.current_WBTC_offer);
+      setCurrentETHOffer(state.current_ETH_offer);
     });
 
     return () => {
@@ -21,7 +23,8 @@ const useWelcomePage = () => {
   return {
     loading,
     error,
-    currentOffer,
+    currentWBTCOffer,
+    currentETHOffer,
   };
 };
 
