@@ -34,53 +34,55 @@ const TableContent = () => {
         </Table.Head.Tr>
       </Table.Head>
 
-      {loading && <LoadingSpinner />}
-      {!loading && !error && currentETHOffer && currentWBTCOffer && (
-        <Table.Body hr>
-          <Table.Tr
-            grid_template_columns={'1fr 1fr 1fr 1fr 0.5fr'}
-            mobile_grid_template_columns={'1fr 1.5fr 1fr 1fr 0.5fr'}
-          >
-            <Table.Td align={'left'} adaptive>
-              <ETH />
-              ETH
-            </Table.Td>
-            <Table.Td align={'left'} adaptive>
-              {currentETHOffer.market_price}
-            </Table.Td>
-            <Table.Td align={'left'} adaptive>
-              {currentETHOffer.offer_price}
-            </Table.Td>
-            <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
-              {currentETHOffer.save_percent}%
-            </Table.Td>
-            <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
-              ${currentETHOffer.prices_difference}
-            </Table.Td>
-          </Table.Tr>
-          <Table.Tr
-            grid_template_columns={'1fr 1fr 1fr 1fr 0.5fr'}
-            mobile_grid_template_columns={'1fr 1.5fr 1fr 1fr 0.5fr'}
-          >
-            <Table.Td align={'left'} adaptive>
-              <BTC />
-              BTC
-            </Table.Td>
-            <Table.Td align={'left'} adaptive>
-              {currentWBTCOffer.market_price}
-            </Table.Td>
-            <Table.Td align={'left'} adaptive>
-              {currentWBTCOffer.offer_price}
-            </Table.Td>
-            <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
-              {currentWBTCOffer.save_percent}%
-            </Table.Td>
-            <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
-              ${currentWBTCOffer.prices_difference}
-            </Table.Td>
-          </Table.Tr>
-        </Table.Body>
-      )}
+      <Table.Body hr>
+        {loading && <LoadingSpinner style={{ margin: 'auto' }} />}
+        {!loading && !error && currentETHOffer && currentWBTCOffer && (
+          <>
+            <Table.Tr
+              grid_template_columns={'1fr 1fr 1fr 1fr 0.5fr'}
+              mobile_grid_template_columns={'1fr 1.5fr 1fr 1fr 0.5fr'}
+            >
+              <Table.Td align={'left'} adaptive>
+                <ETH />
+                ETH
+              </Table.Td>
+              <Table.Td align={'left'} adaptive>
+                {currentETHOffer.market_price}
+              </Table.Td>
+              <Table.Td align={'left'} adaptive>
+                {currentETHOffer.offer_price}
+              </Table.Td>
+              <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
+                {currentETHOffer.save_percent}%
+              </Table.Td>
+              <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
+                ${currentETHOffer.prices_difference}
+              </Table.Td>
+            </Table.Tr>
+            <Table.Tr
+              grid_template_columns={'1fr 1fr 1fr 1fr 0.5fr'}
+              mobile_grid_template_columns={'1fr 1.5fr 1fr 1fr 0.5fr'}
+            >
+              <Table.Td align={'left'} adaptive>
+                <BTC />
+                BTC
+              </Table.Td>
+              <Table.Td align={'left'} adaptive>
+                {currentWBTCOffer.market_price}
+              </Table.Td>
+              <Table.Td align={'left'} adaptive>
+                {currentWBTCOffer.offer_price}
+              </Table.Td>
+              <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
+                {currentWBTCOffer.save_percent}%
+              </Table.Td>
+              <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
+                ${currentWBTCOffer.prices_difference}
+              </Table.Td>
+            </Table.Tr>
+          </>
+        )}
+      </Table.Body>
     </Table>
   );
 };

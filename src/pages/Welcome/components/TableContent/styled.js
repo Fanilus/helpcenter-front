@@ -20,6 +20,7 @@ export const Thead = styled.thead`
 export const Tbody = styled.tbody`
   display: grid;
   margin: 0;
+  min-height: 170px;
 `;
 
 export const TFooter = styled.tfoot`

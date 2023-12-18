@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyledSpinner } from './styled';
 
-const LoadingSpinner = ({ size, noMargin }) => {
+const LoadingSpinner = ({ size, noMargin, ...rest }) => {
   let width;
   switch (size) {
     case 'xs':
@@ -21,7 +21,7 @@ const LoadingSpinner = ({ size, noMargin }) => {
       width = 80;
       break;
   }
-  return <StyledSpinner width={width} noMargin={noMargin} />;
+  return <StyledSpinner width={width} noMargin={noMargin} {...rest} />;
 };
 
 export default LoadingSpinner;
