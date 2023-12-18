@@ -21,7 +21,7 @@ const App = () => {
       <Suspense fallback={<></>}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            {WELCOME_PAGE ? (
+            {WELCOME_PAGE === 'true' ? (
               <>
                 <Route path="/" element={<Welcome />} />
                 <Route path="*" element={<Welcome />} />

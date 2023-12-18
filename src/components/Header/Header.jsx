@@ -40,7 +40,7 @@ const Header = ({ light }) => {
 
   return (
     <Styled.Header>
-      {!WELCOME_PAGE && (
+      {WELCOME_PAGE !== 'true' && (
         <>
           <Styled.LogoLink to={'/'}>
             <TymioUI.LogoIcon />
@@ -62,7 +62,7 @@ const Header = ({ light }) => {
         </>
       )}
       <Styled.MobileActions>
-        {WELCOME_PAGE && (
+        {WELCOME_PAGE === 'true' && (
           <>
             <Styled.LogoLink to={'/'}>
               <TymioUI.LogoIcon />

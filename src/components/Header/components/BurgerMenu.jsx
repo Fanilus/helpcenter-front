@@ -16,7 +16,7 @@ const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
 const BurgerMenu = () => {
   const { burger, burgerWelcome } = useRoutes();
   const [active, setActive] = useState(false);
-  const BURGER = WELCOME_PAGE ? burgerWelcome : burger;
+  const BURGER = WELCOME_PAGE === 'true' ? burgerWelcome : burger;
   const toggleMenu = () => {
     setActive((prevState) => !prevState);
   };

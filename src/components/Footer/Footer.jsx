@@ -12,7 +12,7 @@ const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
 
 const Footer = ({ light }) => {
   const { footer, media, footerWelcome } = useRoutes();
-  const FOOTER = WELCOME_PAGE ? footerWelcome : footer;
+  const FOOTER = WELCOME_PAGE === 'true' ? footerWelcome : footer;
   return (
     <Styled.Footer light={light}>
       <Styled.Hr />
