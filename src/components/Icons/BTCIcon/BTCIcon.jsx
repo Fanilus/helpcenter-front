@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BTCIcon = () => {
+const BTCIcon = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,6 +8,7 @@ const BTCIcon = () => {
       height="30"
       fill="none"
       viewBox="0 0 30 30"
+      {...props}
     >
       <path
         fill="#F7931A"

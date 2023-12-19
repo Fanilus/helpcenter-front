@@ -22,12 +22,14 @@ const Welcome = () => {
           </Styled.Logo>
           <Styled.Wrapper>
             {DIRECTION === 'sell' && (
-              <UI.HH color={COLORS.BLACK}>Sell ETH or BTC higher.</UI.HH>
+              <UI.HH color={COLORS.BLACK}>
+                SELL BITCOIN OR ETHEREUM HIGHER.
+              </UI.HH>
             )}
             {DIRECTION === 'buy' && (
-              <UI.HH color={COLORS.BLACK}>Buy ETH or BTC lower.</UI.HH>
+              <UI.HH color={COLORS.BLACK}>BUY BITCOIN OR ETHEREUM LOWER.</UI.HH>
             )}
-            <UI.HH color={COLORS.LEMON}>Earn yield on your stablecoins</UI.HH>
+            <UI.HH color={COLORS.LEMON}>GET BEST PRICE POSSIBLE</UI.HH>
           </Styled.Wrapper>
         </Styled.Banner>
       </UI.Animation>
@@ -36,17 +38,10 @@ const Welcome = () => {
         <UI.Animation delay={step * 2} style={{ paddingBottom: '80px' }}>
           <Styled.TableItem>
             <Styled.Title>
-              <UI.H2>Сurrent offers:</UI.H2>
+              <UI.H2>Current SELL offers:</UI.H2>
             </Styled.Title>
             <Styled.Content>
               <TableContent />
-
-              <Styled.Formula>
-                <UI.Paragraph size={'small'}>
-                  *Price formula: Offer on TYMIO =  closest limit order price -
-                  guaranteed yield
-                </UI.Paragraph>
-              </Styled.Formula>
 
               <Styled.ButtonWrapper>
                 <UI.Button

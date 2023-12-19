@@ -18,5 +18,9 @@ export { default as Dropdown } from './Dropdown/Dropdown';
 export { default as Footer } from './Footer/Footer';
 export { default as Layout } from './Layout/Layout';
 export { default as Animation } from './Animation/Animation';
+export { default as Tooltip } from './Tooltip/Tooltip';
 
 export { Container } from './Container/styled';
+
+// Icons
+export { default as TooltipIcon } from './Icons/TooltipIcon/TooltipIcon';

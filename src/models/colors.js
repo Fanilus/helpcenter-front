@@ -52,6 +52,7 @@ const gradientDarkPurple =
 
 const gradientDarkPurpleLight =
   ' linear-gradient(180deg, rgba(230, 226, 238, 0.00) 0%, #A180FF 144.16%);';
+const purpleGray2 = '#A89ADF';
 
 export const COLORS = {
   //new
@@ -74,6 +75,7 @@ export const COLORS = {
   WARNINGS: warnings,
   RED: red,
   PINK: pink,
+  PURPLE_GRAY2: purpleGray2,
 
   BOX_SHADOW: boxShadow,
   BOX_SHADOW_DARK: boxShadowDark,

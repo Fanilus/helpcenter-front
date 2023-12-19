@@ -7,7 +7,7 @@ export const Table = styled.table`
   display: flex;
   flex-direction: column;
   background: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   &:hover {
     cursor: default;
   }
@@ -78,7 +78,7 @@ export const Th = styled.th`
 
 export const Td = styled.td`
   display: flex;
-  align-items: center;
+  align-items: ${({ alignItems }) => alignItems || 'center'};
   font-family: ${({ mono }) => mono && 'monospace !important'};
   width: 100%;
   text-align: ${({ align }) => align || 'center'};
@@ -90,10 +90,6 @@ export const Td = styled.td`
   line-height: 110%;
   letter-spacing: 0.4px;
   padding: 0;
-
-  svg {
-    margin-right: 10px;
-  }
 
   @media (max-width: 1439px) {
     font-size: 17px;
