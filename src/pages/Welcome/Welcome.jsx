@@ -38,7 +38,7 @@ const Welcome = () => {
         <UI.Animation delay={step * 2} style={{ paddingBottom: '80px' }}>
           <Styled.TableItem>
             <Styled.Title>
-              <UI.H2>Current SELL offers:</UI.H2>
+              <UI.H2>Current {DIRECTION.toUpperCase()} offers:</UI.H2>
             </Styled.Title>
             <Styled.Content>
               <TableContent />
