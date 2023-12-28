@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { TooltipText, TooltipWrapper, TitleWrapper } from './styled';
 import TooltipIcon from '../Icons/TooltipIcon/TooltipIcon';
+import InfoIcon from '../Icons/InfoIcon/InfoIcon';
 
 const Tooltip = ({
   icon,
+  secondaryIcon,
   text,
   children,
   swapPosition,
@@ -33,6 +35,9 @@ const Tooltip = ({
       <TitleWrapper show={show} gap={gap} secondary={secondary}>
         {swapPosition && children}
         {icon && <TooltipIcon show={show} secondary={secondary} size={size} />}
+        {secondaryIcon && (
+          <InfoIcon show={show} secondary={secondary} size={size} />
+        )}
         {!swapPosition && children}
       </TitleWrapper>
 

@@ -23,11 +23,16 @@ const Welcome = () => {
           <Styled.Wrapper>
             {DIRECTION === 'sell' && (
               <UI.HH color={COLORS.BLACK}>
-                SELL BITCOIN OR ETHEREUM HIGHER.
+                SELL BITCOIN <br />
+                OR ETHEREUM HIGHER.
               </UI.HH>
             )}
+
             {DIRECTION === 'buy' && (
-              <UI.HH color={COLORS.BLACK}>BUY BITCOIN OR ETHEREUM LOWER.</UI.HH>
+              <UI.HH color={COLORS.BLACK}>
+                BUY BITCOIN <br />
+                OR ETHEREUM LOWER.
+              </UI.HH>
             )}
             <UI.HH color={COLORS.LEMON}>GET BEST PRICE POSSIBLE</UI.HH>
           </Styled.Wrapper>
@@ -42,7 +47,12 @@ const Welcome = () => {
             </Styled.Title>
             <Styled.Content>
               <TableContent />
-
+              <Styled.Formula>
+                <UI.Paragraph size={'small'}>
+                  *Price formula: Offer on TYMIO = closest limit order price -
+                  guaranteed yield
+                </UI.Paragraph>
+              </Styled.Formula>
               <Styled.ButtonWrapper>
                 <UI.Button
                   type={'big'}

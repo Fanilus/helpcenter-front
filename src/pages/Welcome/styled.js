@@ -93,6 +93,7 @@ export const Title = styled.div`
 
 export const Content = styled.div`
   width: ${({ width }) => width || 'fit-content'};
+
   @media (max-width: 1439px) {
     width: fit-content;
     flex-basis: auto;

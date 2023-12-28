@@ -50,12 +50,12 @@ const TableContent = () => {
                 ETH
               </Table.Td>
               <Table.Td align={'left'} adaptive>
-                ${currentETHOffer.market_price}
+                {currentETHOffer.market_price}
               </Table.Td>
-              <Table.Td align={'left'} alignItems={'flex-start'} adaptive>
-                ${currentETHOffer.offer_price}
+              <Table.Td align={'left'} alignItems={'center'} adaptive>
                 <UI.Tooltip
-                  icon={true}
+                  icon={false}
+                  secondaryIcon={true}
                   text={`${
                     currentETHOffer.target_price
                   }$ (${DIRECTION} price) ${DIRECTION === 'sell' ? '+' : '-'} ${
@@ -64,9 +64,8 @@ const TableContent = () => {
                     currentETHOffer.offer_price
                   }$ (effective price)`}
                   size={20}
-                  position={'top'}
-                  style={{ marginLeft: '5px' }}
                 />
+                {currentETHOffer.offer_price}
               </Table.Td>
               <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
                 {currentETHOffer.save_percent}%
@@ -81,12 +80,12 @@ const TableContent = () => {
                 BTC
               </Table.Td>
               <Table.Td align={'left'} adaptive>
-                ${currentWBTCOffer.market_price}
+                {currentWBTCOffer.market_price}
               </Table.Td>
-              <Table.Td align={'left'} alignItems={'flex-start'} adaptive>
-                ${currentWBTCOffer.offer_price}
+              <Table.Td align={'left'} alignItems={'center'} adaptive>
                 <UI.Tooltip
-                  icon={true}
+                  icon={false}
+                  secondaryIcon={true}
                   text={`${
                     currentWBTCOffer.target_price
                   }$ (${DIRECTION} price) ${DIRECTION === 'sell' ? '+' : '-'} ${
@@ -94,10 +93,8 @@ const TableContent = () => {
                   }$ (yield) = ${
                     currentWBTCOffer.offer_price
                   }$ (effective price)`}
-                  size={20}
-                  position={'top'}
-                  style={{ marginLeft: '5px' }}
                 />
+                {currentWBTCOffer.offer_price}
               </Table.Td>
               <Table.Td align={'left'} color={COLORS.LEMON} adaptive>
                 {currentWBTCOffer.save_percent}%
