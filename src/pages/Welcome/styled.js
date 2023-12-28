@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { COLORS } from '../../models/colors';
 import ComplicatedGradientRedirect from '../../components/Icons/ComplicatedGradientRedirect/ComplicatedGradientRedirect.svg';
+import ComplicatedGradiendMobileWelcome from '../../components/Icons/ComplicatedGradiendMobileWelcome/ComplicatedGradiendMobileWelcome.svg';
 
 export const Welcome = styled.div`
   max-width: 1320px;
@@ -27,6 +28,9 @@ export const Banner = styled.div`
     padding: 30px 20px;
     margin-bottom: 60px;
   }
+  @media (max-width: 767px) {
+    background-image: url(${ComplicatedGradiendMobileWelcome});
+  }
 `;
 
 export const Logo = styled.div`
@@ -40,11 +44,15 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
+  h1 {
+    font-size: 80px;
+    line-height: 90%;
+  }
   @media (max-width: 767px) {
     h1 {
-      font-size: 47px;
+      font-size: 40px;
       line-height: 90%;
-      letter-spacing: -0.94px;
+      letter-spacing: -0.8px;
     }
   }
 `;
@@ -170,5 +178,17 @@ export const TableWrapperArticles = styled.div`
         border-bottom: none;
       }
     }
+  }
+`;
+
+export const TextButton = styled.div`
+  color: ${COLORS.BLACK};
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0.3px;
+  @media (max-width: 767px) {
+    font-size: 28px;
+    letter-spacing: 0.28px;
   }
 `;

@@ -58,7 +58,7 @@ const Welcome = () => {
                   type={'big'}
                   onClick={() => window.open(APP_LINK, '_blank')}
                 >
-                  <UI.H2 color={COLORS.BLACK}>GO TO TYMIO APP</UI.H2>
+                  <Styled.TextButton>GO TO TYMIO APP</Styled.TextButton>
                 </UI.Button>
               </Styled.ButtonWrapper>
 

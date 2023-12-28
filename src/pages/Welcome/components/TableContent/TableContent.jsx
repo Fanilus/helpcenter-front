@@ -25,7 +25,7 @@ const TableContent = () => {
       <Table.Head>
         <Table.Head.Tr
           grid_template_columns={'1fr 1fr 1fr 1fr'}
-          mobile_grid_template_columns={'1fr 1.5fr 1fr 1.5fr'}
+          mobile_grid_template_columns={'1fr 1fr 1fr 1fr'}
         >
           <Table.Th align={'left'}>Asset</Table.Th>
           <Table.Th align={'left'}>Market price</Table.Th>
@@ -42,8 +42,8 @@ const TableContent = () => {
         {!loading && !error && currentETHOffer && currentWBTCOffer && (
           <>
             <Table.Tr
-              grid_template_columns={'1fr 1fr 1fr 1fr'}
-              mobile_grid_template_columns={'1fr 1.5fr 1fr 1fr'}
+              grid_template_columns={'1fr 1fr 1.1fr 1fr'}
+              mobile_grid_template_columns={'1fr 1fr 1fr 1fr'}
             >
               <Table.Td align={'left'} adaptive>
                 <ETH style={{ marginRight: '10px' }} />
@@ -72,8 +72,8 @@ const TableContent = () => {
               </Table.Td>
             </Table.Tr>
             <Table.Tr
-              grid_template_columns={'1fr 1fr 1fr 1fr'}
-              mobile_grid_template_columns={'1fr 1.5fr 1fr 1fr'}
+              grid_template_columns={'1fr 1fr 1.1fr 1fr'}
+              mobile_grid_template_columns={'1fr 1fr 1fr 1fr'}
             >
               <Table.Td align={'left'} adaptive>
                 <BTC style={{ marginRight: '10px' }} />

@@ -21,6 +21,9 @@ export const Tbody = styled.tbody`
   display: grid;
   margin: 0;
   min-height: 170px;
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 `;
 
 export const TFooter = styled.tfoot`
@@ -54,6 +57,7 @@ export const Tr = styled.tr`
       ? 'linear-gradient(90deg, rgba(252, 7, 122, 0.40) 0%, rgba(219, 63, 248, 0.40) 110.75%);'
       : 'transparent'};
   @media (max-width: 768px) {
+    padding: 10px 0px;
     grid-template-columns: ${({ mobile_grid_template_columns }) =>
       mobile_grid_template_columns};
   }

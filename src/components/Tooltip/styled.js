@@ -28,6 +28,12 @@ export const TooltipText = styled.div`
   transition: opacity 0.5s ease;
   text-align: left;
   text-transform: none;
+
+  @media (max-width: 767px) {
+    right: 50%;
+    transform: translateX(50%);
+    left: auto;
+  }
 `;
 
 export const TitleWrapper = styled.div`
