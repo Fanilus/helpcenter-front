@@ -1,8 +1,9 @@
 import React from 'react';
+import * as Styled from './styled';
 
 const ETHIconSecond = (props) => {
   return (
-    <svg
+    <Styled.SVG
       xmlns="http://www.w3.org/2000/svg"
       width="30"
       height="30"
@@ -36,7 +37,7 @@ const ETHIconSecond = (props) => {
         fillOpacity="0.602"
         d="M8.44 15.206l7.028 4.08v-7.222l-7.029 3.142z"
       ></path>
-    </svg>
+    </Styled.SVG>
   );
 };
 

@@ -94,23 +94,10 @@ export const Td = styled.td`
   line-height: 110%;
   letter-spacing: 0.3px;
   padding: 0;
-  svg {
-    margin-right: 10px;
-  }
-
-  @media (max-width: 768px) {
-    svg {
-      margin-right: 5px;
-    }
-  }
 
   @media (max-width: 1439px) {
     font-size: 17px;
     letter-spacing: 0.34px;
-    svg {
-      height: 15px;
-      width: 15px;
-    }
   }
   ${({ adaptive }) =>
     adaptive &&

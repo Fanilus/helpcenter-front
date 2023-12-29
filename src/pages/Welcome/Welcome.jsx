@@ -40,7 +40,7 @@ const Welcome = () => {
       </UI.Animation>
 
       <Styled.Table>
-        <UI.Animation delay={step * 2} style={{ paddingBottom: '80px' }}>
+        <UI.Animation delay={step * 2}>
           <Styled.TableItem>
             <Styled.Title>
               <UI.H2>Current {DIRECTION.toUpperCase()} offers:</UI.H2>
@@ -74,15 +74,7 @@ const Welcome = () => {
           </Styled.TableItem>
         </UI.Animation>
 
-        <UI.Animation
-          delay={step * 3}
-          style={{
-            paddingBottom: '80px',
-            paddingTop: '30px',
-            borderTop: '1px solid rgb(130, 122, 149)',
-            width: 'fit-content',
-          }}
-        >
+        <UI.Animation delay={step * 3}>
           <Styled.TableItem>
             <Styled.Title>
               <UI.H2>How it works?</UI.H2>
@@ -117,15 +109,8 @@ const Welcome = () => {
           </Styled.TableItem>
         </UI.Animation>
 
-        <UI.Animation
-          delay={step * 4}
-          style={{
-            paddingTop: '30px',
-            borderTop: '1px solid rgb(130, 122, 149)',
-            width: 'fit-content',
-          }}
-        >
-          <Styled.TableItem>
+        <UI.Animation delay={step * 4}>
+          <Styled.TableItem style={{ paddingBottom: 0 }}>
             <Styled.Title>
               <UI.H2 color={COLORS.LEMON}>New to crypto?</UI.H2>
               <UI.H2>Check out these articles:</UI.H2>

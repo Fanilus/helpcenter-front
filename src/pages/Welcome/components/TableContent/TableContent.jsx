@@ -7,7 +7,7 @@ import WelcomePageService from '../../../../services/welcome-page.service';
 import { Table } from './index';
 import ETH from '../../../../components/Icons/ETHIconSecond/ETHIconSecond';
 import BTC from '../../../../components/Icons/BTCIcon/BTCIcon';
-import { LoadingSpinner } from '../../../../components/_DEPRECATED';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import * as UI from '../../../../components';
 
 const DIRECTION = process.env.REACT_APP_WELCOME_PAGE_DIRECTION;
@@ -46,7 +46,7 @@ const TableContent = () => {
               mobile_grid_template_columns={'1fr 1fr 1fr 1fr'}
             >
               <Table.Td align={'left'} adaptive>
-                <ETH style={{ marginRight: '10px' }} />
+                <ETH />
                 ETH
               </Table.Td>
               <Table.Td align={'left'} adaptive>
@@ -76,7 +76,7 @@ const TableContent = () => {
               mobile_grid_template_columns={'1fr 1fr 1fr 1fr'}
             >
               <Table.Td align={'left'} adaptive>
-                <BTC style={{ marginRight: '10px' }} />
+                <BTC />
                 BTC
               </Table.Td>
               <Table.Td align={'left'} adaptive>

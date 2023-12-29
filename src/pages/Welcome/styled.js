@@ -70,21 +70,27 @@ export const TableItem = styled.div`
 
   padding: 30px 0 80px 0;
 
-  :first-child {
+  /* :first-child {
     border-top: none;
     padding-top: 0;
-  }
-  :last-child {
+  } */
+  /* :last-child {
     padding-bottom: 0;
-  }
+  } */
   @media (max-width: 1439px) {
-    width: 100%;
+    width: auto;
   }
   @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
     border-top: none;
     gap: 40px;
+    :first-child {
+      border-top: none;
+    }
+    :first-child {
+      padding-top: 0;
+    }
   }
 `;
 
@@ -117,6 +123,9 @@ export const Formula = styled.div`
   margin-bottom: 80px;
   p {
     color: ${COLORS.GRAY};
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 60px;
   }
 `;
 
