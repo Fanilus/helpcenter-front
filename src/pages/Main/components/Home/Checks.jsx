@@ -16,7 +16,7 @@ const Checks = () => {
         <Styled.Check>
           <CheckCircle />
           <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE} lh={'100%'}>
-            Instant
+            Simple
           </UI.Paragraph>
         </Styled.Check>
       </UI.Animation>
