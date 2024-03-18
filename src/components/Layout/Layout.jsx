@@ -14,7 +14,8 @@ const Layout = () => {
   useEffect(() => {
     if (
       location.pathname.includes('/whitepaper') ||
-      location.pathname.includes('/terms')
+      location.pathname.includes('/terms') ||
+      location.pathname.includes('/blog')
     ) {
       setLight(true);
     } else {
@@ -23,7 +24,7 @@ const Layout = () => {
   }, [location.pathname]);
 
   return (
-    <TymioUI.Container>
+    <TymioUI.Container light={light}>
       <UI.Header light={light} />
       <Styled.Main>
         <Outlet />

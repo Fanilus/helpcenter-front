@@ -10,6 +10,7 @@ const Terms = lazy(() => import('./pages/Terms/Terms'));
 const Ambassadors = lazy(() => import('./pages/Ambassadors/Ambassadors'));
 const Club = lazy(() => import('./pages/Club/Club'));
 const Welcome = lazy(() => import('./pages/Welcome/Welcome'));
+const Blog = lazy(() => import('./pages/Blog/Blog'));
 
 const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
 
@@ -31,6 +32,7 @@ const App = () => {
                 <Route path="/" element={<Main />} />
                 <Route path="/:elementId" element={<Main />} />
                 <Route path="/whitepaper" element={<WhitePaper />} />
+                <Route path="/blog" element={<Blog />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/ambassadors" element={<Ambassadors />} />
                 <Route path="/club" element={<Club />} />
