@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { COLORS } from '../../models/colors';
 
 export const Blog = styled.div`
-  padding: 120px 0 180px;
+  padding: 120px 60px 180px;
   margin-bottom: -1px;
 
   @media (max-width: 1439px) {
@@ -10,5 +9,18 @@ export const Blog = styled.div`
   }
   @media (max-width: 767px) {
     padding: 75px 15px 100px;
+  }
+`;
+
+export const Container = styled.div`
+  padding: 0 112px 0 112px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 30px;
+
+  @media (max-width: 1439px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0;
+    padding: 0;
   }
 `;

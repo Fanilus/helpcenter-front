@@ -5,7 +5,7 @@ import { BUTTON_TYPE } from '../../models/types';
 export const Button = styled.button`
   padding: 14.5px 20px 12px 20px;
   border-radius: 5px;
-  background: ${({ type }) => {
+  background: ${({ type, active }) => {
     switch (type) {
       case BUTTON_TYPE.PRIMARY:
         return COLORS.GRADIENT_RED_PINK;
@@ -13,8 +13,19 @@ export const Button = styled.button`
         return COLORS.PURPLE_BRIGHT;
       case BUTTON_TYPE.BIG:
         return COLORS.LEMON;
+      case BUTTON_TYPE.BLOG:
+        if (active) return COLORS.PURPLE_GRAY;
+        return 'transparent';
       default:
         return COLORS.GRADIENT_RED_PINK;
+    }
+  }};
+  box-shadow: ${({ type, active }) => {
+    switch (type) {
+      case BUTTON_TYPE.BLOG:
+        return active ? 'none' : `0px 0px 0px 1px ${COLORS.BLACK}`;
+      default:
+        return 'none';
     }
   }};
   text-transform: ${({ common }) => !common && 'uppercase'};
@@ -23,7 +34,7 @@ export const Button = styled.button`
   width: fit-content;
   &:hover {
     cursor: pointer;
-    background: ${({ type }) => {
+    background: ${({ type, active }) => {
       switch (type) {
         case BUTTON_TYPE.PRIMARY:
           return COLORS.PINK;
@@ -31,8 +42,18 @@ export const Button = styled.button`
           return COLORS.PURPLE_DARK;
         case BUTTON_TYPE.BIG:
           return COLORS.LIME_LEMON;
+        case BUTTON_TYPE.BLOG:
+          return active ? COLORS.PURPLE_GRAY : 'transparent';
         default:
           return COLORS.PINK;
+      }
+    }};
+    box-shadow: ${({ type }) => {
+      switch (type) {
+        case BUTTON_TYPE.BLOG:
+          return `0px 0px  2px  1px${COLORS.BLACK}`;
+        default:
+          return 'none';
       }
     }};
   }
@@ -41,7 +62,7 @@ export const Button = styled.button`
     box-shadow: ${`0px 0px 3px 0px ${COLORS.BOX_SHADOW}`};
     border: 1.5px solid ${COLORS.LIGHT};
     padding: 13.5px 19px 11px 19px;
-    background: ${({ type }) => {
+    background: ${({ type, active }) => {
       switch (type) {
         case BUTTON_TYPE.PRIMARY:
           return COLORS.GRADIENT_RED_PINK;
@@ -49,8 +70,18 @@ export const Button = styled.button`
           return COLORS.PURPLE_BRIGHT;
         case BUTTON_TYPE.BIG:
           return COLORS.LEMON;
+        case BUTTON_TYPE.BLOG:
+          return active ? COLORS.PURPLE_GRAY : 'transparent';
         default:
           return COLORS.GRADIENT_RED_PINK;
+      }
+    }};
+    box-shadow: ${({ type, active }) => {
+      switch (type) {
+        case BUTTON_TYPE.BLOG:
+          return active ? 'none' : `0px 0px 0px 1px ${COLORS.BLACK}`;
+        default:
+          return 'none';
       }
     }};
   }
