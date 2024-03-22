@@ -18,6 +18,7 @@ const Card = ({
   authorOccupation,
   dataLength,
 }) => {
+  console.log(background);
   return (
     <Styled.Card big={big} dataLength={dataLength}>
       <Styled.ContentWrapper big={big} background={background} color={color}>
@@ -28,7 +29,9 @@ const Card = ({
         </Styled.Header>
         <Styled.Content big={big} color={color}>
           {big && <UI.HH color={COLORS.BLACK}>{title}</UI.HH>}
-          <UI.H2 color={COLORS.BLACK}>{title}</UI.H2>
+          <UI.H2 noMedia={true} color={COLORS.BLACK}>
+            {title}
+          </UI.H2>
           {big && (
             <UI.Paragraph size={'large'} color={COLORS.BLACK}>
               {description}

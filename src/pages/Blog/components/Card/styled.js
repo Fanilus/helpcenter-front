@@ -11,7 +11,10 @@ export const Card = styled.div`
       border-radius: 10px;
       padding: 30px;
       @media (max-width: 1439px) {
-        padding: 20px;
+        padding: 30px 20px;
+      }
+      @media (max-width: 767px) {
+          margin-bottom: 30px;
       }
     `}
   margin-bottom: 60px;
@@ -30,20 +33,26 @@ export const Card = styled.div`
       margin-bottom: 60px;
     }
   }
-    `}
-  @media (max-width: 1439px) {
+    `}/* @media (max-width: 1439px) {
     display: block;
     padding: 50px 0 0 0;
-  }
+  } */
 `;
 export const ContentWrapper = styled.div`
   ${({ big, background, color }) =>
     !big &&
-    ` background: ${background ? background : COLORS.PURPLE_BRIGHT};
+    ` background: ${
+      background
+        ? background ===
+          'linear-gradient(180deg, rgba(28, 16, 47, 0.00) 0%, #A180FF 144.16%);'
+          ? `linear-gradient(180deg, rgba(28, 16, 47, 0.00) 0%, #A180FF 144.16%), ${COLORS.BLACK}`
+          : background
+        : COLORS.PURPLE_BRIGHT
+    };
       border-radius: 10px;
       padding: 30px;
       @media (max-width: 1439px) {
-        padding: 20px;
+        padding: 30px 20px;
       }
       p {
         color: ${color ? color : COLORS.BLACK}
@@ -66,10 +75,14 @@ export const Content = styled.div`
   gap: 60px;
   margin-bottom: 30px;
 
+  @media (max-width: 1439px) {
+    margin-bottom: 20px;
+  }
+
   ${({ color }) =>
     ` 
     h2 {
-    color: ${color ? color : COLORS.BLACK};
+      color: ${color ? color : COLORS.BLACK};
     }
     `}
 
@@ -126,9 +139,9 @@ export const AuthorWrapper = styled.div`
 export const AuthorName = styled.div``;
 
 export const Description = styled.div`
-  padding: 30px;
+  padding: 30px 30px 0 30px;
   @media (max-width: 1439px) {
-    padding: 20px;
+    padding: 30px 20px 0 20px;
   }
   ${({ big }) =>
     big &&
