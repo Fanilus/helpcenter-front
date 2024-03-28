@@ -1,9 +1,9 @@
 import React from 'react';
 import * as Styled from './styled';
 
-export const HH = ({ color, children, mobile }) => {
+export const HH = ({ color, children, mobile, noMedia }) => {
   return (
-    <Styled.HH mobile={mobile} color={color}>
+    <Styled.HH noMedia={noMedia} mobile={mobile} color={color}>
       {children}
     </Styled.HH>
   );

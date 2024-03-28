@@ -8,7 +8,10 @@ export const HH = styled.h1`
   color: ${({ color }) => (color ? color : COLORS.LIGHT)};
   margin: 0;
 
-  @media (max-width: 1439px) {
-    font-size: 50px;
-  }
+  ${({ noMedia }) =>
+    !noMedia &&
+    `@media (max-width: 1439px) {
+      font-size: 50px;
+    }
+    `}
 `;

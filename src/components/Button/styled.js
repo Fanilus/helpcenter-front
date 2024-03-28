@@ -51,7 +51,7 @@ export const Button = styled.button`
     box-shadow: ${({ type }) => {
       switch (type) {
         case BUTTON_TYPE.BLOG:
-          return `0px 0px  2px  1px${COLORS.BLACK}`;
+          return `0px 0px 2px 1px ${COLORS.BLACK}`;
         default:
           return 'none';
       }

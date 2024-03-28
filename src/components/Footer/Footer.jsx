@@ -13,6 +13,8 @@ const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
 const Footer = ({ light }) => {
   const { footer, media, footerWelcome } = useRoutes();
   const FOOTER = WELCOME_PAGE === 'true' ? footerWelcome : footer;
+  const currentYear = new Date().getFullYear();
+
   return (
     <Styled.Footer light={light}>
       <Styled.Hr />
@@ -20,7 +22,7 @@ const Footer = ({ light }) => {
         <Styled.FooterContent>
           <TymioUI.LogoIconFooter />
           <UI.Paragraph color={COLORS.GRAY} size={TYPOGRAPHY_SIZE.SMALL}>
-            © 2023 Tymio. All rights reserved.
+            © {currentYear} Tymio. All rights reserved.
           </UI.Paragraph>
         </Styled.FooterContent>
         <Styled.RoutesLinks>

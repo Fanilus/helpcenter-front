@@ -10,35 +10,33 @@ export const Card = styled.div`
       background-size: cover; 
       border-radius: 10px;
       padding: 30px;
-      @media (max-width: 1439px) {
-        padding: 30px 20px;
-      }
       @media (max-width: 767px) {
           margin-bottom: 30px;
+          padding: 30px 20px;
       }
+      
     `}
   margin-bottom: 60px;
-
-  ${({ dataLength }) =>
-    dataLength &&
-    ` 
-    :nth-child(${dataLength - 1}) {
-      margin-bottom: 0;
-    }
-    :nth-child(${dataLength}) {
-      margin-bottom: 0;
-    }
-    @media (max-width: 1439px) {
-      :nth-child(${dataLength - 1}) {
-      margin-bottom: 60px;
-    }
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
   }
-    `}/* @media (max-width: 1439px) {
-    display: block;
-    padding: 50px 0 0 0;
-  } */
 `;
 export const ContentWrapper = styled.div`
+  button {
+    box-shadow: ${({ color }) =>
+      color ? `0px 0px 0px 1px ${color}` : `0px 0px 0px 1px ${COLORS.BLACK}`};
+    margin-bottom: 30px;
+    &:hover {
+      box-shadow: ${({ color }) =>
+        color ? `0px 0px 2px 1px ${color}` : `0px 0px 0px 1px ${COLORS.BLACK}`};
+    }
+  }
+  @media (max-width: 767px) {
+    button {
+      margin-bottom: 20px;
+    }
+  }
+
   ${({ big, background, color }) =>
     !big &&
     ` background: ${
@@ -51,15 +49,18 @@ export const ContentWrapper = styled.div`
     };
       border-radius: 10px;
       padding: 30px;
-      @media (max-width: 1439px) {
-        padding: 30px 20px;
-      }
       p {
-        color: ${color ? color : COLORS.BLACK}
+        color: ${color ? color : COLORS.BLACK};
       }
       h1 {
-        color: ${color ? color : COLORS.BLACK}
+        color: ${color ? color : COLORS.BLACK};
       }
+      
+      
+      @media (max-width: 767px) {
+        padding: 30px 20px;
+      }
+     
     `}
 `;
 
@@ -75,55 +76,33 @@ export const Content = styled.div`
   gap: 60px;
   margin-bottom: 30px;
 
+  h1 {
+    flex-basis: 1084px;
+    color: ${({ color }) => (color ? color : COLORS.BLACK)};
+  }
+
   @media (max-width: 1439px) {
     margin-bottom: 20px;
   }
 
-  ${({ color }) =>
-    ` 
-    h2 {
-      color: ${color ? color : COLORS.BLACK};
-    }
-    `}
-
-  ${({ big }) =>
-    big &&
-    ` 
+  @media (max-width: 767px) {
     h1 {
-      flex-basis: 755px;
-      flex-shrink: 0;
+      font-size: 40px;
+      line-height: 110%;
     }
-    h2 {
-      display: none;
-    }
-      @media (max-width: 1439px) {
-        h1 {
-          flex-basis: auto;
-          flex-shrink: unset;
-          display: none;
-        }
-        h2 {
-          display: block;
-        }
-        p {
-          display: none;
-        }
-      }
-    `}
+  }
 `;
 
 export const Footer = styled.div`
   display: flex;
   justify-content: space-between;
   svg {
-    ${({ color }) =>
-      ` path {
-      fill: ${color ? color : COLORS.BLACK}
+    path {
+      fill: ${({ color }) => (color ? color : COLORS.BLACK)};
     }
     circle {
-      fill: ${color ? color : COLORS.BLACK}
+      fill: ${({ color }) => (color ? color : COLORS.BLACK)};
     }
-    `}
   }
 `;
 export const Author = styled.div`
@@ -135,21 +114,4 @@ export const Author = styled.div`
 export const AuthorWrapper = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-export const Description = styled.div`
-  padding: 30px 30px 0 30px;
-  @media (max-width: 1439px) {
-    padding: 30px 20px 0 20px;
-  }
-  ${({ big }) =>
-    big &&
-    ` 
-      padding: 0;
-      display: none;
-      @media (max-width: 1439px) {
-        display: block;
-        padding: 50px 0 0 0;
-      }
-    `}
 `;

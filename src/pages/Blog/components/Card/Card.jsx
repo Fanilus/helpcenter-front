@@ -17,8 +17,8 @@ const Card = ({
   authorName,
   authorOccupation,
   dataLength,
+  id,
 }) => {
-  console.log(background);
   return (
     <Styled.Card big={big} dataLength={dataLength}>
       <Styled.ContentWrapper big={big} background={background} color={color}>
@@ -55,7 +55,7 @@ const Card = ({
               </UI.Paragraph>
             </Styled.AuthorWrapper>
           </Styled.Author>
-          <ArrowBlog />
+          <ArrowBlog id={id} />
         </Styled.Footer>
       </Styled.ContentWrapper>
       <Styled.Description big={big}>
