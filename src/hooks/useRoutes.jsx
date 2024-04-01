@@ -7,6 +7,7 @@ const useRoutes = () => {
     { label: 'Safety', path: '/safety' },
     { label: 'FAQ', path: '/faq' },
     { label: 'Ambassadors', path: '/ambassadors' },
+    { label: 'Blog', path: '/blog' },
   ];
   const burger = [
     {
@@ -41,6 +42,7 @@ const useRoutes = () => {
       label: 'Club',
       path: `/club`,
     },
+    { label: 'Blog', path: '/blog' },
   ];
   const burgerWelcome = [
     {

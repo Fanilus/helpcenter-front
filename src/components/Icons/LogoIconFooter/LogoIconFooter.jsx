@@ -1,8 +1,10 @@
 import React from 'react';
 import Logo from '../../../img/logo-footer.svg';
+import WhiteLogoFooter from '../../../img/white-logo-footer.svg';
+
 import * as Styled from './styled.js';
 
-const LogoIconFooter = ({ size }) => {
+const LogoIconFooter = ({ size, light }) => {
   let width;
   let height;
   switch (size) {
@@ -16,7 +18,12 @@ const LogoIconFooter = ({ size }) => {
       break;
   }
   return (
-    <Styled.Logo src={Logo} alt="logotype" width={width} height={height} />
+    <Styled.Logo
+      src={light ? WhiteLogoFooter : Logo}
+      alt="logotype"
+      width={width}
+      height={height}
+    />
   );
 };
 

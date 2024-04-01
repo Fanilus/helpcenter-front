@@ -60,6 +60,7 @@ const useBlog = () => {
         ],
         related: [
           {
+            id: 1,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -67,6 +68,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 2,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -74,6 +76,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 3,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -138,6 +141,7 @@ const useBlog = () => {
         ],
         related: [
           {
+            id: 1,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -145,6 +149,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 2,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -152,6 +157,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 3,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -216,6 +222,7 @@ const useBlog = () => {
         ],
         related: [
           {
+            id: 1,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -223,6 +230,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 2,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -230,6 +238,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 3,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -294,6 +303,7 @@ const useBlog = () => {
         ],
         related: [
           {
+            id: 1,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -301,6 +311,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 2,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -308,6 +319,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 3,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -372,6 +384,7 @@ const useBlog = () => {
         ],
         related: [
           {
+            id: 1,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -379,6 +392,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 2,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -386,6 +400,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 3,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -450,6 +465,7 @@ const useBlog = () => {
         ],
         related: [
           {
+            id: 1,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -457,6 +473,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 2,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -464,6 +481,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 3,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -528,6 +546,7 @@ const useBlog = () => {
         ],
         related: [
           {
+            id: 1,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -535,6 +554,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 2,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',
@@ -542,6 +562,7 @@ const useBlog = () => {
             occupation: 'Occupation',
           },
           {
+            id: 3,
             header: 'Heading 1',
             title: 'Name of the article can consist from one to three lines',
             date: '03.06.2023 (updated — 04.08.2024)',

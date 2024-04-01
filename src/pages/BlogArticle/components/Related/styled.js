@@ -16,7 +16,6 @@ export const Title = styled.div`
 export const MiniCardWrapper = styled.div`
   display: flex;
   gap: 30px;
-  justify-content: space-between;
 `;
 
 export const MiniCard = styled.div`

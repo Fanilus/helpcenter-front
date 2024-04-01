@@ -74,7 +74,7 @@ export const RoutesLinks = styled.div`
   flex-direction: column;
   gap: 10px;
   flex-wrap: wrap;
-  height: 100px;
+  height: 131px;
 
   @media (max-width: 1439px) {
     display: none;

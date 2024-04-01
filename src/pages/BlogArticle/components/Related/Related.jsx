@@ -60,7 +60,7 @@ const Related = ({ related }) => {
                   </UI.Paragraph>
                 </Styled.AuthorWrapper>
               </Styled.Author>
-              <ArrowBlog />
+              <ArrowBlog id={item.id} />
             </Styled.Footer>
           </Styled.MiniCard>
         ))}

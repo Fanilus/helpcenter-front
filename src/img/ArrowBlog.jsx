@@ -13,7 +13,7 @@ function ArrowBlog({ id }) {
       fill="none"
       viewBox="0 0 35 35"
       cursor={'pointer'}
-      onClick={() => navigate(`${id}`)}
+      onClick={() => navigate(`/blog/${id}`)}
     >
       <path
         fill="#1C102F"

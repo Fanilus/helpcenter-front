@@ -20,7 +20,7 @@ const Footer = ({ light }) => {
       <Styled.Hr />
       <Styled.Container>
         <Styled.FooterContent>
-          <TymioUI.LogoIconFooter />
+          <TymioUI.LogoIconFooter light={light} />
           <UI.Paragraph color={COLORS.GRAY} size={TYPOGRAPHY_SIZE.SMALL}>
             © {currentYear} Tymio. All rights reserved.
           </UI.Paragraph>
