@@ -9,6 +9,12 @@ import { COLORS } from '../../../../models/colors';
 const Card = ({ blog }) => {
   const navigate = useNavigate();
 
+  function navigateBack() {
+    navigate(-1);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100); // Задержка в миллисекундах
+  }
   return (
     <Styled.Card big={blog.big}>
       <Styled.ContentWrapper
@@ -16,7 +22,7 @@ const Card = ({ blog }) => {
         background={COLORS[blog.background]}
         color={COLORS[blog.color]}
       >
-        <UI.Button type={'blog'} onClick={() => navigate(-1)}>
+        <UI.Button type={'blog'} onClick={() => navigateBack()}>
           <UI.Paragraph size={'medium'} color={COLORS.BLACK}>
             Back
           </UI.Paragraph>

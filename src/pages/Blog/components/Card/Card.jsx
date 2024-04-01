@@ -5,6 +5,7 @@ import CircleBlog from '../../../../img/CircleBlog';
 import * as UI from '../../../../components/index';
 import { COLORS } from '../../../../models/colors';
 import * as Styled from './styled';
+import { useNavigate } from 'react-router-dom';
 
 const Card = ({
   big,
@@ -19,6 +20,11 @@ const Card = ({
   dataLength,
   id,
 }) => {
+  const navigate = useNavigate();
+
+  function navigateArrow(id) {
+    navigate(`/blog/${id}`);
+  }
   return (
     <Styled.Card big={big} dataLength={dataLength}>
       <Styled.ContentWrapper big={big} background={background} color={color}>
@@ -55,7 +61,9 @@ const Card = ({
               </UI.Paragraph>
             </Styled.AuthorWrapper>
           </Styled.Author>
-          <ArrowBlog id={id} />
+          <div onClick={() => navigateArrow(id)}>
+            <ArrowBlog />
+          </div>
         </Styled.Footer>
       </Styled.ContentWrapper>
       <Styled.Description big={big}>

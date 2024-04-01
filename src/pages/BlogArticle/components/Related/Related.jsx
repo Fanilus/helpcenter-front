@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import * as Styled from './styled';
 import * as UI from '../../../../components/index';
@@ -7,6 +8,9 @@ import CircleBlog from '../../../../img/CircleBlog';
 import ArrowBlog from '../../../../img/ArrowBlog';
 
 const Related = ({ related }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   function truncateText(text, maxLength) {
     if (text.length <= maxLength) {
       return text;
@@ -18,6 +22,13 @@ const Related = ({ related }) => {
         Math.min(truncatedText.length, truncatedText.lastIndexOf(' '))
       );
       return truncatedText + ' ...';
+    }
+  }
+
+  function navigateArrow(id) {
+    if (location.pathname !== `/blog/${id}`) {
+      navigate(`/blog/${id}`);
+      window.scrollTo(0, 0);
     }
   }
 
@@ -60,7 +71,9 @@ const Related = ({ related }) => {
                   </UI.Paragraph>
                 </Styled.AuthorWrapper>
               </Styled.Author>
-              <ArrowBlog id={item.id} />
+              <div onClick={() => navigateArrow(item.id)}>
+                <ArrowBlog />
+              </div>
             </Styled.Footer>
           </Styled.MiniCard>
         ))}

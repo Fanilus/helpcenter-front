@@ -1,10 +1,6 @@
 import React from 'react';
 
-import { useNavigate } from 'react-router';
-
-function ArrowBlog({ id }) {
-  const navigate = useNavigate();
-
+function ArrowBlog({}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +9,6 @@ function ArrowBlog({ id }) {
       fill="none"
       viewBox="0 0 35 35"
       cursor={'pointer'}
-      onClick={() => navigate(`/blog/${id}`)}
     >
       <path
         fill="#1C102F"
