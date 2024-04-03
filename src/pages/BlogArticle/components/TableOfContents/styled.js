@@ -15,6 +15,7 @@ export const TableOfContentsWrapper = styled.div`
     border-bottom: 1px solid ${COLORS.GRAY};
     padding-bottom: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
     :last-child {
       border-bottom: none;
       padding-bottom: 0;

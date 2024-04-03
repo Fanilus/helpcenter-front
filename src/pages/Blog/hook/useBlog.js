@@ -18,11 +18,11 @@ const useBlog = () => {
       background: 'LEMON',
       articleBlog: {
         tableOfContents: [
-          'Staking',
-          'Yield Farming',
-          'Trading',
-          'Tymio',
-          'In summary',
+          { title: 'Staking', id: 'staking' },
+          { title: 'Yield Farming', id: 'yieldFarming' },
+          { title: 'Trading', id: 'trading' },
+          { title: 'Tymio', id: 'tymio' },
+          { title: 'In Summary', id: 'inSummary' },
         ],
         content: [
           {
@@ -35,7 +35,7 @@ const useBlog = () => {
           {
             text: "The same principles apply to cryptocurrency investing. Let's take a comparative look at the profitability and riskiness of such crypto investing strategies as staking, farming, and trading. Additionally, we’ll explore the unique features of the <a href='https://tymio.com/' rel='noreferrer' target='_blank'>Tymio</a>  platform that allows users to place limit orders with yield. We will also compare these three popular strategies with the opportunities that the Tymio platform offers to crypto investors.",
           },
-          { header: 'Staking' },
+          { header: 'Staking', id: 'staking' },
           {
             text: 'Staking is a process where investors lock up their crypto assets to support network operations and validate transactions. In return, stakers receive rewards in the form of additional tokens.',
           },
@@ -63,6 +63,7 @@ const useBlog = () => {
           },
           {
             header: 'Yield Farming',
+            id: 'yieldFarming',
           },
           {
             text: 'Yield farming is a DeFi practice where liquidity providers (LPs) contribute their tokens to liquidity pools on decentralized lending or exchange protocols. In return, they earn rewards (often in the form of additional tokens) for providing liquidity.',
@@ -89,6 +90,7 @@ const useBlog = () => {
           },
           {
             header: 'Trading',
+            id: 'trading',
           },
           {
             text: 'Trading involves buying and selling assets on exchanges to profit from price fluctuations. Traders use various strategies, including technical analysis, fundamental analysis, and market timing.',
@@ -115,6 +117,7 @@ const useBlog = () => {
           {
             header:
               '<a href="https://tymio.com/" rel="noreferrer" target="_blank">TYMIO</a>',
+            id: 'tymio',
           },
           {
             text: 'Tymio is an innovative platform that combines limit orders with yield. Users can set time-limit orders with yield for assets like ETH or WBTC.',
@@ -158,7 +161,7 @@ const useBlog = () => {
               link: 'IMG_1185.PNG',
             },
           },
-          { header: 'In summary:' },
+          { header: 'In summary:', id: 'inSummary' },
           {
             list: [
               {

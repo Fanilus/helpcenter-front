@@ -27,6 +27,7 @@ const Content = ({ content, tableOfContents }) => {
                 noMedia
                 color={COLORS.BLACK}
                 key={index}
+                id={item.id}
                 dangerouslySetInnerHTML={{ __html: item.header }}
               />
             );
