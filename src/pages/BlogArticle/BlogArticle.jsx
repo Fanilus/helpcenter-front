@@ -28,7 +28,9 @@ const BlogArticle = () => {
             content={blog.articleBlog.content}
             tableOfContents={blog.articleBlog.tableOfContents}
           />
-          <Related related={blog.articleBlog.related} />
+          {blog.articleBlog.related && (
+            <Related related={blog.articleBlog.related} />
+          )}
         </>
       )}
     </Styled.BlogArticle>

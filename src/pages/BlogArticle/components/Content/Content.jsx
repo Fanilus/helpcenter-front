@@ -23,9 +23,12 @@ const Content = ({ content, tableOfContents }) => {
         {content.map((item, index) => {
           if (Object.keys(item)[0] === 'header')
             return (
-              <UI.H2 noMedia color={COLORS.BLACK} key={index}>
-                {item.header}
-              </UI.H2>
+              <UI.H2
+                noMedia
+                color={COLORS.BLACK}
+                key={index}
+                dangerouslySetInnerHTML={{ __html: item.header }}
+              />
             );
           if (Object.keys(item)[0] === 'bigHeader')
             return (
@@ -37,26 +40,31 @@ const Content = ({ content, tableOfContents }) => {
             );
           if (Object.keys(item)[0] === 'text')
             return (
-              <UI.Paragraph size={'large'} color={COLORS.BLACK} key={index}>
-                {item.text}
-              </UI.Paragraph>
+              <UI.Paragraph
+                size={'large'}
+                color={COLORS.BLACK}
+                key={index}
+                dangerouslySetInnerHTML={{ __html: item.text }}
+              />
             );
           if (Object.keys(item)[0] === 'image')
             return (
               <Styled.ImageWrapper key={index}>
                 <Styled.Image
                   src={
-                    item.image.link && !item.image.link === 'default'
-                      ? item.image.link
+                    item.image.link && item.image.link !== 'default'
+                      ? require(`../../../../img/${item.image.link}`).default
                       : Image
                   }
                   alt="Blog Image"
                 />
-                <UI.Paragraph size={'small'} color={COLORS.BLACK}>
-                  {item.image.link && !item.image.link === 'default'
-                    ? item.image.imageDescription
-                    : 'Image default'}
-                </UI.Paragraph>
+                {item.image.link &&
+                  item.image.link !== 'default' &&
+                  item.image.imageDescription && (
+                    <UI.Paragraph size={'small'} color={COLORS.BLACK}>
+                      {item.image.imageDescription}
+                    </UI.Paragraph>
+                  )}
               </Styled.ImageWrapper>
             );
           if (Object.keys(item)[0] === 'earningBanner')
@@ -64,6 +72,34 @@ const Content = ({ content, tableOfContents }) => {
               <Styled.MobileAdaptive key={index}>
                 <EarningBanner />
               </Styled.MobileAdaptive>
+            );
+          if (Object.keys(item)[0] === 'list')
+            return (
+              <Styled.ListContainer key={index}>
+                {item.list.map((i, index) => (
+                  <Styled.List key={index} gap={i.listItem ? true : false}>
+                    <Styled.TitleList>
+                      <Styled.ListIcon>&#9679;</Styled.ListIcon>
+                      <UI.Paragraph size={'large'} color={COLORS.BLACK}>
+                        {i.label} {i.listItem ? ':' : ''}
+                      </UI.Paragraph>
+                    </Styled.TitleList>
+                    <Styled.ListWrapper>
+                      {i.listItem &&
+                        i.listItem.map((i, index) => (
+                          <Styled.ListItem key={index}>
+                            <Styled.ListIcon>&#9675;</Styled.ListIcon>
+                            <UI.Paragraph
+                              size={'big'}
+                              color={COLORS.BLACK}
+                              dangerouslySetInnerHTML={{ __html: i }}
+                            />
+                          </Styled.ListItem>
+                        ))}
+                    </Styled.ListWrapper>
+                  </Styled.List>
+                ))}
+              </Styled.ListContainer>
             );
           return '';
         })}
