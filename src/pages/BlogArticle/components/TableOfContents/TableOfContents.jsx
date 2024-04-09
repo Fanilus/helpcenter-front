@@ -5,7 +5,6 @@ import * as UI from '../../../../components/index';
 import { COLORS } from '../../../../models/colors';
 
 const TableOfContents = ({ tableOfContents }) => {
-  // Функция для прокрутки страницы к якорю
   const scrollToAnchor = (anchorId) => {
     const anchorElement = document.getElementById(anchorId);
     if (anchorElement) {

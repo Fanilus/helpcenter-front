@@ -33,15 +33,15 @@ const Title = () => {
           </UI.Paragraph>
         </UI.Button>
         <UI.Button
-          active={isFilterActive('heading1')}
+          active={isFilterActive('investing')}
           type={'blog'}
-          onClick={() => toggleFilter('heading1')}
+          onClick={() => toggleFilter('investing')}
         >
           <UI.Paragraph size={'medium'} color={COLORS.BLACK}>
-            Heading 1
+            investing
           </UI.Paragraph>
         </UI.Button>
-        <UI.Button
+        {/* <UI.Button
           active={isFilterActive('heading2')}
           type={'blog'}
           onClick={() => toggleFilter('heading2')}
@@ -67,7 +67,7 @@ const Title = () => {
           <UI.Paragraph size={'medium'} color={COLORS.BLACK}>
             Heading 4
           </UI.Paragraph>
-        </UI.Button>
+        </UI.Button> */}
       </Styled.Title>
       <Styled.Blur />
     </Styled.TitleWrapper>

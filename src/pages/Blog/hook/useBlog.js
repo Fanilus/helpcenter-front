@@ -7,12 +7,13 @@ const useBlog = () => {
   const [blogs, setBlogs] = useState([
     {
       id: 1,
-      heading: '-',
-      title: '-',
-      description: '-',
-      date: '-',
-      authorName: '-',
-      authorOccupation: '-',
+      heading: 'investing ',
+      title: 'Overview of low-risk strategies for investing in digital assets',
+      description:
+        'Explore low-risk strategies for investing in digital assets and learn how the innovative Tymio platform combines limit orders with yield to provide secure and profitable opportunities in the dynamic crypto market.',
+      date: '8.04.2024',
+      authorName: 'TYMIO team',
+      authorOccupation: '',
       big: true,
       color: 'BLACK',
       background: 'LEMON',
@@ -754,8 +755,8 @@ const useBlog = () => {
     //         nameAuthor: 'Name of the author',
     //         occupation: 'Occupation',
     //       },
-    //   ],
-    // },
+    //     ],
+    //   },
     // },
   ]);
   useEffect(() => {

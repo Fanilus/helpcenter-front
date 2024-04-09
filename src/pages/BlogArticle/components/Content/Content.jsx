@@ -68,6 +68,7 @@ const Content = ({ content, tableOfContents }) => {
                   )}
               </Styled.ImageWrapper>
             );
+
           if (Object.keys(item)[0] === 'earningBanner')
             return (
               <Styled.MobileAdaptive key={index}>
