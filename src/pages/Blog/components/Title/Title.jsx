@@ -6,7 +6,6 @@ import * as UI from '../../../../components/index';
 
 const Title = () => {
   const [filters, setFilters] = useState([]);
-  console.log(filters);
 
   const toggleFilter = (filter) => {
     if (filters.includes(filter)) {

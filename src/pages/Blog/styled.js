@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 export const Blog = styled.div`
-  padding: 120px 60px 180px;
   margin-bottom: -1px;
+  max-width: 1320px;
+  margin: 0px auto;
+  padding: 120px 0 180px;
 
   @media (max-width: 1439px) {
+    max-width: auto;
+    margin: 0px;
     padding: 85px 30px 100px;
   }
   @media (max-width: 767px) {

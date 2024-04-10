@@ -23,6 +23,7 @@ const Header = ({ light }) => {
   }, [location.pathname]);
 
   useEffect(() => {
+    console.log(window);
     if (typeof window !== 'undefined') {
       const update = () => {
         if (window.scrollY > 0) {

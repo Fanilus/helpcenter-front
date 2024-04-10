@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import * as Styled from './styled';
 import { COLORS } from '../../models/colors';
@@ -9,10 +10,20 @@ import useBlog from './hook/useBlog';
 
 const Blog = () => {
   const { blogs } = useBlog();
+  const location = useLocation();
+
   const bigTrueData = blogs.length > 0 ? blogs.filter((item) => item.big) : [];
   const bigFalseData =
     blogs.length > 0 ? blogs.filter((item) => !item.big) : [];
   const length = blogs.length - bigTrueData.length;
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, [location]);
 
   return (
     <Styled.Blog>

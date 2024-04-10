@@ -5,7 +5,7 @@ import { TYPOGRAPHY_SIZE } from '../../models/types';
 
 const RouteMenu = ({ scroll, light, active, options, ...props }) => {
   const navigate = useNavigate();
-
+  console.log(scroll);
   return (
     <TymioUI.Menu scroll={scroll} light={light} {...props}>
       {options.map(({ path, label }, index) => (
