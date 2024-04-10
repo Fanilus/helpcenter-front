@@ -157,11 +157,7 @@ const useBlog = () => {
               },
             ],
           },
-          {
-            image: {
-              link: 'IMG_1185.PNG',
-            },
-          },
+
           { header: 'In summary:', id: 'inSummary' },
           {
             list: [
