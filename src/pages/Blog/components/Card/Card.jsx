@@ -26,7 +26,11 @@ const Card = ({
     navigate(`/blog/${id}`);
   }
   return (
-    <Styled.Card big={big} dataLength={dataLength}>
+    <Styled.Card
+      big={big}
+      dataLength={dataLength}
+      onClick={() => navigateArrow(id)}
+    >
       <Styled.ContentWrapper big={big} background={background} color={color}>
         <Styled.Header>
           <UI.Paragraph size={'small'} color={COLORS.LIME_LEMON}>
@@ -61,7 +65,7 @@ const Card = ({
               </UI.Paragraph>
             </Styled.AuthorWrapper>
           </Styled.Author>
-          <div onClick={() => navigateArrow(id)}>
+          <div>
             <ArrowBlog />
           </div>
         </Styled.Footer>

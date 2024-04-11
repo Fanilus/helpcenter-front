@@ -17,6 +17,7 @@ export const Card = styled.div`
           margin-bottom: 30px;
       }
     `}
+  cursor: pointer;
   margin-bottom: 60px;
 
   ${({ dataLength }) =>
