@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bigCardGradient from '../../../../img/big-card-gradient.png';
+import bigCardGradient from '../../../../img/big-card-gradient.svg';
 import { COLORS } from '../../../../models/colors';
 
 export const Card = styled.div`
