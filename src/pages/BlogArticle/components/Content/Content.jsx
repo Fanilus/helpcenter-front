@@ -7,6 +7,7 @@ import { COLORS } from '../../../../models/colors';
 import TableOfContents from '../../components/TableOfContents/TableOfContents';
 import EarningBanner from '../../components/EarningBanner/EarningBanner';
 import Image from '../../../../img/default_blog_article.png';
+import TymioBanner from '../TymioBanner/TymioBanner';
 
 const Content = ({ content, tableOfContents }) => {
   return (
@@ -33,10 +34,12 @@ const Content = ({ content, tableOfContents }) => {
             );
           if (Object.keys(item)[0] === 'bigHeader')
             return (
-              <Styled.BigHeader key={index}>
-                <UI.H2 noMedia color={COLORS.BLACK}>
-                  {item.bigHeader}
-                </UI.H2>
+              <Styled.BigHeader key={index} id={item.id}>
+                <UI.H2
+                  noMedia
+                  color={COLORS.BLACK}
+                  dangerouslySetInnerHTML={{ __html: item.bigHeader }}
+                />
               </Styled.BigHeader>
             );
           if (Object.keys(item)[0] === 'text')
@@ -75,6 +78,7 @@ const Content = ({ content, tableOfContents }) => {
                 <EarningBanner />
               </Styled.MobileAdaptive>
             );
+          if (Object.keys(item)[0] === 'tymioBanner') return <TymioBanner />;
           if (Object.keys(item)[0] === 'list')
             return (
               <Styled.ListContainer key={index}>

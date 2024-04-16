@@ -8,7 +8,6 @@ export const BlogArticle = styled.div`
 
   @media (max-width: 1439px) {
     max-width: auto;
-    margin: 0px;
     padding: 85px 30px 100px;
   }
   @media (max-width: 767px) {

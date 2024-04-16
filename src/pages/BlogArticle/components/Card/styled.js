@@ -33,6 +33,7 @@ export const ContentWrapper = styled.div`
   }
   @media (max-width: 767px) {
     button {
+      padding: 10px 20px;
       margin-bottom: 20px;
     }
   }
@@ -83,6 +84,13 @@ export const Content = styled.div`
 
   @media (max-width: 1439px) {
     margin-bottom: 20px;
+    h1 {
+      line-height: 110%;
+      font-size: 40px;
+      letter-spacing: 0.4px;
+
+      flex-basis: 638px;
+    }
   }
 
   @media (max-width: 767px) {

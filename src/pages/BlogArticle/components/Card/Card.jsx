@@ -23,7 +23,7 @@ const Card = ({ blog }) => {
         color={COLORS[blog.color]}
       >
         <UI.Button type={'blog'} onClick={() => navigateBack()}>
-          <UI.Paragraph size={'medium'} color={COLORS.BLACK}>
+          <UI.Paragraph size={'medium'} color={COLORS.BLACK} lh={'95%'}>
             Back
           </UI.Paragraph>
         </UI.Button>

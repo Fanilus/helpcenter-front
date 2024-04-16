@@ -15,7 +15,7 @@ export const LeftContent = styled.div`
 export const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr 645px 1fr;
-  margin-bottom: 80px;
+
   @media (max-width: 1439px) {
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ export const Content = styled.div`
 export const CenterContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 50px;
   @media (max-width: 1439px) {
     flex-basis: 462px;
   }
@@ -61,8 +61,9 @@ export const MobileAdaptive = styled.div`
 `;
 
 export const BigHeader = styled.div`
-  @media (max-width: 767px) {
-    padding: 20px 0;
+  padding-top: 20px;
+  @media (max-width: 1439px) {
+    padding-top: 0;
   }
 `;
 
@@ -78,6 +79,7 @@ export const TitleList = styled.div`
 `;
 export const ListIcon = styled.div`
   color: ${COLORS.BLACK};
+  line-height: 23px;
 `;
 
 export const ListWrapper = styled.div`

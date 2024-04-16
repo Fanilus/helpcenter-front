@@ -4,6 +4,13 @@ import { COLORS } from '../../../../models/colors';
 export const Related = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
+  @media (max-width: 1439px) {
+    margin-top: 100px;
+  }
+  @media (max-width: 767px) {
+    margin-top: 80px;
+  }
 `;
 
 export const Title = styled.div`

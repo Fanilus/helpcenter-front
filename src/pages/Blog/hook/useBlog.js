@@ -36,7 +36,7 @@ const useBlog = () => {
           {
             text: "The same principles apply to cryptocurrency investing. Let's take a comparative look at the profitability and riskiness of such crypto investing strategies as staking, farming, and trading. Additionally, we’ll explore the unique features of the <a href='https://tymio.com/' rel='noreferrer' target='_blank'>Tymio</a>  platform that allows users to place limit orders with yield. We will also compare these three popular strategies with the opportunities that the Tymio platform offers to crypto investors.",
           },
-          { header: 'Staking', id: 'staking' },
+          { bigHeader: 'Staking', id: 'staking' },
           {
             text: 'Staking is a process where investors lock up their crypto assets to support network operations and validate transactions. In return, stakers receive rewards in the form of additional tokens.',
           },
@@ -63,7 +63,7 @@ const useBlog = () => {
             earningBanner: true,
           },
           {
-            header: 'Yield Farming',
+            bigHeader: 'Yield Farming',
             id: 'yieldFarming',
           },
           {
@@ -90,7 +90,7 @@ const useBlog = () => {
             ],
           },
           {
-            header: 'Trading',
+            bigHeader: 'Trading',
             id: 'trading',
           },
           {
@@ -116,10 +116,13 @@ const useBlog = () => {
           },
 
           {
-            header:
-              '<a href="https://tymio.com/" rel="noreferrer" target="_blank">TYMIO</a>',
+            bigHeader:
+              '<a href="https://tymio.com/" rel="noreferrer" target="_blank">TYMIO →</a>',
             id: 'tymio',
           },
+          // {
+          //          tymioBanner: true,
+          //         },
           {
             text: 'Tymio is an innovative platform that combines limit orders with yield. Users can set time-limit orders with yield for assets like ETH or WBTC.',
           },
@@ -158,7 +161,7 @@ const useBlog = () => {
             ],
           },
 
-          { header: 'In summary:', id: 'inSummary' },
+          { bigHeader: 'In summary:', id: 'inSummary' },
           {
             list: [
               {
