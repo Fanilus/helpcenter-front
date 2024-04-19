@@ -19,26 +19,8 @@ export const Card = styled.div`
     `}
   cursor: pointer;
   margin-bottom: 60px;
-
-  ${({ dataLength }) =>
-    dataLength &&
-    ` 
-    :nth-child(${dataLength - 1}) {
-      margin-bottom: 0;
-    }
-    :nth-child(${dataLength}) {
-      margin-bottom: 0;
-    }
-    @media (max-width: 1439px) {
-      :nth-child(${dataLength - 1}) {
-      margin-bottom: 60px;
-    }
-  }
-    `}/* @media (max-width: 1439px) {
-    display: block;
-    padding: 50px 0 0 0;
-  } */
 `;
+
 export const ContentWrapper = styled.div`
   ${({ big, background, color }) =>
     !big &&
@@ -50,9 +32,14 @@ export const ContentWrapper = styled.div`
           : background
         : COLORS.PURPLE_BRIGHT
     };
+      height: 330px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       border-radius: 10px;
       padding: 30px;
       @media (max-width: 1439px) {
+        height: auto; 
         padding: 30px 20px;
       }
       p {
@@ -68,24 +55,29 @@ export const Header = styled.div`
   margin-bottom: 20px;
 `;
 export const Date = styled.div`
-  margin-bottom: 50px;
+  margin-bottom: ${({ big }) => (big ? '50px' : '0')};
 `;
 
 export const Content = styled.div`
   display: flex;
   gap: 60px;
-  margin-bottom: 30px;
-
+  margin-bottom: 20px;
   @media (max-width: 1439px) {
     margin-bottom: 20px;
   }
 
   ${({ color }) =>
     ` 
+  h2 {
+    color: ${color ? color : COLORS.BLACK};
+  }
+
+  @media (max-width: 1439px) {
     h2 {
-      color: ${color ? color : COLORS.BLACK};
+      display: none;
     }
-    `}
+  }
+  `}
 
   ${({ big }) =>
     big &&
@@ -93,6 +85,7 @@ export const Content = styled.div`
     h1 {
       flex-basis: 755px;
       flex-shrink: 0;
+      margin-bottom: 10px;
     }
     h2 {
       display: none;
@@ -153,4 +146,19 @@ export const Description = styled.div`
         padding: 50px 0 0 0;
       }
     `}
+`;
+export const TopWrapper = styled.div`
+  @media (max-width: 1439px) {
+    margin-bottom: 50px;
+  }
+`;
+
+export const MobileH2Wrapper = styled.div`
+  display: none;
+  @media (max-width: 1439px) {
+    display: ${({ big }) => (big ? 'none' : 'block')};
+    h2 {
+      display: block;
+    }
+  }
 `;

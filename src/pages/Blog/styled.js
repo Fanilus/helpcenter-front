@@ -4,15 +4,15 @@ export const Blog = styled.div`
   margin-bottom: -1px;
   max-width: 1320px;
   margin: 0px auto;
-  padding: 120px 0 180px;
+  padding: 120px 0 120px;
 
   @media (max-width: 1439px) {
     max-width: auto;
     margin: 0px;
-    padding: 85px 30px 100px;
+    padding: 85px 30px 40px;
   }
   @media (max-width: 767px) {
-    padding: 85px 15px 100px;
+    padding: 85px 15px 40px;
   }
 `;
 

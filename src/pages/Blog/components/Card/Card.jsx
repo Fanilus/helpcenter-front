@@ -25,6 +25,20 @@ const Card = ({
   function navigateArrow(id) {
     navigate(`/blog/${id}`);
   }
+
+  function truncateText(text, maxLength) {
+    if (text.length <= maxLength) {
+      return text;
+    } else {
+      let truncatedText = text.substring(0, maxLength);
+
+      truncatedText = truncatedText.substring(
+        0,
+        Math.min(truncatedText.length, truncatedText.lastIndexOf(' '))
+      );
+      return truncatedText + ' ...';
+    }
+  }
   return (
     <Styled.Card
       big={big}
@@ -32,27 +46,34 @@ const Card = ({
       onClick={() => navigateArrow(id)}
     >
       <Styled.ContentWrapper big={big} background={background} color={color}>
-        <Styled.Header>
-          <UI.Paragraph size={'small'} color={COLORS.LIME_LEMON}>
-            {heading}
-          </UI.Paragraph>
-        </Styled.Header>
-        <Styled.Content big={big} color={color}>
-          {big && <UI.HH color={COLORS.BLACK}>{title}</UI.HH>}
-          <UI.H2 noMedia={true} color={COLORS.BLACK}>
-            {title}
-          </UI.H2>
-          {big && (
-            <UI.Paragraph size={'large'} color={COLORS.BLACK}>
-              {description}
+        <Styled.TopWrapper>
+          <Styled.Header big={big}>
+            <UI.Paragraph size={'small'} color={COLORS.LIME_LEMON}>
+              {heading}
             </UI.Paragraph>
-          )}
-        </Styled.Content>
-        <Styled.Date>
-          <UI.Paragraph size={'small'} color={COLORS.LIME_LEMON}>
-            {date}
-          </UI.Paragraph>
-        </Styled.Date>
+          </Styled.Header>
+          <Styled.Content big={big} color={color}>
+            {big && <UI.HH color={COLORS.BLACK}>{title}</UI.HH>}
+            <UI.H2 noMedia={true} color={COLORS.BLACK}>
+              {truncateText(title, 70)}
+            </UI.H2>
+            <Styled.MobileH2Wrapper big={big}>
+              <UI.H2 noMedia={true} color={COLORS.BLACK}>
+                {title}
+              </UI.H2>
+            </Styled.MobileH2Wrapper>
+            {big && (
+              <UI.Paragraph size={'large'} color={COLORS.BLACK}>
+                {description}
+              </UI.Paragraph>
+            )}
+          </Styled.Content>
+          <Styled.Date big={big}>
+            <UI.Paragraph size={'small'} color={COLORS.LIME_LEMON}>
+              {date}
+            </UI.Paragraph>
+          </Styled.Date>
+        </Styled.TopWrapper>
         <Styled.Footer color={color}>
           <Styled.Author>
             <CircleBlog />

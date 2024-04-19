@@ -41,7 +41,7 @@ const Safety = () => {
                 - we do not control your funds; only you do. Open source smart
                 contract addresses: [
                 <a
-                  href="https://etherscan.io/address/0x0D0C69c9E31923712f2D51d994950D08Ed9b2958"
+                  href="https://etherscan.io/address/0xB67D637B1301EEb56Dba4555bBd15Cd220F1aaD6"
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -49,7 +49,7 @@ const Safety = () => {
                 </a>
                 ,{' '}
                 <a
-                  href="https://arbiscan.io/address/0x0D0C69c9E31923712f2D51d994950D08Ed9b2958"
+                  href="https://arbiscan.io/address/0xB67D637B1301EEb56Dba4555bBd15Cd220F1aaD6"
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -69,10 +69,16 @@ const Safety = () => {
             </UI.Animation>
             <UI.Animation delay={step * 2} type={'opacity'}>
               <UI.Paragraph size={'large'}>
-                The results of the audit by Pessimistic Security can be found
-                here. Additionally, we maintain a reserve fund of 100,000 USDC
-                to cover any potential issues. This fund is set to grow over
-                time.
+                The results of the audit by Pessimistic Security can be found{' '}
+                <a
+                  href="https://github.com/pessimistic-io/audits/blob/f2c817cecb35ecd831f5cc73aa99c58b484c0d13/TYMIO%20Security%20Analysis%20by%20Pessimistic.pdf"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  here
+                </a>
+                . Additionally, we maintain a reserve fund of 100,000 USDC to
+                cover any potential issues. This fund is set to grow over time.
               </UI.Paragraph>
             </UI.Animation>
           </Styled.Card>
