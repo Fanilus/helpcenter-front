@@ -12,6 +12,9 @@ import video from '../../../../assets/video/video_low_quality.webm';
 import { importAllImages, isMobile } from '../../../../lib/lib';
 
 import { useStep } from '../../../../hooks';
+import BebraIcon from '../../../../img/BebraIcon';
+import XIcon from '../../../../img/XIcon';
+import TelegramIcon from '../../../../img/TelegramIcon';
 const imageContext = require.context(
   '../../../../assets/video/frames/home',
   false,
@@ -91,21 +94,29 @@ const Home = ({ loading, statistics }) => {
             <UI.Animation delay={step}>
               <Styled.Description>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                  Earn up to 50% annualized on your USDC, ETH or WBTC by being ready to sell
-                  above market price or to buy below market price.
+                  Grow your wealth and earn passive income from your stablecoins
+                  or major crypto assets by monetizing your commitment to sell
+                  above market price or buy below market price.
                 </UI.Paragraph>
               </Styled.Description>
             </UI.Animation>
 
             <UI.Animation delay={step * 2}>
-              <UI.Button>
-                <UI.Paragraph
-                  color={COLORS.BLACK}
-                  onClick={() => window.open(APP_LINK, '_blank')}
-                >
-                  Start earning
-                </UI.Paragraph>
-              </UI.Button>
+              <Styled.Wrapper>
+                <UI.Button>
+                  <UI.Paragraph
+                    color={COLORS.BLACK}
+                    onClick={() => window.open(APP_LINK, '_blank')}
+                  >
+                    Start earning
+                  </UI.Paragraph>
+                </UI.Button>
+                <Styled.IconWrapper>
+                  <BebraIcon />
+                  <TelegramIcon />
+                  <XIcon />
+                </Styled.IconWrapper>
+              </Styled.Wrapper>
             </UI.Animation>
 
             <Styled.Bot>

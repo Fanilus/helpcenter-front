@@ -6,6 +6,9 @@ import * as UI from '../../../../components/index';
 import CheckCircle from '../../../../components/Icons/CheckCircle/CheckCircle';
 import { TYPOGRAPHY_SIZE } from '../../../../models/types';
 import { useStep } from '../../../../hooks';
+import BebraIcon from '../../../../img/BebraIcon';
+import TelegramIcon from '../../../../img/TelegramIcon';
+import XIcon from '../../../../img/XIcon';
 
 const Checks = () => {
   const step = useStep();
@@ -36,6 +39,15 @@ const Checks = () => {
           </UI.Paragraph>
         </Styled.Check>
       </UI.Animation>
+      <Styled.TableWrapper>
+        <UI.Animation delay={step * 3} distance={'25px'}>
+          <Styled.TableIconWrapper>
+            <BebraIcon />
+            <TelegramIcon />
+            <XIcon />
+          </Styled.TableIconWrapper>
+        </UI.Animation>
+      </Styled.TableWrapper>
     </Styled.Checks>
   );
 };

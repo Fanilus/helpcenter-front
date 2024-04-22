@@ -213,3 +213,49 @@ export const Description = styled.div`
     width: auto;
   }
 `;
+export const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  @media (max-width: 1439px) {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    display: flex;
+    gap: 10px;
+  }
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  @media (max-width: 767px) {
+    gap: 40px;
+  }
+`;
+
+export const TableIconWrapper = styled.div`
+  @media (max-width: 1439px) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
+
+export const TableWrapper = styled.div`
+  display: none;
+  @media (max-width: 1439px) {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 65%;
+    margin-right: 33px;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
