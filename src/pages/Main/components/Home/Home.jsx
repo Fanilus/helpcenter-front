@@ -94,9 +94,8 @@ const Home = ({ loading, statistics }) => {
             <UI.Animation delay={step}>
               <Styled.Description>
                 <UI.Paragraph size={TYPOGRAPHY_SIZE.LARGE}>
-                  Grow your wealth and earn passive income from your stablecoins
-                  or major crypto assets by monetizing your commitment to sell
-                  above market price or buy below market price.
+                  Grow your wealth and earn passive income by selling crypto
+                  above market price and buying it below market price
                 </UI.Paragraph>
               </Styled.Description>
             </UI.Animation>
