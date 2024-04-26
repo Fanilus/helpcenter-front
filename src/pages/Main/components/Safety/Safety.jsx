@@ -19,9 +19,7 @@ const Safety = () => {
             <UI.Animation type={'text'}>Safety</UI.Animation>
           </UI.H1>
           <UI.Animation type={'opacity'} delay={step}>
-            <UI.H2>
-              At TYMIO, the safety of our users' funds is our top priority.
-            </UI.H2>
+            <UI.H2>At TYMIO, the safety of our users' funds is our top priority.</UI.H2>
           </UI.Animation>
         </Styled.Title>
         <Styled.CardContainer>
@@ -34,12 +32,8 @@ const Safety = () => {
             </UI.Animation>
             <UI.Animation delay={step} type={'opacity'}>
               <UI.Paragraph size={'large'}>
-                We maintain a reserve fund of 100,000 USDC to cover any
-                potential losses or theft from our smart contract. This fund is
-                set to grow over time. TYMIO is a non-custodial platform, which
-                means users maintain control over their assets. In other words,
-                - we do not control your funds; only you do. Open source smart
-                contract addresses: [
+                TYMIO is a non-custodial platform, which means users maintain control over their assets. In other words,
+                - we do not control your funds; only you do. Open source smart contract addresses: [
                 <a
                   href="https://etherscan.io/address/0xB67D637B1301EEb56Dba4555bBd15Cd220F1aaD6"
                   rel="noreferrer"
@@ -77,8 +71,8 @@ const Safety = () => {
                 >
                   here
                 </a>
-                . Additionally, we maintain a reserve fund of 100,000 USDC to
-                cover any potential issues. This fund is set to grow over time.
+                . Additionally, we maintain a reserve fund of 100,000 USDC to cover any potential issues. This fund is
+                set to grow over time.
               </UI.Paragraph>
             </UI.Animation>
           </Styled.Card>
@@ -92,10 +86,9 @@ const Safety = () => {
             </UI.Animation>
             <UI.Animation delay={step * 3} type={'opacity'}>
               <UI.Paragraph size={'large'}>
-                User funds remain within the smart contract and only serve as
-                collateral for deal settlements. We use our own liquidity to
-                generate yields. Hence, you are shielded from any troubles with
-                third-party liquidity providers.
+                User funds remain within the smart contract and only serve as collateral for deal settlements. We use
+                our own liquidity to generate yields. Hence, you are shielded from any troubles with third-party
+                liquidity providers.
               </UI.Paragraph>
             </UI.Animation>
           </Styled.Card>
