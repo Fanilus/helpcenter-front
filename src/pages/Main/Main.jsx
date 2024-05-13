@@ -9,7 +9,7 @@ import Media from './components/Media/Media';
 import { useParams } from 'react-router-dom';
 import useStatistics from './hooks/useStatistics';
 
-const Main = () => {
+const Main = ({ setNavRefs }) => {
   const {
     //  error,
     loading,
@@ -31,6 +31,10 @@ const Main = () => {
     safety,
     faq,
   };
+
+  useEffect(() => {
+    setNavRefs({ home, how_it_work, use_cases, media, safety, faq });
+  }, []);
 
   useEffect(() => {
     if (elementId && ids[elementId]) {

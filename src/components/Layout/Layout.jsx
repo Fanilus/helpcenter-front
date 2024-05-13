@@ -6,7 +6,7 @@ import * as TymioUI from '../_DEPRECATED/index';
 import * as UI from '../index';
 import * as Styled from './styled';
 
-const Layout = () => {
+const Layout = ({ navRefs }) => {
   const [light, setLight] = useState(false);
 
   const location = useLocation();
@@ -25,7 +25,7 @@ const Layout = () => {
 
   return (
     <TymioUI.Container light={light}>
-      <UI.Header light={light} />
+      <UI.Header light={light} navRefs={navRefs} />
       <Styled.Main>
         <Outlet />
       </Styled.Main>

@@ -7,49 +7,48 @@ import { BUTTON_TYPE } from '../../models/types';
 
 import * as Styled from './styled';
 import useRoutes from '../../hooks/useRoutes';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const APP_LINK = process.env.REACT_APP_APP_LINK;
 const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
 
-const Header = ({ light }) => {
-  const { header } = useRoutes();
-  const [scroll, setScroll] = useState(false);
-  const location = useLocation();
-  const [active, setActive] = useState();
-  const [initialOffset, setInitialOffset] = useState(window.scrollY);
-  const [renderCnt, setRenderCnt] = useState(0);
-
+const Header = ({ light, navRefs }) => {
   const navigate = useNavigate();
+  const { elementId } = useParams();
+  const { header } = useRoutes();
+
+  const [scroll, setScroll] = useState(false);
+  const [active, setActive] = useState();
 
   useEffect(() => {
-    setActive(location.pathname);
-  }, [location.pathname]);
+    if (elementId) setActive(`/${elementId}`);
+    else setActive('/');
+  }, [elementId]);
 
   useEffect(() => {
-    setInitialOffset(window.scrollY);
-    if (!active) navigate('/');
-  }, [active]);
-
-  useEffect(() => {
-    setRenderCnt((prev) => ++prev);
-    if (typeof window !== 'undefined' && initialOffset) {
-      const update = () => {
-        console.log({ initialOffset, scrollY: window.scrollY, renderCnt });
-        setRenderCnt(0);
-        if (window.scrollY !== initialOffset) setActive(false);
-        if (window.scrollY > 0) {
-          setScroll(true);
-        } else {
-          setScroll(false);
-        }
-      };
+    if (navRefs) {
       window.addEventListener('scroll', update);
       return () => {
         window.removeEventListener('scroll', update);
       };
     }
-  }, [initialOffset, window]);
+  }, [navRefs, elementId]);
+
+  const update = () => {
+    if (window.scrollY > 0) {
+      setScroll(true);
+      handleScroll();
+    } else {
+      setScroll(false);
+    }
+  };
+
+  const handleScroll = () => {
+    if (navRefs && navRefs[elementId] && window.scrollY !== navRefs[elementId].current.offsetTop) {
+      setActive(false);
+      navigate('/');
+    }
+  };
 
   return (
     <Styled.Header>
