@@ -2,10 +2,10 @@ import React from 'react';
 
 import * as Styled from './styled';
 import * as UI from '../../../../components/index';
-import { useStep } from '../../../../hooks';
+// import { useStep } from '../../../../hooks';
 
 const UseCases = () => {
-  const step = useStep();
+  // const step = useStep();
   const faqList = [
     {
       title: 'Investors',
@@ -55,7 +55,7 @@ const UseCases = () => {
           <UI.Animation type={'text'}>Use cases</UI.Animation>
         </UI.H1>
         <UI.AccordionCases faqList={faqList} />
-        <UI.Animation delay={step}>
+        {/* <UI.Animation delay={step}>
           <Styled.Board>
             <Styled.Badge>
               <UI.Badge
@@ -88,7 +88,7 @@ const UseCases = () => {
               </UI.Animation>
             </Styled.Desc>
           </Styled.Board>
-        </UI.Animation>
+        </UI.Animation> */}
       </UI.Container>
     </Styled.UseCases>
   );

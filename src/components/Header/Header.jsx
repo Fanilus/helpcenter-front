@@ -17,14 +17,22 @@ const Header = ({ light }) => {
   const [scroll, setScroll] = useState(false);
   const location = useLocation();
   const [active, setActive] = useState();
+  const [initialOffset, setInitialOffset] = useState(window.scrollY);
 
   useEffect(() => {
     setActive(location.pathname);
   }, [location.pathname]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    setInitialOffset(window.scrollY);
+  }, [active]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && initialOffset) {
       const update = () => {
+        console.log('scroll', window.scrollY);
+        console.log({ initialOffset });
+        if (window.scrollY !== initialOffset) setActive(false);
         if (window.scrollY > 0) {
           setScroll(true);
         } else {
@@ -36,7 +44,7 @@ const Header = ({ light }) => {
         window.removeEventListener('scroll', update);
       };
     }
-  }, []);
+  }, [initialOffset]);
 
   return (
     <Styled.Header>

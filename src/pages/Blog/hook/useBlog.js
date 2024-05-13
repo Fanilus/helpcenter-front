@@ -397,10 +397,6 @@ const useBlog = () => {
         ],
         content: [
           {
-            header: 'How to Make Transfers Between Different Networks',
-            id: 0,
-          },
-          {
             text: `The ability to seamlessly transfer assets across different blockchain networks is a game-changer in the world of cryptocurrencies. As the cryptocurrency ecosystem continues to evolve, interoperability has become a crucial factor in enabling truly decentralized and interconnected financial systems. In this article, we'll explore the realm of cross-chain transfers and provide you with a comprehensive guide on how to navigate this groundbreaking technology.
             `,
           },

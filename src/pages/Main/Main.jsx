@@ -5,6 +5,7 @@ import HowItWork from './components/HowItWork/HowItWork';
 import UseCases from './components/UseCases/UseCases';
 import Safety from './components/Safety/Safety';
 import FAQ from './components/FAQ/FAQ';
+import Media from './components/Media/Media';
 import { useParams } from 'react-router-dom';
 import useStatistics from './hooks/useStatistics';
 
@@ -18,6 +19,7 @@ const Main = () => {
   const home = useRef();
   const how_it_work = useRef();
   const use_cases = useRef();
+  const media = useRef();
   const safety = useRef();
   const faq = useRef();
 
@@ -25,6 +27,7 @@ const Main = () => {
     home,
     how_it_work,
     use_cases,
+    media,
     safety,
     faq,
   };
@@ -46,6 +49,9 @@ const Main = () => {
       </div>
       <div ref={use_cases}>
         <UseCases />
+      </div>
+      <div ref={media}>
+        <Media />
       </div>
       <div ref={safety}>
         <Safety />
