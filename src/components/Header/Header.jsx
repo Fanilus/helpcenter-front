@@ -7,7 +7,7 @@ import { BUTTON_TYPE } from '../../models/types';
 
 import * as Styled from './styled';
 import useRoutes from '../../hooks/useRoutes';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const APP_LINK = process.env.REACT_APP_APP_LINK;
 const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
@@ -18,6 +18,9 @@ const Header = ({ light }) => {
   const location = useLocation();
   const [active, setActive] = useState();
   const [initialOffset, setInitialOffset] = useState(window.scrollY);
+  const [renderCnt, setRenderCnt] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setActive(location.pathname);
@@ -25,13 +28,15 @@ const Header = ({ light }) => {
 
   useEffect(() => {
     setInitialOffset(window.scrollY);
+    if (!active) navigate('/');
   }, [active]);
 
   useEffect(() => {
+    setRenderCnt((prev) => ++prev);
     if (typeof window !== 'undefined' && initialOffset) {
       const update = () => {
-        console.log('scroll', window.scrollY);
-        console.log({ initialOffset });
+        console.log({ initialOffset, scrollY: window.scrollY, renderCnt });
+        setRenderCnt(0);
         if (window.scrollY !== initialOffset) setActive(false);
         if (window.scrollY > 0) {
           setScroll(true);
@@ -44,7 +49,7 @@ const Header = ({ light }) => {
         window.removeEventListener('scroll', update);
       };
     }
-  }, [initialOffset]);
+  }, [initialOffset, window]);
 
   return (
     <Styled.Header>
@@ -54,16 +59,8 @@ const Header = ({ light }) => {
             <TymioUI.LogoIcon />
           </Styled.LogoLink>
           <Styled.Fixed>
-            <UI.RouteMenu
-              scroll={light ? null : scroll}
-              options={header}
-              light={light}
-              active={active}
-            />
-            <UI.Button
-              type={BUTTON_TYPE.SECONDARY}
-              onClick={() => window.open(APP_LINK, '_blank')}
-            >
+            <UI.RouteMenu scroll={light ? null : scroll} options={header} light={light} active={active} />
+            <UI.Button type={BUTTON_TYPE.SECONDARY} onClick={() => window.open(APP_LINK, '_blank')}>
               Start earning
             </UI.Button>
           </Styled.Fixed>
