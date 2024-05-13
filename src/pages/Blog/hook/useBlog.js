@@ -19,11 +19,6 @@ const useBlog = () => {
       background: 'LEMON',
       articleBlog: {
         tableOfContents: [
-          {
-            title:
-              'Overview of low-risk strategies for investing in digital assets',
-            id: '0',
-          },
           { title: 'Staking', id: 'staking' },
           { title: 'Yield Farming', id: 'yieldFarming' },
           { title: 'Trading', id: 'trading' },
@@ -31,11 +26,6 @@ const useBlog = () => {
           { title: 'In Summary', id: 'inSummary' },
         ],
         content: [
-          {
-            header:
-              'Overview of low-risk strategies for investing in digital assets',
-            id: '0',
-          },
           {
             text: 'Any investment strategies are built around two key factors: return and degree of risk. Investors choose personalized investment strategies based on their preferences and their willingness or unwillingness to risk their capital for higher returns.',
           },
@@ -227,10 +217,6 @@ const useBlog = () => {
       background: 'LEMON',
       articleBlog: {
         tableOfContents: [
-          {
-            title: `TYMIO: Revolutionizing Crypto Investing with Safe, Yield-Generating Strategies`,
-            id: '0',
-          },
           { title: "TYMIO's Innovative Approach", id: '1' },
           { title: 'A User-Friendly Experience', id: '2' },
           { title: 'Challenges and Opportunities', id: '3' },
@@ -238,11 +224,6 @@ const useBlog = () => {
           { title: 'The Road Ahead', id: '5' },
         ],
         content: [
-          {
-            header:
-              'TYMIO: Revolutionizing Crypto Investing with Safe, Yield-Generating Strategies',
-            id: 0,
-          },
           {
             text: 'Contrary to the common misconception, the crypto market has various strategies to generate substantial returns without exposing investors to excessive risk. One such approach, "selling covered calls," has long been employed by seasoned professionals like Warren Buffett in classical financial markets. TYMIO has recognized the potential of these strategies and has successfully transposed them into the crypto ecosystem, where the necessary infrastructure in the form of options exchanges already exists.',
           },
@@ -385,10 +366,6 @@ const useBlog = () => {
       background: 'PURPLE_BRIGHT',
       articleBlog: {
         tableOfContents: [
-          {
-            title: `How to Make Transfers Between Different Networks`,
-            id: '0',
-          },
           { title: 'Understanding cross-chain bridges', id: '1' },
           { title: 'Benefits of cross-chain transfers', id: '2' },
           { title: 'Step-by-step guide to cross-chain transfers', id: '3' },
