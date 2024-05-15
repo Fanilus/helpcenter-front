@@ -7,11 +7,11 @@ const useBlog = () => {
   const [blogs, setBlogs] = useState([
     {
       id: 1,
-      heading: 'investing ',
+      heading: 'investing',
       title: 'Overview of low-risk strategies for investing in digital assets',
       description:
         'Explore low-risk strategies for investing in digital assets and learn how the innovative TYMIO platform combines limit orders with yield to provide secure and profitable opportunities in the dynamic crypto market.',
-      date: '8.04.2024',
+      date: '08.04.2024',
       authorName: 'TYMIO team',
       authorOccupation: '',
       big: true,
@@ -116,9 +116,6 @@ const useBlog = () => {
               '<a href="https://tymio.com/" rel="noreferrer" target="_blank">TYMIO →</a>',
             id: 'tymio',
           },
-          // {
-          //          tymioBanner: true,
-          //         },
           {
             text: 'TYMIO is an innovative platform that combines limit orders with yield. Users can set time-limit orders with yield for assets like ETH or WBTC.',
           },
@@ -198,6 +195,14 @@ const useBlog = () => {
             header: 'Investing',
             title: 'How to Make Transfers Between Different Networks',
             date: '18.04.2024',
+            nameAuthor: 'TYMIO Team',
+          },
+          {
+            id: 5,
+            header: 'Investing',
+            title:
+              'Benefits of Using Limit Orders with Income on the TYMIO Platform',
+            date: '13.05.2024',
             nameAuthor: 'TYMIO Team',
           },
         ],
@@ -340,7 +345,7 @@ const useBlog = () => {
             header: 'Investing',
             title:
               'Overview of low-risk strategies for investing in digital assets',
-            date: '8.04.2024',
+            date: '08.04.2024',
             nameAuthor: 'TYMIO Team',
           },
           {
@@ -348,6 +353,14 @@ const useBlog = () => {
             header: 'Investing',
             title: 'How to Make Transfers Between Different Networks',
             date: '18.04.2024',
+            nameAuthor: 'TYMIO Team',
+          },
+          {
+            id: 5,
+            header: 'Investing',
+            title:
+              'Benefits of Using Limit Orders with Income on the TYMIO Platform',
+            date: '13.05.2024',
             nameAuthor: 'TYMIO Team',
           },
         ],
@@ -553,7 +566,7 @@ const useBlog = () => {
             header: 'Investing',
             title:
               'Overview of low-risk strategies for investing in digital assets',
-            date: '8.04.2024',
+            date: '08.04.2024',
             nameAuthor: 'TYMIO Team',
           },
           {
@@ -564,495 +577,231 @@ const useBlog = () => {
             date: '16.04.2024',
             nameAuthor: 'TYMIO Team',
           },
+          {
+            id: 5,
+            header: 'Investing',
+            title:
+              'Benefits of Using Limit Orders with Income on the TYMIO Platform',
+            date: '16.04.2024',
+            nameAuthor: 'TYMIO Team',
+          },
         ],
       },
     },
-    // {
-    //   id: 2,
-    //   heading: 'Heading 1',
-    //   title: 'Name of the article can consist from one to three lines length',
-    //   description:
-    //     'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //   date: '03.06.2023 (updated — 04.08.2024)',
-    //   authorName: 'Name of the author ',
-    //   authorOccupation: 'Occupation',
-    //   big: false,
-    //   color: 'BLACK',
-    //   background: 'LEMON',
-    //   articleBlog: {
-    //     tableOfContents: [
-    //       'Subtitle',
-    //       'Subtitle a few lines',
-    //       'Subtitle',
-    //       'Subtitle Subtitle a few lines',
-    //       'Subtitle a few lines',
-    //       'Subtitle subtitle subtitle ',
-    //     ],
-    //     content: [
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         earningBanner: true,
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       {
-    //         bigHeader:
-    //           'Important point that need to be highlighted in a few line, not too long. Highlighting key points concisely is crucial. Important point that need to be highlighted.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         image: {
-    //           link: 'default',
-    //           imageDescription: 'Caption for photo or illustrations',
-    //         },
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //     ],
-    // related: [
-    //   {
-    //     id: 1,
-    //     header: 'Heading 1',
-    //     title: 'Name of the article can consist from one to three lines',
-    //     date: '03.06.2023 (updated — 04.08.2024)',
-    //     nameAuthor: 'Name of the author',
-    //     occupation: 'Occupation',
-    //   },
-    //   {
-    //     id: 2,
-    //     header: 'Heading 1',
-    //     title: 'Name of the article can consist from one to three lines',
-    //     date: '03.06.2023 (updated — 04.08.2024)',
-    //     nameAuthor: 'Name of the author',
-    //     occupation: 'Occupation',
-    //   },
-    //   {
-    //     id: 3,
-    //     header: 'Heading 1',
-    //     title: 'Name of the article can consist from one to three lines',
-    //     date: '03.06.2023 (updated — 04.08.2024)',
-    //     nameAuthor: 'Name of the author',
-    //     occupation: 'Occupation',
-    //   },
-    // ],
-    //   },
-    // },
-    // {
-    //   id: 3,
-    //   heading: 'Heading 1',
-    //   title: 'Name of the article can consist from one to three lines length',
-    //   description:
-    //     'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //   date: '03.06.2023 (updated — 04.08.2024)',
-    //   authorName: 'Name of the author ',
-    //   authorOccupation: 'Occupation',
-    //   big: false,
-    //   color: 'BLACK',
-    //   background: 'PURPLE-BRIGHT',
-    //   articleBlog: {
-    //     tableOfContents: [
-    //       'Subtitle',
-    //       'Subtitle a few lines',
-    //       'Subtitle',
-    //       'Subtitle Subtitle a few lines',
-    //       'Subtitle a few lines',
-    //       'Subtitle subtitle subtitle ',
-    //     ],
-    //     content: [
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         earningBanner: true,
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       {
-    //         bigHeader:
-    //           'Important point that need to be highlighted in a few line, not too long. Highlighting key points concisely is crucial. Important point that need to be highlighted.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         image: {
-    //           link: 'default',
-    //           imageDescription: 'Caption for photo or illustrations',
-    //         },
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //     ],
-    //     related: [
-    //       {
-    //         id: 1,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //       {
-    //         id: 2,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //       {
-    //         id: 3,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //     ],
-    //   },
-    // },
-    // {
-    //   id: 4,
-    //   heading: 'Heading 1',
-    //   title: 'Name of the article can consist from one to three lines length',
-    //   description:
-    //     'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //   date: '03.06.2023 (updated — 04.08.2024)',
-    //   authorName: 'Name of the author ',
-    //   authorOccupation: 'Occupation',
-    //   big: false,
-    //   color: 'LIGHT',
-    //   background: 'BLACK',
-    //   articleBlog: {
-    //     tableOfContents: [
-    //       'Subtitle',
-    //       'Subtitle a few lines',
-    //       'Subtitle',
-    //       'Subtitle Subtitle a few lines',
-    //       'Subtitle a few lines',
-    //       'Subtitle subtitle subtitle ',
-    //     ],
-    //     content: [
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         earningBanner: true,
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       {
-    //         bigHeader:
-    //           'Important point that need to be highlighted in a few line, not too long. Highlighting key points concisely is crucial. Important point that need to be highlighted.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         image: {
-    //           link: 'default',
-    //           imageDescription: 'Caption for photo or illustrations',
-    //         },
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //     ],
-    //     related: [
-    //       {
-    //         id: 1,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //       {
-    //         id: 2,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //       {
-    //         id: 3,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //     ],
-    //   },
-    // },
-    // {
-    //   id: 5,
-    //   heading: 'Heading 1',
-    //   title: 'Name of the article can consist from one to three lines length',
-    //   description:
-    //     'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //   date: '03.06.2023 (updated — 04.08.2024)',
-    //   authorName: 'Name of the author ',
-    //   authorOccupation: 'Occupation',
-    //   big: false,
-    //   color: 'BLACK',
-    //   background: 'GRADIENT_RED_PINK',
-    //   articleBlog: {
-    //     tableOfContents: [
-    //       'Subtitle',
-    //       'Subtitle a few lines',
-    //       'Subtitle',
-    //       'Subtitle Subtitle a few lines',
-    //       'Subtitle a few lines',
-    //       'Subtitle subtitle subtitle ',
-    //     ],
-    //     content: [
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         earningBanner: true,
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       {
-    //         bigHeader:
-    //           'Important point that need to be highlighted in a few line, not too long. Highlighting key points concisely is crucial. Important point that need to be highlighted.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         image: {
-    //           link: 'default',
-    //           imageDescription: 'Caption for photo or illustrations',
-    //         },
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //     ],
-    //     related: [
-    //       {
-    //         id: 1,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //       {
-    //         id: 2,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //       {
-    //         id: 3,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //     ],
-    //   },
-    // },
-    // {
-    //   id: 6,
-    //   heading: 'Heading 1',
-    //   title: 'Name of the article can consist from one to three lines length',
-    //   description:
-    //     'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //   date: '03.06.2023 (updated — 04.08.2024)',
-    //   authorName: 'Name of the author ',
-    //   authorOccupation: 'Occupation',
-    //   big: false,
-    //   color: 'BLACK',
-    //   background: 'PURPLE_LIGHT',
-    //   articleBlog: {
-    //     tableOfContents: [
-    //       'Subtitle',
-    //       'Subtitle a few lines',
-    //       'Subtitle',
-    //       'Subtitle Subtitle a few lines',
-    //       'Subtitle a few lines',
-    //       'Subtitle subtitle subtitle ',
-    //     ],
-    //     content: [
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         earningBanner: true,
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       {
-    //         bigHeader:
-    //           'Important point that need to be highlighted in a few line, not too long. Highlighting key points concisely is crucial. Important point that need to be highlighted.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         image: {
-    //           link: 'default',
-    //           imageDescription: 'Caption for photo or illustrations',
-    //         },
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //     ],
-    //     related: [
-    //       {
-    //         id: 1,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //       {
-    //         id: 2,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //       {
-    //         id: 3,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //     ],
-    //   },
-    // },
-    // {
-    //   id: 7,
-    //   heading: 'Heading 1',
-    //   title: 'Name of the article can consist from one to three lines length',
-    //   description:
-    //     'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //   date: '03.06.2023 (updated — 04.08.2024)',
-    //   authorName: 'Name of the author ',
-    //   authorOccupation: 'Occupation',
-    //   big: false,
-    //   color: 'LIGHT',
-    //   background: 'GRADIENT_DARK_PURPLE',
-    //   articleBlog: {
-    //     tableOfContents: [
-    //       'Subtitle',
-    //       'Subtitle a few lines',
-    //       'Subtitle',
-    //       'Subtitle Subtitle a few lines',
-    //       'Subtitle a few lines',
-    //       'Subtitle subtitle subtitle ',
-    //     ],
-    //     content: [
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         earningBanner: true,
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //       {
-    //         bigHeader:
-    //           'Important point that need to be highlighted in a few line, not too long. Highlighting key points concisely is crucial. Important point that need to be highlighted.',
-    //       },
-    //       { header: 'Subtitle' },
-    //       {
-    //         text: 'Structured products are well-known in traditional fiat finance, typically offered by banks to high net worth individuals (HNWI) as pre-packaged, out-of-the-box products. According to Bloomberg, the total structured product market accounts for over $7 trillion in invested assets*. We expect several trends to continue over time, such as overall financial literacy growth and increasing crypto/DeFi adoption worldwide. Currently, there is strong demand for low-risk financial solutions that can produce higher yields on crypto assets. ',
-    //       },
-    //       {
-    //         image: {
-    //           link: 'default',
-    //           imageDescription: 'Caption for photo or illustrations',
-    //         },
-    //       },
-    //       {
-    //         text: 'The Decentralized Structured Products Protocol (DSPP) enables the creation of financial products and strategies tailored to the needs of a broad range of non-professional users, thereby making the management of crypto assets more efficient and accessible.',
-    //       },
-    //     ],
-    //     related: [
-    //       {
-    //         id: 1,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //       {
-    //         id: 2,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //       {
-    //         id: 3,
-    //         header: 'Heading 1',
-    //         title: 'Name of the article can consist from one to three lines',
-    //         date: '03.06.2023 (updated — 04.08.2024)',
-    //         nameAuthor: 'Name of the author',
-    //         occupation: 'Occupation',
-    //       },
-    //     ],
-    //   },
-    // },
+
+    {
+      id: 4,
+      heading: 'news',
+      title: 'TYMIO Giveaway 15000 points and a 1200 USDC cash prize',
+      description:
+        'Participate in the TYMIO Airdrop from May 1st to May 30th for a chance to win a share of 15,000 points and a cash prize of 1200 USDC.',
+      date: '01.05.2024',
+      authorName: 'TYMIO Team',
+      big: false,
+      color: 'LIGHT',
+      background: 'RICH_PURPLE',
+      articleBlog: {
+        content: [
+          {
+            text: `We’re finally thrilled to announce the airdrop of 15,000 TYMIO points, to be distributed among all participants making deals over the next month, along with a prize pool of 1200 USDC. One lucky winner will claim it.`,
+          },
+          {
+            text: `To get into the 15,000 points airdrop and claim 1200 USDC:`,
+          },
+          {
+            list: [
+              {
+                label:
+                  "Make a deal on <a href='https://tymio.com/telegram' rel='noreferrer' target='_blank'>TYMIO</a> worth $1000 or more",
+              },
+              {
+                label: "Follow the project's social media",
+              },
+            ],
+          },
+          {
+            text: '⚠️All earned points, including current accruals in your account, will be summed up. After the TGE, points will be converted into project tokens.',
+          },
+          {
+            text: 'We’ll reward a user with 1200 USDC by randomly choosing them on random.org. We’ll announce the contest results and distribute points and cash prize on May 30.',
+          },
+          {
+            text: 'Good luck!',
+          },
+          {
+            text: 'Our socials',
+          },
+          {
+            text: "<a href='https://debank.com/official/TYMIO/stream' rel='noreferrer' target='_blank'>Debank</a> | <a href='https://www.google.com/url?q=https://twitter.com/TYMIOapp&sa=D&source=docs&ust=1715681557153235&usg=AOvVaw3SdP37JqwOcBifDbBOW-5j' rel='noreferrer' target='_blank'>Twitter</a> | <a href='https://t.me/tymioapp' rel='noreferrer' target='_blank'>Telegram</a> | <a href='https://t.me/tymio_en' rel='noreferrer' target='_blank'>Chat</a>",
+          },
+          {
+            text: "<a href='https://docs.google.com/document/d/1MAHbMkkDT131P20uTHjqlyrbWb0fCaLKQiKNGn08u0U/edit' rel='noreferrer' target='_blank'>Contest rules</a>",
+          },
+        ],
+      },
+    },
+    {
+      id: 5,
+      heading: 'Investing',
+      title: 'Benefits of Using Limit Orders with Income on the TYMIO Platform',
+      description:
+        'Navigating the Decentralized Structured Product Protocol and its benefits for capital growing with low-risk strategies.',
+      date: '13.05.2024',
+      authorName: 'TYMIO Team',
+      big: false,
+      color: 'BLACK',
+      background: 'GRADIENT_RED_PINK',
+      articleBlog: {
+        tableOfContents: [
+          {
+            title: 'Embrace the Possibilities: Monetize Your Intentions',
+            id: '1',
+          },
+          { title: 'How TYMIO Works: Paths to Passive Income', id: '2' },
+          { title: 'The Secret Sauce: Harnessing Option Liquidity', id: '3' },
+          { title: 'Safety and Risk Mitigation', id: '4' },
+          { title: 'Ideal Use Cases: Maximize Your Opportunities', id: '5' },
+          { title: 'Embrace the Future of Decentralized Finance', id: '5' },
+        ],
+        content: [
+          {
+            text: `Navigating the world of decentralized finance (DeFi) can be a daunting task, but with TYMIO, earning passive income from your crypto assets has never been easier. This game-changing platform harnesses the power of option liquidity, allowing you to generate fixed returns on your ETH, WBTC, or USDC holdings. Buckle up and get ready to explore the incredible benefits of using limit orders with TYMIO!`,
+          },
+          {
+            bigHeader: 'Embrace the Possibilities: Monetize Your Intentions',
+            id: '1',
+          },
+          {
+            text: 'At its core, TYMIO empowers you to monetize your intentions to buy or sell an asset at a specific price. By utilizing the ETH/USDC and WBTC/USDC pairs on the Ethereum or Arbitrum blockchains, you can unlock a world of opportunities to earn increased returns on your crypto assets.',
+          },
+          {
+            text: 'The beauty of TYMIO lies in its ability to eliminate the uncertainty that often accompanies traditional farming or staking methods. Unlike these approaches, TYMIO ensures that you receive a predetermined yield, eliminating the risk of impermanent loss.',
+          },
+          { bigHeader: 'How TYMIO Works: Paths to Passive Income', id: '2' },
+          {
+            text: "Let's take a look below at examples of two strategies for using the TYMIO platform to monetize the sale or purchase of BTC and ETH:",
+          },
+          {
+            header: '1. "Sell Higher" Strategy',
+          },
+          {
+            text: "Let's say you hold ETH and are willing to sell it at a price above the current market rate. With TYMIO, you can specify:",
+          },
+          {
+            list: [
+              {
+                label:
+                  "Let's say you hold ETH and are willing to sell it at a price above the current market rate. With TYMIO, you can specify",
+                listItem: [
+                  'The amount of ETH you wish to sell',
+                  'The desired selling price (e.g., $3,800 when the market price is $3,600)',
+                  'The contract term (ranging from a few days to a month)',
+                ],
+              },
+              {
+                label: `Upon confirming the contract, you'll receive a fixed yield listed in the "You Earn" column, regardless of the outcome. When the contract expires, one of two scenarios will unfold`,
+                listItem: [
+                  `If the ETH price is higher than your specified selling price, the transaction will be executed, and you'll receive the USDC proceeds from the sale, plus the guaranteed yield.`,
+                  `If the ETH price is lower than your specified selling price, the trade will no be executed, but you'll still receive your original ETH holdings, along with the fixed yield.`,
+                ],
+              },
+            ],
+          },
+
+          {
+            earningBanner: true,
+          },
+          {
+            header: '"Buy Cheaper" Strategy',
+          },
+          {
+            list: [
+              {
+                label:
+                  "Alternatively, if you hold USDC and are willing to buy ETH at a price below the current market rate, TYMIO offers a lucrative opportunity. You'll follow a similar process",
+                listItem: [
+                  'Specify the amount of ETH you wish to purchase',
+                  'Set the desired buying price (e.g., 3,500 when the market price is $3,650)',
+                  'Choose the contract term',
+                ],
+              },
+              {
+                label: `Upon contract expiration, the following outcomes are possible`,
+                listItem: [
+                  `If the ETH price is higher than your specified buying price, the transaction will not occur, but you'll receive your original USDC, plus the predetermined yield.`,
+                  `If the ETH price is lower than your specified buying price, the transaction will be executed, and you'll receive the purchased ETH, along with the fixed yield.`,
+                ],
+              },
+            ],
+          },
+          {
+            bigHeader: 'The Secret Sauce: Harnessing Option Liquidity',
+            id: '3',
+          },
+          {
+            text: "But where do these high returns come from? TYMIO taps into option liquidity venues where private traders speculate on significant price movements. When these traders' bets fail to materialize, their losses become your gains. TYMIO essentially allows you to earn a percentage of the yield by taking the opposite side of these trades.",
+          },
+          {
+            text: 'Another perspective is that the market compensates you for limiting your potential returns. By agreeing to sell ETH at a specific price, you forgo the opportunity to capitalize on further price appreciation beyond that point. This willingness to cap your upside is what generates the increased fixed income.',
+          },
+          { bigHeader: 'Safety and Risk Mitigation', id: '4' },
+          {
+            text: "While TYMIO offers an exciting opportunity to generate passive income, it's essential to understand the associated risks. The platform's smart contracts are designed to mitigate market risks by providing predetermined outcomes based on your specified conditions.",
+          },
+          {
+            text: "However, as with any DeFi application, there are inherent risks related to smart contract vulnerabilities or technical failures that could potentially lead to fund loss. It's crucial to exercise caution and only commit capital that you can afford to lose without impacting your standard of living.",
+          },
+          {
+            bigHeader: 'Ideal Use Cases: Maximize Your Opportunities',
+            id: '5',
+          },
+          {
+            list: [
+              {
+                label:
+                  "TYMIO shines in situations where you're willing to buy or sell an asset at a specific price and have the flexibility to wait. For instance",
+                listItem: [
+                  "If you're planning to rebalance your portfolio from USDC to ETH or WBTC, but at a lower price point, TYMIO can help you achieve a better entry point while generating income.",
+                  'If you need to sell a portion of your ETH or WBTC holdings by a certain date, TYMIO can potentially fetch you a higher selling price while earning additional yield.',
+                ],
+              },
+            ],
+          },
+          {
+            text: "By leveraging TYMIO's unique capabilities, you can unlock new avenues for passive income generation while maintaining control over your investment decisions.",
+          },
+          { bigHeader: 'Embrace the Future of Decentralized Finance', id: '5' },
+          {
+            text: "By harnessing the power of option liquidity and limit orders, TYMIO offers a fresh perspective on earning passive income from your crypto assets. Whether you're a seasoned investor or just starting your journey into the world of digital currencies, TYMIO presents an exciting opportunity to maximize your returns while mitigating risks. Embrace the future of decentralized finance and embark on a path towards financial freedom with TYMIO.",
+          },
+        ],
+        related: [
+          {
+            id: 1,
+            header: 'Investing',
+            title:
+              'Overview of low-risk strategies for investing in digital assets',
+            date: '08.04.2024',
+            nameAuthor: 'TYMIO Team',
+          },
+          {
+            id: 2,
+            header: 'Investing',
+            title:
+              'TYMIO: Revolutionazing Crypto Investing with Safe, Yield-Generating Strategies',
+            date: '16.04.2024',
+            nameAuthor: 'TYMIO Team',
+          },
+          {
+            id: 3,
+            header: 'Investing',
+            title: 'How to Make Transfers Between Different Networks',
+            date: '18.04.2024',
+            nameAuthor: 'TYMIO Team',
+          },
+        ],
+      },
+    },
   ]);
   useEffect(() => {
     setLoading(true);

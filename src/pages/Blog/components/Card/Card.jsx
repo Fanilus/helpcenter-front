@@ -74,7 +74,7 @@ const Card = ({
             </UI.Paragraph>
           </Styled.Date>
         </Styled.TopWrapper>
-        <Styled.Footer color={color}>
+        <Styled.Footer color={color} big={big}>
           <Styled.Author>
             <CircleBlog />
             <Styled.AuthorWrapper>

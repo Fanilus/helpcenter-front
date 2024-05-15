@@ -1,72 +1,80 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import * as Styled from './styled';
 import { COLORS } from '../../../../models/colors';
 import * as UI from '../../../../components/index';
 
-const Title = () => {
-  const [filters, setFilters] = useState([]);
+const Title = ({ blogs, setFilteredBlogs }) => {
+  const [filters, setFilters] = useState(['all']);
 
   const toggleFilter = (filter) => {
-    if (filters.includes(filter)) {
-      setFilters(filters.filter((f) => f !== filter));
+    if (filter === 'all') {
+      setFilters(['all']);
     } else {
-      setFilters([...filters, filter]);
+      const newFilters = filters.includes(filter)
+        ? filters.filter((f) => f !== filter)
+        : [...filters.filter((f) => f !== 'all'), filter];
+      setFilters(newFilters);
     }
   };
 
-  const isFilterActive = (filter) => {
-    return filters.includes(filter);
+  const isFilterActive = (filter) =>
+    filters.includes(filter) || (filter === 'all' && filters.length === 0);
+
+  const filterBlogs = (newFilters, allBlogs) => {
+    let filtered = allBlogs;
+
+    if (newFilters.length > 0 && !newFilters.includes('all')) {
+      filtered = allBlogs.filter((item) =>
+        newFilters.includes(item.heading.toLowerCase())
+      );
+    }
+
+    if (filtered.length > 0) {
+      filtered = filtered.map((item, index) => ({
+        ...item,
+        big: index === 0,
+      }));
+    }
+
+    setFilteredBlogs(filtered);
   };
+
+  useEffect(() => {
+    filterBlogs(filters, blogs);
+  }, [filters, blogs]);
 
   return (
     <Styled.TitleWrapper>
       <Styled.Title>
         <UI.Button
-          active={filters.length === 0}
-          type={'blog'}
-          onClick={() => setFilters([])}
+          active={isFilterActive('all')}
+          type="blog"
+          onClick={() => toggleFilter('all')}
         >
-          <UI.Paragraph size={'medium'} color={COLORS.BLACK}>
+          <UI.Paragraph size="medium" color={COLORS.BLACK}>
             ALL
           </UI.Paragraph>
         </UI.Button>
         <UI.Button
           active={isFilterActive('investing')}
-          type={'blog'}
+          type="blog"
           onClick={() => toggleFilter('investing')}
         >
-          <UI.Paragraph size={'medium'} color={COLORS.BLACK}>
+          <UI.Paragraph size="medium" color={COLORS.BLACK}>
             investing
           </UI.Paragraph>
         </UI.Button>
-        {/* <UI.Button
-          active={isFilterActive('heading2')}
-          type={'blog'}
-          onClick={() => toggleFilter('heading2')}
+        <UI.Button
+          active={isFilterActive('news')}
+          type="blog"
+          onClick={() => toggleFilter('news')}
         >
-          <UI.Paragraph size={'medium'} color={COLORS.BLACK}>
-            Heading 2
+          <UI.Paragraph size="medium" color={COLORS.BLACK}>
+            news
           </UI.Paragraph>
         </UI.Button>
-        <UI.Button
-          active={isFilterActive('heading3')}
-          type={'blog'}
-          onClick={() => toggleFilter('heading3')}
-        >
-          <UI.Paragraph size={'medium'} color={COLORS.BLACK}>
-            Heading 3
-          </UI.Paragraph>
-        </UI.Button>
-        <UI.Button
-          active={isFilterActive('heading4')}
-          type={'blog'}
-          onClick={() => toggleFilter('heading4')}
-        >
-          <UI.Paragraph size={'medium'} color={COLORS.BLACK}>
-            Heading 4
-          </UI.Paragraph>
-        </UI.Button> */}
       </Styled.Title>
       <Styled.Blur />
     </Styled.TitleWrapper>

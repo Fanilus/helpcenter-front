@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import * as Styled from './styled';
@@ -11,23 +11,31 @@ import useBlog from './hook/useBlog';
 const Blog = () => {
   const { blogs } = useBlog();
   const location = useLocation();
-
-  const bigTrueData = blogs.length > 0 ? blogs.filter((item) => item.big) : [];
-  const bigFalseData =
-    blogs.length > 0 ? blogs.filter((item) => !item.big) : [];
-  const length = blogs.length - bigTrueData.length;
-
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+  const [filteredBlogs, setFilteredBlogs] = useState(blogs);
 
   useEffect(() => {
-    scrollToTop();
-  }, [location]);
+    setFilteredBlogs(blogs);
+  }, [blogs]);
+
+  // const scrollToTop = () => {
+  //   window.scrollTo(0, 0);
+  // };
+
+  // useEffect(() => {
+  //   scrollToTop();
+  // }, [location]);
+
+  const handleSetFilteredBlogs = (filteredBlogs) => {
+    setFilteredBlogs(filteredBlogs);
+  };
+
+  // Разделение данных на большие и маленькие
+  const bigTrueData = filteredBlogs.filter((item) => item.big);
+  const bigFalseData = filteredBlogs.filter((item) => !item.big);
 
   return (
     <Styled.Blog>
-      <Title />
+      <Title blogs={blogs} setFilteredBlogs={handleSetFilteredBlogs} />
       {bigTrueData.map((item, index) => (
         <Card
           key={index}
@@ -41,7 +49,7 @@ const Blog = () => {
           authorName={item.authorName}
           authorOccupation={item.authorOccupation}
           id={item.id}
-          dataLength={length}
+          dataLength={filteredBlogs.length}
         />
       ))}
       <Styled.Container>
@@ -58,7 +66,7 @@ const Blog = () => {
             authorName={item.authorName}
             authorOccupation={item.authorOccupation}
             id={item.id}
-            dataLength={length}
+            dataLength={filteredBlogs.length}
           />
         ))}
       </Styled.Container>

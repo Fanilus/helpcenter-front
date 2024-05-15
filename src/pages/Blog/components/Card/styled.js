@@ -110,12 +110,12 @@ export const Footer = styled.div`
   display: flex;
   justify-content: space-between;
   svg {
-    ${({ color }) =>
+    ${({ color, big }) =>
       ` path {
-      fill: ${color ? color : COLORS.BLACK}
+      fill: ${color && !big ? color : COLORS.BLACK}
     }
     circle {
-      fill: ${color ? color : COLORS.BLACK}
+      fill: ${color && !big ? color : COLORS.BLACK}
     }
     `}
   }

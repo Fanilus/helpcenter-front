@@ -13,7 +13,9 @@ const Content = ({ content, tableOfContents }) => {
   return (
     <Styled.Content>
       <Styled.LeftContent>
-        <TableOfContents tableOfContents={tableOfContents} />
+        {tableOfContents && (
+          <TableOfContents tableOfContents={tableOfContents} />
+        )}
         <EarningBanner />
         <div></div>
       </Styled.LeftContent>
@@ -86,9 +88,13 @@ const Content = ({ content, tableOfContents }) => {
                   <Styled.List key={index} gap={i.listItem ? true : false}>
                     <Styled.TitleList>
                       <Styled.ListIcon>&#9679;</Styled.ListIcon>
-                      <UI.Paragraph size={'large'} color={COLORS.BLACK}>
-                        {i.label} {i.listItem ? ':' : ''}
-                      </UI.Paragraph>
+                      <UI.Paragraph
+                        size={'large'}
+                        color={COLORS.BLACK}
+                        dangerouslySetInnerHTML={{
+                          __html: `${i.label} ${i.listItem ? ':' : ''}`,
+                        }}
+                      />
                     </Styled.TitleList>
                     <Styled.ListWrapper>
                       {i.listItem &&
