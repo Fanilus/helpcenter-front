@@ -59,10 +59,7 @@ export const FooterContent = styled.div`
     }
   }
 `;
-// export const FooterLinks = styled.div`
-//   display: flex;
-//   gap: 140px;
-// `;
+
 export const FooterButton = styled.div`
   @media (max-width: 1439px) {
     display: none;

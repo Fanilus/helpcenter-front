@@ -1,1 +1,2 @@
-export { default as SuccessIcon } from './SuccessIcon';
+import SuccessIcon from './SuccessIcon';
+export { SuccessIcon };

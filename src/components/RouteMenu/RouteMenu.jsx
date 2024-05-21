@@ -1,5 +1,5 @@
 import React from 'react';
-import * as TymioUI from '../';
+import * as TymioUI from '..';
 import { useNavigate } from 'react-router-dom';
 import { TYPOGRAPHY_SIZE } from '../../models/types';
 

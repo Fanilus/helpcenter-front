@@ -14,6 +14,7 @@ export const GET = (url = '', params = {}) => {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        'Accept-Language': 'ru',
         System: true,
       },
     })
@@ -23,34 +24,5 @@ export const GET = (url = '', params = {}) => {
       .catch((err) => {
         reject(new Error(err.message));
       });
-  });
-};
-
-export const POST = (url = '', data = {}) => {
-  return new Promise((resolve, reject) => {
-    const options = {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    };
-
-    fetch(url, options)
-      .then((response) => {
-        if (!response.ok) {
-          reject(
-            new Error(
-              `${
-                response.statusText || 'Can`t post data'
-              }\n${url}\n${JSON.stringify(data)}`
-            )
-          );
-        }
-
-        resolve(response.json());
-      })
-      .catch((e) => reject(new Error(`${e.message}\n${url}`)));
   });
 };

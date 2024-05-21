@@ -4,19 +4,12 @@ import { NavLink } from 'react-router-dom';
 import useRoutes from '../../../hooks/useRoutes';
 import * as Styled from '../styled';
 import Close from '../../../assets/img/icons/cross-purple.svg';
-import { LogoIcon } from '../../_DEPRECATED';
-import Button from '../../Button/Button';
-import { BUTTON_TYPE } from '../../../models/types';
-import { COLORS } from '../../../models/colors';
-import Paragraph from '../../Typography/Paragraph/Paragraph';
-
-const APP_LINK = process.env.REACT_APP_APP_LINK;
-const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
+import { LogoIcon } from '../../';
 
 const BurgerMenu = () => {
-  const { burger, burgerWelcome } = useRoutes();
+  const { burger } = useRoutes();
   const [active, setActive] = useState(false);
-  const BURGER = WELCOME_PAGE === 'true' ? burgerWelcome : burger;
+  const BURGER = burger;
   const toggleMenu = () => {
     setActive((prevState) => !prevState);
   };
@@ -52,14 +45,6 @@ const BurgerMenu = () => {
                 <Styled.HR />
               </Styled.Route>
             ))}
-            <Button type={BUTTON_TYPE.PRIMARY}>
-              <Paragraph
-                color={COLORS.BLACK}
-                onClick={() => window.open(APP_LINK, '_blank')}
-              >
-                Start earning
-              </Paragraph>
-            </Button>
           </Styled.Routes>
         </Styled.Content>
         <Styled.Overlay onClick={toggleMenu} />

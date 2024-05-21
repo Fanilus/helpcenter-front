@@ -1,69 +1,92 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 
-import Home from './components/Home/Home';
-import HowItWork from './components/HowItWork/HowItWork';
-import UseCases from './components/UseCases/UseCases';
-import Safety from './components/Safety/Safety';
-import FAQ from './components/FAQ/FAQ';
-import Media from './components/Media/Media';
-import { useParams } from 'react-router-dom';
-import useStatistics from './hooks/useStatistics';
+import * as Styled from './styled';
 
-const Main = ({ setNavRefs }) => {
-  const {
-    //  error,
-    loading,
-    statistics,
-  } = useStatistics();
-  const { elementId } = useParams();
-  const home = useRef();
-  const how_it_work = useRef();
-  const use_cases = useRef();
-  const media = useRef();
-  const safety = useRef();
-  const faq = useRef();
+import * as TymioUI from '../../components/index';
 
-  const ids = {
-    home,
-    how_it_work,
-    use_cases,
-    media,
-    safety,
-    faq,
-  };
+import { COLORS } from '../../models/colors';
 
-  useEffect(() => {
-    setNavRefs({ home, how_it_work, use_cases, media, safety, faq });
-  }, []);
+import { useNavigate } from 'react-router-dom';
 
-  useEffect(() => {
-    if (elementId && ids[elementId]) {
-      window.scrollTo(0, ids[elementId].current.offsetTop);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [elementId]);
+import useMainCategories from '../../hooks/useMainCategories';
+
+const CategoryTree = ({ category }) => {
+  const navigate = useNavigate();
 
   return (
-    <>
-      <div ref={home}>
-        <Home loading={loading} statistics={statistics} />
+    <div style={{ paddingLeft: '20px' }}>
+      {/* <Styled.Link
+      // onClick={() => navigate(`/${category.id}`)}
+      > */}
+      <TymioUI.Paragraph size={'large'} color={COLORS.LIGHT}>
+        {category.title}
+      </TymioUI.Paragraph>
+      {/* </Styled.Link> */}
+
+      {category.articles.length > 0 && (
+        <ul>
+          {category.articles.map((article) => {
+            console.log(article.id);
+            return (
+              <li key={article.id} style={{ paddingLeft: '24px' }}>
+                <Styled.Link onClick={() => navigate(`/article/${article.id}`)}>
+                  <TymioUI.Paragraph
+                    size={'medium'}
+                    color={COLORS.PURPLE_BRIGHT}
+                  >
+                    {article.title}
+                  </TymioUI.Paragraph>
+                </Styled.Link>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+
+      {category.categories.length > 0 && (
+        <ul>
+          {category.categories.map((subCategory) => (
+            <li key={subCategory.id}>
+              <CategoryTree category={subCategory} />
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+const Main = () => {
+  const { mainCategories } = useMainCategories();
+  const navigate = useNavigate();
+
+  return (
+    <Styled.Main>
+      <div>
+        <TymioUI.H2>Main Categories</TymioUI.H2>
+
+        {mainCategories.map((category) => (
+          // <Styled.Link
+          //   // onClick={() => navigate(`/${category.id}`)}
+          //   key={category.id}
+          // >
+          <TymioUI.Paragraph
+            key={category.id}
+            size={'large'}
+            color={COLORS.LIGHT}
+          >
+            {category.title}
+          </TymioUI.Paragraph>
+          // </Styled.Link>
+        ))}
       </div>
-      <div ref={how_it_work}>
-        <HowItWork loading={loading} statistics={statistics} />
+      <div>
+        <TymioUI.H2>Tree Categories</TymioUI.H2>
+        {mainCategories.map((category) => (
+          <CategoryTree key={category.id} category={category} />
+        ))}
       </div>
-      <div ref={use_cases}>
-        <UseCases />
-      </div>
-      <div ref={media}>
-        <Media />
-      </div>
-      <div ref={safety}>
-        <Safety />
-      </div>
-      <div ref={faq}>
-        <FAQ />
-      </div>
-    </>
+    </Styled.Main>
   );
 };
 

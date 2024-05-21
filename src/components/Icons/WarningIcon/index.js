@@ -1,1 +1,2 @@
-export { default as WarningIcon } from './WarningIcon';
+import WarningIcon from './WarningIcon';
+export { WarningIcon };

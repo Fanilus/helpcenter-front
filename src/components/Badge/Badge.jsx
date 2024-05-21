@@ -1,7 +1,7 @@
 import React from 'react';
 
 import * as Styled from './styled';
-import * as UI from '../../components/index';
+import * as UI from '../index';
 
 const Badge = ({ children, height, width, padding, size }) => {
   return (

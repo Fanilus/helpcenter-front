@@ -1,68 +1,23 @@
 import React, { useState, useEffect } from 'react';
 
 import BurgerMenu from './components/BurgerMenu';
-import * as TymioUI from '../_DEPRECATED';
-import * as UI from '../index';
-import { BUTTON_TYPE } from '../../models/types';
+import * as TymioUI from '../index';
 
 import * as Styled from './styled';
 import useRoutes from '../../hooks/useRoutes';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-const APP_LINK = process.env.REACT_APP_APP_LINK;
 const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
 
-const Header = ({ light, navRefs }) => {
-  const navigate = useNavigate();
-  const { elementId } = useParams();
+const Header = ({ light }) => {
   const { header } = useRoutes();
 
-  const [scroll, setScroll] = useState(false);
   const [active, setActive] = useState();
   const location = useLocation();
 
   useEffect(() => {
-    if (elementId) setActive(`/${elementId}`);
-    else setActive('/');
-  }, [elementId]);
-
-  useEffect(() => {
-    if (
-      location.pathname.includes('/blog') ||
-      location.pathname.includes('/ambassadors')
-    )
-      setActive(`${location.pathname}`);
+    setActive(`${location.pathname}`);
   }, [location.pathname]);
-
-  useEffect(() => {
-    if (navRefs && elementId) {
-      window.addEventListener('scroll', update);
-      return () => {
-        window.removeEventListener('scroll', update);
-      };
-    }
-  }, [navRefs, elementId]);
-
-  const update = () => {
-    if (window.scrollY > 0) {
-      setScroll(true);
-      handleScroll();
-    } else {
-      setScroll(false);
-    }
-  };
-
-  const handleScroll = () => {
-    if (
-      navRefs &&
-      navRefs[elementId] &&
-      (window.scrollY <= navRefs[elementId].current.offsetTop - 100 ||
-        window.scrollY >= navRefs[elementId].current.offsetTop + 100)
-    ) {
-      setActive(false);
-      navigate('/');
-    }
-  };
 
   return (
     <Styled.Header>
@@ -72,18 +27,7 @@ const Header = ({ light, navRefs }) => {
             <TymioUI.LogoIcon />
           </Styled.LogoLink>
           <Styled.Fixed>
-            <UI.RouteMenu
-              scroll={light ? null : scroll}
-              options={header}
-              light={light}
-              active={active}
-            />
-            <UI.Button
-              type={BUTTON_TYPE.SECONDARY}
-              onClick={() => window.open(APP_LINK, '_blank')}
-            >
-              Start earning
-            </UI.Button>
+            <TymioUI.RouteMenu options={header} light={light} active={active} />
           </Styled.Fixed>
         </>
       )}

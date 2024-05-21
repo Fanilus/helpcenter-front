@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 
 import * as Styled from './styled';
-import * as UI from '../../components/index';
+import * as UI from '../index';
 
-const Input = ({
-  placeholder,
-  checkbox,
-  paste,
-  onChange,
-  label,
-  number,
-  error,
-  ...props
-}) => {
+const Input = ({ placeholder, checkbox, paste, onChange, label, number, error, ...props }) => {
   const [value, setValue] = useState('');
   const [isChecked, setIsChecked] = useState(false);
 

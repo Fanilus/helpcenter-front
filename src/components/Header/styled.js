@@ -22,9 +22,9 @@ export const Fixed = styled.div`
     display: none;
   }
 `;
+// position: absolute;
 
 export const Header = styled.header`
-  position: absolute;
   z-index: 2;
   padding: 20px 60px;
 

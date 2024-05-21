@@ -1,1 +1,2 @@
-export { default as ErrorIcon } from './ErrorIcon';
+import ErrorIcon from './ErrorIcon';
+export { ErrorIcon };

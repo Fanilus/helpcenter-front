@@ -1,6 +1,5 @@
 import React from 'react';
-import * as TymioUI from '../_DEPRECATED';
-import * as UI from '../';
+import * as TymioUI from '../';
 
 import * as Styled from './styled';
 
@@ -21,20 +20,20 @@ const Footer = ({ light }) => {
       <Styled.Container>
         <Styled.FooterContent>
           <TymioUI.LogoIconFooter light={light} />
-          <UI.Paragraph color={COLORS.GRAY} size={TYPOGRAPHY_SIZE.SMALL}>
+          <TymioUI.Paragraph color={COLORS.GRAY} size={TYPOGRAPHY_SIZE.SMALL}>
             © {currentYear} Tymio. All rights reserved.
-          </UI.Paragraph>
+          </TymioUI.Paragraph>
         </Styled.FooterContent>
         <Styled.RoutesLinks>
           {FOOTER.map(({ label, path }, index) => (
             <Styled.Route key={index}>
               <NavLink to={path}>
-                <UI.Paragraph
+                <TymioUI.Paragraph
                   color={COLORS.PURPLE_DARK}
                   size={TYPOGRAPHY_SIZE.LARGE}
                 >
                   {label}
-                </UI.Paragraph>
+                </TymioUI.Paragraph>
               </NavLink>
             </Styled.Route>
           ))}
@@ -47,12 +46,12 @@ const Footer = ({ light }) => {
                 rel={type !== 'mail' ? 'noreferrer' : []}
                 target={type !== 'mail' ? '_blank' : '_self'}
               >
-                <UI.Paragraph
+                <TymioUI.Paragraph
                   color={COLORS.PURPLE_DARK}
                   size={TYPOGRAPHY_SIZE.LARGE}
                 >
                   {label}
-                </UI.Paragraph>
+                </TymioUI.Paragraph>
               </a>
             </Styled.Route>
           ))}

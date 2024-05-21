@@ -7,11 +7,7 @@ export const Menu = styled.div`
   display: flex;
   width: fit-content;
   background-color: ${({ light, scroll }) =>
-    scroll
-      ? 'rgb(43, 28, 77, 0.9)'
-      : light
-      ? 'rgba(215, 203, 250, 0.9)'
-      : 'rgba(28, 16, 47, 0.9)'};
+    scroll ? 'rgb(43, 28, 77, 0.9)' : light ? 'rgba(215, 203, 250, 0.9)' : 'rgba(28, 16, 47, 0.9)'};
 `;
 
 export const MenuItem = styled.button`

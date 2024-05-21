@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  padding: 0 60px;
+export const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(28, 16, 47);
+`;
+
+export const Content = styled.div`
+  flex: 1;
 `;
 
 export const Main = styled.main`
-  /* @media (max-width: 1439px) {
-    margin-top: 80px;
-  }
-
-  @media (max-width: 767px) {
-    margin-top: 88px;
-  } */
+  padding: 0 60px;
 `;

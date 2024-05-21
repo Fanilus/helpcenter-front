@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { PreloaderService } from '../services';
+import PreloaderService from '../services/preloader.service';
 
 const usePreloader = () => {
   const [loaded, setLoaded] = useState(false);
