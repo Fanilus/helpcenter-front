@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
-import MainСategoryService from '../services/main-category.services';
+import СategoryService from '../services/category.service';
 
-const useMainCategories = () => {
+const useCategory = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [mainCategories, setMainCategories] = useState([]);
+  const [category, setCategory] = useState([]);
 
   useEffect(() => {
     setLoading(true);
 
-    const projects$ = MainСategoryService.state$.subscribe((state) => {
+    const projects$ = СategoryService.state$.subscribe((state) => {
       setError(state.error);
-      setMainCategories(state.сategory);
+      setCategory(state.сategory);
       setLoading(state.loading);
     });
 
@@ -23,8 +23,8 @@ const useMainCategories = () => {
   return {
     loading,
     error,
-    mainCategories,
+    category,
   };
 };
 
-export default useMainCategories;
+export default useCategory;

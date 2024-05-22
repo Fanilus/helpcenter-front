@@ -2,7 +2,7 @@ import { take, Subject, from } from 'rxjs';
 import { GET } from '../api/fetch-api';
 import { Categories } from '../pages/Categories/styled';
 
-class MainСategoryService {
+class СategoryService {
   initialState = {
     loading: false,
     error: null,
@@ -16,7 +16,7 @@ class MainСategoryService {
     this.apiUrl = process.env.REACT_APP_API_URL;
   }
 
-  getData(parentId = 0) {
+  getData(parentId) {
     if (this.state.loading) {
       return;
     }
@@ -34,12 +34,11 @@ class MainСategoryService {
 
     data$.subscribe({
       next: (result) => {
-        // console.log(result);
         this.state = {
           ...this.state,
           error: null,
           loading: false,
-          сategory: result.data ? result.data.rows : [],
+          сategory: result.data ? result.data.rows[0] : [],
         };
 
         this.state$.next(this.state);
@@ -56,5 +55,5 @@ class MainСategoryService {
   }
 }
 
-const MainСategoryServiceInstance = new MainСategoryService();
-export default MainСategoryServiceInstance;
+const СategoryServiceInstance = new СategoryService();
+export default СategoryServiceInstance;

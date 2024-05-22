@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 import FullArticleService from '../services/full-article.service';
 
-const useFullArticle = (id) => {
+const useFullArticle = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [article, setArticle] = useState({});
 
   useEffect(() => {
     setLoading(true);
-    FullArticleService.getData(id);
 
     const projects$ = FullArticleService.state$.subscribe((state) => {
       setError(state.error);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import * as Styled from './styled';
 
@@ -6,24 +6,25 @@ import * as TymioUI from '../../components/index';
 import { useNavigate, useParams } from 'react-router-dom';
 import useFullArticle from '../../hooks/useFullArticle';
 import Markdown from 'react-markdown';
+import FullArticleService from '../../services/full-article.service';
 
 const Article = () => {
   const navigate = useNavigate();
-  const params = useParams();
-  console.log(params.ArticleId);
-  const { article } = useFullArticle(params.ArticleId);
-  console.log(article);
-
+  const { articleId } = useParams();
+  const { article, loading } = useFullArticle();
+  useEffect(() => {
+    FullArticleService.getData(articleId);
+  }, []);
   return (
     <Styled.Article>
-      <TymioUI.Button type={'secondary'} onClick={() => navigate('/')}>
+      <TymioUI.Button type={'secondary'} onClick={() => navigate(-1)}>
         Back
       </TymioUI.Button>
-      {/* <TymioUI.H2>{article.title}</TymioUI.H2> */}
-      {article.content ? (
+      {loading && <TymioUI.LoadingSpinner />}
+      {!loading && article.content ? (
         <Markdown>{article.content}</Markdown>
       ) : (
-        <TymioUI.Paragraph>No content</TymioUI.Paragraph>
+        <></>
       )}
     </Styled.Article>
   );

@@ -1,12 +1,11 @@
 import { take, Subject, from } from 'rxjs';
 import { GET } from '../api/fetch-api';
-import { Categories } from '../pages/Categories/styled';
 
-class MainСategoryService {
+class ArticleListService {
   initialState = {
     loading: false,
     error: null,
-    сategory: [],
+    articleList: [],
   };
 
   state = this.initialState;
@@ -16,7 +15,7 @@ class MainСategoryService {
     this.apiUrl = process.env.REACT_APP_API_URL;
   }
 
-  getData(parentId = 0) {
+  getData(categoryId) {
     if (this.state.loading) {
       return;
     }
@@ -27,19 +26,20 @@ class MainСategoryService {
     };
     this.state$.next(this.state);
     const data$ = from(
-      GET(`${this.apiUrl}/article_main`, {
-        parentId,
+      GET(`${this.apiUrl}/article_list`, {
+        categoryId,
+        _start: 0,
+        _end: 9999,
       })
     ).pipe(take(1));
 
     data$.subscribe({
       next: (result) => {
-        // console.log(result);
         this.state = {
           ...this.state,
           error: null,
           loading: false,
-          сategory: result.data ? result.data.rows : [],
+          articleList: result ? result.rows : [],
         };
 
         this.state$.next(this.state);
@@ -56,5 +56,5 @@ class MainСategoryService {
   }
 }
 
-const MainСategoryServiceInstance = new MainСategoryService();
-export default MainСategoryServiceInstance;
+const ArticleListServiceInstance = new ArticleListService();
+export default ArticleListServiceInstance;
