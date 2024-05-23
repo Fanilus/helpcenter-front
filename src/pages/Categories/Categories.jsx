@@ -28,16 +28,16 @@ const Categories = () => {
           {category.categories && (
             <div>
               {category.categories.length > 0 && (
-                <ul>
+                <div>
                   {category.categories.map((subCategory) => (
-                    <li key={subCategory.id}>
+                    <div key={subCategory.id}>
                       <CategoryTree
                         isSubCategory={true}
                         category={subCategory}
                       />
-                    </li>
+                    </div>
                   ))}
-                </ul>
+                </div>
               )}
             </div>
           )}

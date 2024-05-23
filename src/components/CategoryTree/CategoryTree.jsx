@@ -30,10 +30,10 @@ const CategoryTree = ({ category, isSubCategory = false }) => {
       </Styled.Link>
 
       {category.articles.length > 0 && (
-        <ul>
+        <div>
           {category.articles.map((article) => {
             return (
-              <li key={article.id} style={{ paddingLeft: '24px' }}>
+              <div key={article.id} style={{ paddingLeft: '24px' }}>
                 <Styled.Link onClick={() => navigate(`/article/${article.id}`)}>
                   <TymioUI.Paragraph
                     size={'medium'}
@@ -42,20 +42,20 @@ const CategoryTree = ({ category, isSubCategory = false }) => {
                     {article.title}
                   </TymioUI.Paragraph>
                 </Styled.Link>
-              </li>
+              </div>
             );
           })}
-        </ul>
+        </div>
       )}
 
       {category.categories.length > 0 && (
-        <ul>
+        <div>
           {category.categories.map((subCategory) => (
-            <li key={subCategory.id}>
+            <div key={subCategory.id}>
               <CategoryTree category={subCategory} isSubCategory={true} />
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );

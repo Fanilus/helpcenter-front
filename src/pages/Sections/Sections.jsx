@@ -27,11 +27,11 @@ const Sections = () => {
       {!loading && articleList && (
         <>
           <TymioUI.H2>{articleList.title}</TymioUI.H2>
-          <ul>
+          <div>
             {articleList.articles &&
               articleList.articles.map((article) => {
                 return (
-                  <li key={article.id} style={{ paddingLeft: '24px' }}>
+                  <div key={article.id} style={{ paddingLeft: '24px' }}>
                     <Styled.Link
                       onClick={() => navigate(`/article/${article.id}`)}
                     >
@@ -42,10 +42,10 @@ const Sections = () => {
                         {article.title}
                       </TymioUI.Paragraph>
                     </Styled.Link>
-                  </li>
+                  </div>
                 );
               })}
-          </ul>
+          </div>
         </>
       )}
     </Styled.Sections>
