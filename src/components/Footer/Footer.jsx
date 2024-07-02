@@ -1,18 +1,22 @@
 import React from 'react';
-import * as TymioUI from '../';
+import { NavLink } from 'react-router-dom';
 
+import * as TymioUI from '../';
 import * as Styled from './styled';
 
 import { COLORS } from '../../models/colors';
-import { NavLink } from 'react-router-dom';
-import useRoutes from '../../hooks/useRoutes';
 import { TYPOGRAPHY_SIZE } from '../../models/types';
+
+import useRoutes from '../../hooks/useRoutes';
+import { useTranslation } from 'react-i18next';
+
 const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
 
-const Footer = ({ light }) => {
+const Footer = ({ light = true }) => {
   const { footer, media, footerWelcome } = useRoutes();
   const FOOTER = WELCOME_PAGE === 'true' ? footerWelcome : footer;
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <Styled.Footer light={light}>
@@ -21,7 +25,7 @@ const Footer = ({ light }) => {
         <Styled.FooterContent>
           <TymioUI.LogoIconFooter light={light} />
           <TymioUI.Paragraph color={COLORS.GRAY} size={TYPOGRAPHY_SIZE.SMALL}>
-            © {currentYear} Tymio. All rights reserved.
+            © {currentYear} Tymio. {t('All rights reserved')}.
           </TymioUI.Paragraph>
         </Styled.FooterContent>
         <Styled.RoutesLinks>
@@ -32,7 +36,7 @@ const Footer = ({ light }) => {
                   color={COLORS.PURPLE_DARK}
                   size={TYPOGRAPHY_SIZE.LARGE}
                 >
-                  {label}
+                  {t(label)}
                 </TymioUI.Paragraph>
               </NavLink>
             </Styled.Route>

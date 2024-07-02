@@ -54,9 +54,7 @@ export const FooterContent = styled.div`
   }
 
   @media (max-width: 767px) {
-    p {
-      padding-bottom: 4px;
-    }
+    gap: 16px;
   }
 `;
 
@@ -69,7 +67,7 @@ export const FooterButton = styled.div`
 export const RoutesLinks = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
   height: 131px;
 
@@ -81,7 +79,7 @@ export const RoutesLinks = styled.div`
 export const MediaRoutes = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   margin: 0 auto;
   @media (max-width: 1439px) {
     margin: 0;
@@ -91,11 +89,13 @@ export const MediaRoutes = styled.div`
 export const Route = styled.div`
   margin-left: 60px;
   cursor: pointer;
+  height: 13px;
   a {
     text-decoration: none;
   }
 
   @media (max-width: 767px) {
     margin-left: 20px;
+    height: 12px;
   }
 `;

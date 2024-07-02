@@ -14,7 +14,7 @@ function SelectArrow({ isOpen }) {
       style={iconStyle}
     >
       <path
-        stroke="#827A95"
+        stroke="#1C102F"
         strokeLinecap="round"
         strokeLinejoin="bevel"
         strokeWidth="1.5"

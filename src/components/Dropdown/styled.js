@@ -10,23 +10,35 @@ export const DropDownContainer = styled('div')`
 
 export const DropDownHeader = styled('div')`
   width: 100%;
-  border-radius: 5px;
-  border: 0.5px solid ${({ isOpen }) => (isOpen ? COLORS.LIGHT : COLORS.GRAY)};
-  background: ${({ isOpen }) => (isOpen ? COLORS.DARK : COLORS.RICH_BLACK)};
-  padding: 11.5px 15px 11.5px 15px;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0.18px;
-  line-height: 100%;
-  color: ${({ isOpen, valueSelected }) =>
-    isOpen || valueSelected !== 'Country' ? COLORS.LIGHT : COLORS.PURPLE_GRAY};
+  border-radius: ${({ isOpen }) => (isOpen ? '5px 5px 0 0' : '5px')};
+  border: 1px solid
+    ${({ isOpen }) => (isOpen ? COLORS.PURPLE_BRIGHT : COLORS.PURPLE_GRAY)};
+  border-bottom: ${({ isOpen }) =>
+    isOpen
+      ? `0px solid ${COLORS.PURPLE_BRIGHT}`
+      : `1px solid ${COLORS.PURPLE_GRAY}`};
+  border-top: 1px solid
+    ${({ isOpen }) => (isOpen ? COLORS.PURPLE_BRIGHT : COLORS.PURPLE_GRAY)};
+  border-left: 1px solid
+    ${({ isOpen }) => (isOpen ? COLORS.PURPLE_BRIGHT : COLORS.PURPLE_GRAY)};
+  border-right: 1px solid
+    ${({ isOpen }) => (isOpen ? COLORS.PURPLE_BRIGHT : COLORS.PURPLE_GRAY)};
+  background: transparent;
+  padding: 15px 20px;
+
+  color: ${COLORS.BLACK};
   outline: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   user-select: none;
-
+  span {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.18px;
+    line-height: 100%;
+  }
   &:hover {
     cursor: pointer;
   }
@@ -42,32 +54,32 @@ export const DropDownHeader = styled('div')`
 export const DropDownListContainer = styled('div')`
   position: absolute;
   width: 100%;
-  top: 40px;
 `;
 
 export const DropDownList = styled('ul')`
   margin: 0;
-  background: ${COLORS.BLACK};
+  background: ${COLORS.LIGHT_BRIGHT};
+
+  box-shadow: 0px 4px 6px 0px rgba(43, 28, 77, 0.25);
   border-radius: 0px 0px 5px 5px;
-  padding: 10px;
+  padding: 10px 0 10px 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-height: 213px;
   overflow-y: scroll;
 
-  border-right: 1px solid ${COLORS.LIGHT_BRIGHT};
-  border-bottom: 1px solid ${COLORS.LIGHT_BRIGHT};
-  border-left: 1px solid ${COLORS.LIGHT_BRIGHT};
-  background: ${COLORS.DARK};
+  border-right: 1px solid ${COLORS.PURPLE_BRIGHT};
+  border-bottom: 1px solid ${COLORS.PURPLE_BRIGHT};
+  border-left: 1px solid ${COLORS.PURPLE_BRIGHT};
   user-select: none;
 
   ::-webkit-scrollbar {
-    width: 15px;
+    width: 4px;
   }
 
   ::-webkit-scrollbar-thumb {
-    border: 5px solid ${COLORS.DARK};
+    border: 2px solid ${COLORS.PURPLE_GRAY};
     background-color: ${COLORS.PURPLE_GRAY};
     border-radius: 16px;
   }
@@ -75,19 +87,17 @@ export const DropDownList = styled('ul')`
 
 export const ListItem = styled('li')`
   list-style: none;
-  color: ${COLORS.LIGHT};
-  font-size: 13px;
+  color: ${COLORS.BLACK};
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 130%;
-  letter-spacing: 0.39px;
+  line-height: 16px;
+  letter-spacing: 0.18px;
   text-transform: capitalize;
-  padding: 5px;
+  padding: 15px 20px;
 
   &:hover {
-    border-radius: 5px;
-    background: ${COLORS.PURPLE_GRAY};
-    color: ${COLORS.BLACK};
+    background: ${COLORS.LIGHT};
     cursor: pointer;
   }
 `;
@@ -106,4 +116,8 @@ export const FormErrorText = styled.div`
   line-height: 10px;
   letter-spacing: 0.39px;
   color: ${COLORS.BLACK};
+`;
+
+export const Star = styled.span`
+  color: ${COLORS.RED};
 `;

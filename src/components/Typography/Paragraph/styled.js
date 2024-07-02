@@ -17,13 +17,13 @@ const sizeMap = {
   medium: {
     fontSize: '16px',
     letterSpacing: '0.32px',
-    lineHeight: '14px',
+    lineHeight: '140%',
     fontWeight: '500',
   },
   small: {
     fontSize: '13px',
     letterSpacing: '0.39px',
-    lineHeight: '15px',
+    lineHeight: '140%',
     fontWeight: '400',
   },
 };

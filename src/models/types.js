@@ -1,6 +1,6 @@
 export const BUTTON_TYPE = {
   PRIMARY: 'primary',
-  SECONDARY: 'secondary',
+  SUBMIT: 'submit',
   BIG: 'big',
   BLOG: 'blog',
 };

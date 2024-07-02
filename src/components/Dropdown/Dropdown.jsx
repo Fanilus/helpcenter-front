@@ -7,6 +7,7 @@ import {
   DropDownListContainer,
   FormErrorText,
   ListItem,
+  Star,
 } from './styled';
 import SelectArrow from '../Icons/SelectArrow/SelectArrow';
 
@@ -41,7 +42,15 @@ const Dropdown = ({
         isOpen={isOpen}
         onClick={toggling}
       >
-        <span>{valueSelected || placeholder}</span>
+        <span>
+          {valueSelected || (
+            <>
+              {placeholder}
+              <Star>*</Star>
+            </>
+          )}
+        </span>
+
         <SelectArrow isOpen={isOpen} />
       </DropDownHeader>
       {isOpen && (

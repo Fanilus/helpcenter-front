@@ -9,12 +9,13 @@ const convertToQueryParams = (params = {}) => {
 
 export const GET = (url = '', params = {}) => {
   return new Promise((resolve, reject) => {
+    const lang = localStorage.getItem('i18nextLng');
     fetch(url + convertToQueryParams(params), {
       method: 'GET',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        'Accept-Language': 'ru',
+        'Accept-Language': lang,
         System: true,
       },
     })

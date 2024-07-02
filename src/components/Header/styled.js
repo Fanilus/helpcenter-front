@@ -27,7 +27,7 @@ export const Fixed = styled.div`
 export const Header = styled.header`
   z-index: 2;
   padding: 20px 60px;
-
+  position: absolute;
   @media (max-width: 1439px) {
     width: 100%;
     display: flex;
@@ -136,14 +136,13 @@ export const Route = styled.li`
   line-height: 28px;
   letter-spacing: 0.28px;
   cursor: pointer;
-
-  a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  h2 {
     color: ${COLORS.LIGHT};
-    text-decoration: none;
   }
 
   &:hover {
-    a {
+    h2 {
       color: ${COLORS.PINK};
     }
   }

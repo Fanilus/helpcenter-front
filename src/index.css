@@ -30,16 +30,7 @@
 
 body {
   margin: 0;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.2px;
-}
-
-ul,
-li,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style-type: auto;
 }

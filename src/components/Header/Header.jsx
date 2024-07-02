@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-import BurgerMenu from './components/BurgerMenu';
-import * as TymioUI from '../index';
+import { useTranslation } from 'react-i18next';
+import useRoutes from '../../hooks/useRoutes';
 
 import * as Styled from './styled';
-import useRoutes from '../../hooks/useRoutes';
-import { useLocation } from 'react-router-dom';
+import * as TymioUI from '../index';
+import { COLORS } from '../../models/colors';
+
+import BurgerMenu from './components/BurgerMenu';
 
 const WELCOME_PAGE = process.env.REACT_APP_WELCOME_PAGE;
 
-const Header = ({ light }) => {
+const Header = ({ light = true }) => {
   const { header } = useRoutes();
+  const { t } = useTranslation();
 
   const [active, setActive] = useState();
   const location = useLocation();
@@ -28,6 +32,18 @@ const Header = ({ light }) => {
           </Styled.LogoLink>
           <Styled.Fixed>
             <TymioUI.RouteMenu options={header} light={light} active={active} />
+            <TymioUI.Button
+              type={'submit'}
+              onClick={() => window.open('https://app.tymio.com/', '_blank')}
+            >
+              <TymioUI.Paragraph
+                lh={'13px'}
+                size={'medium'}
+                color={COLORS.BLACK}
+              >
+                {t('START EARNING')}
+              </TymioUI.Paragraph>
+            </TymioUI.Button>
           </Styled.Fixed>
         </>
       )}

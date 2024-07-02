@@ -27,6 +27,13 @@ import Link from './Link/Link';
 import VerticalSlider from './VerticalSlider/VerticalSlider';
 import LoadingSpinner from './LoadingSpinner/LoadingSpinner';
 import Message from './Message/Message';
+import MenuLink from './MenuLink/MenuLink';
+import ArticleLink from './ArticleLink/ArticleLink';
+import Searcher from './Searcher/Searcher';
+import AccordionCategories from './AccordionCategories/AccordionCategories';
+import RoutingMenu from './RoutingMenu/RoutingMenu';
+import Title from './Title/Title';
+import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 
 import { Grid, GridElem } from './Grid/styled';
 import { Container } from './Container/styled';
@@ -73,6 +80,13 @@ export {
   VerticalSlider,
   LoadingSpinner,
   Message,
+  MenuLink,
+  ArticleLink,
+  Searcher,
+  AccordionCategories,
+  RoutingMenu,
+  Title,
+  Breadcrumbs,
   Grid,
   GridElem,
   TransitionArrow,
