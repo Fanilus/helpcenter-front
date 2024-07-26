@@ -10,6 +10,8 @@ import Selector from './components/Selector';
 const languages = {
   en: { nativeName: 'ENGLISH' },
   ru: { nativeName: 'RUSSIAN' },
+  es: { nativeName: 'español' },
+  fr: { nativeName: 'Français' },
 };
 
 const LanguageSwitch = () => {
