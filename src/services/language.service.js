@@ -1,23 +1,28 @@
-import { Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 class LanguageService {
   initialState = {
-    language: localStorage.getItem('i18nextLng') || 'en',
+    language: 'en',
   };
 
-  state = this.initialState;
-  state$ = new Subject();
+  state$ = new BehaviorSubject(this.initialState);
 
   setLanguage(language) {
-    this.state = {
-      language,
-    };
-    localStorage.setItem('i18nextLng', language);
-    this.state$.next(this.state);
+    this.state$.next({ language });
   }
+
   getLanguage() {
-    localStorage.setItem('i18nextLng', this.state.language);
-    this.state$.next(this.state);
+    return this.state$.getValue().language;
+  }
+
+  getLanguageFromUrl() {
+    const pathParts = window.location.pathname.split('/');
+    return pathParts[1] || this.initialState.language;
+  }
+
+  initLanguage() {
+    const languageFromUrl = this.getLanguageFromUrl();
+    this.setLanguage(languageFromUrl);
   }
 }
 
