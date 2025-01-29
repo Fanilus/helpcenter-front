@@ -18,16 +18,16 @@ import СategoryService from '../../services/category.service';
 
 import * as TymioUI from '../../components/index';
 import * as Styled from './styled';
+import { bool } from 'yup';
 
 const Article = () => {
   const location = useLocation();
   const { articleId, lang } = useParams();
-  const { article, loading } = useFullArticle();
+  const { article, loading, error } = useFullArticle();
   const category = useCategory();
   const articleList = useArticleList();
 
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -74,64 +74,71 @@ const Article = () => {
 
   return (
     <Styled.Article>
-      <Styled.DesktopWrapper>
-        <div></div>
-        {!combinedLoading && (
-          <TymioUI.Breadcrumbs
-            lang={lang}
-            subCategory={articleList.articleList}
-            category={category.category}
-          />
-        )}
+      {!error ? (
+        <>
+          <Styled.DesktopWrapper>
+            <div></div>
+            {!combinedLoading && (
+              <TymioUI.Breadcrumbs
+                lang={lang}
+                subCategory={articleList.articleList}
+                category={category.category}
+              />
+            )}
 
-        <Styled.SwitcherWrapper>
-          <LanguageSwitch />
-        </Styled.SwitcherWrapper>
-      </Styled.DesktopWrapper>
-      <Styled.MobileWrapper>
-        <Styled.Wrapper>
-          <TymioUI.AccordionCategories label={articleList.articleList?.title}>
-            <RoutingMenu
+            <Styled.SwitcherWrapper>
+              <LanguageSwitch />
+            </Styled.SwitcherWrapper>
+          </Styled.DesktopWrapper>
+          <Styled.MobileWrapper>
+            <Styled.Wrapper>
+              <TymioUI.AccordionCategories
+                label={articleList.articleList?.title}
+              >
+                <RoutingMenu
+                  lang={lang}
+                  articleId={articleId}
+                  title={articleList.articleList?.title}
+                  menuItems={articleList.articleList?.articles}
+                />
+              </TymioUI.AccordionCategories>
+              <LanguageSwitch />
+            </Styled.Wrapper>
+            <TymioUI.Breadcrumbs
               lang={lang}
-              articleId={articleId}
-              title={articleList.articleList?.title}
-              menuItems={articleList.articleList?.articles}
+              subCategory={articleList.articleList}
+              category={category.category}
             />
-          </TymioUI.AccordionCategories>
-          <LanguageSwitch />
-        </Styled.Wrapper>
-        <TymioUI.Breadcrumbs
-          lang={lang}
-          subCategory={articleList.articleList}
-          category={category.category}
-        />
-      </Styled.MobileWrapper>
-
-      <Styled.Content>
-        <Styled.DesktopMenu>
-          <RoutingMenu
-            lang={lang}
-            articleId={articleId}
-            title={articleList.articleList?.title}
-            menuItems={articleList.articleList?.articles}
-          />
-        </Styled.DesktopMenu>
-        {!combinedLoading ? (
-          <Styled.ContainerContent>
-            <Styled.Markdown>
-              <Markdown components={renderers}>{article.content}</Markdown>
-            </Styled.Markdown>
-            {/* <Helpful /> */}
-            <Switcher
-              articleId={articleId}
-              articleList={articleList}
-              lang={lang}
-            />
-          </Styled.ContainerContent>
-        ) : (
-          <TymioUI.LoadingSpinner />
-        )}
-      </Styled.Content>
+          </Styled.MobileWrapper>
+          <Styled.Content>
+            <Styled.DesktopMenu>
+              <RoutingMenu
+                lang={lang}
+                articleId={articleId}
+                title={articleList.articleList?.title}
+                menuItems={articleList.articleList?.articles}
+              />
+            </Styled.DesktopMenu>
+            {!combinedLoading ? (
+              <Styled.ContainerContent>
+                <Styled.Markdown>
+                  <Markdown components={renderers}>{article.content}</Markdown>
+                </Styled.Markdown>
+                {/* <Helpful /> */}
+                <Switcher
+                  articleId={articleId}
+                  articleList={articleList}
+                  lang={lang}
+                />
+              </Styled.ContainerContent>
+            ) : (
+              <TymioUI.LoadingSpinner />
+            )}
+          </Styled.Content>
+        </>
+      ) : (
+        <Styled.PageNotFound>Page not found</Styled.PageNotFound>
+      )}
     </Styled.Article>
   );
 };

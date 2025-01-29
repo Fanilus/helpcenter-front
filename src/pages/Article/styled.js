@@ -158,3 +158,18 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   gap: 20px;
 `;
+
+export const PageNotFound = styled.h1`
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0.4px;
+  padding: 0px 0px 30px;
+  margin: 0px;
+  text-align: center;
+`;
+
+export const WrapperPageNotFound = styled.div`
+  width: 100%;
+`;
