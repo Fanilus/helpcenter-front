@@ -137,7 +137,7 @@ const Article = () => {
           </Styled.Content>
         </>
       ) : (
-        <Styled.PageNotFound>Page not found</Styled.PageNotFound>
+        <Styled.PageNotFound>404 Page not found</Styled.PageNotFound>
       )}
     </Styled.Article>
   );
